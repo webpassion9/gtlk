@@ -1,0 +1,83 @@
+include html/mixins
+
+doctype html
+block head
+html(lang="en")
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no")
+		meta(name="format-detection" content="telephone=no")
+
+		link(rel="stylesheet", href="css/style.min.css")
+
+		title Title
+
+	body
+		.wrapper
+
+			header.header
+				.container
+					.header__top
+						a(href="#").header__logo
+							img(src="img/logo-GTLK.png", width="214" height="67" alt="")
+						.d-flex.align-items-center
+							a(href="tel:88002001299").phone.header__phone
+								+sprite("icon-phone")
+								|	8-800-200-12-99
+							a(href="#").btn.btn-menu.header__btn-menu
+								+sprite("icon-menu")
+					ul.header__menu
+						li
+							a(href="#") Главная
+						li
+							a(href="#") Компания
+						li
+							a(href="#") Общественная деятельность
+					.header__heading Авторизация
+			
+			main
+				.container
+					.auth
+						.auth__heading Вход
+						.auth__form
+							form
+								.auth__form-main
+									.auth__field
+										.auth__form-heading.auth__form-heading--field Логин
+										.auth__field-input-wrap
+											input(type="text").auth__field-input
+											.auth__field-error Логин введен неверно
+									.auth__field
+										.auth__form-heading.auth__form-heading--field Пароль
+										.auth__field-input-wrap
+											input(type="password").auth__field-input.auth__field-input--password
+											.auth__field-error Пароль введен неверно
+											.btn.btn-show-pass
+												+sprite("icon-eye")
+												+sprite("icon-eye-opened")
+								label.checkbox.auth__checkbox
+									input(type="checkbox" hidden)
+									span.checkbox__icon
+										+sprite("icon-check")
+									span.checkbox__text Запомнить меня на этом компьютере
+								div
+									input(type="submit" value="Войти").btn.btn-submit.btn-submit--size-large.btn--fullwidth
+						.auth__sep
+							.auth__sep-text или
+						.auth__type
+							.auth__form-heading Войти через
+							ul.auth__type-list
+								li
+									a(href="#")
+										img(src="img/gosuslugi.svg", alt="")
+
+			.popup-cookies
+				div Пользуясь системой, вы даете согласие на использование файлов cookie, помогающих нам сделать систему удобнее для вас
+				a.btn.btn-submit.btn-submit--cookies.btn-submit--size-normal.popup-cookies__btn Понятно
+
+		.preloader
+			img(src="img/logo-GTLK_dark.png", width="402" height="125" alt="")
+			.preloader__progress
+				.preloader__progress-line
+
+		script(src="js/app.min.js")

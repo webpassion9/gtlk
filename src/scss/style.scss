@@ -1,0 +1,45 @@
+/* ==========================================================================
+Config
+========================================================================== */
+
+/* Normalize */
+@import "assets/normalize";
+
+/* Variables */
+@import "assets/variables";
+
+/* Grid */
+@import "assets/grid";
+
+
+/* States */
+@import "assets/states";
+
+/* ==========================================================================
+Base styles
+========================================================================== */
+
+/* Connect fonts */
+@import "assets/fonts";
+
+/* Layout */
+@import "assets/layout";
+
+/* Buttons */
+@import "assets/buttons";
+
+/* Typography */
+@import "assets/typography";
+
+/* Icons */
+@import "assets/icons";
+
+/* Forms */
+@import "assets/forms";
+
+/* ==========================================================================
+Main styles
+========================================================================== */
+
+// authorization
+@import "components/authorization/index.scss";

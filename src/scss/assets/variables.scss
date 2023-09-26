@@ -1,0 +1,22 @@
+// fonts
+$fontBase: Supermolot, Arial, sans-serif;
+$fontSecond: Roboto, Arial, sans-serif;
+$fontThird: PFDinTextPro, Arial, sans-serif;
+
+// colors
+:root {
+	--color-white: #FFFFFF;
+	--color-black: #000000;
+	--color-dark: #262627;
+	--color-red: #CA0000;
+}
+
+// breakpoints
+$xs: 320px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+$hd: 1600px;
+

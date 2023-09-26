@@ -1,0 +1,20 @@
+.popup-cookies {
+	position: fixed;
+	left: 0;
+	bottom: 1px;
+	width: 100%;
+	z-index: 100;
+
+	background: #EFEFEF;
+	border-width: 1px 0px;
+	border-style: solid;
+	border-color: #C6C6C6;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 40px;
+	padding: 9px 15px;
+
+	transition: .25s;
+}

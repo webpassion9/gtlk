@@ -1,0 +1,97 @@
+.btn {
+	cursor: pointer;
+	text-decoration: none;
+	background: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	transition: all .25s;
+	max-width: 100%;
+	outline: none;
+	&:hover {
+		text-decoration: none;
+	}
+	&:active {
+		transition: none;
+	}
+
+	&-submit {
+		background: #0060CC;
+		border-radius: 10px;
+		font-weight: 700;
+		font-family: $fontThird;
+		color: var(--color-white);
+		padding: 5px 15px;
+
+		&--size-normal {
+			height: 43px;
+			font-size: 21px;
+			line-height: 25px;
+		}
+
+		&--size-large {
+			height: 60px;
+			font-size: 36px;
+			line-height: 43px;
+		}
+
+		&--cookies {
+			min-width: 190px;
+		}
+
+
+		&:hover {
+			background: #0054b4;
+		}
+	}
+
+	&-show-pass {
+		opacity: 0;
+		position: absolute;
+		right: 15px;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 24px;
+		height: 24px;
+
+		.icon-eye-opened {
+			display: none;
+		}
+
+		&.is-visible {
+			opacity: 1;
+		}
+
+		&.is-active {
+			.icon-eye-opened {
+				display: block;
+			}
+			.icon-eye {
+				display: none;
+			}
+
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	&--fullwidth {
+		width: 100%;
+	}
+
+	
+}
