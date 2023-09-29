@@ -41,5 +41,14 @@ Base styles
 Main styles
 ========================================================================== */
 
+// main layout
+@import "layout/index.scss";
+
+// common
+@import "common/index.scss";
+
 // authorization
 @import "components/authorization/index.scss";
+
+// applications
+@import "components/applications/index.scss";

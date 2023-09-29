@@ -1,0 +1,21 @@
+.main-row {
+	display: flex;
+	flex-grow: 1;
+}
+
+.main {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.content {
+	padding: 35px;
+	flex-grow: 1;
+}
+
+.content-inner {
+	background: var(--color-white);
+	border-radius: 8px;
+	padding: 30px 30px;
+}

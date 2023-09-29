@@ -1,5 +1,7 @@
 import svgSprite from "gulp-svg-sprite";
-// import cheerio from "gulp-cheerio";
+import cheerio from "gulp-cheerio";
+
+const excludedFileName = 'icon-doc.svg';
 
 export const svgSprive = () => {
     return app.gulp.src(`${app.path.src.svgicons}`,{})
@@ -9,14 +11,6 @@ export const svgSprive = () => {
                 message: "Error: <%= error.message %>"
             })
         ))
-        // .pipe(cheerio({
-		// 	run: function ($) {
-		// 		$('[fill]').removeAttr('fill');
-		// 		$('[stroke]').removeAttr('stroke');
-		// 		$('[style]').removeAttr('style');
-		// 	},
-		// 	parserOptions: {xmlMode: true}
-		// }))
         .pipe(svgSprite({
             mode: {
                 stack: {
@@ -25,6 +19,17 @@ export const svgSprive = () => {
                     example: true
                 }
             }
+        }))
+        .pipe(cheerio({
+            run: function ($) {
+              $('svg[id]:not(#icon-chat)').each(function () {
+                $(this).removeAttr('fill');
+                $(this).find('[fill]').removeAttr('fill');
+                $(this).find('[stroke]').removeAttr('stroke');
+                $(this).find('[style]').removeAttr('style');
+              });
+            },
+            parserOptions: { xmlMode: true }
         }))
         .pipe(app.gulp.dest(`${app.path.build.images}`))
 }

@@ -1,6 +1,8 @@
 import * as flsFunctions from "./modules/functions.js";
 // import Swiper, { Navigation, Pagination } from 'swiper';
 // import 'swiper/css/bundle';
+import { Fancybox } from "@fancyapps/ui";
+import "@fancyapps/ui/dist/fancybox.css";
 
 flsFunctions.isWebp();
 
@@ -22,3 +24,14 @@ document.addEventListener("DOMContentLoaded", function() {
     initializeAuthFields();
 });
 
+//
+
+import { initializeTooltip } from './modules/applications/index.js';
+
+initializeTooltip();
+
+//
+
+import { initializeFancybox } from './modules/common/index.js';
+
+initializeFancybox();

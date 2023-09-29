@@ -39,8 +39,6 @@
 		&--cookies {
 			min-width: 190px;
 		}
-
-
 		&:hover {
 			background: #0054b4;
 		}
@@ -74,8 +72,53 @@
 		}
 	}
 
+	&-base {
+		background: #159655;
+		font-size: 16px;
+		line-height: 24px;
+		color: #E8E8E8;
+		height: 52px;
+		padding: 5px 41px;
+		border-radius: 10px;
+		text-transform: uppercase;
+		&:hover {
+			background: #0b8045;
+		}
+	}
 
-
+	&-filling {
+		height: 46px;
+		border-radius: 4px;
+		width: 138px;
+		color: var(--color-white);
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 1;
+		&--positive {
+			background: #159655;
+		}
+		&--negative {
+			background: #243F94;
+		}
+	}
+	
+	&-confirm {
+		height: 46px;
+		border-radius: 10px;
+		width: 138px;
+		color: var(--color-white);
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 1;
+		&--positive {
+			background: #53BD00;
+		}
+		&--negative {
+			background: #939598;
+		}
+	}
 
 
 

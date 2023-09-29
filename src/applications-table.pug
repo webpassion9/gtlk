@@ -1,0 +1,555 @@
+include html/mixins
+
+doctype html
+block head
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no")
+		meta(name="format-detection" content="telephone=no")
+
+		link(rel="stylesheet", href="css/style.min.css")
+
+		title Title
+
+	body
+		.wrapper.wrapper-main
+
+			header.header-main
+				.container
+					a(href="#")
+						img(src="img/logo-GTLK_dark.png", width="166" height="52" alt="")
+					ul.header-menu
+						li
+							a(href="#") Компания
+						li
+							a(href="#") Деятельность
+						li
+							a(href="#") Клиентам
+						li
+							a(href="#") Закупки
+						li
+							a(href="#") Инвесторам
+						li
+							a(href="#") Устойчивое развитие
+						li
+							a(href="#") Медиа
+					form.header-search
+						input(type="text").header-search__input
+						.header-search__icon
+							+sprite("icon-loop")
+					.header-btns
+						a(href="#").btn.header-btns__item
+							+sprite("icon-bell")
+						a(href="#").btn.header-btns__item
+							+sprite("icon-user")
+
+						
+			.main-row
+
+				aside.sidebar
+					.sidebar__section
+						ul.sidebar__nav
+							li.sidebar__nav-item.current
+								a(href="#").sidebar__nav-item-btn
+									.sidebar__nav-item-icon
+										+sprite("icon-file-tray")
+									.sidebar__nav-item-text Заявки
+							li.sidebar__nav-item
+								a(href="#").sidebar__nav-item-btn
+									.sidebar__nav-item-icon
+										+sprite("icon-newspaper")
+									.sidebar__nav-item-text Договоры
+							li.sidebar__nav-item
+								a(href="#").sidebar__nav-item-btn
+									.sidebar__nav-item-icon
+										+sprite("icon-doc")
+									.sidebar__nav-item-text Обращения НМЦ
+					.sidebar__section
+						ul.sidebar__nav
+							li.sidebar__nav-item
+								a(href="#").sidebar__nav-item-btn
+									.sidebar__nav-item-icon
+										+sprite("icon-book")
+									.sidebar__nav-item-text Справка
+					.sidebar__section
+						.manager
+							.manager__ava
+								img(src="img/avatar-manager.png", alt="")
+							.manager__name Менеджер Иванова А.А.
+							a(href="#").btn.manager__btn Связаться
+					.sidebar__section
+						a(href="#").support
+							.support__icon
+								+sprite("icon-chat")
+							.support__heading Служба поддержки
+
+				main.main
+					.content
+						.content-inner
+							.d-flex.justify-content-between.align-items-center
+								.heading-base Все заявки
+								div
+									a(href="#").btn.btn-base Новая заявка
+							ul.tabs
+								li.current
+									a(href="#") Заявки
+								li
+									a(href="#") Черновики
+							
+							form.application-form
+								.application-form__item
+									input(type="text" placeholder="Регистрационный номер заявки").application-form__item-input
+									.application-form__item-icon
+										+sprite("icon-loop")
+								.application-form__item
+									input(type="text" placeholder="Поиск по совпадению").application-form__item-input
+									.application-form__item-icon
+										+sprite("icon-loop")
+								input(type="submit" value="Найти").btn.application-form__btn
+							
+							table.application-table
+								tr
+									th Регистрационный номер
+									th Дата создания
+									th Название предмета
+									th Поставщик
+									th Срок поставки
+									th Стоимость единицы
+									th Количество
+									th Стоимость итоговая
+									th Документы
+									th Статус
+								tr
+									td 123-ЗЛ-ОК
+									td 12.07.2023
+										br
+										span.color-gray 12:24
+									td ж/д вагон Хоппер
+										br
+										| ж/д вагон Хоппер
+										br
+										| Фитинговая платформа
+										br
+										| Вагон-аппарель
+									td ООО «РЖД»
+										br
+										| ООО «Название длинное длинное длинное
+										br
+										| ООО «Название»
+										br
+										| ООО «Название»
+									td 01.10.2023
+										br
+										| 03.11.2023
+										br
+										| 01.10.2023
+										br
+										| 09.12.2023
+									td 1 000 000,00
+										br
+										| 50 000 000,00
+										br
+										| 50 000,00
+										br
+										| 750 000,00
+									td 20 ед.
+										br
+										| 1 ед.
+										br
+										| 2 ед.
+										br
+										| 1 ед.
+										br
+										span.total-selected итого
+									td 20 000 000,00
+										br
+										| 50 000 000,00
+										br
+										| 100 000,00
+										br
+										| 750 000,00
+										br
+										span.total-selected 70 850 000,00
+									td 75%
+									td
+										.d-flex.align-items-center.application-nav
+											.status.status--review На рассмотрении
+											.tooltip
+												a.btn.tooltip__btn
+													+sprite("icon-more-alt")
+												ul.tooltip__menu
+													li.tooltip__menu-item
+														a(href="#").tooltip__menu-item-link Просмотреть
+													li.tooltip__menu-item
+														a(href="#").tooltip__menu-item-link Создать новую версию
+													li.tooltip__menu-item.tooltip__menu-item--cancel
+														a(href="#").tooltip__menu-item-link Аннулировать
+								tr
+									td 123-ЗЛ-ОК
+									td 12.07.2023
+										br
+										span.color-gray 12:24
+									td ж/д вагон Хоппер
+										br
+										| ж/д вагон Хоппер
+										br
+										| Фитинговая платформа
+										br
+										| Вагон-аппарель
+									td ООО «РЖД»
+										br
+										| ООО «Название длинное длинное длинное
+										br
+										| ООО «Название»
+										br
+										| ООО «Название»
+									td 01.10.2023
+										br
+										| 03.11.2023
+										br
+										| 01.10.2023
+										br
+										| 09.12.2023
+									td 1 000 000,00
+										br
+										| 50 000 000,00
+										br
+										| 50 000,00
+										br
+										| 750 000,00
+									td 20 ед.
+										br
+										| 1 ед.
+										br
+										| 2 ед.
+										br
+										| 1 ед.
+										br
+										span.total-selected итого
+									td 20 000 000,00
+										br
+										| 50 000 000,00
+										br
+										| 100 000,00
+										br
+										| 750 000,00
+										br
+										span.total-selected 70 850 000,00
+									td 75%
+									td
+										.d-flex.align-items-center.application-nav
+											.status.status--rejected Отклонена
+											.tooltip
+												a.btn.tooltip__btn
+													+sprite("icon-more-alt")
+												ul.tooltip__menu
+													li.tooltip__menu-item
+														a(href="#").tooltip__menu-item-link Просмотреть
+													li.tooltip__menu-item
+														a(href="#").tooltip__menu-item-link Создать новую версию
+													li.tooltip__menu-item.tooltip__menu-item--cancel
+														a(href="#").tooltip__menu-item-link Аннулировать
+								tr
+									td 123-ЗЛ-ОК
+									td 12.07.2023
+										br
+										span.color-gray 12:24
+									td ж/д вагон Хоппер
+										br
+										| ж/д вагон Хоппер
+										br
+										| Фитинговая платформа
+										br
+										| Вагон-аппарель
+									td ООО «РЖД»
+										br
+										| ООО «Название длинное длинное длинное
+										br
+										| ООО «Название»
+										br
+										| ООО «Название»
+									td 01.10.2023
+										br
+										| 03.11.2023
+										br
+										| 01.10.2023
+										br
+										| 09.12.2023
+									td 1 000 000,00
+										br
+										| 50 000 000,00
+										br
+										| 50 000,00
+										br
+										| 750 000,00
+									td 20 ед.
+										br
+										| 1 ед.
+										br
+										| 2 ед.
+										br
+										| 1 ед.
+										br
+										span.total-selected итого
+									td 20 000 000,00
+										br
+										| 50 000 000,00
+										br
+										| 100 000,00
+										br
+										| 750 000,00
+										br
+										span.total-selected 70 850 000,00
+									td 75%
+									td
+										.d-flex.align-items-center.application-nav
+											.status.status--review На рассмотрении
+											.tooltip
+												a.btn.tooltip__btn
+													+sprite("icon-more-alt")
+												ul.tooltip__menu
+													li.tooltip__menu-item
+														a(href="#").tooltip__menu-item-link Просмотреть
+													li.tooltip__menu-item
+														a(href="#").tooltip__menu-item-link Создать новую версию
+													li.tooltip__menu-item.tooltip__menu-item--cancel
+														a(href="#").tooltip__menu-item-link Аннулировать
+								tr
+									td 123-ЗЛ-ОК
+									td 12.07.2023
+										br
+										span.color-gray 12:24
+									td ж/д вагон Хоппер
+										br
+										| ж/д вагон Хоппер
+										br
+										| Фитинговая платформа
+										br
+										| Вагон-аппарель
+									td ООО «РЖД»
+										br
+										| ООО «Название длинное длинное длинное
+										br
+										| ООО «Название»
+										br
+										| ООО «Название»
+									td 01.10.2023
+										br
+										| 03.11.2023
+										br
+										| 01.10.2023
+										br
+										| 09.12.2023
+									td 1 000 000,00
+										br
+										| 50 000 000,00
+										br
+										| 50 000,00
+										br
+										| 750 000,00
+									td 20 ед.
+										br
+										| 1 ед.
+										br
+										| 2 ед.
+										br
+										| 1 ед.
+										br
+										span.total-selected итого
+									td 20 000 000,00
+										br
+										| 50 000 000,00
+										br
+										| 100 000,00
+										br
+										| 750 000,00
+										br
+										span.total-selected 70 850 000,00
+									td 75%
+									td
+										.d-flex.align-items-center.application-nav
+											.status.status--registered Зарегистрирована
+											.tooltip
+												a.btn.tooltip__btn
+													+sprite("icon-more-alt")
+												ul.tooltip__menu
+													li.tooltip__menu-item
+														a(href="#").tooltip__menu-item-link Просмотреть
+													li.tooltip__menu-item
+														a(href="#").tooltip__menu-item-link Создать новую версию
+													li.tooltip__menu-item.tooltip__menu-item--cancel
+														a(href="#").tooltip__menu-item-link Аннулировать
+								tr
+									td 123-ЗЛ-ОК
+									td 12.07.2023
+										br
+										span.color-gray 12:24
+									td ж/д вагон Хоппер
+										br
+										| ж/д вагон Хоппер
+										br
+										| Фитинговая платформа
+										br
+										| Вагон-аппарель
+									td ООО «РЖД»
+										br
+										| ООО «Название длинное длинное длинное
+										br
+										| ООО «Название»
+										br
+										| ООО «Название»
+									td 01.10.2023
+										br
+										| 03.11.2023
+										br
+										| 01.10.2023
+										br
+										| 09.12.2023
+									td 1 000 000,00
+										br
+										| 50 000 000,00
+										br
+										| 50 000,00
+										br
+										| 750 000,00
+									td 20 ед.
+										br
+										| 1 ед.
+										br
+										| 2 ед.
+										br
+										| 1 ед.
+										br
+										span.total-selected итого
+									td 20 000 000,00
+										br
+										| 50 000 000,00
+										br
+										| 100 000,00
+										br
+										| 750 000,00
+										br
+										span.total-selected 70 850 000,00
+									td 75%
+									td
+										.d-flex.align-items-center.application-nav
+											.status.status--completed Завершена
+											.tooltip
+												a.btn.tooltip__btn
+													+sprite("icon-more-alt")
+												ul.tooltip__menu
+													li.tooltip__menu-item
+														a(href="#").tooltip__menu-item-link Просмотреть
+													li.tooltip__menu-item
+														a(href="#").tooltip__menu-item-link Создать новую версию
+													li.tooltip__menu-item.tooltip__menu-item--cancel
+														a(href="#").tooltip__menu-item-link Аннулировать
+								tr
+									td 123-ЗЛ-ОК
+									td 12.07.2023
+										br
+										span.color-gray 12:24
+									td ж/д вагон Хоппер
+										br
+										| ж/д вагон Хоппер
+										br
+										| Фитинговая платформа
+										br
+										| Вагон-аппарель
+									td ООО «РЖД»
+										br
+										| ООО «Название длинное длинное длинное
+										br
+										| ООО «Название»
+										br
+										| ООО «Название»
+									td 01.10.2023
+										br
+										| 03.11.2023
+										br
+										| 01.10.2023
+										br
+										| 09.12.2023
+									td 1 000 000,00
+										br
+										| 50 000 000,00
+										br
+										| 50 000,00
+										br
+										| 750 000,00
+									td 20 ед.
+										br
+										| 1 ед.
+										br
+										| 2 ед.
+										br
+										| 1 ед.
+										br
+										span.total-selected итого
+									td 20 000 000,00
+										br
+										| 50 000 000,00
+										br
+										| 100 000,00
+										br
+										| 750 000,00
+										br
+										span.total-selected 70 850 000,00
+									td 75%
+									td
+										.d-flex.align-items-center.application-nav
+											.status.status--replaced Заменена
+											.tooltip
+												a.btn.tooltip__btn
+													+sprite("icon-more-alt")
+												ul.tooltip__menu
+													li.tooltip__menu-item
+														a(href="#").tooltip__menu-item-link Просмотреть
+													li.tooltip__menu-item
+														a(href="#").tooltip__menu-item-link Создать новую версию
+													li.tooltip__menu-item.tooltip__menu-item--cancel
+														a(href="#").tooltip__menu-item-link Аннулировать
+
+							ul.pagination
+								li.disabled
+									a(href="#")
+										+sprite("icon-chevron-left")
+								li.current
+									a(href="#") 1
+								li
+									a(href="#") 2
+								li
+									a(href="#").disabled ...
+								li
+									a(href="#") 9
+								li
+									a(href="#") 10
+								li
+									a(href="#")
+										+sprite("icon-chevron-right")
+
+					footer.footer
+						.container
+							.footer__section.d-flex.justify-content-end
+								ul.footer__menu
+									li
+										a(href="#") О нас
+									li
+										a(href="#") Реквизиты
+									li
+										a(href="#") Политика в отношении обработки персональных данных в АО “ГТЛК”
+							hr
+							.footer__section.d-flex.justify-content-between.align-items-center
+								.footer__copyright © 2023 АО ГТЛК
+								ul.footer__menu
+									li
+										a(href="tel:88002001299") 8-800-200-12-99
+									li
+										a(href="mailto:gtlk@gtlk.ru") gtlk@gtlk.ru
+									li
+										a(href="#") 125284, г. Москва, Ленинградский проспект д. 31 а, стр. 1
+			
+		include html/modals
+
+		script(src="js/app.min.js")

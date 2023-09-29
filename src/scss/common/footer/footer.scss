@@ -1,0 +1,48 @@
+.footer {
+	&>.container {
+		max-width: none;
+		padding-left: 80px;
+		padding-right: 80px;
+	}
+	hr {
+		height: 1px;
+		border: 0;
+		background: rgba(0,0,0,.28);
+		margin: 0;
+		padding: 0;
+	}
+
+	&__copyright {
+		font-family: $fontThird;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 19px;
+		text-transform: uppercase;
+		color: rgba(0, 0, 0, 0.8);
+	}
+
+	&__menu {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		gap: 30px;
+		&>li {
+			&>a {
+				font-size: 14px;
+				line-height: 16px;
+				text-decoration: underline;
+				text-transform: uppercase;
+				color: rgba(0, 0, 0, 0.8);
+				font-family: $fontSecond;
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	&__section {
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+}

@@ -1,6 +1,12 @@
 // preloader.js
 
 export function initializePreloader() {
+  const progressLine = document.querySelector('.preloader__progress-line');
+  const preloader = document.querySelector('.preloader');
+
+  if (!progressLine || !preloader) {
+    return;
+  }
 
   function updateProgress(progress) {
     const progressLine = document.querySelector('.preloader__progress-line');
@@ -30,11 +36,9 @@ export function initializePreloader() {
     updateProgress(100);
 
     setTimeout(() => {
-      const preloader = document.querySelector('.preloader');
       preloader.style.opacity = '0';
       preloader.style.visibility = 'hidden';
       document.body.style.overflow = 'visible';
     }, 1000);
   });
-
 }

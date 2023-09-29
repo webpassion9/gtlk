@@ -1,0 +1,17 @@
+.header-main {
+	background: var(--color-white);
+	border-bottom: 1px solid #EEEEEE;
+	&>.container {
+		max-width: none;
+		padding: 15px 45px 7px;
+		gap: 15px;
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+
+	&__menu {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}

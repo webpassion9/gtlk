@@ -1,0 +1,14 @@
+.header-btns {
+	display: flex;
+	align-items: center;
+	gap: 35px;
+	padding-top: 6px;
+	padding-right: 7px;
+	&__item {
+		width: 32px;
+		height: 32px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
