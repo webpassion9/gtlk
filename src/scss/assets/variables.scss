@@ -2,14 +2,19 @@
 $fontBase: Supermolot, Arial, sans-serif;
 $fontSecond: Roboto, Arial, sans-serif;
 $fontThird: PFDinTextPro, Arial, sans-serif;
-
+$fontFourth: OpenSans, Arial, sans-serif;
 // colors
 :root {
 	--color-white: #FFFFFF;
 	--color-black: #000000;
 	--color-dark: #262627;
 	--color-red: #CA0000;
+	--color-red-base: #EF665B;
 	--color-gray: #969696;
+	--color-gray2: #8C8C8C;
+	--color-blue: #093E8C;
+	--color-blue-base: #0085FF;
+	--color-green: #159654;
 }
 
 .color {

@@ -1,0 +1,11 @@
+.go-back {
+	padding-bottom: 23px;
+	a {
+		font-size: 16px;
+		line-height: 19px;
+		color: #A2A2A2;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}

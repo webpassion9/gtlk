@@ -1,0 +1,315 @@
+include html/mixins
+
+doctype html
+block head
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no")
+		meta(name="format-detection" content="telephone=no")
+
+		link(rel="stylesheet", href="css/style.min.css")
+
+		title Title
+
+	body
+		.wrapper.wrapper-main
+
+			header.header-main
+				.container
+					a(href="#")
+						img(src="img/logo-GTLK_dark.png", width="166" height="52" alt="")
+					ul.header-menu
+						li
+							a(href="#") Компания
+						li
+							a(href="#") Деятельность
+						li
+							a(href="#") Клиентам
+						li
+							a(href="#") Закупки
+						li
+							a(href="#") Инвесторам
+						li
+							a(href="#") Устойчивое развитие
+						li
+							a(href="#") Медиа
+					form.header-search
+						input(type="text").header-search__input
+						.header-search__icon
+							+sprite("icon-loop")
+					.header-btns
+						a(href="#").btn.header-btns__item
+							+sprite("icon-bell")
+						a(href="#").btn.header-btns__item
+							+sprite("icon-user")
+
+						
+			.main-row
+
+				aside.sidebar
+					.sidebar__inner
+						.sidebar__section
+							ul.sidebar__nav
+								li.sidebar__nav-item.current
+									a(href="#").sidebar__nav-item-btn
+										.sidebar__nav-item-icon
+											+sprite("icon-file-tray")
+										.sidebar__nav-item-text Заявки
+								li.sidebar__nav-item
+									a(href="#").sidebar__nav-item-btn
+										.sidebar__nav-item-icon
+											+sprite("icon-newspaper")
+										.sidebar__nav-item-text Договоры
+								li.sidebar__nav-item
+									a(href="#").sidebar__nav-item-btn
+										.sidebar__nav-item-icon
+											+sprite("icon-doc")
+										.sidebar__nav-item-text Обращения НМЦ
+						.sidebar__section.sidebar__section--info
+							ul.sidebar__nav
+								li.sidebar__nav-item
+									a(href="#").sidebar__nav-item-btn
+										.sidebar__nav-item-icon
+											+sprite("icon-book")
+										.sidebar__nav-item-text Справка
+						.sidebar__section
+							.manager
+								.manager__ava
+									img(src="img/avatar-manager.png", alt="")
+								.manager__name Менеджер Иванова А.А.
+								a(href="#").btn.manager__btn Связаться
+						.sidebar__section
+							a(href="#").support
+								.support__icon
+									+sprite("icon-chat")
+								.support__heading Служба поддержки
+
+				main.main
+					.content
+						.content-inner.application-content
+							.application-content__main
+								.go-back
+									a(href="#") < Назад в мои заявки
+								.application-top
+									.application-top__heading
+										.heading-base Заявка 123-ЗЛ-ОК от 12.07.2023
+										.status-note.status-note--signed Заявка подписана
+									div Заявка на лизинг транспортного средства
+								.application-main
+									ul.tabs
+										li.current
+											a(href="#") Основная информация
+										li
+											a(href="#") Документы (готовы на 75%)
+										li
+											a(href="#") Связанные заявки
+									
+									div
+										.application-main__section
+											.heading-base Заявитель
+											table.details-table
+												tr
+													td Полное наименование организации
+													td МУНИЦИПАЛЬНОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ Г.КАЗАНИ "ПАССАЖИРСКОЕ ABTOTPAHCПOPTHOE ПРЕДПРИЯТИЕ Хв2"
+												tr
+													td ИНН
+													td 1660005127
+												tr
+													td КПП
+													td 166001001
+										.application-main__section
+											.heading-base Предмет лизинга/аренды
+											table.details-table
+												tr
+													td(style="width: 51.5%") Вид имущества
+													td Транспортное средство
+												tr
+													td(style="width: 51.5%") Ставка НДС
+													td 20%
+												tr
+													td(style="width: 51.5%") Предметы лизинга
+													td
+											table.application-table
+												thead
+													tr
+														th Название предмета
+														th Поставщик
+														th Срок поставки
+														th Спецификация
+														th Стоимость единицы
+														th Количество
+														th Стоимость итоговая
+												tbody
+													tr
+														td ж/д вагон Хоппер
+														td ООО «РЖД»
+														td 120 дней
+														td Метан (КПГ)
+														td 1 000 000,00 ₽
+														td 20 ед.
+														td 20 000 000,00 ₽
+													tr
+														td ж/д вагон Хоппер
+														td ООО «РЖД»
+														td 120 дней
+														td Метан (КПГ)
+														td 1 000 000,00 ₽
+														td 20 ед.
+														td 20 000 000,00 ₽
+													tr
+														td ж/д вагон Хоппер
+														td ООО «РЖД»
+														td 120 дней
+														td Метан (КПГ)
+														td 1 000 000,00 ₽
+														td 20 ед.
+														td 20 000 000,00 ₽
+													tr
+														td ж/д вагон Хоппер
+														td ООО «РЖД»
+														td 120 дней
+														td Метан (КПГ)
+														td 1 000 000,00 ₽
+														td 20 ед.
+														td 20 000 000,00 ₽
+													tr
+														td
+														td
+														td
+														td
+														td
+														td итого
+														td 70 850 000,00 ₽
+											
+										.application-main__section
+											.heading-base Условия лизинга/аренды
+											table.details-table
+												tbody
+													tr
+														th(colspan="2") Порядок и сроки оплаты поставщику
+													tr
+														td Наименование платежа
+														td Аванс
+													tr
+														td Размер аванса
+														td 30%
+													tr
+														td Порядок и срок оплаты
+														td ...
+											table.details-table
+												tbody
+													tr
+														th(colspan="2") Планируемые условия договора лизинга
+													tr
+														td График платежей
+														td Аннуитет (равными частями)
+													tr
+														td Срок лизинга, мес.
+														td 85
+													tr
+														td Авансовый платёж, %
+														td 0
+													tr
+														td Страхователь
+														td Арендодатор
+													tr
+														td Балансодержатель
+														td Арендодатор
+													tr
+														td Госпрограмма
+														td Да
+										.application-main__section
+											.heading-base Дополнительные условия
+											table.details-table
+												tbody
+													tr
+														td Монтажные работы
+														td —
+													tr
+														td Пусконаладочные работы
+														td —
+													tr
+														td Другое
+														td —
+							
+							.application-content__side
+								.application-content__side-section.application-content__side-section--first
+									.d-flex.justify-content-center
+										.application-status.application-status--registered Зарегистрирована
+									ul.application-steps
+										li.application-steps__item Черновик
+										li.application-steps__item.current Зарегистрирована
+										li.application-steps__item На рассмотрении
+										li.application-steps__item Завершена
+								.application-content__side-section.application-content__side-section--actions
+									.heading-base Действия
+									ul.application-action-links
+										li
+											a(href="#modal-annul" data-fancybox).link-base Аннулировать
+												+sprite("icon-circle-alert")
+										li
+											a(href="#modal-new-version" data-fancybox).link-base Создать новую версию заявки
+								
+								.application-content__side-section
+									.heading-base Комментарии и замечания
+									.notifications-wrapper
+										.notification
+											.notification__inner
+												.notification__icon
+													+sprite("icon-chat_stroke")
+												.notification__content
+													.notification__content-top
+														.notification__heading Новый комментарий по сделке 123-ЗЛ-ОК
+														a(href="#").btn.notification__btn-more
+															+sprite("icon-more-alt_vertical")
+													.notification__desc
+														p Предварительные выводы неутешительны: повышение уровня гражданского сознания предопределяет высокую востребованность инновационных методов управления процессами.
+													.notification__bar
+														a(href="#").notification__bar-link.link-base Смотреть
+														.notification__bar-date Сегодня в 14:32
+												.notification__indicator.notification__indicator--is-new
+										.notification.notification--is-important
+											.notification__inner
+												.notification__icon
+													+sprite("icon-alert")
+												.notification__content
+													.notification__content-top
+														.notification__heading Необходимо обновить документы
+														a(href="#").btn.notification__btn-more
+															+sprite("icon-more-alt_vertical")
+													.notification__desc
+														p Предварительные выводы неутешительны: повышение уровня гражданского сознания предопределяет высокую востребованность инновационных методов управления процессами.
+													.notification__bar
+														a(href="#").notification__bar-link.link-base Перейти к обновлению
+														.notification__bar-date Вчера в 15:00
+												.notification__indicator.notification__indicator--is-read
+							
+
+							
+							
+
+					footer.footer
+						.container
+							.footer__section.d-flex.justify-content-end
+								ul.footer__menu
+									li
+										a(href="#") О нас
+									li
+										a(href="#") Реквизиты
+									li
+										a(href="#") Политика в отношении обработки персональных данных в АО “ГТЛК”
+							hr
+							.footer__section.d-flex.justify-content-between.align-items-center
+								.footer__copyright © 2023 АО ГТЛК
+								ul.footer__menu
+									li
+										a(href="tel:88002001299") 8-800-200-12-99
+									li
+										a(href="mailto:gtlk@gtlk.ru") gtlk@gtlk.ru
+									li
+										a(href="#") 125284, г. Москва, Ленинградский проспект д. 31 а, стр. 1
+			
+		include html/modals
+
+		script(src="js/app.min.js")

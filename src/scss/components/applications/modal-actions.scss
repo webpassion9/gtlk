@@ -1,0 +1,45 @@
+.modal-actions {
+	width: 100%;
+	max-width: 807px;
+	background: var(--color-white);
+	border-radius: 24px;
+	gap: 28px;
+	display: none;
+	&--annul {
+		flex-direction: column;
+		gap: 75px;
+	}
+	&--new-version {
+		flex-direction: column;
+		gap: 40px;
+		.modal-actions {
+			&__btns {
+				padding-top: 20px;
+			}
+		}
+	}
+	&.fancybox__content {
+		padding: 70px 80px;
+	}
+	.carousel__button.is-close {
+		display: none;
+	}
+	&__heading {
+		font-weight: 700;
+		font-size: 32px;
+		line-height: 40px;
+		color: rgba(28, 28, 28, 0.8);
+	}
+	&__text {
+		p {
+			font-size: 16px;
+			line-height: 20px;
+			color: #343434;
+		}
+	}
+	&__btns {
+		display: flex;
+		gap: 20px;
+		flex-wrap: wrap;
+	}
+}

@@ -5,12 +5,66 @@ html(lang="ru")
 		meta(http-equiv="X-UA-Compatible", content="IE=edge")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		title gtlk
+		style.
+			.page-list {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 30px;
+			}
+			.page-list__section {
+				padding: 25px 20px 20px;
+				border: 1px solid #ccc;
+				position: relative;
+			}
+			.page-list__section-heading {
+				position: absolute;
+				left: 10px;
+				bottom: calc(100% - 8px);
+				background: #fff;
+				padding: 0 10px;
+				font-weight: 700;
+				font-size: 14px;
+			}
 	body(style="font-family: arial; margin: 0; padding: 30px;")
-		h1(style="margin: 0 0 20px; padding: 0;") Pages list:
-		ul.page-list(style="list-style: numeric; display: inline-block; list-style-position: inside; margin: 0; padding: 0;")
-			li(style="margin-bottom: 20px;")
-				a(href="authorization.html" style="color: black; text-decoration: none;") authorization.html
-			li(style="margin-bottom: 20px;")
-				a(href="applications-table.html" style="color: black; text-decoration: none;") applications-table.html
-			li(style="margin-bottom: 20px;")
-				a(href="applications-table_drafts.html" style="color: black; text-decoration: none;") applications-table_drafts.html
+
+
+		h1(style="margin: 0 0 40px; padding: 0;") Pages list:
+		.page-list
+			.page-list__section
+				.page-list__section-heading Authorization
+				ul.page-list(style="list-style: numeric; display: inline-block; list-style-position: inside; margin: 0; padding: 0;")
+					li(style="margin-bottom: 20px;")
+						a(href="authorization.html" style="color: black; text-decoration: none;") authorization.html
+			.page-list__section
+				.page-list__section-heading Applications table
+				ul.page-list(style="list-style: numeric; display: inline-block; list-style-position: inside; margin: 0; padding: 0;")
+					li(style="margin-bottom: 20px;")
+						a(href="applications-table.html" style="color: black; text-decoration: none;") applications-table.html
+					li(style="margin-bottom: 20px;")
+						a(href="applications-table_drafts.html" style="color: black; text-decoration: none;") applications-table_drafts.html
+			.page-list__section
+				.page-list__section-heading Application
+				ul.page-list(style="list-style: numeric; display: inline-block; list-style-position: inside; margin: 0; padding: 0;")
+					li(style="margin-bottom: 20px;")
+						a(href="application_registered.html" style="color: black; text-decoration: none;") application_registered.html
+					li(style="margin-bottom: 20px;")
+						a(href="application_draft.html" style="color: black; text-decoration: none;") application_draft.html
+					li(style="margin-bottom: 20px;")
+						a(href="application_rejected.html" style="color: black; text-decoration: none;") application_rejected.html
+					li(style="margin-bottom: 20px;")
+						a(href="application-docs.html" style="color: black; text-decoration: none;") application-docs.html
+					li(style="margin-bottom: 20px;")
+						a(href="application_review.html" style="color: black; text-decoration: none;") application_review.html
+					li(style="margin-bottom: 20px;")
+						a(href="application_replaced.html" style="color: black; text-decoration: none;") application_replaced.html
+			.page-list__section
+				.page-list__section-heading Create application
+				ul.page-list(style="list-style: numeric; display: inline-block; list-style-position: inside; margin: 0; padding: 0;")
+					li(style="margin-bottom: 20px;")
+						a(href="create-application.html" style="color: black; text-decoration: none;") create-application.html
+					li(style="margin-bottom: 20px;")
+						a(href="create-application_step2.html" style="color: black; text-decoration: none;") create-application_step2.html
+					li(style="margin-bottom: 20px;")
+						a(href="create-application_step3.html" style="color: black; text-decoration: none;") create-application_step3.html
+					li(style="margin-bottom: 20px;")
+						a(href="create-application_step4.html" style="color: black; text-decoration: none;") create-application_step4.html

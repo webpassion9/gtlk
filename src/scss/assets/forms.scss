@@ -95,3 +95,29 @@ textarea {
 	}
 }
 
+
+.input-base {
+	display: block;
+	width: 100%;
+	font-family: $fontBase;
+	-webkit-appearance: none;
+	transition: 0.25s;
+	padding: 8px 15px;
+	height: 38px;
+	background: var(--color-white);
+	border: 1px solid #D1D1D1;
+	border-radius: 8px;
+	font-size: 16px;
+	line-height: 20px;
+	&--textarea {
+		height: 58px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	&:focus, &.complete {
+		border-color: rgba(52, 52, 52, 0.8);
+	}
+	&--replace-info {
+		height: 103px;
+	}
+}

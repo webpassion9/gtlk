@@ -1,0 +1,10 @@
+.status-note {
+	font-family: $fontFourth;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 20px;
+	&--signed {
+		color: #67CE16;
+	}
+}
+

@@ -5,13 +5,90 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>gtlk</title>
+		<style>
+			.page-list {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 30px;
+			}
+			.page-list__section {
+				padding: 25px 20px 20px;
+				border: 1px solid #ccc;
+				position: relative;
+			}
+			.page-list__section-heading {
+				position: absolute;
+				left: 10px;
+				bottom: calc(100% - 8px);
+				background: #fff;
+				padding: 0 10px;
+				font-weight: 700;
+				font-size: 14px;
+			}
+		</style>
 	</head>
 	<body style="font-family: arial; margin: 0; padding: 30px;">
-		<h1 style="margin: 0 0 20px; padding: 0;">Pages list:</h1>
-		<ul class="page-list" style="list-style: numeric; display: inline-block; list-style-position: inside; margin: 0; padding: 0;">
-			<li style="margin-bottom: 20px;"><a href="authorization.html" style="color: black; text-decoration: none;">authorization.html</a></li>
-			<li style="margin-bottom: 20px;"><a href="applications-table.html" style="color: black; text-decoration: none;">applications-table.html</a></li>
-			<li style="margin-bottom: 20px;"><a href="applications-table_drafts.html" style="color: black; text-decoration: none;">applications-table_drafts.html</a></li>
-		</ul>
+		<h1 style="margin: 0 0 40px; padding: 0;">Pages list:</h1>
+		<div class="page-list">
+			<div class="page-list__section">
+				<div class="page-list__section-heading">Authorization</div>
+				<ul class="page-list" style="list-style: numeric; display: inline-block; list-style-position: inside; margin: 0; padding: 0;">
+					<li style="margin-bottom: 20px;">
+						<a href="authorization.html" style="color: black; text-decoration: none;">authorization.html</a>
+					</li>
+				</ul>
+			</div>
+			<div class="page-list__section">
+				<div class="page-list__section-heading">Applications table</div>
+				<ul class="page-list" style="list-style: numeric; display: inline-block; list-style-position: inside; margin: 0; padding: 0;">
+					<li style="margin-bottom: 20px;">
+						<a href="applications-table.html" style="color: black; text-decoration: none;">applications-table.html</a>
+					</li>
+					<li style="margin-bottom: 20px;">
+						<a href="applications-table_drafts.html" style="color: black; text-decoration: none;">applications-table_drafts.html</a>
+					</li>
+				</ul>
+			</div>
+			<div class="page-list__section">
+				<div class="page-list__section-heading">Application</div>
+				<ul class="page-list" style="list-style: numeric; display: inline-block; list-style-position: inside; margin: 0; padding: 0;">
+					<li style="margin-bottom: 20px;">
+						<a href="application_registered.html" style="color: black; text-decoration: none;">application_registered.html</a>
+					</li>
+					<li style="margin-bottom: 20px;">
+						<a href="application_draft.html" style="color: black; text-decoration: none;">application_draft.html</a>
+					</li>
+					<li style="margin-bottom: 20px;">
+						<a href="application_rejected.html" style="color: black; text-decoration: none;">application_rejected.html</a>
+					</li>
+					<li style="margin-bottom: 20px;">
+						<a href="application-docs.html" style="color: black; text-decoration: none;">application-docs.html</a>
+					</li>
+					<li style="margin-bottom: 20px;">
+						<a href="application_review.html" style="color: black; text-decoration: none;">application_review.html</a>
+					</li>
+					<li style="margin-bottom: 20px;">
+						<a href="application_replaced.html" style="color: black; text-decoration: none;">application_replaced.html</a>
+					</li>
+				</ul>
+			</div>
+			<div class="page-list__section">
+				<div class="page-list__section-heading">Create application</div>
+				<ul class="page-list" style="list-style: numeric; display: inline-block; list-style-position: inside; margin: 0; padding: 0;">
+					<li style="margin-bottom: 20px;">
+						<a href="create-application.html" style="color: black; text-decoration: none;">create-application.html</a>
+					</li>
+					<li style="margin-bottom: 20px;">
+						<a href="create-application_step2.html" style="color: black; text-decoration: none;">create-application_step2.html</a>
+					</li>
+					<li style="margin-bottom: 20px;">
+						<a href="create-application_step3.html" style="color: black; text-decoration: none;">create-application_step3.html</a>
+					</li>
+					<li style="margin-bottom: 20px;">
+						<a href="create-application_step4.html" style="color: black; text-decoration: none;">create-application_step4.html</a>
+					</li>
+				</ul>
+			</div>
+		</div>
 	</body>
 </html>

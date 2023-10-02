@@ -1,0 +1,10 @@
+.application-top {
+	padding-bottom: 11px;
+	&__heading {
+		display: flex;
+		align-items: center;
+		gap: 45px;
+		flex-wrap: wrap;
+		padding-bottom: 13px;
+	}
+}

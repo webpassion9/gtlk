@@ -1,0 +1,19 @@
+.details-table {
+	font-size: 16px;
+	line-height: 18px;
+	max-width: 840px;
+	th {
+		padding: 10px 0;
+		color: var(--color-gray2);
+		text-decoration: underline;
+		font-weight: 400;
+		text-align: left;
+	}
+	td {
+		padding: 10px 16px;
+		&:first-child {
+			color: var(--color-gray2);
+			padding-left: 0;
+		}
+	}
+}

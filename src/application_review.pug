@@ -1,0 +1,215 @@
+include html/mixins
+
+doctype html
+block head
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no")
+		meta(name="format-detection" content="telephone=no")
+
+		link(rel="stylesheet", href="css/style.min.css")
+
+		title Title
+
+	body
+		.wrapper.wrapper-main
+
+			header.header-main
+				.container
+					a(href="#")
+						img(src="img/logo-GTLK_dark.png", width="166" height="52" alt="")
+					ul.header-menu
+						li
+							a(href="#") Компания
+						li
+							a(href="#") Деятельность
+						li
+							a(href="#") Клиентам
+						li
+							a(href="#") Закупки
+						li
+							a(href="#") Инвесторам
+						li
+							a(href="#") Устойчивое развитие
+						li
+							a(href="#") Медиа
+					form.header-search
+						input(type="text").header-search__input
+						.header-search__icon
+							+sprite("icon-loop")
+					.header-btns
+						a(href="#").btn.header-btns__item
+							+sprite("icon-bell")
+						a(href="#").btn.header-btns__item
+							+sprite("icon-user")
+
+						
+			.main-row
+
+				aside.sidebar
+					.sidebar__inner
+						.sidebar__section
+							ul.sidebar__nav
+								li.sidebar__nav-item.current
+									a(href="#").sidebar__nav-item-btn
+										.sidebar__nav-item-icon
+											+sprite("icon-file-tray")
+										.sidebar__nav-item-text Заявки
+								li.sidebar__nav-item
+									a(href="#").sidebar__nav-item-btn
+										.sidebar__nav-item-icon
+											+sprite("icon-newspaper")
+										.sidebar__nav-item-text Договоры
+								li.sidebar__nav-item
+									a(href="#").sidebar__nav-item-btn
+										.sidebar__nav-item-icon
+											+sprite("icon-doc")
+										.sidebar__nav-item-text Обращения НМЦ
+						.sidebar__section.sidebar__section--info
+							ul.sidebar__nav
+								li.sidebar__nav-item
+									a(href="#").sidebar__nav-item-btn
+										.sidebar__nav-item-icon
+											+sprite("icon-book")
+										.sidebar__nav-item-text Справка
+						.sidebar__section
+							.manager
+								.manager__ava
+									img(src="img/avatar-manager.png", alt="")
+								.manager__name Менеджер Иванова А.А.
+								a(href="#").btn.manager__btn Связаться
+						.sidebar__section
+							a(href="#").support
+								.support__icon
+									+sprite("icon-chat")
+								.support__heading Служба поддержки
+
+				main.main
+					.content
+						.content-inner.application-content
+							.application-content__main
+								.go-back
+									a(href="#") < Назад в мои заявки
+								.application-top
+									.application-top__heading
+										.heading-base Заявка 123-ЗЛ-ОК от 12.07.2023
+									div Заявка на лизинг транспортного средства
+								.application-main
+									ul.tabs
+										li
+											a(href="#") Основная информация
+										li
+											a(href="#") Документы (готовы на 75%)
+										li.current
+											a(href="#") Связанные заявки
+									
+									div
+										ul.applications-list
+											li.applications-list__item
+												a(href="#").applications-list__item-link
+													.applications-list__item-icon
+														+sprite("icon-notes")
+													.applications-list__item-main
+														.applications-list__item-heading Заявка 123-ЗЛ-ОК/3 (создана 25.06.2023)
+													.applications-list__item-tooltip Заявка активна
+												
+												ul.applications-list.applications-list--nested
+													li
+														a(href="#").applications-list__item-link
+															.applications-list__item-icon
+																+sprite("icon-notes")
+															.applications-list__item-main
+																.applications-list__item-heading Заявка 123-ЗЛ-ОК/2
+																.applications-list__item-info (создана 05.06.2023, заменена 25.06.2023)
+															.applications-list__item-tooltip Заявка активна
+													li
+														a(href="#").applications-list__item-link
+															.applications-list__item-icon
+																+sprite("icon-notes")
+															.applications-list__item-main
+																.applications-list__item-heading Заявка 123-ЗЛ-ОК/2
+																.applications-list__item-info (создана 05.06.2023, заменена 25.06.2023)
+															.applications-list__item-tooltip Заявка активна
+
+							.application-content__side
+								.application-content__side-section.application-content__side-section--first
+									.d-flex.justify-content-center
+										.application-status.application-status--review На рассмотрении
+									ul.application-steps
+										li.application-steps__item Черновик
+										li.application-steps__item Зарегистрирована
+										li.application-steps__item.current На рассмотрении
+										li.application-steps__item Завершена
+								.application-content__side-section
+									.heading-base Комментарии и замечания
+									.notifications-wrapper
+										.notification
+											.notification__inner
+												.notification__icon
+													+sprite("icon-chat_stroke")
+												.notification__content
+													.notification__content-top
+														.notification__heading Новый комментарий по сделке 123-ЗЛ-ОК
+														a(href="#").btn.notification__btn-more
+															+sprite("icon-more-alt_vertical")
+													.notification__desc
+														p Предварительные выводы неутешительны: повышение уровня гражданского сознания предопределяет высокую востребованность инновационных методов управления процессами.
+													.notification__bar
+														a(href="#").notification__bar-link.link-base Смотреть
+														.notification__bar-date Сегодня в 14:32
+												.notification__indicator.notification__indicator--is-new
+										.notification
+											.notification__inner
+												.notification__icon
+													+sprite("icon-chat_stroke")
+												.notification__content
+													.notification__content-top
+														.notification__heading Новый комментарий по сделке 123-ЗЛ-ОК
+														a(href="#").btn.notification__btn-more
+															+sprite("icon-more-alt_vertical")
+													.notification__desc
+														p текст уведомления
+													.notification__bar
+														.notification__bar-date Сегодня в 14:32
+												.notification__indicator.notification__indicator--is-new
+										.notification.notification--is-important
+											.notification__inner
+												.notification__icon
+													+sprite("icon-alert")
+												.notification__content
+													.notification__content-top
+														.notification__heading Необходимо обновить документы
+														a(href="#").btn.notification__btn-more
+															+sprite("icon-more-alt_vertical")
+													.notification__desc
+														p Предварительные выводы неутешительны: повышение уровня гражданского сознания предопределяет высокую востребованность инновационных методов управления процессами.
+													.notification__bar
+														a(href="#").notification__bar-link.link-base Перейти к обновлению
+														.notification__bar-date Вчера в 15:00
+												.notification__indicator.notification__indicator--is-read
+								
+					footer.footer
+						.container
+							.footer__section.d-flex.justify-content-end
+								ul.footer__menu
+									li
+										a(href="#") О нас
+									li
+										a(href="#") Реквизиты
+									li
+										a(href="#") Политика в отношении обработки персональных данных в АО “ГТЛК”
+							hr
+							.footer__section.d-flex.justify-content-between.align-items-center
+								.footer__copyright © 2023 АО ГТЛК
+								ul.footer__menu
+									li
+										a(href="tel:88002001299") 8-800-200-12-99
+									li
+										a(href="mailto:gtlk@gtlk.ru") gtlk@gtlk.ru
+									li
+										a(href="#") 125284, г. Москва, Ленинградский проспект д. 31 а, стр. 1
+			
+		include html/modals
+
+		script(src="js/app.min.js")

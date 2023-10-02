@@ -8,8 +8,8 @@ html, body {
     scroll-behavior: smooth;
 }
 
-body {
-    font: 400 18px/24px $fontBase;
+body {  
+    font: 400 16px/20px $fontBase;
     -webkit-font-smoothing: antialiased;
     -webkit-tap-highlight-color: transparent;
 }
@@ -22,8 +22,8 @@ body {
     width: 100%;
     min-width: 320px;
 
-    // max-width: 1920px;
-    // margin: 0 auto;
+    max-width: 1920px;
+    margin: 0 auto;
 
     background: var(--color-white);
     color: var(--color-black);

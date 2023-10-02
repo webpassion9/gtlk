@@ -1,0 +1,32 @@
+.application-content {
+	display: flex;
+	&__main {
+		flex-grow: 1;
+		padding-right: 115px;
+	}
+	&__side {
+		width: 413px;
+		padding-right: 35px;
+		&-section {
+			padding-top: 27px;
+			padding-bottom: 30px;
+			.heading-base {
+				margin-bottom: 35px;
+			}
+			&:not(:last-child) {
+				border-bottom: 1px solid #BEBEBE;
+			}
+			&:last-child {
+				padding-bottom: 0;
+			}
+
+			&--first {
+				padding-top: 70px;
+				padding-bottom: 65px;
+			}
+			&--actions {
+				min-height: 460px;
+			}
+		}
+	}
+}

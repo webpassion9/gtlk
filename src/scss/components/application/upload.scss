@@ -1,0 +1,14 @@
+.upload {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	&__info {
+		color: #BBBBBB;
+		font-size: 12px;
+		line-height: 16px;
+	}
+	&.disabled {
+		opacity: .3;
+		pointer-events: none;
+	}
+}

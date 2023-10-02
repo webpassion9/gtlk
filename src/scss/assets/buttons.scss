@@ -120,7 +120,62 @@
 		}
 	}
 
+	&-nav {
+		height: 57px;
+		min-width: 296px;
+		border-radius: 10px;
+		font-size: 20px;
+		line-height: 1;
+		font-family: $fontBase;
+		text-transform: uppercase;
+		&--cancel {
+			background: var(--color-blue);
+			color: var(--color-white);
+			&:hover {
+				background: #033177;
+			}
+		}
+		&--annul {
+			color: var(--color-white);
+			background: #E74C3C;
+			&:hover {
+				background: #d03828;
 
+			}
+		}
+		&--back {
+			border: 1px solid var(--color-green);
+			color: var(--color-green);
+		}
+		&--continue {
+			background: var(--color-green);
+			color: var(--color-white);
+			&:hover {
+				background: #117944;
+			}
+		}
+		&--save {
+			background: #243F94;
+			color: var(--color-white);
+		}
+	}
+
+		&-action {
+			font-size: 12px;
+			line-height: 1;
+			gap: 6px;
+			color: var(--color-blue-base);
+		}
+
+		&-upload {
+			gap: 8px;
+			font-size: 14px;
+			line-height: 18px;
+			color: var(--color-blue-base);
+			&__icon {
+				line-height: 0;
+			}
+		}
 
 
 

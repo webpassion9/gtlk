@@ -13,3 +13,22 @@
 	.modal__btns
 		a(href="#").btn.btn-confirm.btn-confirm--positive Да
 		a(href="#").btn.btn-confirm.btn-confirm--negative Нет
+
+
+.modal-actions.modal-actions--annul#modal-annul
+	.modal-actions__heading Аннулировать заявку
+	.modal-actions__text
+		p При аннулировании заявки вы не сможете ее восстановить или заменить. Пожалуйста, убедитесь, что вы действительно хотите аннулировать заявку.
+	.modal-actions__btns
+		a(data-fancybox-close).btn.btn-nav.btn-nav--cancel Отменить
+		a(href="#").btn.btn-nav.btn-nav--annul Аннулировать
+
+.modal-actions.modal-actions--new-version#modal-new-version
+	.modal-actions__heading Создать новую версию заявки
+	p При создании новой версии текущая отправленная заявка аннулируется и её статус изменится на «Заменена». Данные заявки скопируются в новую заявку. После заполнения заявки потребуется заново отправить ее на рассмотрение.
+	form
+		div
+			textarea(placeholder="Укажите причину замены").input-base.input-base--textarea.input-base--replace-info
+	.modal-actions__btns
+		a(data-fancybox-close).btn.btn-nav.btn-nav--cancel Отменить
+		a(href="#").btn.btn-nav.btn-nav--continue Продолжить

@@ -1,0 +1,183 @@
+include html/mixins
+
+doctype html
+block head
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no")
+		meta(name="format-detection" content="telephone=no")
+
+		link(rel="stylesheet", href="css/style.min.css")
+
+		title Title
+
+	body
+		.wrapper.wrapper-main
+
+			header.header-main
+				.container
+					a(href="#")
+						img(src="img/logo-GTLK_dark.png", width="166" height="52" alt="")
+					ul.header-menu
+						li
+							a(href="#") Компания
+						li
+							a(href="#") Деятельность
+						li
+							a(href="#") Клиентам
+						li
+							a(href="#") Закупки
+						li
+							a(href="#") Инвесторам
+						li
+							a(href="#") Устойчивое развитие
+						li
+							a(href="#") Медиа
+					form.header-search
+						input(type="text").header-search__input
+						.header-search__icon
+							+sprite("icon-loop")
+					.header-btns
+						a(href="#").btn.header-btns__item
+							+sprite("icon-bell")
+						a(href="#").btn.header-btns__item
+							+sprite("icon-user")
+
+						
+			.main-row
+
+				aside.sidebar
+					.sidebar__inner
+						.sidebar__section
+							ul.sidebar__nav
+								li.sidebar__nav-item.current
+									a(href="#").sidebar__nav-item-btn
+										.sidebar__nav-item-icon
+											+sprite("icon-file-tray")
+										.sidebar__nav-item-text Заявки
+								li.sidebar__nav-item
+									a(href="#").sidebar__nav-item-btn
+										.sidebar__nav-item-icon
+											+sprite("icon-newspaper")
+										.sidebar__nav-item-text Договоры
+								li.sidebar__nav-item
+									a(href="#").sidebar__nav-item-btn
+										.sidebar__nav-item-icon
+											+sprite("icon-doc")
+										.sidebar__nav-item-text Обращения НМЦ
+						.sidebar__section.sidebar__section--info
+							ul.sidebar__nav
+								li.sidebar__nav-item
+									a(href="#").sidebar__nav-item-btn
+										.sidebar__nav-item-icon
+											+sprite("icon-book")
+										.sidebar__nav-item-text Справка
+						.sidebar__section
+							.manager
+								.manager__ava
+									img(src="img/avatar-manager.png", alt="")
+								.manager__name Менеджер Иванова А.А.
+								a(href="#").btn.manager__btn Связаться
+						.sidebar__section
+							a(href="#").support
+								.support__icon
+									+sprite("icon-chat")
+								.support__heading Служба поддержки
+
+				main.main
+					.content
+						.content-inner.create-application
+							.go-back
+								a(href="#") < Назад в мои заявки
+							.application-top
+								.application-top__heading
+									.heading-base.heading-base--large Новая заявка
+							ul.form-steps
+								li.form-steps__item.active
+									.form-steps__item-text Заявитель
+								li.form-steps__item
+									.form-steps__item-text Контактное лицо по сделке
+								li.form-steps__item
+									.form-steps__item-text Руководитель организации
+								li.form-steps__item
+									.form-steps__item-text Предмет лизинга/аренды
+								li.form-steps__item
+									.form-steps__item-text Условия лизинга/аренды
+								li.form-steps__item
+									.form-steps__item-text Дополнительные условия
+								li.form-steps__item
+									.form-steps__item-text Загрузить документы
+							.create-application-form
+								.create-application-form__row
+									.create-application-form__row-heading 
+										.field-heading Полное наименование организации
+											span.field-heading__require *
+									.create-application-form__row-content
+										textarea.input-base.input-base--textarea
+								.create-application-form__row
+									.create-application-form__row-heading 
+										.field-heading Фактический адрес
+											span.field-heading__require *
+									.create-application-form__row-content
+										textarea.input-base.input-base--textarea
+								.create-application-form__row
+									.create-application-form__row-heading 
+										.field-heading Телефон
+											span.field-heading__require *
+									.create-application-form__row-content
+										input(type="text").input-base
+								.create-application-form__row
+									.create-application-form__row-heading 
+										.field-heading E-mail
+											span.field-heading__require *
+									.create-application-form__row-content
+										input(type="email").input-base
+								.create-application-form__row
+									.create-application-form__row-heading 
+										.field-heading Факс
+											span.field-heading__require *
+									.create-application-form__row-content
+										input(type="text").input-base
+								.create-application-form__row
+									.create-application-form__row-heading 
+										.field-heading ИНН
+											span.field-heading__require *
+									.create-application-form__row-content
+										input(type="text").input-base
+								.create-application-form__row
+									.create-application-form__row-heading 
+										.field-heading КПП
+											span.field-heading__require *
+									.create-application-form__row-content
+										input(type="text").input-base
+							.create-application__nav
+								a(href="#").btn.btn-nav.btn-nav--back Назад
+								a(href="#").btn.btn-nav.btn-nav--continue Продолжить
+								a(href="#").btn.btn-nav.btn-nav--save Сохранить
+
+
+					footer.footer
+						.container
+							.footer__section.d-flex.justify-content-end
+								ul.footer__menu
+									li
+										a(href="#") О нас
+									li
+										a(href="#") Реквизиты
+									li
+										a(href="#") Политика в отношении обработки персональных данных в АО “ГТЛК”
+							hr
+							.footer__section.d-flex.justify-content-between.align-items-center
+								.footer__copyright © 2023 АО ГТЛК
+								ul.footer__menu
+									li
+										a(href="tel:88002001299") 8-800-200-12-99
+									li
+										a(href="mailto:gtlk@gtlk.ru") gtlk@gtlk.ru
+									li
+										a(href="#") 125284, г. Москва, Ленинградский проспект д. 31 а, стр. 1
+			
+		include html/modals
+
+		script(src="js/app.min.js")

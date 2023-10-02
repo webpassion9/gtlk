@@ -1,0 +1,29 @@
+.application-docs {
+	&__head {
+		padding-bottom: 30px;
+	}
+	&__top {
+		display: flex;
+		gap: 20px;
+		align-items: center;
+	}
+
+	&__section {
+		&:not(:last-child) {
+			padding-bottom: 40px;
+		}
+		&-top {
+			cursor: pointer;
+			display: inline-flex;
+			align-items: center;
+			gap: 10px;
+			padding-bottom: 10px;
+		}
+		&-heading {
+			font-weight: 700;
+			font-size: 18px;
+			line-height: 22px;
+			color: rgba(0, 0, 0, 0.8);
+		}
+	}
+}

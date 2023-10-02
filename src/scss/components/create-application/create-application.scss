@@ -1,0 +1,10 @@
+.create-application {
+	.go-back {
+		padding-bottom: 15px;
+	}
+	&__nav {
+		padding-top: 43px;
+		display: flex;
+		gap: 30px;
+	}
+}

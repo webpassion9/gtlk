@@ -35,3 +35,9 @@ initializeTooltip();
 import { initializeFancybox } from './modules/common/index.js';
 
 initializeFancybox();
+
+//
+
+import { inputFillCheck } from './modules/create-application/index.js';
+
+inputFillCheck();
