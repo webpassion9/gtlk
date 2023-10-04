@@ -154,7 +154,7 @@
 									<li class="form-steps__item active">
 										<div class="form-steps__item-text">Предмет лизинга/аренды</div>
 									</li>
-									<li class="form-steps__item active">
+									<li class="form-steps__item">
 										<div class="form-steps__item-text">Условия лизинга/аренды</div>
 									</li>
 									<li class="form-steps__item">
@@ -166,19 +166,27 @@
 								</ul>
 							</div>
 							<div class="form-application__main form-application__main--step4">
-								<div class="form-application__row-items form-application__row-items--gap-medium">
-									<div class="form-application__row">
-										<div class="heading-base heading-base--medium">Порядок и сроки оплаты поставщику</div>
+								<div class="form-application__row-items form-application__row-items--gap-small">
+									<div class="form-application__row form-application__row--check">
+										<label class="checkbox-base">
+											<input type="checkbox" checked hidden>
+											<span class="checkbox-base__icon">
+												<svg class="icon-check">
+													<use xlink:href="img/icons/icons.svg#icon-check"></use>
+												</svg>
+											</span>
+											<span class="checkbox-base__text">Заявка на аренду</span>
+										</label>
 									</div>
 									<div class="form-application__row">
-										<div class="form-application__row-heading form-application__row-heading--width-small">
-											<div class="field-heading">Наименование платежа
+										<div class="form-application__row-heading form-application__row-heading--width-normal">
+											<div class="field-heading">Вид имущества
 												<span class="field-heading__require">*</span>
 											</div>
 										</div>
-										<div class="form-application__row-content form-application__row-content--width-medium">
-											<div class="select">
-												<input class="input-base input-base--select select__input" type="text" placeholder="Выберите из списка">
+										<div class="form-application__row-content">
+											<div class="select select--width-base">
+												<input class="input-base input-base--select select__input input-base--height-small" type="text" placeholder="Выберите из списка">
 												<div class="select__icon">
 													<svg class="icon-chevron-up">
 														<use xlink:href="img/icons/icons.svg#icon-chevron-up"></use>
@@ -186,175 +194,192 @@
 												</div>
 												<ul class="select__list select__list--type-of-property">
 													<li class="select__list-item">
-														<div class="select__list-item-main">Аванс</div>
+														<div class="select__list-item-main">Авиатранспорт</div>
 													</li>
 													<li class="select__list-item">
-														<div class="select__list-item-main">Полная оплата</div>
+														<div class="select__list-item-main">Автотранспорт</div>
 													</li>
 													<li class="select__list-item">
-														<div class="select__list-item-main">Постоплата</div>
+														<div class="select__list-item-main">Водный транспорт</div>
+													</li>
+													<li class="select__list-item">
+														<div class="select__list-item-main">Дорожно-строительная техника</div>
+													</li>
+													<li class="select__list-item">
+														<div class="select__list-item-main">Железнодорожный транспорт</div>
+													</li>
+													<li class="select__list-item">
+														<div class="select__list-item-main">Недвижимость</div>
+													</li>
+													<li class="select__list-item">
+														<div class="select__list-item-main">Оборудование</div>
+													</li>
+													<li class="select__list-item">
+														<div class="select__list-item-main">С/х техника</div>
+													</li>
+													<li class="select__list-item" data-target="type-other">
+														<div class="select__list-item-main">Прочее</div>
 													</li>
 												</ul>
 											</div>
 										</div>
 									</div>
-									<div class="form-application__row">
-										<div class="form-application__row-heading form-application__row-heading--width-small">
-											<div class="field-heading">Размер аванса
-												<span class="field-heading__require">*</span>
-											</div>
-										</div>
-										<div class="form-application__row-content form-application__row-content--width-medium">
-											<div class="row-payment-input">
-												<div class="row-payment-input__col-select">
-													<div class="select">
-														<input class="input-base input-base--select select__input" type="text" placeholder="Выберите из списка">
-														<div class="select__icon">
-															<svg class="icon-chevron-up">
-																<use xlink:href="img/icons/icons.svg#icon-chevron-up"></use>
-															</svg>
-														</div>
-														<ul class="select__list">
-															<li class="select__list-item">
-																<div class="select__list-item-main">Указать % аванса</div>
-															</li>
-															<li class="select__list-item">
-																<div class="select__list-item-main">Ввести сумму</div>
-															</li>
-														</ul>
-													</div>
-												</div>
-												<div class="row-payment-input__col-input">
-													<input class="input-base" type="text" placeholder="Укажите значение">
-												</div>
-											</div>
+									<div class="form-application__row hidden" data-item="type-other">
+										<div class="form-application__row-heading form-application__row-heading--width-normal"></div>
+										<div class="form-application__row-content">
+											<input class="input-base input-base--width-base input-base--height-small" type="text" placeholder="Введите вид имущества">
 										</div>
 									</div>
 									<div class="form-application__row">
-										<div class="form-application__row-heading form-application__row-heading--width-small">
-											<div class="field-heading">Порядок и срок оплаты</div>
+										<div class="form-application__row-heading form-application__row-heading--width-normal">
+											<div class="field-heading">Ставка НДС
+												<span class="field-heading__require">*</span>
+											</div>
 										</div>
-										<div class="form-application__row-content form-application__row-content--width-medium">
-											<input class="input-base" type="text" placeholder="Укажите значение">
+										<div class="form-application__row-content">
+											<div class="select select--width-base">
+												<input class="input-base input-base--select select__input input-base--height-small" type="text" placeholder="Выберите из списка">
+												<div class="select__icon">
+													<svg class="icon-chevron-up">
+														<use xlink:href="img/icons/icons.svg#icon-chevron-up"></use>
+													</svg>
+												</div>
+												<ul class="select__list">
+													<li class="select__list-item">
+														<div class="select__list-item-main">Без НДС</div>
+													</li>
+													<li class="select__list-item">
+														<div class="select__list-item-main">0%</div>
+													</li>
+													<li class="select__list-item">
+														<div class="select__list-item-main">20%</div>
+													</li>
+												</ul>
+											</div>
 										</div>
 									</div>
 								</div>
-								<div class="form-application__row-items form-application__row-items--gap-medium">
-									<div class="form-application__row">
-										<div class="heading-base heading-base--medium">Планируемые условия договора лизинга</div>
-									</div>
-									<div class="form-application__row">
-										<div class="form-application__row-heading form-application__row-heading--width-small">
-											<div class="field-heading">График платежей
-												<span class="field-heading__require">*</span>
-											</div>
+								<div class="form-application__add-item">
+									<a class="btn btn-add-item">
+										<svg class="icon-add-circle">
+											<use xlink:href="img/icons/icons.svg#icon-add-circle"></use>
+										</svg>Добавить предмет лизинга
+									</a>
+								</div>
+								<div class="add-items-wrapper">
+									<div class="add-item">
+										<div class="add-item__heading">Предмет 1</div>
+										<div class="tooltip add-item__menu">
+											<a class="btn add-item__menu-btn tooltip__btn">
+												<svg class="icon-more-alt_vertical">
+													<use xlink:href="img/icons/icons.svg#icon-more-alt_vertical"></use>
+												</svg>
+											</a>
+											<ul class="tooltip__menu add-item__tooltip">
+												<li class="tooltip__menu-item">
+													<a class="tooltip__menu-item-link">Сбросить форму</a>
+												</li>
+												<li class="tooltip__menu-item tooltip__menu-item--cancel">
+													<a class="tooltip__menu-item-link">Удалить предмет</a>
+												</li>
+											</ul>
 										</div>
-										<div class="form-application__row-content form-application__row-content--width-medium">
-											<div class="select">
-												<input class="input-base input-base--select select__input" type="text" placeholder="Выберите из списка">
-												<div class="select__icon">
-													<svg class="icon-chevron-up">
-														<use xlink:href="img/icons/icons.svg#icon-chevron-up"></use>
-													</svg>
+										<div class="add-item__row">
+											<div class="add-item__row-section">
+												<div class="form-application__row-items form-application__row-items--gap-small">
+													<div class="form-application__row">
+														<div class="form-application__row-heading form-application__row-heading--width-base">
+															<div class="field-heading">Поставщик
+																<span class="field-heading__require">*</span>
+															</div>
+														</div>
+														<div class="form-application__row-content">
+															<div class="select">
+																<input class="input-base input-base--select input-base--height-small select__input" type="text" placeholder="Поиск по названию, ИНН">
+																<div class="select__icon">
+																	<svg class="icon-chevron-up">
+																		<use xlink:href="img/icons/icons.svg#icon-chevron-up"></use>
+																	</svg>
+																</div>
+																<ul class="select__list select__list--supplier">
+																	<li class="select__list-item">
+																		<div class="select__list-item-main">МУП "ПАТП №2"</div>
+																		<div class="select__list-item-details">ИНН 771537455874</div>
+																	</li>
+																	<li class="select__list-item">
+																		<div class="select__list-item-main">МУП "ПАТП №22"</div>
+																		<div class="select__list-item-details">ИНН 771537487477</div>
+																	</li>
+																	<li class="select__list-item">
+																		<div class="select__list-item-main">МУП "ПАТП №2223"</div>
+																		<div class="select__list-item-details">ИНН 771874537455</div>
+																	</li>
+																	<li class="select__list-item">
+																		<div class="select__list-item-main">МУП "ПАТП №2332"</div>
+																		<div class="select__list-item-details">ИНН 771537455874</div>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+													<div class="form-application__row">
+														<div class="form-application__row-heading form-application__row-heading--width-base">
+															<div class="field-heading">Название предмета аренды
+																<span class="field-heading__require">*</span>
+															</div>
+														</div>
+														<div class="form-application__row-content">
+															<input class="input-base input-base--height-small" type="text" placeholder="Укажите название">
+														</div>
+													</div>
+													<div class="form-application__row">
+														<div class="form-application__row-heading form-application__row-heading--width-base">
+															<div class="field-heading">Спецификация</div>
+														</div>
+														<div class="form-application__row-content">
+															<input class="input-base input-base--height-small" type="text" placeholder="Укажите значение">
+														</div>
+													</div>
+													<div class="form-application__row">
+														<div class="form-application__row-heading form-application__row-heading--width-base">
+															<div class="field-heading">Стоимость единицы с НДС (руб)</div>
+														</div>
+														<div class="form-application__row-content">
+															<input class="input-base input-base--height-small" type="text" placeholder="Укажите значение">
+														</div>
+													</div>
 												</div>
-												<ul class="select__list select__list--type-of-property">
-													<li class="select__list-item">
-														<div class="select__list-item-main">1</div>
-													</li>
-													<li class="select__list-item">
-														<div class="select__list-item-main">2</div>
-													</li>
-													<li class="select__list-item">
-														<div class="select__list-item-main">3</div>
-													</li>
-												</ul>
 											</div>
-										</div>
-									</div>
-									<div class="form-application__row">
-										<div class="form-application__row-heading form-application__row-heading--width-small">
-											<div class="field-heading">Срок лизинга (мес)</div>
-										</div>
-										<div class="form-application__row-content form-application__row-content--width-medium">
-											<input class="input-base" type="text" placeholder="Test">
-										</div>
-									</div>
-									<div class="form-application__row">
-										<div class="form-application__row-heading form-application__row-heading--width-small">
-											<div class="field-heading">Авансовый платеж (%)</div>
-										</div>
-										<div class="form-application__row-content form-application__row-content--width-medium">
-											<input class="input-base" type="text" placeholder="Test">
-										</div>
-									</div>
-									<div class="form-application__row">
-										<div class="form-application__row-heading form-application__row-heading--width-small">
-											<div class="field-heading">Страхователь
-												<span class="field-heading__require">*</span>
-											</div>
-										</div>
-										<div class="form-application__row-content form-application__row-content--width-medium">
-											<div class="select">
-												<input class="input-base input-base--select select__input" type="text" placeholder="Выберите из списка">
-												<div class="select__icon">
-													<svg class="icon-chevron-up">
-														<use xlink:href="img/icons/icons.svg#icon-chevron-up"></use>
-													</svg>
+											<div class="add-item__row-section">
+												<div class="form-application__row-items form-application__row-items--gap-small">
+													<div class="form-application__row">
+														<div class="form-application__row-heading form-application__row-heading--width-base">
+															<div class="field-heading">Количествр</div>
+														</div>
+														<div class="form-application__row-content">
+															<input class="input-base input-base--height-small" type="text" placeholder="Укажите значение">
+														</div>
+													</div>
+													<div class="form-application__row">
+														<div class="form-application__row-heading form-application__row-heading--width-base">
+															<div class="field-heading">Срок поставки
+																<span class="field-heading__require">*</span>
+															</div>
+														</div>
+														<div class="form-application__row-content">
+															<input class="input-base input-base--height-small" type="text" placeholder="Укажите значение">
+														</div>
+													</div>
 												</div>
-												<ul class="select__list">
-													<li class="select__list-item">
-														<div class="select__list-item-main">1</div>
-													</li>
-													<li class="select__list-item">
-														<div class="select__list-item-main">2</div>
-													</li>
-													<li class="select__list-item">
-														<div class="select__list-item-main">3</div>
-													</li>
-												</ul>
 											</div>
 										</div>
 									</div>
+								</div>
+								<div class="form-application__row-items form-application__row-items--padding-top-large">
 									<div class="form-application__row">
-										<div class="form-application__row-heading form-application__row-heading--width-small">
-											<div class="field-heading">Балансодержатель
-												<span class="field-heading__require">*</span>
-											</div>
-										</div>
-										<div class="form-application__row-content form-application__row-content--width-medium">
-											<div class="select">
-												<input class="input-base input-base--select select__input" type="text" placeholder="Выберите из списка">
-												<div class="select__icon">
-													<svg class="icon-chevron-up">
-														<use xlink:href="img/icons/icons.svg#icon-chevron-up"></use>
-													</svg>
-												</div>
-												<ul class="select__list">
-													<li class="select__list-item">
-														<div class="select__list-item-main">1</div>
-													</li>
-													<li class="select__list-item">
-														<div class="select__list-item-main">2</div>
-													</li>
-													<li class="select__list-item">
-														<div class="select__list-item-main">3</div>
-													</li>
-												</ul>
-											</div>
-										</div>
-									</div>
-									<div class="form-application__row">
-										<div class="form-application__row-heading form-application__row-heading--width-small">
-											<div class="field-heading">Госпрограмма
-												<span class="field-heading__require">*</span>
-											</div>
-										</div>
-										<div class="form-application__row-content form-application__row-content--width-medium">
-											<label class="switcher">
-												<input type="checkbox">
-												<div class="switcher__trigger"></div>
-												<div class="switcher__back"></div>
-											</label>
+										<div class="total-sum total-sum--large">
+											<span class="total-sum__text">Итоговая стоимость всего иммущества с НДС: </span>
+											<span class="total-sum__value">36 420 000,00 ₽</span>
 										</div>
 									</div>
 									<div class="form-application__row">

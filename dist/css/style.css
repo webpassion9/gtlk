@@ -1354,6 +1354,39 @@ body {
   height: 32px;
 }
 
+.btn-app {
+  background: #0060CC;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: Supermolot, Arial, sans-serif;
+  color: var(--color-white);
+  height: 54px;
+  padding: 5px 15px;
+  min-width: 279px;
+}
+
+.btn-app:hover {
+  background: #0054b4;
+}
+
+.btn-search {
+  width: 141px;
+  height: 38px;
+  border: 1px solid #0085FF;
+  border-radius: 10px;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #0085FF;
+}
+
+.btn-search:hover {
+  background: #0085FF;
+  color: var(--color-white);
+}
+
 .btn--fullwidth {
   width: 100%;
 }
@@ -1624,6 +1657,10 @@ video {
   width: 15px;
   height: 9px;
   fill: #8C8C8C;
+}
+
+.icon-done {
+  fill: #67CE16;
 }
 
 /* Forms */
@@ -2733,22 +2770,6 @@ body .fancybox__content :focus:not(.carousel__button.is-close) {
   width: 20px;
   height: 20px;
   fill: #8C8C8C;
-}
-
-.application-form__btn {
-  width: 141px;
-  height: 38px;
-  border: 1px solid #0085FF;
-  border-radius: 10px;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  color: #0085FF;
-}
-
-.application-form__btn:hover {
-  background: #0085FF;
-  color: var(--color-white);
 }
 
 .application-table {
@@ -4003,6 +4024,7 @@ body .fancybox__content :focus:not(.carousel__button.is-close) {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  min-height: 34px;
 }
 
 .form-application__row.hidden {
@@ -4460,6 +4482,39 @@ body .fancybox__content :focus:not(.carousel__button.is-close) {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.modal-app {
+  width: 100%;
+  max-width: 910px;
+  background: var(--color-white);
+  border-radius: 24px;
+  gap: 36px;
+  display: none;
+}
+
+.modal-app.fancybox__content {
+  padding: 75px 90px 60px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.modal-app .carousel__button.is-close {
+  display: none;
+}
+
+.modal-app__icon .icon-done {
+  width: 68px;
+  height: 68px;
+}
+
+.modal-app__heading {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  color: rgba(28, 28, 28, 0.8);
+  padding-bottom: 10px;
 }
 
 @media (min-width: 320px) {

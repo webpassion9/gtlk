@@ -1,0 +1,50 @@
+include html/mixins
+
+doctype html
+block head
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no")
+		meta(name="format-detection" content="telephone=no")
+
+		link(rel="stylesheet", href="css/style.min.css")
+
+		title Title
+
+	body
+		.wrapper.wrapper-main
+
+				main.main
+					.content-inner
+						div(style="display:flex;flex-direction:column;align-items:flex-start;gap:10px;")
+							a(href="#").btn.btn-submit.btn-submit--size-normal Test
+							a(href="#").btn.btn-submit.btn-submit--size-large Test
+							a(href="#").btn.btn-submit.btn-submit--size-normal.btn-submit--cookies Test
+							a(href="#").btn.btn-base Test
+							a(href="#").btn.btn-filling.btn-filling--positive Test
+							a(href="#").btn.btn-filling.btn-filling--negative Test
+							a(href="#").btn.btn-confirm.btn-confirm--positive Test
+							a(href="#").btn.btn-confirm.btn-confirm--negative Test
+							a(href="#").btn.btn-nav.btn-nav--cancel Test
+							a(href="#").btn.btn-nav.btn-nav--annul Test
+							a(href="#").btn.btn-nav.btn-nav--back Test
+							a(href="#").btn.btn-nav.btn-nav--continue Test
+							a(href="#").btn.btn-nav.btn-nav--save Test
+							a(href="#").btn.btn-nav.btn-nav--back-cancel Test
+							a(href="#").btn.btn-nav.btn-nav--send Test
+							a(href="#").btn.btn-nav.btn-nav--waiting Test
+							a(href="#").btn.btn-nav.btn-nav--continue.disabled Test
+							a(href="#").btn.btn-app Test
+							a(href="#").btn.btn-search Test
+							label.auth-checkbox
+								input(type="checkbox" hidden)
+								span.auth-checkbox__icon
+									+sprite("icon-check")
+								span.auth-checkbox__text Запомнить меня на этом компьютере
+
+
+
+
+
+		script(src="js/app.min.js")

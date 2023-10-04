@@ -210,6 +210,38 @@
 		}
 	}
 
+	&-app {
+		background: #0060CC;
+		border-radius: 8px;
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 24px;
+		font-family: $fontBase;
+		color: var(--color-white);
+		height: 54px;
+		padding: 5px 15px;
+		min-width: 279px;
+
+		&:hover {
+			background: #0054b4;
+		}
+	}
+
+	&-search {
+		width: 141px;
+		height: 38px;
+		border: 1px solid #0085FF;
+		border-radius: 10px;
+		font-size: 12px;
+		line-height: 15px;
+		text-transform: uppercase;
+		color: #0085FF;
+		&:hover {
+			background: #0085FF;
+			color: var(--color-white);
+		}
+	}
+
 
 
 

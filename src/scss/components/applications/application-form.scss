@@ -40,18 +40,4 @@
 			}
 		}
 	}
-	&__btn {
-		width: 141px;
-		height: 38px;
-		border: 1px solid #0085FF;
-		border-radius: 10px;
-		font-size: 12px;
-		line-height: 15px;
-		text-transform: uppercase;
-		color: #0085FF;
-		&:hover {
-			background: #0085FF;
-			color: var(--color-white);
-		}
-	}
 }

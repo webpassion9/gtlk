@@ -96,21 +96,56 @@ html(lang="ru")
 										.heading-base.heading-base--large Подписать и отправить
 									.application-top__note Вы можете ещё раз посмотреть все заполненные данные перед отправкой
 								.application-main
-									.application-main__section
-										.application-main__section
-											.heading-base.heading-base--application Заявитель
-											table.details-table
-												tr
-													td Полное наименование организации
-													td МУНИЦИПАЛЬНОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ Г.КАЗАНИ "ПАССАЖИРСКОЕ ABTOTPAHCПOPTHOE ПРЕДПРИЯТИЕ Хв2"
-												tr
-													td ИНН
-													td 1660005127
-												tr
-													td КПП
-													td 166001001
+									.application-main__row.application-main__section
+										.application-main__row-col-first
+											.application-main__section
+												.heading-base.heading-base--application Заявитель
+												table.details-table
+													tr
+														td Полное наименование организации
+														td МУНИЦИПАЛЬНОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ Г.КАЗАНИ "ПАССАЖИРСКОЕ ABTOTPAHCПOPTHOE ПРЕДПРИЯТИЕ Хв2"
+													tr
+														td Телефон
+														td +7 (843) 262-06-76
+													tr
+														td E-mail
+														td kpatp-2@yandex.ru
+													tr
+														td Факс
+														td +7 (843) 262-06-72
+													tr
+														td ИНН
+														td 1660005127
+													tr
+														td КПП
+														td 166001001
+										.application-main__row-col-sec
+											.application-main__section
+												.heading-base.heading-base--application Контактное лицо по сделке
+												table.details-table
+													tr
+														td ФИО
+														td Абдулхаков Артур Маратович
+													tr
+														td Должность
+														td Заместитель директора
+													tr
+														td Телефон
+														td +7 (843) 262-06-76
+													tr
+														td E-mail
+														td kpatp-2@yandex.ru
+											.application-main__section
+												.heading-base.heading-base--application Руководитель организации
+												table.details-table
+													tr
+														td ФИО
+														td Абдулхаков Артур Маратович
+													tr
+														td Должность
+														td Заместитель директора
 											
-									.application-main__section.application-main__section--item.application-main__section--width-medium
+									.application-main__section.application-main__section--item
 										.heading-base.heading-base--application Предмет лизинга/аренды
 										table.details-table
 											tr
@@ -174,46 +209,62 @@ html(lang="ru")
 													td итого
 													td 70 850 000,00 ₽
 									
-									.application-main__section
-										.heading-base.heading-base--application Условия лизинга/аренды
-										table.details-table
-											tbody
-												tr
-													th(colspan="2") Порядок и сроки оплаты поставщику
-												tr
-													td Наименование платежа
-													td Аванс
-												tr
-													td Размер аванса
-													td 30%
-												tr
-													td Порядок и срок оплаты
-													td ...
-										table.details-table
-											tbody
-												tr
-													th(colspan="2") Планируемые условия договора лизинга
-												tr
-													td График платежей
-													td Аннуитет (равными частями)
-												tr
-													td Срок лизинга, мес.
-													td 85
-												tr
-													td Авансовый платёж, %
-													td 0
-												tr
-													td Страхователь
-													td Арендодатор
-												tr
-													td Балансодержатель
-													td Арендодатор
-												tr
-													td График платежей
-													td Аннуитет (равными частями)
-												tr
-													td Срок лизинга
-													td 85 месяцев
+									.application-main__row.application-main__section
+										.application-main__row-col-first
+											.application-main__section
+												.heading-base.heading-base--application Условия лизинга/аренды
+												table.details-table
+													tbody
+														tr
+															th(colspan="2") Порядок и сроки оплаты поставщику
+														tr
+															td Наименование платежа
+															td Аванс
+														tr
+															td Размер аванса
+															td 30%
+														tr
+															td Порядок и срок оплаты
+															td ...
+												table.details-table
+													tbody
+														tr
+															th(colspan="2") Планируемые условия договора лизинга
+														tr
+															td График платежей
+															td Аннуитет (равными частями)
+														tr
+															td Срок лизинга, мес.
+															td 85
+														tr
+															td Авансовый платёж, %
+															td 0
+														tr
+															td Страхователь
+															td Арендодатор
+														tr
+															td Балансодержатель
+															td Арендодатор
+														tr
+															td График платежей
+															td Аннуитет (равными частями)
+														tr
+															td Срок лизинга
+															td 85 месяцев
+										.application-main__row-col-sec
+											.application-main__section
+												.heading-base.heading-base--application Дополнительные условия
+												table.details-table
+													tbody
+														tr
+															td Монтажные работы
+															td —
+														tr
+															td Пусконаладочные работы
+															td —
+														tr
+															td Другое
+															td —
 									.application-main__section
 										.heading-base.heading-base--application Документы
 										ul.docs-list
@@ -249,8 +300,15 @@ html(lang="ru")
 												span.checkbox-base__text Я даю свое согласие на обработку персональных данных и соглашаюсь с условиями политики конфиденциальности
 										.application-agreement__text Отправляя форму, вы даете согласие на обработку персональных данных, указанных вами в заявке, в соответствии с требованиями Федерального закона от 27.07.2016 г. № 152-ФЗ “О персональных данных”
 									.application-main__section.form-application__nav.form-application__nav--preview
-										a(href="#").btn.btn-nav.btn-nav--continue.disabled Заявка подписана
-										a(href="#modal-app-sent" data-fancybox).btn.btn-nav.btn-nav--continue Отправить
+										a(href="#").btn.btn-nav.btn-nav--continue Подписать
+										a(href="#").btn.btn-nav.btn-nav--continue.disabled-send Отправить
+										a(href="#").btn.btn-nav.btn-nav--save Сохранить
+										a(href="#").btn.btn-nav.btn-nav--back-cancel Отменить и вернуться назад
+									.application-main__section.form-application__nav.form-application__nav--preview
+										a(href="#").btn.btn-nav.btn-nav--waiting
+											+sprite("icon-loading")
+											| Ожидается подписание в Диадок
+										a(href="#").btn.btn-nav.btn-nav--send.disabled Отправить
 										a(href="#").btn.btn-nav.btn-nav--save Сохранить
 										a(href="#").btn.btn-nav.btn-nav--back-cancel.disabled Отменить и вернуться назад
 

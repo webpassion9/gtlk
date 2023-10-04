@@ -45,6 +45,7 @@
 	&__row {
 		display: flex;
 		align-items: center;
+		min-height: 34px;
 		&.hidden {
 			display: none;
 		}
