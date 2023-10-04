@@ -88,11 +88,11 @@ html(lang="ru")
 				main.main
 					.content
 						.content-inner
-							.create__top
-								.go-back.go-back--create
+							.form-application__top
+								.go-back.go-back--form-application
 									a(href="#") < Назад в мои заявки
 								.heading-base.heading-base--large Новая заявка
-							.create__steps
+							.form-application__steps
 								ul.form-steps
 									li.form-steps__item.active
 										.form-steps__item-text Заявитель
@@ -109,15 +109,15 @@ html(lang="ru")
 									li.form-steps__item
 										.form-steps__item-text Загрузить документы
 							
-							.create__main.create__main--step4
-								.create__row-items.create__row-items--gap-medium
-									.create__row
+							.form-application__main.form-application__main--step4
+								.form-application__row-items.form-application__row-items--gap-medium
+									.form-application__row
 										.heading-base.heading-base--medium Порядок и сроки оплаты поставщику
-									.create__row
-										.create__row-heading.create__row-heading--width-small
+									.form-application__row
+										.form-application__row-heading.form-application__row-heading--width-small
 											.field-heading Наименование платежа
 												span.field-heading__require *
-										.create__row-content.create__row-content--width-medium
+										.form-application__row-content.form-application__row-content--width-medium
 											.select
 												input(type="text" placeholder="Выберите из списка").input-base.input-base--select.select__input
 												.select__icon
@@ -129,11 +129,11 @@ html(lang="ru")
 														.select__list-item-main Полная оплата
 													li.select__list-item
 														.select__list-item-main Постоплата
-									.create__row
-										.create__row-heading.create__row-heading--width-small
+									.form-application__row
+										.form-application__row-heading.form-application__row-heading--width-small
 											.field-heading Размер аванса
 												span.field-heading__require *
-										.create__row-content.create__row-content--width-medium
+										.form-application__row-content.form-application__row-content--width-medium
 											.row-payment-input
 												.row-payment-input__col-select
 													.select
@@ -147,19 +147,19 @@ html(lang="ru")
 																.select__list-item-main Ввести сумму
 												.row-payment-input__col-input
 													input(type="text" placeholder="Укажите значение").input-base
-									.create__row
-										.create__row-heading.create__row-heading--width-small
+									.form-application__row
+										.form-application__row-heading.form-application__row-heading--width-small
 											.field-heading Порядок и срок оплаты
-										.create__row-content.create__row-content--width-medium
+										.form-application__row-content.form-application__row-content--width-medium
 											input(type="text" placeholder="Укажите значение").input-base
-								.create__row-items.create__row-items--gap-medium
-									.create__row
+								.form-application__row-items.form-application__row-items--gap-medium
+									.form-application__row
 										.heading-base.heading-base--medium Планируемые условия договора лизинга
-									.create__row
-										.create__row-heading.create__row-heading--width-small
+									.form-application__row
+										.form-application__row-heading.form-application__row-heading--width-small
 											.field-heading График платежей
 												span.field-heading__require *
-										.create__row-content.create__row-content--width-medium
+										.form-application__row-content.form-application__row-content--width-medium
 											.select
 												input(type="text" placeholder="Выберите из списка").input-base.input-base--select.select__input
 												.select__icon
@@ -171,21 +171,21 @@ html(lang="ru")
 														.select__list-item-main 2
 													li.select__list-item
 														.select__list-item-main 3
-									.create__row
-										.create__row-heading.create__row-heading--width-small
+									.form-application__row
+										.form-application__row-heading.form-application__row-heading--width-small
 											.field-heading Срок лизинга (мес)
-										.create__row-content.create__row-content--width-medium
+										.form-application__row-content.form-application__row-content--width-medium
 											input(type="text" placeholder="Test").input-base
-									.create__row
-										.create__row-heading.create__row-heading--width-small
+									.form-application__row
+										.form-application__row-heading.form-application__row-heading--width-small
 											.field-heading Авансовый платеж (%)
-										.create__row-content.create__row-content--width-medium
+										.form-application__row-content.form-application__row-content--width-medium
 											input(type="text" placeholder="Test").input-base
-									.create__row
-										.create__row-heading.create__row-heading--width-small
+									.form-application__row
+										.form-application__row-heading.form-application__row-heading--width-small
 											.field-heading Страхователь
 												span.field-heading__require *
-										.create__row-content.create__row-content--width-medium
+										.form-application__row-content.form-application__row-content--width-medium
 											.select
 												input(type="text" placeholder="Выберите из списка").input-base.input-base--select.select__input
 												.select__icon
@@ -197,11 +197,11 @@ html(lang="ru")
 														.select__list-item-main 2
 													li.select__list-item
 														.select__list-item-main 3
-									.create__row
-										.create__row-heading.create__row-heading--width-small
+									.form-application__row
+										.form-application__row-heading.form-application__row-heading--width-small
 											.field-heading Балансодержатель
 												span.field-heading__require *
-										.create__row-content.create__row-content--width-medium
+										.form-application__row-content.form-application__row-content--width-medium
 											.select
 												input(type="text" placeholder="Выберите из списка").input-base.input-base--select.select__input
 												.select__icon
@@ -213,17 +213,17 @@ html(lang="ru")
 														.select__list-item-main 2
 													li.select__list-item
 														.select__list-item-main 3
-									.create__row
-										.create__row-heading.create__row-heading--width-small
+									.form-application__row
+										.form-application__row-heading.form-application__row-heading--width-small
 											.field-heading Госпрограмма
 												span.field-heading__require *
-										.create__row-content.create__row-content--width-medium
+										.form-application__row-content.form-application__row-content--width-medium
 											label.switcher
 												input(type="checkbox")
 												.switcher__trigger
 												.switcher__back
-									.create__row
-										.create__nav
+									.form-application__row
+										.form-application__nav
 											a(href="#").btn.btn-nav.btn-nav--back Назад
 											a(href="#").btn.btn-nav.btn-nav--continue Продолжить
 											a(href="#").btn.btn-nav.btn-nav--save Сохранить
