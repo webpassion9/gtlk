@@ -1,0 +1,19 @@
+.progress-bar {
+	position: relative;
+	display: inline-flex;
+}
+
+.progress {
+	display: inline-flex;
+	align-items: center;
+	gap: 2px;
+	position: relative;
+	top: 2px;
+	&__value-text {
+		font-size: 14px;
+		line-height: 20px;
+	}
+	&--docs {
+		
+	}
+}

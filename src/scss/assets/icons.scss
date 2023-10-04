@@ -1,25 +1,25 @@
 .icon-phone {
 	width: 20px;
 	height: 20px;
+	fill: var(--color-white);
 }
 
 .icon-menu {
 	width: 44px;
 	height: 31px;
+	fill: var(--color-white);
 }
 
 .icon-eye {
 	width: 18px;
 	height: 10px;
+	fill: none;
+	stroke-width: 2px;
+	stroke: rgba(0,0,0,1);
 }
 .icon-eye-opened {
-	width: 21px;
-	height: 15px;
-}
-
-.icon-check {
-	width: 16px;
-	height: 16px;
+	width: 20px;
+	height: 14px;
 }
 
 .icon-user {
@@ -122,13 +122,13 @@
 	fill: var(--color-blue-base);
 }
 
-.icon-check2 {
+.icon-check {
 	width: 12px;
 	height: 9px;
 	fill: #67CE16;
 }
 
-.icon-chevron-down {
+.icon-chevron-up {
 	width: 15px;
 	height: 9px;
 }
@@ -144,3 +144,17 @@
 	height: 10px;
 	fill: var(--color-blue-base);
 }
+
+.icon-loading {
+	width: 21px;
+	height: 21px;
+	stroke: var(--color-white);
+}
+
+.icon-chevron-down {
+	width: 15px;
+	height: 9px;
+	fill: #8C8C8C;
+}
+
+

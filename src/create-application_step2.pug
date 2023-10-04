@@ -87,56 +87,58 @@ html(lang="ru")
 
 				main.main
 					.content
-						.content-inner.create-application
-							.go-back
-								a(href="#") < Назад в мои заявки
-							.application-top
-								.application-top__heading
-									.heading-base.heading-base--large Новая заявка
-							ul.form-steps
-								li.form-steps__item.active
-									.form-steps__item-text Заявитель
-								li.form-steps__item.active
-									.form-steps__item-text Контактное лицо по сделке
-								li.form-steps__item
-									.form-steps__item-text Руководитель организации
-								li.form-steps__item
-									.form-steps__item-text Предмет лизинга/аренды
-								li.form-steps__item
-									.form-steps__item-text Условия лизинга/аренды
-								li.form-steps__item
-									.form-steps__item-text Дополнительные условия
-								li.form-steps__item
-									.form-steps__item-text Загрузить документы
-							.create-application-form
-								.create-application-form__row
-									.create-application-form__row-heading 
-										.field-heading ФИО
-											span.field-heading__require *
-									.create-application-form__row-content
-										input(type="text").input-base
-								.create-application-form__row
-									.create-application-form__row-heading 
-										.field-heading Должность
-											span.field-heading__require *
-									.create-application-form__row-content
-										input(type="text").input-base
-								.create-application-form__row
-									.create-application-form__row-heading 
-										.field-heading Телефон
-											span.field-heading__require *
-									.create-application-form__row-content
-										input(type="text").input-base
-								.create-application-form__row
-									.create-application-form__row-heading 
-										.field-heading E-mail
-											span.field-heading__require *
-									.create-application-form__row-content
-										input(type="email").input-base
-							.create-application__nav
-								a(href="#").btn.btn-nav.btn-nav--back Назад
-								a(href="#").btn.btn-nav.btn-nav--continue Продолжить
-								a(href="#").btn.btn-nav.btn-nav--save Сохранить
+						.content-inner
+							.create__top
+								.go-back.go-back--create
+									a(href="#") < Назад в мои заявки
+								.heading-base.heading-base--large Новая заявка
+							.create__steps
+								ul.form-steps
+									li.form-steps__item.active
+										.form-steps__item-text Заявитель
+									li.form-steps__item.active
+										.form-steps__item-text Контактное лицо по сделке
+									li.form-steps__item
+										.form-steps__item-text Руководитель организации
+									li.form-steps__item
+										.form-steps__item-text Предмет лизинга/аренды
+									li.form-steps__item
+										.form-steps__item-text Условия лизинга/аренды
+									li.form-steps__item
+										.form-steps__item-text Дополнительные условия
+									li.form-steps__item
+										.form-steps__item-text Загрузить документы
+							.create__main
+								.create__row-items
+									.create__row
+										.create__row-heading.create__row-heading--width-normal
+											.field-heading ФИО
+												span.field-heading__require *
+										.create__row-content.create__row-content--width-medium
+											input(type="text").input-base
+									.create__row
+										.create__row-heading.create__row-heading--width-normal
+											.field-heading Должность
+												span.field-heading__require *
+										.create__row-content.create__row-content--width-medium
+											input(type="text").input-base
+									.create__row
+										.create__row-heading.create__row-heading--width-normal
+											.field-heading Телефон
+												span.field-heading__require *
+										.create__row-content.create__row-content--width-medium
+											input(type="text").input-base
+									.create__row
+										.create__row-heading.create__row-heading--width-normal
+											.field-heading E-mail
+												span.field-heading__require *
+										.create__row-content.create__row-content--width-medium
+											input(type="email").input-base
+									.create__row
+										.create__nav
+											a(href="#").btn.btn-nav.btn-nav--back Назад
+											a(href="#").btn.btn-nav.btn-nav--continue Продолжить
+											a(href="#").btn.btn-nav.btn-nav--save Сохранить
 
 
 					footer.footer

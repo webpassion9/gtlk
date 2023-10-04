@@ -87,120 +87,263 @@ html(lang="ru")
 
 				main.main
 					.content
-						.content-inner.create-application
-							.go-back
-								a(href="#") < Назад в мои заявки
-							.application-top
-								.application-top__heading
-									.heading-base.heading-base--large Новая заявка
-							ul.form-steps
-								li.form-steps__item.active
-									.form-steps__item-text Заявитель
-								li.form-steps__item.active
-									.form-steps__item-text Контактное лицо по сделке
-								li.form-steps__item.active
-									.form-steps__item-text Руководитель организации
-								li.form-steps__item.active
-									.form-steps__item-text Предмет лизинга/аренды
-								li.form-steps__item
-									.form-steps__item-text Условия лизинга/аренды
-								li.form-steps__item
-									.form-steps__item-text Дополнительные условия
-								li.form-steps__item
-									.form-steps__item-text Загрузить документы
-							
-							.create-application-form
-								div checkbox
-								.create-application-form__row
-									.create-application-form__row-heading 
-										.field-heading Вид имущества
-											span.field-heading__require *
-									.create-application-form__row-content
-										select
-											option option 1
-											option option 2
-								.create-application-form__row
-									.create-application-form__row-heading 
-										.field-heading Ставка НДС
-											span.field-heading__require *
-									.create-application-form__row-content
-										select
-											option option 1
-											option option 2
-								.create-application-form__row
-									.create-application-form__row-content
-										div
-											+sprite("icon-add-circle")
-											| Добавить предмет лизинга
+						.content-inner
+							.create__top
+								.go-back.go-back--create
+									a(href="#") < Назад в мои заявки
+								.heading-base.heading-base--large Новая заявка
+							.create__steps
+								ul.form-steps
+									li.form-steps__item.active
+										.form-steps__item-text Заявитель
+									li.form-steps__item.active
+										.form-steps__item-text Контактное лицо по сделке
+									li.form-steps__item.active
+										.form-steps__item-text Руководитель организации
+									li.form-steps__item.active
+										.form-steps__item-text Предмет лизинга/аренды
+									li.form-steps__item
+										.form-steps__item-text Условия лизинга/аренды
+									li.form-steps__item
+										.form-steps__item-text Дополнительные условия
+									li.form-steps__item
+										.form-steps__item-text Загрузить документы
+							.create__main.create__main--step4
+								.create__row-items.create__row-items--gap-small
+									.create__row.create__row--check
+										label.checkbox-base
+											input(type="checkbox" hidden)
+											span.checkbox-base__icon
+												+sprite("icon-check")
+											span.checkbox-base__text Заявка на аренду
+									.create__row
+										.create__row-heading.create__row-heading--width-normal
+											.field-heading Вид имущества
+												span.field-heading__require *
+										.create__row-content
+											.select.select--width-base
+												input(type="text" placeholder="Выберите из списка").input-base.input-base--select.select__input.input-base--height-small
+												.select__icon
+													+sprite("icon-chevron-up")
+												ul.select__list.select__list--type-of-property
+													li.select__list-item
+														.select__list-item-main Авиатранспорт
+													li.select__list-item
+														.select__list-item-main Автотранспорт
+													li.select__list-item
+														.select__list-item-main Водный транспорт
+													li.select__list-item
+														.select__list-item-main Дорожно-строительная техника
+													li.select__list-item
+														.select__list-item-main Железнодорожный транспорт
+													li.select__list-item
+														.select__list-item-main Недвижимость
+													li.select__list-item
+														.select__list-item-main Оборудование
+													li.select__list-item
+														.select__list-item-main С/х техника
+													li.select__list-item(data-target="type-other")
+														.select__list-item-main Прочее
+									.create__row.hidden(data-item="type-other")
+										.create__row-heading.create__row-heading--width-normal
+										.create__row-content
+												input(type="text" placeholder="Введите вид имущества").input-base.input-base--width-base.input-base--height-small
+									.create__row
+										.create__row-heading.create__row-heading--width-normal
+											.field-heading Ставка НДС
+												span.field-heading__require *
+										.create__row-content
+											.select.select--width-base
+												input(type="text" placeholder="Выберите из списка").input-base.input-base--select.select__input.input-base--height-small
+												.select__icon
+													+sprite("icon-chevron-up")
+												ul.select__list
+													li.select__list-item
+														.select__list-item-main Без НДС
+													li.select__list-item
+														.select__list-item-main 0%
+													li.select__list-item
+														.select__list-item-main 20%
+								.create__add-item
+									a.btn.btn-add-item
+										+sprite("icon-add-circle")
+										| Добавить предмет лизинга
 								
-								.add-item
-									div Предмет 1
-									div
-										+sprite("icon-more-alt_vertical")
-									.add-item__row
-										.add-item__row-section
-											.create-application-form__row
-												.create-application-form__row-heading 
-													.field-heading Поставщик
-														span.field-heading__require *
-												.create-application-form__row-content
-													input(type="text" placeholder="Поиск по названию, ИНН").input-base
-											.create-application-form__row
-												.create-application-form__row-heading 
-													.field-heading ФИО руководителя
-														span.field-heading__require *
-												.create-application-form__row-content
-													input(type="text" placeholder="Укажите ФИО").input-base
-											.create-application-form__row
-												.create-application-form__row-heading 
-													.field-heading ФИО контактного лица со стороны поставщика
-														span.field-heading__require *
-												.create-application-form__row-content
-													input(type="text" placeholder="Укажите ФИО").input-base
-											.create-application-form__row
-												.create-application-form__row-heading 
-													.field-heading Контакты
-														span.field-heading__require *
-												.create-application-form__row-content
-													input(type="text" placeholder="+7").input-base
-											.create-application-form__row
-												.create-application-form__row-heading 
-													.field-heading Название предмета лизинга
-														span.field-heading__require *
-												.create-application-form__row-content
-													input(type="text" placeholder="TEST").input-base
-										.add-item__row-section
-											.create-application-form__row
-												.create-application-form__row-heading 
-													.field-heading Спецификация
-														span.field-heading__require *
-												.create-application-form__row-content
-													input(type="text" placeholder="TEST").input-base
-											.create-application-form__row
-												.create-application-form__row-heading 
-													.field-heading Стоимость единицы с НДС
-														span.field-heading__require *
-												.create-application-form__row-content
-													input(type="text" placeholder="TEST").input-base
-											.create-application-form__row
-												.create-application-form__row-heading 
-													.field-heading Количество
-														span.field-heading__require *
-												.create-application-form__row-content
-													input(type="text" placeholder="TEST").input-base
-											.create-application-form__row
-												.create-application-form__row-heading 
-													.field-heading Срок поставки
-														span.field-heading__require *
-												.create-application-form__row-content
-													input(type="text" placeholder="Укажите значение").input-base
-											.create-application-form__row Итого: 18 210 000,00
-								div Итоговая стоимость всего иммущества с НДС: 36 420 000,00
+								.add-items-wrapper
+								
+									.add-item
+										.add-item__heading Предмет 1
+										.tooltip.add-item__menu
+											a.btn.add-item__menu-btn.tooltip__btn
+												+sprite("icon-more-alt_vertical")
+											ul.tooltip__menu.add-item__tooltip
+												li.tooltip__menu-item
+													a.tooltip__menu-item-link Сбросить форму
+												li.tooltip__menu-item.tooltip__menu-item--cancel
+													a.tooltip__menu-item-link Удалить предмет
 
-							.create-application__nav
-								a(href="#").btn.btn-nav.btn-nav--back Назад
-								a(href="#").btn.btn-nav.btn-nav--continue Продолжить
-								a(href="#").btn.btn-nav.btn-nav--save Сохранить
+										.add-item__row
+											.add-item__row-section
+												.create__row-items.create__row-items--gap-small
+													.create__row
+														.create__row-heading.create__row-heading--width-base
+															.field-heading Поставщик
+																span.field-heading__require *
+														.create__row-content
+															input(type="text" placeholder="Поиск по названию, ИНН").input-base.input-base--height-small
+													.create__row
+														.create__row-heading.create__row-heading--width-base
+															.field-heading ФИО руководителя
+																span.field-heading__require *
+														.create__row-content
+															input(type="text" placeholder="Укажите ФИО").input-base.input-base--height-small
+													.create__row
+														.create__row-heading.create__row-heading--width-base
+															.field-heading ФИО контактного лица со стороны поставщика
+																span.field-heading__require *
+														.create__row-content
+															input(type="text" placeholder="Укажите ФИО").input-base.input-base--height-small
+													.create__row
+														.create__row-heading.create__row-heading--width-base
+															.field-heading Контакты
+																span.field-heading__require *
+														.create__row-content
+															input(type="text" placeholder="+7").input-base.input-base--height-small
+													.create__row
+														.create__row-heading.create__row-heading--width-base
+															.field-heading Название предмета лизинга
+																span.field-heading__require *
+														.create__row-content
+															input(type="text" placeholder="TEST").input-base.input-base--height-small
+											.add-item__row-section
+												.create__row-items.create__row-items--gap-small
+													.create__row
+														.create__row-heading.create__row-heading--width-base
+															.field-heading Спецификация
+																span.field-heading__require *
+														.create__row-content
+															input(type="text" placeholder="TEST").input-base.input-base--height-small
+													.create__row
+														.create__row-heading.create__row-heading--width-base
+															.field-heading Стоимость единицы с НДС
+																span.field-heading__require *
+														.create__row-content
+															input(type="text" placeholder="TEST").input-base.input-base--height-small
+													.create__row
+														.create__row-heading.create__row-heading--width-base
+															.field-heading Количество
+																span.field-heading__require *
+														.create__row-content
+															input(type="text" placeholder="TEST").input-base.input-base--height-small
+													.create__row
+														.create__row-heading.create__row-heading--width-base
+															.field-heading Срок поставки
+																span.field-heading__require *
+														.create__row-content
+															input(type="text" placeholder="Укажите значение").input-base.input-base--height-small
+													.create__row
+														.total-sum.total-sum--base
+															span.total-sum__text Итого: 
+															span.total-sum__value 18 210 000,00 ₽
+									.add-item
+										.add-item__heading Предмет 2
+										.tooltip.add-item__menu
+											a.btn.add-item__menu-btn.tooltip__btn
+												+sprite("icon-more-alt_vertical")
+											ul.tooltip__menu.add-item__tooltip
+												li.tooltip__menu-item
+													a.tooltip__menu-item-link Сбросить форму
+												li.tooltip__menu-item.tooltip__menu-item--cancel
+													a.tooltip__menu-item-link Удалить предмет
+										.add-item__row
+											.add-item__row-section
+												.create__row-items.create__row-items--gap-small
+													.create__row
+														.create__row-heading.create__row-heading--width-base
+															.field-heading Поставщик
+																span.field-heading__require *
+														.create__row-content
+															.select
+																input(type="text" placeholder="Поиск по названию, ИНН").input-base.input-base--select.input-base--height-small.select__input
+																.select__icon
+																	+sprite("icon-chevron-up")
+																ul.select__list.select__list--supplier
+																	li.select__list-item
+																		.select__list-item-main МУП "ПАТП №2"
+																		.select__list-item-details ИНН 771537455874
+																	li.select__list-item
+																		.select__list-item-main МУП "ПАТП №22"
+																		.select__list-item-details ИНН 771537487477
+																	li.select__list-item
+																		.select__list-item-main МУП "ПАТП №2223"
+																		.select__list-item-details ИНН 771874537455
+																	li.select__list-item
+																		.select__list-item-main МУП "ПАТП №2332"
+																		.select__list-item-details ИНН 771537455874
+													.create__row
+														.create__row-heading.create__row-heading--width-base
+															.field-heading ФИО руководителя
+																span.field-heading__require *
+														.create__row-content
+															input(type="text" placeholder="Укажите ФИО").input-base.input-base--height-small
+													.create__row
+														.create__row-heading.create__row-heading--width-base
+															.field-heading ФИО контактного лица со стороны поставщика
+																span.field-heading__require *
+														.create__row-content
+															input(type="text" placeholder="Укажите ФИО").input-base.input-base--height-small
+													.create__row
+														.create__row-heading.create__row-heading--width-base
+															.field-heading Контакты
+																span.field-heading__require *
+														.create__row-content
+															input(type="text" placeholder="+7").input-base.input-base--height-small
+													.create__row
+														.create__row-heading.create__row-heading--width-base
+															.field-heading Название предмета лизинга
+																span.field-heading__require *
+														.create__row-content
+															input(type="text" placeholder="TEST").input-base.input-base--height-small
+											.add-item__row-section
+												.create__row-items.create__row-items--gap-small
+													.create__row
+														.create__row-heading.create__row-heading--width-base
+															.field-heading Спецификация
+																span.field-heading__require *
+														.create__row-content
+															input(type="text" placeholder="TEST").input-base.input-base--height-small
+													.create__row
+														.create__row-heading.create__row-heading--width-base
+															.field-heading Стоимость единицы с НДС
+																span.field-heading__require *
+														.create__row-content
+															input(type="text" placeholder="TEST").input-base.input-base--height-small
+													.create__row
+														.create__row-heading.create__row-heading--width-base
+															.field-heading Количество
+																span.field-heading__require *
+														.create__row-content
+															input(type="text" placeholder="TEST").input-base.input-base--height-small
+													.create__row
+														.create__row-heading.create__row-heading--width-base
+															.field-heading Срок поставки
+																span.field-heading__require *
+														.create__row-content
+															input(type="text" placeholder="Укажите значение").input-base.input-base--height-small
+													.create__row
+														.total-sum.total-sum--base
+															span.total-sum__text Итого: 
+															span.total-sum__value 18 210 000,00 ₽
+								.create__row-items.create__row-items--padding-top-large
+									.create__row
+										.total-sum.total-sum--large
+											span.total-sum__text Итоговая стоимость всего иммущества с НДС: 
+											span.total-sum__value 36 420 000,00 ₽
+									.create__row
+										.create__nav
+											a(href="#").btn.btn-nav.btn-nav--back Назад
+											a(href="#").btn.btn-nav.btn-nav--continue Продолжить
+											a(href="#").btn.btn-nav.btn-nav--save Сохранить
 
 
 					footer.footer

@@ -1,10 +1,21 @@
 .application-top {
 	padding-bottom: 11px;
+	&--preview {
+		padding-bottom: 30px;
+	}
 	&__heading {
 		display: flex;
 		align-items: center;
 		gap: 45px;
 		flex-wrap: wrap;
 		padding-bottom: 13px;
+		&--preview {
+			padding-bottom: 7px;
+		}
+	}
+	&__note {
+		color: #979797;
+		font-size: 16px;
+		line-height: 20px;
 	}
 }

@@ -1,0 +1,11 @@
+.application-agreement {
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+	&__text {
+		max-width: 942px;
+		color: #8C8C8C;
+		font-size: 16px;
+		line-height: 20px;
+	}
+}

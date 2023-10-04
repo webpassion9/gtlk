@@ -1,0 +1,11 @@
+
+.row-payment-input {
+	display: flex;
+	gap: 15px;
+	&__col-select {
+		width: 205px;
+	}
+	&__col-input {
+		flex-grow: 1;
+	}
+}

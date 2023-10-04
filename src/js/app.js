@@ -26,18 +26,30 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //
 
-import { initializeTooltip } from './modules/applications/index.js';
+import { initializeFancybox, initializeSelect, initializeTooltip } from './modules/common/index.js';
 
+initializeFancybox();
+initializeSelect();
 initializeTooltip();
 
 //
 
-import { initializeFancybox } from './modules/common/index.js';
+// import { inputFillCheck } from './modules/create-application/index.js';
 
-initializeFancybox();
+// inputFillCheck();
 
 //
 
-import { inputFillCheck } from './modules/create-application/index.js';
 
-inputFillCheck();
+
+
+
+
+import { progressCircle } from './modules/common/progressCircle.js';
+
+progressCircle();
+
+
+import { docsToggle } from './modules/application/index.js';
+
+docsToggle();

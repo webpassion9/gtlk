@@ -128,6 +128,7 @@
 		line-height: 1;
 		font-family: $fontBase;
 		text-transform: uppercase;
+		padding: 5px 30px;
 		&--cancel {
 			background: var(--color-blue);
 			color: var(--color-white);
@@ -153,29 +154,61 @@
 			&:hover {
 				background: #117944;
 			}
+			&.disabled-send {
+				background: #969696;
+				cursor: default;
+				pointer-events: none;
+			}
 		}
 		&--save {
 			background: #243F94;
 			color: var(--color-white);
 		}
+		&--back-cancel {
+			background: #E6961F;
+			color: var(--color-white);
+		}
+		&--send {
+			background: #969696;
+			color: var(--color-white);
+		}
+		&.disabled {
+			background: #CECECE;
+			cursor: default;
+			pointer-events: none;
+		}
+		&--waiting {
+			background: #43698C;
+			color: var(--color-white);
+			gap: 17px;
+		}
 	}
 
-		&-action {
-			font-size: 12px;
-			line-height: 1;
-			gap: 6px;
-			color: var(--color-blue-base);
-		}
+	&-action {
+		font-size: 12px;
+		line-height: 1;
+		gap: 6px;
+		color: var(--color-blue-base);
+	}
 
-		&-upload {
-			gap: 8px;
-			font-size: 14px;
-			line-height: 18px;
-			color: var(--color-blue-base);
-			&__icon {
-				line-height: 0;
-			}
+	&-upload {
+		gap: 8px;
+		font-size: 14px;
+		line-height: 18px;
+		color: var(--color-blue-base);
+		&__icon {
+			line-height: 0;
 		}
+	}
+
+	&-add-item {
+		gap: 8px;
+		font-size: 18px;
+		.icon-add-circle {
+			width: 32px;
+			height: 32px;
+		}
+	}
 
 
 

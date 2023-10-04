@@ -1,0 +1,42 @@
+.add-items-wrapper {
+	display: grid;
+	gap: 60px;
+}
+
+.add-item {
+	padding: 31px 55px 80px 12px;
+	gap: 96px;
+	border: 1px dashed rgba(0, 0, 0, 0.46);
+	position: relative;
+	max-width: 1460px;
+	&__tooltip {
+		right: auto;
+		left: 10px;
+	}
+	&__row {
+		display: flex;
+		gap: 95px;
+		&-section {
+			flex-grow: 1;
+		}
+	}
+	&__heading {
+		position: absolute;
+		left: 20px;
+		top: -24px;
+		background: var(--color-white);
+		min-height: 43px;
+		padding: 5px 35px;
+		display: flex;
+		align-items: center;
+	}
+	&__menu {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	&__menu-btn {
+		width: 40px;
+		height: 40px;
+	}
+}

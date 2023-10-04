@@ -133,84 +133,88 @@
 				</aside>
 				<main class="main">
 					<div class="content">
-						<div class="content-inner create-application">
-							<div class="go-back">
-								<a href="#">< Назад в мои заявки</a>
+						<div class="content-inner">
+							<div class="create__top">
+								<div class="go-back go-back--create">
+									<a href="#">< Назад в мои заявки</a>
+								</div>
+								<div class="heading-base heading-base--large">Новая заявка</div>
 							</div>
-							<div class="application-top">
-								<div class="application-top__heading">
-									<div class="heading-base heading-base--large">Новая заявка</div>
-								</div>
+							<div class="create__steps">
+								<ul class="form-steps">
+									<li class="form-steps__item active">
+										<div class="form-steps__item-text">Заявитель</div>
+									</li>
+									<li class="form-steps__item active">
+										<div class="form-steps__item-text">Контактное лицо по сделке</div>
+									</li>
+									<li class="form-steps__item">
+										<div class="form-steps__item-text">Руководитель организации</div>
+									</li>
+									<li class="form-steps__item">
+										<div class="form-steps__item-text">Предмет лизинга/аренды</div>
+									</li>
+									<li class="form-steps__item">
+										<div class="form-steps__item-text">Условия лизинга/аренды</div>
+									</li>
+									<li class="form-steps__item">
+										<div class="form-steps__item-text">Дополнительные условия</div>
+									</li>
+									<li class="form-steps__item">
+										<div class="form-steps__item-text">Загрузить документы</div>
+									</li>
+								</ul>
 							</div>
-							<ul class="form-steps">
-								<li class="form-steps__item active">
-									<div class="form-steps__item-text">Заявитель</div>
-								</li>
-								<li class="form-steps__item active">
-									<div class="form-steps__item-text">Контактное лицо по сделке</div>
-								</li>
-								<li class="form-steps__item">
-									<div class="form-steps__item-text">Руководитель организации</div>
-								</li>
-								<li class="form-steps__item">
-									<div class="form-steps__item-text">Предмет лизинга/аренды</div>
-								</li>
-								<li class="form-steps__item">
-									<div class="form-steps__item-text">Условия лизинга/аренды</div>
-								</li>
-								<li class="form-steps__item">
-									<div class="form-steps__item-text">Дополнительные условия</div>
-								</li>
-								<li class="form-steps__item">
-									<div class="form-steps__item-text">Загрузить документы</div>
-								</li>
-							</ul>
-							<div class="create-application-form">
-								<div class="create-application-form__row">
-									<div class="create-application-form__row-heading"> 
-										<div class="field-heading">ФИО
-											<span class="field-heading__require">*</span>
+							<div class="create__main">
+								<div class="create__row-items">
+									<div class="create__row">
+										<div class="create__row-heading create__row-heading--width-normal">
+											<div class="field-heading">ФИО
+												<span class="field-heading__require">*</span>
+											</div>
+										</div>
+										<div class="create__row-content create__row-content--width-medium">
+											<input class="input-base" type="text">
 										</div>
 									</div>
-									<div class="create-application-form__row-content">
-										<input class="input-base" type="text">
-									</div>
-								</div>
-								<div class="create-application-form__row">
-									<div class="create-application-form__row-heading"> 
-										<div class="field-heading">Должность
-											<span class="field-heading__require">*</span>
+									<div class="create__row">
+										<div class="create__row-heading create__row-heading--width-normal">
+											<div class="field-heading">Должность
+												<span class="field-heading__require">*</span>
+											</div>
+										</div>
+										<div class="create__row-content create__row-content--width-medium">
+											<input class="input-base" type="text">
 										</div>
 									</div>
-									<div class="create-application-form__row-content">
-										<input class="input-base" type="text">
-									</div>
-								</div>
-								<div class="create-application-form__row">
-									<div class="create-application-form__row-heading"> 
-										<div class="field-heading">Телефон
-											<span class="field-heading__require">*</span>
+									<div class="create__row">
+										<div class="create__row-heading create__row-heading--width-normal">
+											<div class="field-heading">Телефон
+												<span class="field-heading__require">*</span>
+											</div>
+										</div>
+										<div class="create__row-content create__row-content--width-medium">
+											<input class="input-base" type="text">
 										</div>
 									</div>
-									<div class="create-application-form__row-content">
-										<input class="input-base" type="text">
-									</div>
-								</div>
-								<div class="create-application-form__row">
-									<div class="create-application-form__row-heading"> 
-										<div class="field-heading">E-mail
-											<span class="field-heading__require">*</span>
+									<div class="create__row">
+										<div class="create__row-heading create__row-heading--width-normal">
+											<div class="field-heading">E-mail
+												<span class="field-heading__require">*</span>
+											</div>
+										</div>
+										<div class="create__row-content create__row-content--width-medium">
+											<input class="input-base" type="email">
 										</div>
 									</div>
-									<div class="create-application-form__row-content">
-										<input class="input-base" type="email">
+									<div class="create__row">
+										<div class="create__nav">
+											<a class="btn btn-nav btn-nav--back" href="#">Назад</a>
+											<a class="btn btn-nav btn-nav--continue" href="#">Продолжить</a>
+											<a class="btn btn-nav btn-nav--save" href="#">Сохранить</a>
+										</div>
 									</div>
 								</div>
-							</div>
-							<div class="create-application__nav">
-								<a class="btn btn-nav btn-nav--back" href="#">Назад</a>
-								<a class="btn btn-nav btn-nav--continue" href="#">Продолжить</a>
-								<a class="btn btn-nav btn-nav--save" href="#">Сохранить</a>
 							</div>
 						</div>
 					</div>

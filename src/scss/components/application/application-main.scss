@@ -1,14 +1,27 @@
 .application-main {
-	.tabs {
-		padding-bottom: 62px;
-	}
-	.heading-base {
-		margin-bottom: 11px;
-	}
 
 	&__section {
 		&:not(:last-child) {
 			padding-bottom: 40px;
+		}
+		&--item {
+			&:not(:last-child) {
+				padding-bottom: 80px;
+			}
+		}
+		&--width-medium {
+			max-width: 1150px;
+		}
+	}
+	&__row {
+		width: 100%;
+		display: flex;
+		gap: 40px;
+		&-col-first {
+			flex-grow: 1;
+		}
+		&-col-sec {
+			width: 691px;
 		}
 	}
 }

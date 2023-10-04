@@ -5,8 +5,16 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-top: 15px;
+	// margin-top: 15px;
+	width: 100%;
 	max-width: 845px;
+
+	&--width-large {
+		max-width: 1141px;
+	}
+	&--width-large2 {
+		max-width: 1363px;
+	}
 	&__main {
 		display: flex;
 		align-items: center;
@@ -24,6 +32,14 @@
 		&-heading {
 			font-size: 14px;
 			line-height: 16px;
+			&-icon {
+				margin: 0 4px;
+				line-height: 0;
+				.icon-circle-alert {
+					width: 13px;
+					height: 13px;
+				}
+			}
 		}
 		p {
 			font-size: 12px;
@@ -73,6 +89,22 @@
 				svg {
 					width: 20px;
 					height: 20px;
+				}
+			}
+		}
+	}
+	&--done {
+		background: #EDFBD8;
+		border-color: #84D65A;
+		.application-info {
+			&__text {
+				color: #2B641E;
+			}
+			&__icon {
+				svg {
+					width: 20px;
+					height: 20px;
+					fill: #84D65A;
 				}
 			}
 		}

@@ -104,3 +104,18 @@ body.preload {
 .d-flex {
 	display: flex;
 }
+
+.hidden {
+	display: none;
+}
+
+.pull-right {
+	float: right;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+

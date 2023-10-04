@@ -1,10 +1,14 @@
 .application-content {
 	display: flex;
+	align-items: flex-start;
+	&--float {
+		display: block;
+	}
 	&__main {
 		flex-grow: 1;
-		padding-right: 115px;
 	}
 	&__side {
+		margin-left: 115px;
 		width: 413px;
 		padding-right: 35px;
 		&-section {

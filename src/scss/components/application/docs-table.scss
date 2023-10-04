@@ -5,6 +5,8 @@
 	color: rgba(0, 0, 0, 0.8);
 	border-top: 1px solid #CECECE;
 	border-collapse: collapse;
+	max-width: 1660px;
+	table-layout: fixed;
 	tr {
 		transition: .25s;
 		&:not(:first-child) {
@@ -33,6 +35,14 @@
 		&:not(:last-child) {
 			border-right: 1px solid #CECECE;
 		}
+		&.docs-table__subheading {
+			font-size: 15px;
+			font-weight: 700;
+			line-height: 20px;
+			color: rgba(0, 0, 0, 0.8);
+			// border-top: 2px solid #A2A2A2;
+			padding-top: 20px;
+		}
 	}
 	td {
 		vertical-align: middle;
@@ -42,9 +52,22 @@
 		padding: 7px 15px;
 	}
 
+	&__section {
+		&:not(:last-child) {
+			border-bottom: 2px solid #A2A2A2;
+		}
+	}
+
+
 }
 
-.doc-main {
+.table-td-main {
 	display: flex;
 	align-items: center;
+	.table-td-alert {
+		margin-right: 6px;
+	}
+	.checkbox-base {
+		margin-right: 12px;
+	}
 }

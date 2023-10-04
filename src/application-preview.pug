@@ -1,0 +1,339 @@
+include html/mixins
+
+doctype html
+block head
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no")
+		meta(name="format-detection" content="telephone=no")
+
+		link(rel="stylesheet", href="css/style.min.css")
+
+		title Title
+
+	body
+		.wrapper.wrapper-main
+
+			header.header-main
+				.container
+					a(href="#")
+						img(src="img/logo-GTLK_dark.png", width="166" height="52" alt="")
+					ul.header-menu
+						li
+							a(href="#") Компания
+						li
+							a(href="#") Деятельность
+						li
+							a(href="#") Клиентам
+						li
+							a(href="#") Закупки
+						li
+							a(href="#") Инвесторам
+						li
+							a(href="#") Устойчивое развитие
+						li
+							a(href="#") Медиа
+					form.header-search
+						input(type="text").header-search__input
+						.header-search__icon
+							+sprite("icon-loop")
+					.header-btns
+						a(href="#").btn.header-btns__item
+							+sprite("icon-bell")
+						a(href="#").btn.header-btns__item
+							+sprite("icon-user")
+
+						
+			.main-row
+
+				aside.sidebar
+					.sidebar__inner
+						.sidebar__section
+							ul.sidebar__nav
+								li.sidebar__nav-item.current
+									a(href="#").sidebar__nav-item-btn
+										.sidebar__nav-item-icon
+											+sprite("icon-file-tray")
+										.sidebar__nav-item-text Заявки
+								li.sidebar__nav-item
+									a(href="#").sidebar__nav-item-btn
+										.sidebar__nav-item-icon
+											+sprite("icon-newspaper")
+										.sidebar__nav-item-text Договоры
+								li.sidebar__nav-item
+									a(href="#").sidebar__nav-item-btn
+										.sidebar__nav-item-icon
+											+sprite("icon-doc")
+										.sidebar__nav-item-text Обращения НМЦ
+						.sidebar__section.sidebar__section--info
+							ul.sidebar__nav
+								li.sidebar__nav-item
+									a(href="#").sidebar__nav-item-btn
+										.sidebar__nav-item-icon
+											+sprite("icon-book")
+										.sidebar__nav-item-text Справка
+						.sidebar__section
+							.manager
+								.manager__ava
+									img(src="img/avatar-manager.png", alt="")
+								.manager__name Менеджер Иванова А.А.
+								a(href="#").btn.manager__btn Связаться
+						.sidebar__section
+							a(href="#").support
+								.support__icon
+									+sprite("icon-chat")
+								.support__heading Служба поддержки
+
+				main.main
+					.content
+						.content-inner.application-content
+							.application-content__main
+								.go-back.go-back--preview
+									a(href="#") < Назад в мои заявки
+								.application-top.application-top--preview
+									.application-top__heading.application-top__heading--preview
+										.heading-base.heading-base--large Подписать и отправить
+									.application-top__note Вы можете ещё раз посмотреть все заполненные данные перед отправкой
+								.application-main
+									.application-main__row.application-main__section
+										.application-main__row-col-first
+											.application-main__section
+												.heading-base Заявитель
+												table.details-table
+													tr
+														td Полное наименование организации
+														td МУНИЦИПАЛЬНОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ Г.КАЗАНИ "ПАССАЖИРСКОЕ ABTOTPAHCПOPTHOE ПРЕДПРИЯТИЕ Хв2"
+													tr
+														td Телефон
+														td +7 (843) 262-06-76
+													tr
+														td E-mail
+														td kpatp-2@yandex.ru
+													tr
+														td Факс
+														td +7 (843) 262-06-72
+													tr
+														td ИНН
+														td 1660005127
+													tr
+														td КПП
+														td 166001001
+										.application-main__row-col-sec
+											.application-main__section
+												.heading-base Контактное лицо по сделке
+												table.details-table
+													tr
+														td ФИО
+														td Абдулхаков Артур Маратович
+													tr
+														td Должность
+														td Заместитель директора
+													tr
+														td Телефон
+														td +7 (843) 262-06-76
+													tr
+														td E-mail
+														td kpatp-2@yandex.ru
+											.application-main__section
+												.heading-base Руководитель организации
+												table.details-table
+													tr
+														td ФИО
+														td Абдулхаков Артур Маратович
+													tr
+														td Должность
+														td Заместитель директора
+											
+									.application-main__section.application-main__section--item
+										.heading-base Предмет лизинга/аренды
+										table.details-table
+											tr
+												td(style="width: 51.5%") Вид имущества
+												td Транспортное средство
+											tr
+												td(style="width: 51.5%") Ставка НДС
+												td 20%
+											tr
+												td(style="width: 51.5%") Предметы лизинга
+												td
+										table.application-table
+											thead
+												tr
+													th Название предмета
+													th Поставщик
+													th Срок поставки
+													th Спецификация
+													th Стоимость единицы
+													th Количество
+													th Стоимость итоговая
+											tbody
+												tr
+													td ж/д вагон Хоппер
+													td ООО «РЖД»
+													td 120 дней
+													td Метан (КПГ)
+													td 1 000 000,00 ₽
+													td 20 ед.
+													td 20 000 000,00 ₽
+												tr
+													td ж/д вагон Хоппер
+													td ООО «РЖД»
+													td 120 дней
+													td Метан (КПГ)
+													td 1 000 000,00 ₽
+													td 20 ед.
+													td 20 000 000,00 ₽
+												tr
+													td ж/д вагон Хоппер
+													td ООО «РЖД»
+													td 120 дней
+													td Метан (КПГ)
+													td 1 000 000,00 ₽
+													td 20 ед.
+													td 20 000 000,00 ₽
+												tr
+													td ж/д вагон Хоппер
+													td ООО «РЖД»
+													td 120 дней
+													td Метан (КПГ)
+													td 1 000 000,00 ₽
+													td 20 ед.
+													td 20 000 000,00 ₽
+												tr
+													td
+													td
+													td
+													td
+													td
+													td итого
+													td 70 850 000,00 ₽
+									
+									.application-main__row.application-main__section
+										.application-main__row-col-first
+											.application-main__section
+												.heading-base Условия лизинга/аренды
+												table.details-table
+													tbody
+														tr
+															th(colspan="2") Порядок и сроки оплаты поставщику
+														tr
+															td Наименование платежа
+															td Аванс
+														tr
+															td Размер аванса
+															td 30%
+														tr
+															td Порядок и срок оплаты
+															td ...
+												table.details-table
+													tbody
+														tr
+															th(colspan="2") Планируемые условия договора лизинга
+														tr
+															td График платежей
+															td Аннуитет (равными частями)
+														tr
+															td Срок лизинга, мес.
+															td 85
+														tr
+															td Авансовый платёж, %
+															td 0
+														tr
+															td Страхователь
+															td Арендодатор
+														tr
+															td Балансодержатель
+															td Арендодатор
+														tr
+															td График платежей
+															td Аннуитет (равными частями)
+														tr
+															td Срок лизинга
+															td 85 месяцев
+										.application-main__row-col-sec
+											.application-main__section
+												.heading-base Дополнительные условия
+												table.details-table
+													tbody
+														tr
+															td Монтажные работы
+															td —
+														tr
+															td Пусконаладочные работы
+															td —
+														tr
+															td Другое
+															td —
+									.application-main__section
+										.heading-base Документы
+										ul.docs-list
+											li.docs-list__item
+												.docs-list__item-text Юридические
+												.docs-list__item-icon
+													+sprite("icon-chevron-down")
+											li.docs-list__item
+												.docs-list__item-text Бухгалтерские и финансовые
+												.docs-list__item-icon
+													+sprite("icon-chevron-down")
+											li.docs-list__item
+												.docs-list__item-text Прочие
+												.docs-list__item-icon
+													+sprite("icon-chevron-down")
+											li.docs-list__item
+												.docs-list__item-text Документы перевозчика
+												.docs-list__item-icon
+													+sprite("icon-chevron-down")
+									.application-main__section
+										.application-info.application-info--base.application-info--width-large
+											.application-info__main
+												.application-info__icon
+													+sprite("icon-info")
+												.application-info__text
+													.application-info__text-heading Если вы хотите изменить заявку или загрузить новые документы, нажмите кнопку “Отменить и вернуться назад”
+									.application-main__section.application-agreement
+										div
+											label.checkbox-base
+												input(type="checkbox" hidden)
+												span.checkbox-base__icon
+													+sprite("icon-check")
+												span.checkbox-base__text Я даю свое согласие на обработку персональных данных и соглашаюсь с условиями политики конфиденциальности
+										.application-agreement__text Отправляя форму, вы даете согласие на обработку персональных данных, указанных вами в заявке, в соответствии с требованиями Федерального закона от 27.07.2016 г. № 152-ФЗ “О персональных данных”
+									.application-main__section.create__nav.create__nav--preview
+										a(href="#").btn.btn-nav.btn-nav--continue Подписать
+										a(href="#").btn.btn-nav.btn-nav--continue.disabled-send Отправить
+										a(href="#").btn.btn-nav.btn-nav--save Сохранить
+										a(href="#").btn.btn-nav.btn-nav--back-cancel Отменить и вернуться назад
+									.application-main__section.create__nav.create__nav--preview
+										a(href="#").btn.btn-nav.btn-nav--waiting
+											+sprite("icon-loading")
+											| Ожидается подписание в Диадок
+										a(href="#").btn.btn-nav.btn-nav--send.disabled Отправить
+										a(href="#").btn.btn-nav.btn-nav--save Сохранить
+										a(href="#").btn.btn-nav.btn-nav--back-cancel.disabled Отменить и вернуться назад
+
+
+					footer.footer
+						.container
+							.footer__section.d-flex.justify-content-end
+								ul.footer__menu
+									li
+										a(href="#") О нас
+									li
+										a(href="#") Реквизиты
+									li
+										a(href="#") Политика в отношении обработки персональных данных в АО “ГТЛК”
+							hr
+							.footer__section.d-flex.justify-content-between.align-items-center
+								.footer__copyright © 2023 АО ГТЛК
+								ul.footer__menu
+									li
+										a(href="tel:88002001299") 8-800-200-12-99
+									li
+										a(href="mailto:gtlk@gtlk.ru") gtlk@gtlk.ru
+									li
+										a(href="#") 125284, г. Москва, Ленинградский проспект д. 31 а, стр. 1
+			
+		include html/modals
+
+		script(src="js/app.min.js")

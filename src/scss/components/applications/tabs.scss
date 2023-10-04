@@ -3,6 +3,12 @@
 	margin: 0;
 	padding: 22px 0 25px;
 	display: flex;
+	&--application {
+		padding-bottom: 62px;
+	}
+	&--application-docs {
+		padding-bottom: 35px;
+	}
 	&>li {
 		&>a {
 			display: flex;

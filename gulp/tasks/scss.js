@@ -39,14 +39,19 @@ export const scss = () => {
     //     mediaQuery: false,
     //     minPixelValue: 0
     // }))
-    .pipe(app.plugins.if(
-        app.isBuild,
-        autoprefixer({
-            grid: true,
-            overrideBrowserslist: ["last 2 versions"],
-            cascade: true
-        })
-    ))
+    // .pipe(app.plugins.if(
+    //     app.isBuild,
+    //     autoprefixer({
+    //         grid: true,
+    //         overrideBrowserslist: ["last 2 versions"],
+    //         cascade: true
+    //     })
+    // ))
+    .pipe(autoprefixer({
+        grid: true,
+        overrideBrowserslist: ["last 2 versions"],
+        cascade: true
+    }))
     .pipe(groupCssMediaQueries())
     .pipe(app.plugins.if(
         app.isBuild,
@@ -56,10 +61,10 @@ export const scss = () => {
         })
     ))
     .pipe(app.plugins.replace(/@img\//g, '../img/'))
-    .pipe(app.plugins.if(
-        app.isDev,
-        sourcemaps.write()
-    ))
+    // .pipe(app.plugins.if(
+    //     app.isDev,
+    //     sourcemaps.write()
+    // ))
     .pipe(app.gulp.dest(app.path.build.css))
     .pipe(app.plugins.if(
         app.isBuild,

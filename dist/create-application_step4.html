@@ -133,186 +133,429 @@
 				</aside>
 				<main class="main">
 					<div class="content">
-						<div class="content-inner create-application">
-							<div class="go-back">
-								<a href="#">< Назад в мои заявки</a>
+						<div class="content-inner">
+							<div class="create__top">
+								<div class="go-back go-back--create">
+									<a href="#">< Назад в мои заявки</a>
+								</div>
+								<div class="heading-base heading-base--large">Новая заявка</div>
 							</div>
-							<div class="application-top">
-								<div class="application-top__heading">
-									<div class="heading-base heading-base--large">Новая заявка</div>
-								</div>
+							<div class="create__steps">
+								<ul class="form-steps">
+									<li class="form-steps__item active">
+										<div class="form-steps__item-text">Заявитель</div>
+									</li>
+									<li class="form-steps__item active">
+										<div class="form-steps__item-text">Контактное лицо по сделке</div>
+									</li>
+									<li class="form-steps__item active">
+										<div class="form-steps__item-text">Руководитель организации</div>
+									</li>
+									<li class="form-steps__item active">
+										<div class="form-steps__item-text">Предмет лизинга/аренды</div>
+									</li>
+									<li class="form-steps__item">
+										<div class="form-steps__item-text">Условия лизинга/аренды</div>
+									</li>
+									<li class="form-steps__item">
+										<div class="form-steps__item-text">Дополнительные условия</div>
+									</li>
+									<li class="form-steps__item">
+										<div class="form-steps__item-text">Загрузить документы</div>
+									</li>
+								</ul>
 							</div>
-							<ul class="form-steps">
-								<li class="form-steps__item active">
-									<div class="form-steps__item-text">Заявитель</div>
-								</li>
-								<li class="form-steps__item active">
-									<div class="form-steps__item-text">Контактное лицо по сделке</div>
-								</li>
-								<li class="form-steps__item active">
-									<div class="form-steps__item-text">Руководитель организации</div>
-								</li>
-								<li class="form-steps__item active">
-									<div class="form-steps__item-text">Предмет лизинга/аренды</div>
-								</li>
-								<li class="form-steps__item">
-									<div class="form-steps__item-text">Условия лизинга/аренды</div>
-								</li>
-								<li class="form-steps__item">
-									<div class="form-steps__item-text">Дополнительные условия</div>
-								</li>
-								<li class="form-steps__item">
-									<div class="form-steps__item-text">Загрузить документы</div>
-								</li>
-							</ul>
-							<div class="create-application-form">
-								<div>checkbox</div>
-								<div class="create-application-form__row">
-									<div class="create-application-form__row-heading"> 
-										<div class="field-heading">Вид имущества
-											<span class="field-heading__require">*</span>
-										</div>
+							<div class="create__main create__main--step4">
+								<div class="create__row-items create__row-items--gap-small">
+									<div class="create__row create__row--check">
+										<label class="checkbox-base">
+											<input type="checkbox" hidden>
+											<span class="checkbox-base__icon">
+												<svg class="icon-check">
+													<use xlink:href="img/icons/icons.svg#icon-check"></use>
+												</svg>
+											</span>
+											<span class="checkbox-base__text">Заявка на аренду</span>
+										</label>
 									</div>
-									<div class="create-application-form__row-content">
-										<select>
-											<option>option 1</option>
-											<option>option 2</option>
-										</select>
-									</div>
-								</div>
-								<div class="create-application-form__row">
-									<div class="create-application-form__row-heading"> 
-										<div class="field-heading">Ставка НДС
-											<span class="field-heading__require">*</span>
-										</div>
-									</div>
-									<div class="create-application-form__row-content">
-										<select>
-											<option>option 1</option>
-											<option>option 2</option>
-										</select>
-									</div>
-								</div>
-								<div class="create-application-form__row">
-									<div class="create-application-form__row-content">
-										<div>
-											<svg class="icon-add-circle">
-												<use xlink:href="img/icons/icons.svg#icon-add-circle"></use>
-											</svg>Добавить предмет лизинга
-										</div>
-									</div>
-								</div>
-								<div class="add-item">
-									<div>Предмет 1</div>
-									<div>
-										<svg class="icon-more-alt_vertical">
-											<use xlink:href="img/icons/icons.svg#icon-more-alt_vertical"></use>
-										</svg>
-									</div>
-									<div class="add-item__row">
-										<div class="add-item__row-section">
-											<div class="create-application-form__row">
-												<div class="create-application-form__row-heading"> 
-													<div class="field-heading">Поставщик
-														<span class="field-heading__require">*</span>
-													</div>
-												</div>
-												<div class="create-application-form__row-content">
-													<input class="input-base" type="text" placeholder="Поиск по названию, ИНН">
-												</div>
-											</div>
-											<div class="create-application-form__row">
-												<div class="create-application-form__row-heading"> 
-													<div class="field-heading">ФИО руководителя
-														<span class="field-heading__require">*</span>
-													</div>
-												</div>
-												<div class="create-application-form__row-content">
-													<input class="input-base" type="text" placeholder="Укажите ФИО">
-												</div>
-											</div>
-											<div class="create-application-form__row">
-												<div class="create-application-form__row-heading"> 
-													<div class="field-heading">ФИО контактного лица со стороны поставщика
-														<span class="field-heading__require">*</span>
-													</div>
-												</div>
-												<div class="create-application-form__row-content">
-													<input class="input-base" type="text" placeholder="Укажите ФИО">
-												</div>
-											</div>
-											<div class="create-application-form__row">
-												<div class="create-application-form__row-heading"> 
-													<div class="field-heading">Контакты
-														<span class="field-heading__require">*</span>
-													</div>
-												</div>
-												<div class="create-application-form__row-content">
-													<input class="input-base" type="text" placeholder="+7">
-												</div>
-											</div>
-											<div class="create-application-form__row">
-												<div class="create-application-form__row-heading"> 
-													<div class="field-heading">Название предмета лизинга
-														<span class="field-heading__require">*</span>
-													</div>
-												</div>
-												<div class="create-application-form__row-content">
-													<input class="input-base" type="text" placeholder="TEST">
-												</div>
+									<div class="create__row">
+										<div class="create__row-heading create__row-heading--width-normal">
+											<div class="field-heading">Вид имущества
+												<span class="field-heading__require">*</span>
 											</div>
 										</div>
-										<div class="add-item__row-section">
-											<div class="create-application-form__row">
-												<div class="create-application-form__row-heading"> 
-													<div class="field-heading">Спецификация
-														<span class="field-heading__require">*</span>
-													</div>
+										<div class="create__row-content">
+											<div class="select select--width-base">
+												<input class="input-base input-base--select select__input input-base--height-small" type="text" placeholder="Выберите из списка">
+												<div class="select__icon">
+													<svg class="icon-chevron-up">
+														<use xlink:href="img/icons/icons.svg#icon-chevron-up"></use>
+													</svg>
 												</div>
-												<div class="create-application-form__row-content">
-													<input class="input-base" type="text" placeholder="TEST">
-												</div>
+												<ul class="select__list select__list--type-of-property">
+													<li class="select__list-item">
+														<div class="select__list-item-main">Авиатранспорт</div>
+													</li>
+													<li class="select__list-item">
+														<div class="select__list-item-main">Автотранспорт</div>
+													</li>
+													<li class="select__list-item">
+														<div class="select__list-item-main">Водный транспорт</div>
+													</li>
+													<li class="select__list-item">
+														<div class="select__list-item-main">Дорожно-строительная техника</div>
+													</li>
+													<li class="select__list-item">
+														<div class="select__list-item-main">Железнодорожный транспорт</div>
+													</li>
+													<li class="select__list-item">
+														<div class="select__list-item-main">Недвижимость</div>
+													</li>
+													<li class="select__list-item">
+														<div class="select__list-item-main">Оборудование</div>
+													</li>
+													<li class="select__list-item">
+														<div class="select__list-item-main">С/х техника</div>
+													</li>
+													<li class="select__list-item" data-target="type-other">
+														<div class="select__list-item-main">Прочее</div>
+													</li>
+												</ul>
 											</div>
-											<div class="create-application-form__row">
-												<div class="create-application-form__row-heading"> 
-													<div class="field-heading">Стоимость единицы с НДС
-														<span class="field-heading__require">*</span>
-													</div>
-												</div>
-												<div class="create-application-form__row-content">
-													<input class="input-base" type="text" placeholder="TEST">
-												</div>
+										</div>
+									</div>
+									<div class="create__row hidden" data-item="type-other">
+										<div class="create__row-heading create__row-heading--width-normal"></div>
+										<div class="create__row-content">
+											<input class="input-base input-base--width-base input-base--height-small" type="text" placeholder="Введите вид имущества">
+										</div>
+									</div>
+									<div class="create__row">
+										<div class="create__row-heading create__row-heading--width-normal">
+											<div class="field-heading">Ставка НДС
+												<span class="field-heading__require">*</span>
 											</div>
-											<div class="create-application-form__row">
-												<div class="create-application-form__row-heading"> 
-													<div class="field-heading">Количество
-														<span class="field-heading__require">*</span>
-													</div>
+										</div>
+										<div class="create__row-content">
+											<div class="select select--width-base">
+												<input class="input-base input-base--select select__input input-base--height-small" type="text" placeholder="Выберите из списка">
+												<div class="select__icon">
+													<svg class="icon-chevron-up">
+														<use xlink:href="img/icons/icons.svg#icon-chevron-up"></use>
+													</svg>
 												</div>
-												<div class="create-application-form__row-content">
-													<input class="input-base" type="text" placeholder="TEST">
-												</div>
+												<ul class="select__list">
+													<li class="select__list-item">
+														<div class="select__list-item-main">Без НДС</div>
+													</li>
+													<li class="select__list-item">
+														<div class="select__list-item-main">0%</div>
+													</li>
+													<li class="select__list-item">
+														<div class="select__list-item-main">20%</div>
+													</li>
+												</ul>
 											</div>
-											<div class="create-application-form__row">
-												<div class="create-application-form__row-heading"> 
-													<div class="field-heading">Срок поставки
-														<span class="field-heading__require">*</span>
-													</div>
-												</div>
-												<div class="create-application-form__row-content">
-													<input class="input-base" type="text" placeholder="Укажите значение">
-												</div>
-											</div>
-											<div class="create-application-form__row">Итого: 18 210 000,00</div>
 										</div>
 									</div>
 								</div>
-								<div>Итоговая стоимость всего иммущества с НДС: 36 420 000,00</div>
-							</div>
-							<div class="create-application__nav">
-								<a class="btn btn-nav btn-nav--back" href="#">Назад</a>
-								<a class="btn btn-nav btn-nav--continue" href="#">Продолжить</a>
-								<a class="btn btn-nav btn-nav--save" href="#">Сохранить</a>
+								<div class="create__add-item">
+									<a class="btn btn-add-item">
+										<svg class="icon-add-circle">
+											<use xlink:href="img/icons/icons.svg#icon-add-circle"></use>
+										</svg>Добавить предмет лизинга
+									</a>
+								</div>
+								<div class="add-items-wrapper">
+									<div class="add-item">
+										<div class="add-item__heading">Предмет 1</div>
+										<div class="tooltip add-item__menu">
+											<a class="btn add-item__menu-btn tooltip__btn">
+												<svg class="icon-more-alt_vertical">
+													<use xlink:href="img/icons/icons.svg#icon-more-alt_vertical"></use>
+												</svg>
+											</a>
+											<ul class="tooltip__menu add-item__tooltip">
+												<li class="tooltip__menu-item">
+													<a class="tooltip__menu-item-link">Сбросить форму</a>
+												</li>
+												<li class="tooltip__menu-item tooltip__menu-item--cancel">
+													<a class="tooltip__menu-item-link">Удалить предмет</a>
+												</li>
+											</ul>
+										</div>
+										<div class="add-item__row">
+											<div class="add-item__row-section">
+												<div class="create__row-items create__row-items--gap-small">
+													<div class="create__row">
+														<div class="create__row-heading create__row-heading--width-base">
+															<div class="field-heading">Поставщик
+																<span class="field-heading__require">*</span>
+															</div>
+														</div>
+														<div class="create__row-content">
+															<input class="input-base input-base--height-small" type="text" placeholder="Поиск по названию, ИНН">
+														</div>
+													</div>
+													<div class="create__row">
+														<div class="create__row-heading create__row-heading--width-base">
+															<div class="field-heading">ФИО руководителя
+																<span class="field-heading__require">*</span>
+															</div>
+														</div>
+														<div class="create__row-content">
+															<input class="input-base input-base--height-small" type="text" placeholder="Укажите ФИО">
+														</div>
+													</div>
+													<div class="create__row">
+														<div class="create__row-heading create__row-heading--width-base">
+															<div class="field-heading">ФИО контактного лица со стороны поставщика
+																<span class="field-heading__require">*</span>
+															</div>
+														</div>
+														<div class="create__row-content">
+															<input class="input-base input-base--height-small" type="text" placeholder="Укажите ФИО">
+														</div>
+													</div>
+													<div class="create__row">
+														<div class="create__row-heading create__row-heading--width-base">
+															<div class="field-heading">Контакты
+																<span class="field-heading__require">*</span>
+															</div>
+														</div>
+														<div class="create__row-content">
+															<input class="input-base input-base--height-small" type="text" placeholder="+7">
+														</div>
+													</div>
+													<div class="create__row">
+														<div class="create__row-heading create__row-heading--width-base">
+															<div class="field-heading">Название предмета лизинга
+																<span class="field-heading__require">*</span>
+															</div>
+														</div>
+														<div class="create__row-content">
+															<input class="input-base input-base--height-small" type="text" placeholder="TEST">
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="add-item__row-section">
+												<div class="create__row-items create__row-items--gap-small">
+													<div class="create__row">
+														<div class="create__row-heading create__row-heading--width-base">
+															<div class="field-heading">Спецификация
+																<span class="field-heading__require">*</span>
+															</div>
+														</div>
+														<div class="create__row-content">
+															<input class="input-base input-base--height-small" type="text" placeholder="TEST">
+														</div>
+													</div>
+													<div class="create__row">
+														<div class="create__row-heading create__row-heading--width-base">
+															<div class="field-heading">Стоимость единицы с НДС
+																<span class="field-heading__require">*</span>
+															</div>
+														</div>
+														<div class="create__row-content">
+															<input class="input-base input-base--height-small" type="text" placeholder="TEST">
+														</div>
+													</div>
+													<div class="create__row">
+														<div class="create__row-heading create__row-heading--width-base">
+															<div class="field-heading">Количество
+																<span class="field-heading__require">*</span>
+															</div>
+														</div>
+														<div class="create__row-content">
+															<input class="input-base input-base--height-small" type="text" placeholder="TEST">
+														</div>
+													</div>
+													<div class="create__row">
+														<div class="create__row-heading create__row-heading--width-base">
+															<div class="field-heading">Срок поставки
+																<span class="field-heading__require">*</span>
+															</div>
+														</div>
+														<div class="create__row-content">
+															<input class="input-base input-base--height-small" type="text" placeholder="Укажите значение">
+														</div>
+													</div>
+													<div class="create__row">
+														<div class="total-sum total-sum--base">
+															<span class="total-sum__text">Итого: </span>
+															<span class="total-sum__value">18 210 000,00 ₽</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="add-item">
+										<div class="add-item__heading">Предмет 2</div>
+										<div class="tooltip add-item__menu">
+											<a class="btn add-item__menu-btn tooltip__btn">
+												<svg class="icon-more-alt_vertical">
+													<use xlink:href="img/icons/icons.svg#icon-more-alt_vertical"></use>
+												</svg>
+											</a>
+											<ul class="tooltip__menu add-item__tooltip">
+												<li class="tooltip__menu-item">
+													<a class="tooltip__menu-item-link">Сбросить форму</a>
+												</li>
+												<li class="tooltip__menu-item tooltip__menu-item--cancel">
+													<a class="tooltip__menu-item-link">Удалить предмет</a>
+												</li>
+											</ul>
+										</div>
+										<div class="add-item__row">
+											<div class="add-item__row-section">
+												<div class="create__row-items create__row-items--gap-small">
+													<div class="create__row">
+														<div class="create__row-heading create__row-heading--width-base">
+															<div class="field-heading">Поставщик
+																<span class="field-heading__require">*</span>
+															</div>
+														</div>
+														<div class="create__row-content">
+															<div class="select">
+																<input class="input-base input-base--select input-base--height-small select__input" type="text" placeholder="Поиск по названию, ИНН">
+																<div class="select__icon">
+																	<svg class="icon-chevron-up">
+																		<use xlink:href="img/icons/icons.svg#icon-chevron-up"></use>
+																	</svg>
+																</div>
+																<ul class="select__list select__list--supplier">
+																	<li class="select__list-item">
+																		<div class="select__list-item-main">МУП "ПАТП №2"</div>
+																		<div class="select__list-item-details">ИНН 771537455874</div>
+																	</li>
+																	<li class="select__list-item">
+																		<div class="select__list-item-main">МУП "ПАТП №22"</div>
+																		<div class="select__list-item-details">ИНН 771537487477</div>
+																	</li>
+																	<li class="select__list-item">
+																		<div class="select__list-item-main">МУП "ПАТП №2223"</div>
+																		<div class="select__list-item-details">ИНН 771874537455</div>
+																	</li>
+																	<li class="select__list-item">
+																		<div class="select__list-item-main">МУП "ПАТП №2332"</div>
+																		<div class="select__list-item-details">ИНН 771537455874</div>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+													<div class="create__row">
+														<div class="create__row-heading create__row-heading--width-base">
+															<div class="field-heading">ФИО руководителя
+																<span class="field-heading__require">*</span>
+															</div>
+														</div>
+														<div class="create__row-content">
+															<input class="input-base input-base--height-small" type="text" placeholder="Укажите ФИО">
+														</div>
+													</div>
+													<div class="create__row">
+														<div class="create__row-heading create__row-heading--width-base">
+															<div class="field-heading">ФИО контактного лица со стороны поставщика
+																<span class="field-heading__require">*</span>
+															</div>
+														</div>
+														<div class="create__row-content">
+															<input class="input-base input-base--height-small" type="text" placeholder="Укажите ФИО">
+														</div>
+													</div>
+													<div class="create__row">
+														<div class="create__row-heading create__row-heading--width-base">
+															<div class="field-heading">Контакты
+																<span class="field-heading__require">*</span>
+															</div>
+														</div>
+														<div class="create__row-content">
+															<input class="input-base input-base--height-small" type="text" placeholder="+7">
+														</div>
+													</div>
+													<div class="create__row">
+														<div class="create__row-heading create__row-heading--width-base">
+															<div class="field-heading">Название предмета лизинга
+																<span class="field-heading__require">*</span>
+															</div>
+														</div>
+														<div class="create__row-content">
+															<input class="input-base input-base--height-small" type="text" placeholder="TEST">
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="add-item__row-section">
+												<div class="create__row-items create__row-items--gap-small">
+													<div class="create__row">
+														<div class="create__row-heading create__row-heading--width-base">
+															<div class="field-heading">Спецификация
+																<span class="field-heading__require">*</span>
+															</div>
+														</div>
+														<div class="create__row-content">
+															<input class="input-base input-base--height-small" type="text" placeholder="TEST">
+														</div>
+													</div>
+													<div class="create__row">
+														<div class="create__row-heading create__row-heading--width-base">
+															<div class="field-heading">Стоимость единицы с НДС
+																<span class="field-heading__require">*</span>
+															</div>
+														</div>
+														<div class="create__row-content">
+															<input class="input-base input-base--height-small" type="text" placeholder="TEST">
+														</div>
+													</div>
+													<div class="create__row">
+														<div class="create__row-heading create__row-heading--width-base">
+															<div class="field-heading">Количество
+																<span class="field-heading__require">*</span>
+															</div>
+														</div>
+														<div class="create__row-content">
+															<input class="input-base input-base--height-small" type="text" placeholder="TEST">
+														</div>
+													</div>
+													<div class="create__row">
+														<div class="create__row-heading create__row-heading--width-base">
+															<div class="field-heading">Срок поставки
+																<span class="field-heading__require">*</span>
+															</div>
+														</div>
+														<div class="create__row-content">
+															<input class="input-base input-base--height-small" type="text" placeholder="Укажите значение">
+														</div>
+													</div>
+													<div class="create__row">
+														<div class="total-sum total-sum--base">
+															<span class="total-sum__text">Итого: </span>
+															<span class="total-sum__value">18 210 000,00 ₽</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="create__row-items create__row-items--padding-top-large">
+									<div class="create__row">
+										<div class="total-sum total-sum--large">
+											<span class="total-sum__text">Итоговая стоимость всего иммущества с НДС: </span>
+											<span class="total-sum__value">36 420 000,00 ₽</span>
+										</div>
+									</div>
+									<div class="create__row">
+										<div class="create__nav">
+											<a class="btn btn-nav btn-nav--back" href="#">Назад</a>
+											<a class="btn btn-nav btn-nav--continue" href="#">Продолжить</a>
+											<a class="btn btn-nav btn-nav--save" href="#">Сохранить</a>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>

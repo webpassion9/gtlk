@@ -1,27 +1,26 @@
-
-.checkbox-doc {
+.auth-checkbox {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
-	margin-right: 12px;
 	&__icon {
 		flex-shrink: 0;
-		width: 20px;
-		height: 20px;
+		width: 27px;
+		height: 27px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		background: var(--color-white);
-		border: 1px solid #969696;
-		border-radius: 2px;
+		border: 1px solid rgba(0, 0, 0, 0.88);
+		border-radius: 5px;
 		transition: .25s;
 		.icon-check {
 			transition: .25s;
 			opacity: 0;
 			transform: scale(0);
-			width: 10px;
-			height: 10px;
+			fill: var(--color-white);
+			width: 17px;
+			height: 17px;
 		}
 	}
 	&__text {
@@ -34,7 +33,9 @@
 	}
 	input{
 		&:checked {
-			&+.checkbox-doc__icon {
+			&+.auth-checkbox__icon {
+				background: #0085FF;
+				border-color: #0085FF;
 				.icon-check {
 					opacity: 1;
 					transform: scale(1);
