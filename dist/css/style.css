@@ -4428,7 +4428,7 @@ body .fancybox__content :focus:not(.carousel__button.is-close) {
   -ms-flex-align: start;
   align-items: flex-start;
   gap: 7px;
-  padding-top: 15px;
+  padding-top: 4px;
 }
 
 .docs-list__item {
