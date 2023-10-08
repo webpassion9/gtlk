@@ -133,115 +133,168 @@
 				</aside>
 				<main class="main">
 					<div class="content">
-						<div class="content-inner">
-							<div class="form-application__top">
-								<div class="go-back go-back--form-application">
-									<a href="#">< Назад в мои заявки</a>
+						<div class="content-inner application-content">
+							<div class="application-content__main">
+								<div class="go-back">
+									<a href="#">< Назад</a>
 								</div>
-								<div class="heading-base heading-base--large">Новая заявка</div>
+								<div class="application-top">
+									<div class="application-top__heading">
+										<div class="heading-base">Договор 123-ЗЛ-ОК от 12.07.2023</div>
+									</div>
+									<div>Договор лизинга</div>
+								</div>
+								<div class="application-main">
+									<ul class="tabs tabs--application">
+										<li class="current">
+											<a href="#">Основная информация</a>
+										</li>
+										<li>
+											<a href="#">Документы к договору</a>
+										</li>
+									</ul>
+									<div>
+										<div class="application-main__section">
+											<div class="heading-base heading-base--application">Заявитель</div>
+											<table class="details-table">
+												<tr>
+													<td>Вид договора</td>
+													<td>Договор лизинга</td>
+												</tr>
+												<tr>
+													<td>Контрагент</td>
+													<td>Иванов А.А.</td>
+												</tr>
+												<tr>
+													<td>Наименование</td>
+													<td>Наименование</td>
+												</tr>
+												<tr>
+													<td>Номер договора</td>
+													<td>123-ЗЛ-ОК</td>
+												</tr>
+												<tr>
+													<td>Регистрационный номер заявки</td>
+													<td>123-ЗЛ-ОК</td>
+												</tr>
+												<tr>
+													<td>Дата подписания</td>
+													<td>21.08.2023</td>
+												</tr>
+												<tr>
+													<td>Валюта</td>
+													<td>Рубли</td>
+												</tr>
+												<tr>
+													<td>Организация</td>
+													<td>АО “ГТЛК”</td>
+												</tr>
+												<tr>
+													<td>Дата начала</td>
+													<td>21.08.2023</td>
+												</tr>
+												<tr>
+													<td>Срок действия до</td>
+													<td>21.08.2025</td>
+												</tr>
+												<tr>
+													<td>Ставка НДС</td>
+													<td>13%</td>
+												</tr>
+												<tr>
+													<td>Сумма договора</td>
+													<td>20 000 000,00</td>
+												</tr>
+											</table>
+										</div>
+										<div class="application-main__section">
+											<div class="heading-base heading-base--app-contacts">Контактная информация</div>
+											<table class="info-table">
+												<tbody>
+													<tr>
+														<td>Менеджер</td>
+														<td>Анна</td>
+													</tr>
+													<tr>
+														<td>Внутренний номер сотрудника</td>
+														<td>8-800-200-12-99 (доб. 101)</td>
+													</tr>
+													<tr>
+														<td>Мобильный телефон</td>
+														<td>8-916-555-88-99</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
 							</div>
-							<div class="form-application__steps">
-								<ul class="form-steps">
-									<li class="form-steps__item active">
-										<div class="form-steps__item-text">Заявитель</div>
-									</li>
-									<li class="form-steps__item">
-										<div class="form-steps__item-text">Контактное лицо по сделке</div>
-									</li>
-									<li class="form-steps__item">
-										<div class="form-steps__item-text">Руководитель организации</div>
-									</li>
-									<li class="form-steps__item">
-										<div class="form-steps__item-text">Предмет лизинга/аренды</div>
-									</li>
-									<li class="form-steps__item">
-										<div class="form-steps__item-text">Условия лизинга/аренды</div>
-									</li>
-									<li class="form-steps__item">
-										<div class="form-steps__item-text">Дополнительные условия</div>
-									</li>
-									<li class="form-steps__item">
-										<div class="form-steps__item-text">Загрузить документы</div>
-									</li>
-								</ul>
-							</div>
-							<div class="form-application__main">
-								<div class="form-application__row-items">
-									<div class="form-application__row">
-										<div class="form-application__row-heading form-application__row-heading--width-normal">
-											<div class="field-heading">Полное наименование организации
-												<span class="field-heading__require">*</span>
+							<div class="application-content__side">
+								<div class="application-content__side-section application-content__side-section--first">
+									<div class="d-flex justify-content-center">
+										<div class="application-status application-status--active">Активен</div>
+									</div>
+									<ul class="application-steps">
+										<li class="application-steps__item current">Активен</li>
+										<li class="application-steps__item">Выполнен</li>
+									</ul>
+								</div>
+								<div class="application-content__side-section">
+									<div class="heading-base">Комментарии и замечания</div>
+									<div class="notifications-wrapper">
+										<div class="notification">
+											<div class="notification__inner">
+												<div class="notification__icon">
+													<svg class="icon-chat_stroke">
+														<use xlink:href="img/icons/icons.svg#icon-chat_stroke"></use>
+													</svg>
+												</div>
+												<div class="notification__content">
+													<div class="notification__content-top">
+														<div class="notification__heading">Новый комментарий по сделке 123-ЗЛ-ОК</div>
+														<a class="btn notification__btn-more" href="#">
+															<svg class="icon-more-alt_vertical">
+																<use xlink:href="img/icons/icons.svg#icon-more-alt_vertical"></use>
+															</svg>
+														</a>
+													</div>
+													<div class="notification__desc">
+														<p>Предварительные выводы неутешительны: повышение уровня гражданского сознания предопределяет высокую востребованность инновационных методов управления процессами.</p>
+													</div>
+													<div class="notification__bar">
+														<a class="notification__bar-link link-base" href="#">Смотреть</a>
+														<div class="notification__bar-date">Сегодня в 14:32</div>
+													</div>
+												</div>
+												<div class="notification__indicator notification__indicator--is-new"></div>
 											</div>
 										</div>
-										<div class="form-application__row-content form-application__row-content--width-medium">
-											<textarea class="input-base input-base--textarea"></textarea>
-										</div>
-									</div>
-									<div class="form-application__row">
-										<div class="form-application__row-heading form-application__row-heading--width-normal">
-											<div class="field-heading">Фактический адрес
-												<span class="field-heading__require">*</span>
+										<div class="notification notification--is-important">
+											<div class="notification__inner">
+												<div class="notification__icon">
+													<svg class="icon-alert">
+														<use xlink:href="img/icons/icons.svg#icon-alert"></use>
+													</svg>
+												</div>
+												<div class="notification__content">
+													<div class="notification__content-top">
+														<div class="notification__heading">Необходимо обновить документы</div>
+														<a class="btn notification__btn-more" href="#">
+															<svg class="icon-more-alt_vertical">
+																<use xlink:href="img/icons/icons.svg#icon-more-alt_vertical"></use>
+															</svg>
+														</a>
+													</div>
+													<div class="notification__desc">
+														<p>Предварительные выводы неутешительны: повышение уровня гражданского сознания предопределяет высокую востребованность инновационных методов управления процессами.</p>
+													</div>
+													<div class="notification__bar">
+														<a class="notification__bar-link link-base" href="#">Перейти к обновлению</a>
+														<div class="notification__bar-date">Вчера в 15:00</div>
+													</div>
+												</div>
+												<div class="notification__indicator notification__indicator--is-read"></div>
 											</div>
-										</div>
-										<div class="form-application__row-content form-application__row-content--width-medium">
-											<textarea class="input-base input-base--textarea"></textarea>
-										</div>
-									</div>
-									<div class="form-application__row">
-										<div class="form-application__row-heading form-application__row-heading--width-normal">
-											<div class="field-heading">Телефон
-												<span class="field-heading__require">*</span>
-											</div>
-										</div>
-										<div class="form-application__row-content form-application__row-content--width-medium">
-											<input class="input-base" type="text">
-										</div>
-									</div>
-									<div class="form-application__row">
-										<div class="form-application__row-heading form-application__row-heading--width-normal">
-											<div class="field-heading">E-mail
-												<span class="field-heading__require">*</span>
-											</div>
-										</div>
-										<div class="form-application__row-content form-application__row-content--width-medium">
-											<input class="input-base" type="email">
-										</div>
-									</div>
-									<div class="form-application__row">
-										<div class="form-application__row-heading form-application__row-heading--width-normal">
-											<div class="field-heading">Факс
-												<span class="field-heading__require">*</span>
-											</div>
-										</div>
-										<div class="form-application__row-content form-application__row-content--width-medium">
-											<input class="input-base" type="text">
-										</div>
-									</div>
-									<div class="form-application__row">
-										<div class="form-application__row-heading form-application__row-heading--width-normal">
-											<div class="field-heading">ИНН
-												<span class="field-heading__require">*</span>
-											</div>
-										</div>
-										<div class="form-application__row-content form-application__row-content--width-medium">
-											<input class="input-base" type="text">
-										</div>
-									</div>
-									<div class="form-application__row">
-										<div class="form-application__row-heading form-application__row-heading--width-normal">
-											<div class="field-heading">КПП
-												<span class="field-heading__require">*</span>
-											</div>
-										</div>
-										<div class="form-application__row-content form-application__row-content--width-medium">
-											<input class="input-base" type="text">
-										</div>
-									</div>
-									<div class="form-application__row">
-										<div class="form-application__nav">
-											<a class="btn btn-nav btn-nav--back" href="#">Назад</a>
-											<a class="btn btn-nav btn-nav--continue" href="#">Продолжить</a>
-											<a class="btn btn-nav btn-nav--save" href="#">Сохранить</a>
 										</div>
 									</div>
 								</div>
@@ -324,6 +377,17 @@
 			<div class="modal-actions__btns">
 				<a class="btn btn-nav btn-nav--cancel" data-fancybox-close>Отменить</a>
 				<a class="btn btn-nav btn-nav--continue" href="#">Продолжить</a>
+			</div>
+		</div>
+		<div class="modal-app" id="modal-app-sent">
+			<div class="modal-app__icon">
+				<svg class="icon-done">
+					<use xlink:href="img/icons/icons.svg#icon-done"></use>
+				</svg>
+			</div>
+			<div class="modal-app__heading">Ваша заявка отправлена</div>
+			<div>
+				<a class="btn btn-app" href="#">Перейти к заявке </a>
 			</div>
 		</div>
 		<script src="js/app.min.js"></script>

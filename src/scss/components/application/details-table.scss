@@ -2,6 +2,7 @@
 	font-size: 16px;
 	line-height: 18px;
 	max-width: 840px;
+	table-layout: fixed;
 	th {
 		padding: 10px 0;
 		color: var(--color-gray2);
@@ -14,6 +15,13 @@
 		&:first-child {
 			color: var(--color-gray2);
 			padding-left: 0;
+		}
+	}
+
+	&--organization {
+		td {
+			padding-top: 16px;
+			padding-bottom: 16px;
 		}
 	}
 }

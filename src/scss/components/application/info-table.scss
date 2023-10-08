@@ -1,0 +1,20 @@
+.info-table {
+	font-size: 20px;
+	line-height: 24px;
+	color: #242424;
+	border-collapse: collapse;
+	font-family: $fontThird;
+	tr {
+		border-top: 1px solid rgba(0,0,0,.1);
+	}
+	td {
+		padding: 15px 23px;
+		&:first-child {
+			color:rgba(0,0,0,.8);
+			padding-left: 0;
+		}
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+}

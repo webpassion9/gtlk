@@ -1,6 +1,7 @@
 .application-content {
 	display: flex;
 	align-items: flex-start;
+	min-height: 100%;
 	&--float {
 		display: block;
 	}
@@ -10,6 +11,7 @@
 	&__side {
 		margin-left: 115px;
 		width: 413px;
+		flex-shrink: 0;
 		padding-right: 35px;
 		&-section {
 			padding-top: 27px;

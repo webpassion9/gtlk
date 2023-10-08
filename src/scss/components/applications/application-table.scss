@@ -5,13 +5,15 @@
 	color: rgba(0, 0, 0, 0.8);
 	border-top: 1px solid #E6E6E6;
 	border-collapse: collapse;
-	max-width: 1485px;
-	tr {
-		transition: .25s;
-		&:not(:first-child) {
+	table-layout: fixed;
+	// max-width: 1485px;
+	tbody {
+		tr {
+			transition: .25s;
 			&:hover {
 				background: #F5F5F5;
-				td {
+				.total-selected {
+					background: var(--color-white);
 				}
 				.application-table td {
 					border: 0 !important;
@@ -34,15 +36,49 @@
 		&:not(:last-child) {
 			border-right: 1px solid #E6E6E6;
 		}
+		&.th-section-heading {
+			text-align: center;
+		}
+
+		&.th-table-inside {
+			padding: 0;
+			table {
+				width: 100%;
+				border-collapse: collapse;
+				th {
+					height: auto;
+					&:not(.th-section-heading) {
+						border: 0;
+					}
+				}
+			}
+		}
 	}
 	td {
 		vertical-align: top;
 		padding: 10px;
 		border-bottom: 1px solid #E6E6E6;
 		min-height: 66px;
-		padding: 7px 15px;
+		padding: 9px 15px;
 		&:first-child {
 			border-right: 1px solid #E6E6E6;
+		}
+		&.td-table-inside {
+			padding: 5px 0;
+			table {
+				width: 100%;
+				border-collapse: collapse;
+				table-layout: fixed;
+				td {
+					border: 0;
+					padding-top: 4px;
+					padding-bottom: 4px;
+				}
+			}
+		}
+		&.td-total-selected {
+			padding-left: 0;
+			padding-right: 0;
 		}
 	}
 
@@ -52,47 +88,14 @@
 	gap: 15px;
 }
 
-.status {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 3px 4px;
-	width: 155px;
-	height: 36px;
-	border-radius: 4px;
-	font-size: 14px;
-	line-height: 20px;
-	&--review {
-		background: #FBE741;
-		color: #386415;
-	}
-	&--rejected {
-		background: #FFDFDF;
-		color: #8C0909;
-	}
-	&--registered {
-		background: #D0F4FF;
-		color: #093E8C;
-	}
-	&--completed {
-		background: #B5F97F;
-		color: #386415;
-	}
-	&--replaced {
-		background: #FFDFDF;
-		color: #8C0909;
-	}
-	&--draft {
-		background: #DEDEDE;
-		color: #454545;
-	}
-}
-
 .total-selected {
 	background: #F4F4F4;
-	display: inline-block;
-	padding: 3px 10px 4px;
-	margin: 0 -10px;
+	padding: 3px 15px 4px;
+	transition: .25s;
 }
 
-
+.text-one-line {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}

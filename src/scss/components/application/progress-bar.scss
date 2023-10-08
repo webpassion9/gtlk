@@ -1,6 +1,9 @@
 .progress-bar {
 	position: relative;
 	display: inline-flex;
+	&-svg {
+		transform: rotate(180deg);
+	}
 }
 
 .progress {

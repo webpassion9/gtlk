@@ -242,6 +242,19 @@
 		}
 	}
 
+	&-details {
+		background: var(--color-blue-base);
+		color: var(--color-white);
+		border-radius: 10px;
+		border: 1px solid #E8E8E8;
+		font-size: 16px;
+		padding: 5px 10px;
+		height: 40px;
+		&:hover {
+			background: #0074e9;
+		}
+	}
+
 
 
 

@@ -1,0 +1,228 @@
+include html/mixins
+
+doctype html
+block head
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no")
+		meta(name="format-detection" content="telephone=no")
+
+		link(rel="stylesheet", href="css/style.min.css")
+
+		title Title
+
+	body
+		.wrapper.wrapper-main
+
+			header.header-main
+				.container
+					a(href="#")
+						img(src="img/logo-GTLK_dark.png", width="166" height="52" alt="")
+					ul.header-menu
+						li
+							a(href="#") Компания
+						li
+							a(href="#") Деятельность
+						li
+							a(href="#") Клиентам
+						li
+							a(href="#") Закупки
+						li
+							a(href="#") Инвесторам
+						li
+							a(href="#") Устойчивое развитие
+						li
+							a(href="#") Медиа
+					form.header-search
+						input(type="text").header-search__input
+						.header-search__icon
+							+sprite("icon-loop")
+					.header-btns
+						a(href="#").btn.header-btns__item
+							+sprite("icon-bell")
+						a(href="#").btn.header-btns__item
+							+sprite("icon-user")
+
+						
+			.main-row
+
+				aside.sidebar
+					.sidebar__inner
+						.sidebar__section
+							ul.sidebar__nav
+								li.sidebar__nav-item.current
+									a(href="#").sidebar__nav-item-btn
+										.sidebar__nav-item-icon
+											+sprite("icon-file-tray")
+										.sidebar__nav-item-text Заявки
+								li.sidebar__nav-item
+									a(href="#").sidebar__nav-item-btn
+										.sidebar__nav-item-icon
+											+sprite("icon-newspaper")
+										.sidebar__nav-item-text Договоры
+								li.sidebar__nav-item
+									a(href="#").sidebar__nav-item-btn
+										.sidebar__nav-item-icon
+											+sprite("icon-doc")
+										.sidebar__nav-item-text Обращения НМЦ
+						.sidebar__section.sidebar__section--info
+							ul.sidebar__nav
+								li.sidebar__nav-item
+									a(href="#").sidebar__nav-item-btn
+										.sidebar__nav-item-icon
+											+sprite("icon-book")
+										.sidebar__nav-item-text Справка
+						.sidebar__section
+							.manager
+								.manager__ava
+									img(src="img/avatar-manager.png", alt="")
+								.manager__name Менеджер Иванова А.А.
+								a(href="#").btn.manager__btn Связаться
+						.sidebar__section
+							a(href="#").support
+								.support__icon
+									+sprite("icon-chat")
+								.support__heading Служба поддержки
+
+				main.main
+					.content
+						.content-inner.application-content
+							.application-content__main
+								.go-back
+									a(href="#") < Назад
+								.application-top
+									.application-top__heading
+										.heading-base Договор 123-ЗЛ-ОК от 12.07.2023
+									div Договор лизинга
+								.application-main
+									ul.tabs.tabs--application
+										li.current
+											a(href="#") Основная информация
+										li
+											a(href="#") Документы к договору
+									
+									div
+										.application-main__section
+											.heading-base.heading-base--application Заявитель
+											table.details-table
+												tr
+													td Вид договора
+													td Договор лизинга
+												tr
+													td Контрагент
+													td Иванов А.А.
+												tr
+													td Наименование
+													td Наименование
+												tr
+													td Номер договора
+													td 123-ЗЛ-ОК
+												tr
+													td Регистрационный номер заявки
+													td 123-ЗЛ-ОК
+												tr
+													td Дата подписания
+													td 21.08.2023
+												tr
+													td Валюта
+													td Рубли
+												tr
+													td Организация
+													td АО “ГТЛК”
+												tr
+													td Дата начала
+													td 21.08.2023
+												tr
+													td Срок действия до
+													td 21.08.2025
+												tr
+													td Ставка НДС
+													td 13%
+												tr
+													td Сумма договора
+													td 20 000 000,00
+										.application-main__section
+											.heading-base.heading-base--app-contacts Контактная информация
+											table.info-table
+												tbody
+													tr
+														td Менеджер
+														td Анна
+													tr
+														td Внутренний номер сотрудника
+														td 8-800-200-12-99 (доб. 101)
+													tr
+														td Мобильный телефон
+														td 8-916-555-88-99
+							
+							.application-content__side
+								.application-content__side-section.application-content__side-section--first
+									.d-flex.justify-content-center
+										.application-status.application-status--active Активен
+									ul.application-steps
+										li.application-steps__item.current Активен
+										li.application-steps__item Выполнен
+								
+								.application-content__side-section
+									.heading-base Комментарии и замечания
+									.notifications-wrapper
+										.notification
+											.notification__inner
+												.notification__icon
+													+sprite("icon-chat_stroke")
+												.notification__content
+													.notification__content-top
+														.notification__heading Новый комментарий по сделке 123-ЗЛ-ОК
+														a(href="#").btn.notification__btn-more
+															+sprite("icon-more-alt_vertical")
+													.notification__desc
+														p Предварительные выводы неутешительны: повышение уровня гражданского сознания предопределяет высокую востребованность инновационных методов управления процессами.
+													.notification__bar
+														a(href="#").notification__bar-link.link-base Смотреть
+														.notification__bar-date Сегодня в 14:32
+												.notification__indicator.notification__indicator--is-new
+										.notification.notification--is-important
+											.notification__inner
+												.notification__icon
+													+sprite("icon-alert")
+												.notification__content
+													.notification__content-top
+														.notification__heading Необходимо обновить документы
+														a(href="#").btn.notification__btn-more
+															+sprite("icon-more-alt_vertical")
+													.notification__desc
+														p Предварительные выводы неутешительны: повышение уровня гражданского сознания предопределяет высокую востребованность инновационных методов управления процессами.
+													.notification__bar
+														a(href="#").notification__bar-link.link-base Перейти к обновлению
+														.notification__bar-date Вчера в 15:00
+												.notification__indicator.notification__indicator--is-read
+							
+
+							
+							
+
+					footer.footer
+						.container
+							.footer__section.d-flex.justify-content-end
+								ul.footer__menu
+									li
+										a(href="#") О нас
+									li
+										a(href="#") Реквизиты
+									li
+										a(href="#") Политика в отношении обработки персональных данных в АО “ГТЛК”
+							hr
+							.footer__section.d-flex.justify-content-between.align-items-center
+								.footer__copyright © 2023 АО ГТЛК
+								ul.footer__menu
+									li
+										a(href="tel:88002001299") 8-800-200-12-99
+									li
+										a(href="mailto:gtlk@gtlk.ru") gtlk@gtlk.ru
+									li
+										a(href="#") 125284, г. Москва, Ленинградский проспект д. 31 а, стр. 1
+			
+		include html/modals
+
+		script(src="js/app.min.js")

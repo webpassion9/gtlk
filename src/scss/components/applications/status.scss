@@ -1,0 +1,44 @@
+.status {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 3px 4px;
+	width: 155px;
+	height: 36px;
+	border-radius: 4px;
+	font-size: 14px;
+	line-height: 20px;
+	flex-shrink: 0;
+	&--review {
+		background: #FBE741;
+		color: #386415;
+	}
+	&--rejected {
+		background: #FFDFDF;
+		color: #8C0909;
+	}
+	&--registered {
+		background: #D0F4FF;
+		color: #093E8C;
+	}
+	&--completed {
+		background: #B5F97F;
+		color: #386415;
+	}
+	&--replaced {
+		background: #FFDFDF;
+		color: #8C0909;
+	}
+	&--draft {
+		background: #DEDEDE;
+		color: #454545;
+	}
+	&--active {
+		background: #FBE741;
+		color: #093E8C;
+	}
+
+	&--text-medium {
+		font-size: 16px;
+	}
+}

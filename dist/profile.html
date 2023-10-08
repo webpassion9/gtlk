@@ -8,13 +8,13 @@
 		<title>Title</title>
 	</head>
 	<body>
-		<div class="wrapper">
-			<header>
+		<div class="wrapper wrapper-main">
+			<header class="header-main">
 				<div class="container">
 					<a href="#">
-						<img src="" alt="">
+						<img src="img/logo-GTLK_dark.png" width="166" height="52" alt="">
 					</a>
-					<ul>
+					<ul class="header-menu">
 						<li>
 							<a href="#">Компания</a>
 						</li>
@@ -37,97 +37,258 @@
 							<a href="#">Медиа</a>
 						</li>
 					</ul>
-					<form>
-						<input type="text">
+					<form class="header-search">
+						<input class="header-search__input" type="text">
+						<div class="header-search__icon">
+							<svg class="icon-loop">
+								<use xlink:href="img/icons/icons.svg#icon-loop"></use>
+							</svg>
+						</div>
 					</form>
-					<div></div>
-				</div>
-			</header>
-			<main>
-				<aside>
-					<div>
-						<ul>
-							<li>
-								<a href="#">
-									<svg class="icon">
-										<use xlink:href="img/icons/icons.svg#icon"></use>
-									</svg>
-									<div>Заявки</div>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<svg class="icon">
-										<use xlink:href="img/icons/icons.svg#icon"></use>
-									</svg>
-									<div>Договоры</div>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<svg class="icon">
-										<use xlink:href="img/icons/icons.svg#icon"></use>
-									</svg>
-									<div>Обращения НМЦ</div>
-								</a>
-							</li>
-						</ul>
-					</div>
-					<div>
-						<ul>
-							<li>
-								<a href="#">
-									<svg class="icon">
-										<use xlink:href="img/icons/icons.svg#icon"></use>
-									</svg>
-									<div>Справка</div>
-								</a>
-							</li>
-						</ul>
-					</div>
-					<div>
-						<div>ava</div>
-						<div>Менеджер Иванова А.А.</div>
-						<a href="#">Связаться</a>
-					</div>
-					<div>
-						<a href="#">
-							<div>icon</div>
-							<div>Служба поддержки</div>
+					<div class="header-btns">
+						<a class="btn header-btns__item" href="#">
+							<svg class="icon-bell">
+								<use xlink:href="img/icons/icons.svg#icon-bell"></use>
+							</svg>
+						</a>
+						<a class="btn header-btns__item" href="#">
+							<svg class="icon-user">
+								<use xlink:href="img/icons/icons.svg#icon-user"></use>
+							</svg>
 						</a>
 					</div>
-				</aside>
-			</main>
-			<footer class="footer">
-				<div class="container">
-					<ul>
-						<li>
-							<a href="#">О нас</a>
-						</li>
-						<li>
-							<a href="#">Реквизиты</a>
-						</li>
-						<li>
-							<a href="#">Политика в отношении обработки персональных данных в АО “ГТЛК”</a>
-						</li>
-					</ul>
-					<hr>
-					<div>
-						<div>© 2023 АО ГТЛК</div>
-						<ul>
-							<li>
-								<a href="tel:88002001299">8-800-200-12-99</a>
-							</li>
-							<li>
-								<a href="mailto:gtlk@gtlk.ru">gtlk@gtlk.ru</a>
-							</li>
-							<li>
-								<a href="#">125284, г. Москва, Ленинградский проспект д. 31 а, стр. 1</a>
-							</li>
-						</ul>
-					</div>
 				</div>
-			</footer>
+			</header>
+			<div class="main-row">
+				<aside class="sidebar">
+					<div class="sidebar__inner">
+						<div class="sidebar__section">
+							<ul class="sidebar__nav">
+								<li class="sidebar__nav-item current">
+									<a class="sidebar__nav-item-btn" href="#">
+										<div class="sidebar__nav-item-icon">
+											<svg class="icon-file-tray">
+												<use xlink:href="img/icons/icons.svg#icon-file-tray"></use>
+											</svg>
+										</div>
+										<div class="sidebar__nav-item-text">Заявки</div>
+									</a>
+								</li>
+								<li class="sidebar__nav-item">
+									<a class="sidebar__nav-item-btn" href="#">
+										<div class="sidebar__nav-item-icon">
+											<svg class="icon-newspaper">
+												<use xlink:href="img/icons/icons.svg#icon-newspaper"></use>
+											</svg>
+										</div>
+										<div class="sidebar__nav-item-text">Договоры</div>
+									</a>
+								</li>
+								<li class="sidebar__nav-item">
+									<a class="sidebar__nav-item-btn" href="#">
+										<div class="sidebar__nav-item-icon">
+											<svg class="icon-doc">
+												<use xlink:href="img/icons/icons.svg#icon-doc"></use>
+											</svg>
+										</div>
+										<div class="sidebar__nav-item-text">Обращения НМЦ</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="sidebar__section sidebar__section--info">
+							<ul class="sidebar__nav">
+								<li class="sidebar__nav-item">
+									<a class="sidebar__nav-item-btn" href="#">
+										<div class="sidebar__nav-item-icon">
+											<svg class="icon-book">
+												<use xlink:href="img/icons/icons.svg#icon-book"></use>
+											</svg>
+										</div>
+										<div class="sidebar__nav-item-text">Справка</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="sidebar__section">
+							<div class="manager">
+								<div class="manager__ava">
+									<img src="img/avatar-manager.png" alt="">
+								</div>
+								<div class="manager__name">Менеджер Иванова А.А.</div>
+								<a class="btn manager__btn" href="#">Связаться</a>
+							</div>
+						</div>
+						<div class="sidebar__section">
+							<a class="support" href="#">
+								<div class="support__icon">
+									<svg class="icon-chat">
+										<use xlink:href="img/icons/icons.svg#icon-chat"></use>
+									</svg>
+								</div>
+								<div class="support__heading">Служба поддержки</div>
+							</a>
+						</div>
+					</div>
+				</aside>
+				<main class="main">
+					<div class="content">
+						<div class="content-inner application-content profile">
+							<div class="application-content__main">
+								<div class="application-top">
+									<div class="application-top__heading">
+										<div class="heading-base heading-base--large">Профиль</div>
+									</div>
+								</div>
+								<div class="application-main">
+									<ul class="tabs-profile">
+										<li class="current">
+											<a href="#">Профиль пользователя</a>
+										</li>
+										<li>
+											<a href="#">Профиль организации</a>
+										</li>
+									</ul>
+									<div class="profile__common-btn">
+										<a class="btn btn-details" href="#">Общая Информация</a>
+									</div>
+									<div class="application-main__row application-main__section">
+										<div class="application-main__row-col-first">
+											<div class="application-main__section">
+												<table class="details-table">
+													<tr>
+														<td style="width:27%">Ф.И.О. контактного лица со стороны Заявителя</td>
+														<td style="width:73%">Абдулхаков Артур Маратович</td>
+													</tr>
+													<tr>
+														<td style="width:27%">E-mail</td>
+														<td style="width:73%">kpatp-2@yandex.ru</td>
+													</tr>
+													<tr>
+														<td style="width:27%">Телефон</td>
+														<td style="width:73%">+7 (843) 262-06-76</td>
+													</tr>
+												</table>
+											</div>
+										</div>
+										<div class="application-main__row-col-sec">
+											<div class="application-main__section">
+												<div class="heading-base heading-base--application">Контактная информация</div>
+												<table class="info-table">
+													<tbody>
+														<tr>
+															<td>Менеджер</td>
+															<td>Анна</td>
+														</tr>
+														<tr>
+															<td>E-mail для обращений</td>
+															<td>Ivanova@gtlk.ru</td>
+														</tr>
+														<tr>
+															<td>Внутренний номер сотрудника</td>
+															<td>8-800-200-12-99 (доб. 101)</td>
+														</tr>
+														<tr>
+															<td>Мобильный телефон</td>
+															<td>8-916-555-88-99</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<footer class="footer">
+						<div class="container">
+							<div class="footer__section d-flex justify-content-end">
+								<ul class="footer__menu">
+									<li>
+										<a href="#">О нас</a>
+									</li>
+									<li>
+										<a href="#">Реквизиты</a>
+									</li>
+									<li>
+										<a href="#">Политика в отношении обработки персональных данных в АО “ГТЛК”</a>
+									</li>
+								</ul>
+							</div>
+							<hr>
+							<div class="footer__section d-flex justify-content-between align-items-center">
+								<div class="footer__copyright">© 2023 АО ГТЛК</div>
+								<ul class="footer__menu">
+									<li>
+										<a href="tel:88002001299">8-800-200-12-99</a>
+									</li>
+									<li>
+										<a href="mailto:gtlk@gtlk.ru">gtlk@gtlk.ru</a>
+									</li>
+									<li>
+										<a href="#">125284, г. Москва, Ленинградский проспект д. 31 а, стр. 1</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</footer>
+				</main>
+			</div>
+		</div>
+		<div class="modal modal--continue-filling" id="modal-continue-filling">
+			<div class="modal__icon">
+				<img src="img/icon-filling.svg" width="127" height="126" alt="">
+			</div>
+			<div class="modal__heading">Продолжить заполнение?</div>
+			<div class="modal__btns">
+				<a class="btn btn-filling btn-filling--positive" href="#">Да</a>
+				<a class="btn btn-filling btn-filling--negative" href="#">Нет</a>
+			</div>
+		</div>
+		<div class="modal" id="modal-remove-draft">
+			<div class="modal__icon">
+				<img src="img/icon-remove-draft.svg" width="222" height="221" alt="">
+			</div>
+			<div class="modal__heading">Вы уверены, что хотите удалить черновик?</div>
+			<div class="modal__btns">
+				<a class="btn btn-confirm btn-confirm--positive" href="#">Да</a>
+				<a class="btn btn-confirm btn-confirm--negative" href="#">Нет</a>
+			</div>
+		</div>
+		<div class="modal-actions modal-actions--annul" id="modal-annul">
+			<div class="modal-actions__heading">Аннулировать заявку</div>
+			<div class="modal-actions__text">
+				<p>При аннулировании заявки вы не сможете ее восстановить или заменить. Пожалуйста, убедитесь, что вы действительно хотите аннулировать заявку.</p>
+			</div>
+			<div class="modal-actions__btns">
+				<a class="btn btn-nav btn-nav--cancel" data-fancybox-close>Отменить</a>
+				<a class="btn btn-nav btn-nav--annul" href="#">Аннулировать</a>
+			</div>
+		</div>
+		<div class="modal-actions modal-actions--new-version" id="modal-new-version">
+			<div class="modal-actions__heading">Создать новую версию заявки</div>
+			<p>При создании новой версии текущая отправленная заявка аннулируется и её статус изменится на «Заменена». Данные заявки скопируются в новую заявку. После заполнения заявки потребуется заново отправить ее на рассмотрение.</p>
+			<form>
+				<div>
+					<textarea class="input-base input-base--textarea input-base--replace-info" placeholder="Укажите причину замены"></textarea>
+				</div>
+			</form>
+			<div class="modal-actions__btns">
+				<a class="btn btn-nav btn-nav--cancel" data-fancybox-close>Отменить</a>
+				<a class="btn btn-nav btn-nav--continue" href="#">Продолжить</a>
+			</div>
+		</div>
+		<div class="modal-app" id="modal-app-sent">
+			<div class="modal-app__icon">
+				<svg class="icon-done">
+					<use xlink:href="img/icons/icons.svg#icon-done"></use>
+				</svg>
+			</div>
+			<div class="modal-app__heading">Ваша заявка отправлена</div>
+			<div>
+				<a class="btn btn-app" href="#">Перейти к заявке </a>
+			</div>
 		</div>
 		<script src="js/app.min.js"></script>
 	</body>

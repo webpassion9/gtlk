@@ -1,0 +1,26 @@
+.tabs-profile {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	gap: 10px;
+	&>li {
+		&>a {
+			height: 70px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 5px;
+			border-bottom: 1px solid rgba(#707070, .3);
+			color: rgba(0,0,0, .8);
+			font-size: 18px;
+			line-height: 1.2;
+		}
+		&.current {
+			&>a {
+				color: #0085FF;
+				border-color: #0085FF;
+			}
+		}
+	}
+}
