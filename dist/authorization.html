@@ -9,26 +9,26 @@
 	</head>
 	<body>
 		<div class="wrapper">
-			<header class="header">
+			<header class="header-auth">
 				<div class="container">
-					<div class="header__top">
-						<a class="header__logo" href="#">
+					<div class="header-auth__top">
+						<a class="header-auth__logo" href="#">
 							<img src="img/logo-GTLK.png" width="214" height="67" alt="">
 						</a>
 						<div class="d-flex align-items-center">
-							<a class="phone header__phone" href="tel:88002001299">
+							<a class="header-auth__phone" href="tel:88002001299">
 								<svg class="icon-phone">
 									<use xlink:href="img/icons/icons.svg#icon-phone"></use>
 								</svg>	8-800-200-12-99
 							</a>
-							<a class="btn btn-menu header__btn-menu" href="#">
+							<a class="btn btn-menu header-auth__btn-menu" href="#">
 								<svg class="icon-menu">
 									<use xlink:href="img/icons/icons.svg#icon-menu"></use>
 								</svg>
 							</a>
 						</div>
 					</div>
-					<ul class="header__menu">
+					<ul class="header-auth__menu">
 						<li>
 							<a href="#">Главная</a>
 						</li>
@@ -39,7 +39,7 @@
 							<a href="#">Общественная деятельность</a>
 						</li>
 					</ul>
-					<div class="header__heading">Авторизация</div>
+					<div class="header-auth__heading">Авторизация</div>
 				</div>
 			</header>
 			<main>
@@ -72,15 +72,17 @@
 										</div>
 									</div>
 								</div>
-								<label class="auth-checkbox auth__checkbox">
-									<input type="checkbox" hidden>
-									<span class="auth-checkbox__icon">
-										<svg class="icon-check">
-											<use xlink:href="img/icons/icons.svg#icon-check"></use>
-										</svg>
-									</span>
-									<span class="auth-checkbox__text">Запомнить меня на этом компьютере</span>
-								</label>
+								<div class="auth__checkbox-wrapper">
+									<label class="auth-checkbox">
+										<input type="checkbox" hidden>
+										<span class="auth-checkbox__icon">
+											<svg class="icon-check">
+												<use xlink:href="img/icons/icons.svg#icon-check"></use>
+											</svg>
+										</span>
+										<span class="auth-checkbox__text">Запомнить меня на этом компьютере</span>
+									</label>
+								</div>
 								<div>
 									<input class="btn btn-submit btn-submit--size-large btn--fullwidth" type="submit" value="Войти">
 								</div>

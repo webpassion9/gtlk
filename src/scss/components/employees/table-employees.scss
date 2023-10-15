@@ -1,0 +1,32 @@
+.table-employees {
+	width: 100%;
+	font-size: 14px;
+	line-height: 17px;
+	color: rgba(0, 0, 0, 0.8);
+	border-collapse: collapse;
+	table-layout: fixed;
+	tbody {
+		tr {
+			transition: .25s;
+			&:hover {
+				background: #F5F5F5;
+			}
+		}
+	}
+	th {
+		color: var(--color-gray);
+		font-weight: 400;
+		text-align: left;
+		vertical-align: middle;
+		border-bottom: 1px solid #E6E6E6;
+		height: 49px;
+		padding: 7px 15px;
+	}
+	td {
+		vertical-align: middle;
+		padding: 10px;
+		border-bottom: 1px solid #E6E6E6;
+		min-height: 60px;
+		padding: 9px 15px;
+	}
+}

@@ -3,6 +3,7 @@ import * as flsFunctions from "./modules/functions.js";
 // import 'swiper/css/bundle';
 import { Fancybox } from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox.css";
+import PerfectScrollbar from 'perfect-scrollbar';
 
 flsFunctions.isWebp();
 
@@ -26,9 +27,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //
 
-import { initializeFancybox, initializeSelect, initializeTooltip } from './modules/common/index.js';
+import { initializeSelect, initializeTooltip } from './modules/common/index.js';
 
-initializeFancybox();
 initializeSelect();
 initializeTooltip();
 
@@ -41,15 +41,40 @@ initializeTooltip();
 //
 
 
-
-
-
-
 import { progressCircle } from './modules/common/progressCircle.js';
 
 progressCircle();
 
+//
 
 import { docsToggle } from './modules/application/index.js';
 
 docsToggle();
+
+//
+
+const tableWrapper = document.querySelector('.table-wrapper');
+
+if (tableWrapper) {
+  const ps = new PerfectScrollbar(tableWrapper, {});
+  ps.update();
+}
+
+const popupNotificationsList = document.querySelector('.popup-notifications__scroll-wrapper');
+
+if (popupNotificationsList) {
+  const psPopup = new PerfectScrollbar(popupNotificationsList, {});
+  psPopup.update();
+}
+
+//
+
+import { targetPopup } from './modules/header/index.js';
+
+targetPopup();
+
+//
+
+import { checkboxCheckAll } from './modules/event-log/index.js';
+
+checkboxCheckAll();

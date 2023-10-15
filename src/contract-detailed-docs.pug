@@ -15,36 +15,7 @@ html(lang="ru")
 	body
 		.wrapper.wrapper-main
 
-			header.header-main
-				.container
-					a(href="#")
-						img(src="img/logo-GTLK_dark.png", width="166" height="52" alt="")
-					ul.header-menu
-						li
-							a(href="#") Компания
-						li
-							a(href="#") Деятельность
-						li
-							a(href="#") Клиентам
-						li
-							a(href="#") Закупки
-						li
-							a(href="#") Инвесторам
-						li
-							a(href="#") Устойчивое развитие
-						li
-							a(href="#") Медиа
-					form.header-search
-						input(type="text").header-search__input
-						.header-search__icon
-							+sprite("icon-loop")
-					.header-btns
-						a(href="#").btn.header-btns__item
-							+sprite("icon-bell")
-						a(href="#").btn.header-btns__item
-							+sprite("icon-user")
-
-						
+			include html/header
 			.main-row
 
 				aside.sidebar

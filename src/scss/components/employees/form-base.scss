@@ -1,0 +1,17 @@
+.form-base {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	&__item {
+		width: 100%;
+		&-heading {
+			padding-bottom: 9px;
+		}
+		&-main {
+			position: relative;
+		}
+		&--submit {
+			padding-top: 10px;
+		}
+	}
+}

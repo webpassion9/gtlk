@@ -2,13 +2,35 @@
 	display: flex;
 	align-items: center;
 	gap: 35px;
-	padding-top: 6px;
-	padding-right: 7px;
+	list-style: none;
+	margin: 0;
+	padding: 6px 7px 0 0;
 	&__item {
+		position: relative;
+		&-indicator {
+			position: absolute;
+			right: 0;
+			bottom: 3px;
+			width: 14px;
+			height: 14px;
+			background: #E54137;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: var(--color-white);
+			font-weight: 700;
+			font-size: 10px;
+			line-height: 1.2;
+			font-family: $fontThird;
+			border-radius: 100%;
+		}
+	}
+	&__link {
 		width: 32px;
 		height: 32px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		position: relative;
 	}
 }

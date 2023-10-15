@@ -22,20 +22,9 @@ body {
     width: 100%;
     min-width: 320px;
 
-    max-width: 1920px;
-    margin: 0 auto;
-
     background: var(--color-white);
     color: var(--color-black);
 
     display: flex;
     flex-direction: column;
 }
-
-// .container {
-//     width: 100%;
-// 	max-width: 1586px;
-//     padding-left: 15px;
-//     padding-right: 15px;
-//     margin: 0 auto; 
-// }

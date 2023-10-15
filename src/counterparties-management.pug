@@ -1,0 +1,479 @@
+include html/mixins
+
+doctype html
+block head
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no")
+		meta(name="format-detection" content="telephone=no")
+
+		link(rel="stylesheet", href="css/style.min.css")
+
+		title Title
+
+	body
+		.wrapper.wrapper-main
+
+			include html/header
+			.main-row
+
+				aside.sidebar
+					.sidebar__inner
+						.sidebar__section
+							ul.sidebar__nav
+								li.sidebar__nav-item.current
+									a(href="#").sidebar__nav-item-btn
+										.sidebar__nav-item-icon
+											+sprite("icon-file-tray")
+										.sidebar__nav-item-text Заявки
+								li.sidebar__nav-item
+									a(href="#").sidebar__nav-item-btn
+										.sidebar__nav-item-icon
+											+sprite("icon-newspaper")
+										.sidebar__nav-item-text Договоры
+								li.sidebar__nav-item
+									a(href="#").sidebar__nav-item-btn
+										.sidebar__nav-item-icon
+											+sprite("icon-management")
+										.sidebar__nav-item-text Управление контрагентами
+								li.sidebar__nav-item
+									a(href="#").sidebar__nav-item-btn
+										.sidebar__nav-item-icon
+											+sprite("icon-settings")
+										.sidebar__nav-item-text Настройки
+						.sidebar__section.sidebar__section--info
+							ul.sidebar__nav
+								li.sidebar__nav-item
+									a(href="#").sidebar__nav-item-btn
+										.sidebar__nav-item-icon
+											+sprite("icon-book")
+										.sidebar__nav-item-text Справка
+						.sidebar__section
+							a(href="#").support
+								.support__icon
+									+sprite("icon-chat")
+								.support__heading Служба поддержки
+
+				main.main
+					.content
+						.content-inner
+							.d-flex.justify-content-between.align-items-center
+								.heading-base Все контрагенты
+								div
+									a(href="#").btn.btn-base Добавить контрагента
+							
+							form.application-form
+								.application-form__item
+									input(type="text" placeholder="Поиск").application-form__item-input
+									.application-form__item-icon
+										+sprite("icon-loop")
+							.table-wrapper
+								table.table-counterparties
+									thead
+										tr
+											th(style="width:286px") Полное наименование организации
+											th(style="width:199px") Краткое наименование
+											th(style="width:154px") Регион
+											th(style="width:245px") Адрес
+											th(style="width:154px") ИНН/КПП
+											th(style="width:140px") ОКПО
+											th(style="width:130px") Код ОКОПФ
+											th(style="width:120px") ОКВЭД
+											th(style="width:130px") ОКТМО
+											th(style="width:166px") Телефон
+											th(style="width:179px") E-mail организации
+											th(style="width:140px") Код синхронизации
+											th(style="width:179px") ФИО клиентского менеджера
+											th(style="width:166px") E-mail для обращений
+											th(style="width:164px") Внутренний номер КМ
+											th(style="width:164px") Мобильный номер КМ
+											th(style="width:140px") Код синхронизации
+											th(style="width:106px") Дата добавления
+											th(style="width:204px") Статус
+									tbody
+										tr
+											td ООО «ПАССАЖИРСКОЕ ABTOTPAHCПOPTHOE ПРЕДПРИЯТИЕ»
+											td ООО «ПАС-АВТО»
+											td г. Казань
+											td
+												.two-lines-overflow 420087, Республика Татарстан, город Казань, улица
+											td 771537465587
+												.color-gray 166001001
+											td.fs-16 05151873
+											td.fs-16 1 10 00
+											td.fs-16 01
+											td.fs-16 36602404
+											td +7 (843) 262-06-76
+											td email@gtlk.ru
+											td HQ-9999-RE
+											td Иванов Иван Иванович
+											td email@gtlk.ru
+											td +7 (843) 262-06-76
+											td +7 (843) 262-06-76
+											td HQ-9999-RE
+											td 12.08.2023
+											td
+												.td-status-bar
+													.org-status.org-status--active
+														+sprite("icon-check")
+														| Активен
+													.tooltip
+														a.btn.tooltip__btn
+															+sprite("icon-more-alt")
+														ul.tooltip__menu
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Редактировать
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Список сотрудников
+															li.tooltip__menu-item
+																a(href="#modal-block-counterparty" data-fancybox).tooltip__menu-item-link Заблокировать
+															li.tooltip__menu-item.tooltip__menu-item--cancel
+																a(href="#modal-remove-counterparty" data-fancybox).tooltip__menu-item-link Удалить
+										tr
+											td ООО «ПАССАЖИРСКОЕ ABTOTPAHCПOPTHOE ПРЕДПРИЯТИЕ»
+											td ООО «ПАС-АВТО»
+											td г. Казань
+											td
+												.two-lines-overflow 420087, Республика Татарстан, город Казань, улица
+											td 771537465587
+												.color-gray 166001001
+											td.fs-16 05151873
+											td.fs-16 1 10 00
+											td.fs-16 01
+											td.fs-16 36602404
+											td +7 (843) 262-06-76
+											td email@gtlk.ru
+											td HQ-9999-RE
+											td Иванов Иван Иванович
+											td email@gtlk.ru
+											td +7 (843) 262-06-76
+											td +7 (843) 262-06-76
+											td HQ-9999-RE
+											td 12.08.2023
+											td
+												.td-status-bar
+													.org-status.org-status--blocked
+														+sprite("icon-check")
+														| Заблокирован
+													.tooltip
+														a.btn.tooltip__btn
+															+sprite("icon-more-alt")
+														ul.tooltip__menu
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Редактировать
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Список сотрудников
+															li.tooltip__menu-item
+																a(href="#modal-block-counterparty" data-fancybox).tooltip__menu-item-link Заблокировать
+															li.tooltip__menu-item.tooltip__menu-item--cancel
+																a(href="#modal-remove-counterparty" data-fancybox).tooltip__menu-item-link Удалить
+										tr
+											td ООО «ПАССАЖИРСКОЕ ABTOTPAHCПOPTHOE ПРЕДПРИЯТИЕ»
+											td ООО «ПАС-АВТО»
+											td г. Казань
+											td
+												.two-lines-overflow 420087, Республика Татарстан, город Казань, улица
+											td 771537465587
+												.color-gray 166001001
+											td.fs-16 05151873
+											td.fs-16 1 10 00
+											td.fs-16 01
+											td.fs-16 36602404
+											td +7 (843) 262-06-76
+											td email@gtlk.ru
+											td HQ-9999-RE
+											td Иванов Иван Иванович
+											td email@gtlk.ru
+											td +7 (843) 262-06-76
+											td +7 (843) 262-06-76
+											td HQ-9999-RE
+											td 12.08.2023
+											td
+												.td-status-bar
+													.org-status.org-status--active
+														+sprite("icon-check")
+														| Активен
+													.tooltip
+														a.btn.tooltip__btn
+															+sprite("icon-more-alt")
+														ul.tooltip__menu
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Редактировать
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Список сотрудников
+															li.tooltip__menu-item
+																a(href="#modal-block-counterparty" data-fancybox).tooltip__menu-item-link Заблокировать
+															li.tooltip__menu-item.tooltip__menu-item--cancel
+																a(href="#modal-remove-counterparty" data-fancybox).tooltip__menu-item-link Удалить
+										tr
+											td ООО «ПАССАЖИРСКОЕ ABTOTPAHCПOPTHOE ПРЕДПРИЯТИЕ»
+											td ООО «ПАС-АВТО»
+											td г. Казань
+											td
+												.two-lines-overflow 420087, Республика Татарстан, город Казань, улица
+											td 771537465587
+												.color-gray 166001001
+											td.fs-16 05151873
+											td.fs-16 1 10 00
+											td.fs-16 01
+											td.fs-16 36602404
+											td +7 (843) 262-06-76
+											td email@gtlk.ru
+											td HQ-9999-RE
+											td Иванов Иван Иванович
+											td email@gtlk.ru
+											td +7 (843) 262-06-76
+											td +7 (843) 262-06-76
+											td HQ-9999-RE
+											td 12.08.2023
+											td
+												.td-status-bar
+													.org-status.org-status--active
+														+sprite("icon-check")
+														| Активен
+													.tooltip
+														a.btn.tooltip__btn
+															+sprite("icon-more-alt")
+														ul.tooltip__menu
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Редактировать
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Список сотрудников
+															li.tooltip__menu-item
+																a(href="#modal-block-counterparty" data-fancybox).tooltip__menu-item-link Заблокировать
+															li.tooltip__menu-item.tooltip__menu-item--cancel
+																a(href="#modal-remove-counterparty" data-fancybox).tooltip__menu-item-link Удалить
+										tr
+											td ООО «ПАССАЖИРСКОЕ ABTOTPAHCПOPTHOE ПРЕДПРИЯТИЕ»
+											td ООО «ПАС-АВТО»
+											td г. Казань
+											td
+												.two-lines-overflow 420087, Республика Татарстан, город Казань, улица
+											td 771537465587
+												.color-gray 166001001
+											td.fs-16 05151873
+											td.fs-16 1 10 00
+											td.fs-16 01
+											td.fs-16 36602404
+											td +7 (843) 262-06-76
+											td email@gtlk.ru
+											td HQ-9999-RE
+											td Иванов Иван Иванович
+											td email@gtlk.ru
+											td +7 (843) 262-06-76
+											td +7 (843) 262-06-76
+											td HQ-9999-RE
+											td 12.08.2023
+											td
+												.td-status-bar
+													.org-status.org-status--blocked
+														+sprite("icon-check")
+														| Заблокирован
+													.tooltip
+														a.btn.tooltip__btn
+															+sprite("icon-more-alt")
+														ul.tooltip__menu
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Редактировать
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Список сотрудников
+															li.tooltip__menu-item
+																a(href="#modal-block-counterparty" data-fancybox).tooltip__menu-item-link Заблокировать
+															li.tooltip__menu-item.tooltip__menu-item--cancel
+																a(href="#modal-remove-counterparty" data-fancybox).tooltip__menu-item-link Удалить
+										tr
+											td ООО «ПАССАЖИРСКОЕ ABTOTPAHCПOPTHOE ПРЕДПРИЯТИЕ»
+											td ООО «ПАС-АВТО»
+											td г. Казань
+											td
+												.two-lines-overflow 420087, Республика Татарстан, город Казань, улица
+											td 771537465587
+												.color-gray 166001001
+											td.fs-16 05151873
+											td.fs-16 1 10 00
+											td.fs-16 01
+											td.fs-16 36602404
+											td +7 (843) 262-06-76
+											td email@gtlk.ru
+											td HQ-9999-RE
+											td Иванов Иван Иванович
+											td email@gtlk.ru
+											td +7 (843) 262-06-76
+											td +7 (843) 262-06-76
+											td HQ-9999-RE
+											td 12.08.2023
+											td
+												.td-status-bar
+													.org-status.org-status--active
+														+sprite("icon-check")
+														| Активен
+													.tooltip
+														a.btn.tooltip__btn
+															+sprite("icon-more-alt")
+														ul.tooltip__menu
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Редактировать
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Список сотрудников
+															li.tooltip__menu-item
+																a(href="#modal-block-counterparty" data-fancybox).tooltip__menu-item-link Заблокировать
+															li.tooltip__menu-item.tooltip__menu-item--cancel
+																a(href="#modal-remove-counterparty" data-fancybox).tooltip__menu-item-link Удалить
+										tr
+											td ООО «ПАССАЖИРСКОЕ ABTOTPAHCПOPTHOE ПРЕДПРИЯТИЕ»
+											td ООО «ПАС-АВТО»
+											td г. Казань
+											td
+												.two-lines-overflow 420087, Республика Татарстан, город Казань, улица
+											td 771537465587
+												.color-gray 166001001
+											td.fs-16 05151873
+											td.fs-16 1 10 00
+											td.fs-16 01
+											td.fs-16 36602404
+											td +7 (843) 262-06-76
+											td email@gtlk.ru
+											td HQ-9999-RE
+											td Иванов Иван Иванович
+											td email@gtlk.ru
+											td +7 (843) 262-06-76
+											td +7 (843) 262-06-76
+											td HQ-9999-RE
+											td 12.08.2023
+											td
+												.td-status-bar
+													.org-status.org-status--blocked
+														+sprite("icon-check")
+														| Заблокирован
+													.tooltip
+														a.btn.tooltip__btn
+															+sprite("icon-more-alt")
+														ul.tooltip__menu
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Редактировать
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Список сотрудников
+															li.tooltip__menu-item
+																a(href="#modal-block-counterparty" data-fancybox).tooltip__menu-item-link Заблокировать
+															li.tooltip__menu-item.tooltip__menu-item--cancel
+																a(href="#modal-remove-counterparty" data-fancybox).tooltip__menu-item-link Удалить
+										tr
+											td ООО «ПАССАЖИРСКОЕ ABTOTPAHCПOPTHOE ПРЕДПРИЯТИЕ»
+											td ООО «ПАС-АВТО»
+											td г. Казань
+											td
+												.two-lines-overflow 420087, Республика Татарстан, город Казань, улица
+											td 771537465587
+												.color-gray 166001001
+											td.fs-16 05151873
+											td.fs-16 1 10 00
+											td.fs-16 01
+											td.fs-16 36602404
+											td +7 (843) 262-06-76
+											td email@gtlk.ru
+											td HQ-9999-RE
+											td Иванов Иван Иванович
+											td email@gtlk.ru
+											td +7 (843) 262-06-76
+											td +7 (843) 262-06-76
+											td HQ-9999-RE
+											td 12.08.2023
+											td
+												.td-status-bar
+													.org-status.org-status--active
+														+sprite("icon-check")
+														| Активен
+													.tooltip
+														a.btn.tooltip__btn
+															+sprite("icon-more-alt")
+														ul.tooltip__menu
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Редактировать
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Список сотрудников
+															li.tooltip__menu-item
+																a(href="#modal-block-counterparty" data-fancybox).tooltip__menu-item-link Заблокировать
+															li.tooltip__menu-item.tooltip__menu-item--cancel
+																a(href="#modal-remove-counterparty" data-fancybox).tooltip__menu-item-link Удалить
+										tr
+											td ООО «ПАССАЖИРСКОЕ ABTOTPAHCПOPTHOE ПРЕДПРИЯТИЕ»
+											td ООО «ПАС-АВТО»
+											td г. Казань
+											td
+												.two-lines-overflow 420087, Республика Татарстан, город Казань, улица
+											td 771537465587
+												.color-gray 166001001
+											td.fs-16 05151873
+											td.fs-16 1 10 00
+											td.fs-16 01
+											td.fs-16 36602404
+											td +7 (843) 262-06-76
+											td email@gtlk.ru
+											td HQ-9999-RE
+											td Иванов Иван Иванович
+											td email@gtlk.ru
+											td +7 (843) 262-06-76
+											td +7 (843) 262-06-76
+											td HQ-9999-RE
+											td 12.08.2023
+											td
+												.td-status-bar
+													.org-status.org-status--blocked
+														+sprite("icon-check")
+														| Заблокирован
+													.tooltip
+														a.btn.tooltip__btn
+															+sprite("icon-more-alt")
+														ul.tooltip__menu
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Редактировать
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Список сотрудников
+															li.tooltip__menu-item
+																a(href="#modal-block-counterparty" data-fancybox).tooltip__menu-item-link Заблокировать
+															li.tooltip__menu-item.tooltip__menu-item--cancel
+																a(href="#modal-remove-counterparty" data-fancybox).tooltip__menu-item-link Удалить
+
+							ul.pagination
+								li.disabled
+									a(href="#")
+										+sprite("icon-chevron-left")
+								li.current
+									a(href="#") 1
+								li
+									a(href="#") 2
+								li
+									a(href="#") ...
+								li
+									a(href="#") 9
+								li
+									a(href="#") 10
+								li
+									a(href="#")
+										+sprite("icon-chevron-right")
+
+					footer.footer
+						.container
+							.footer__section.d-flex.justify-content-end
+								ul.footer__menu
+									li
+										a(href="#") О нас
+									li
+										a(href="#") Реквизиты
+									li
+										a(href="#") Политика в отношении обработки персональных данных в АО “ГТЛК”
+							hr
+							.footer__section.d-flex.justify-content-between.align-items-center
+								.footer__copyright © 2023 АО ГТЛК
+								ul.footer__menu
+									li
+										a(href="tel:88002001299") 8-800-200-12-99
+									li
+										a(href="mailto:gtlk@gtlk.ru") gtlk@gtlk.ru
+									li
+										a(href="#") 125284, г. Москва, Ленинградский проспект д. 31 а, стр. 1
+			
+		include html/modals
+
+		script(src="js/app.min.js")

@@ -9,7 +9,7 @@
 	</head>
 	<body>
 		<div class="wrapper wrapper-main">
-			<header class="header-main">
+			<header class="header">
 				<div class="container">
 					<a href="#">
 						<img src="img/logo-GTLK_dark.png" width="166" height="52" alt="">
@@ -45,18 +45,191 @@
 							</svg>
 						</div>
 					</form>
-					<div class="header-btns">
-						<a class="btn header-btns__item" href="#">
-							<svg class="icon-bell">
-								<use xlink:href="img/icons/icons.svg#icon-bell"></use>
-							</svg>
-						</a>
-						<a class="btn header-btns__item" href="#">
-							<svg class="icon-user">
-								<use xlink:href="img/icons/icons.svg#icon-user"></use>
-							</svg>
-						</a>
-					</div>
+					<ul class="header-btns">
+						<li class="header-btns__item">
+							<a class="btn header-btns__link" data-target="popup-notifications">
+								<svg class="icon-bell">
+									<use xlink:href="img/icons/icons.svg#icon-bell"></use>
+								</svg>
+								<div class="header-btns__item-indicator">2</div>
+							</a>
+							<div class="popup-notifications" data-popup="popup-notifications">
+								<div class="popup-notifications__top">
+									<div class="popup-notifications__heading">Уведомления</div>
+									<a class="popup-notifications__link" href="#">Прочитать все</a>
+								</div>
+								<div class="popup-notifications__scroll-wrapper">
+									<div class="popup-notifications__list">
+										<ul class="popup-notifications__list">
+											<li>
+												<div class="notification">
+													<div class="notification__inner">
+														<div class="notification__icon">
+															<svg class="icon-credit-card">
+																<use xlink:href="img/icons/icons.svg#icon-credit-card"></use>
+															</svg>
+														</div>
+														<div class="notification__content">
+															<div class="notification__content-top">
+																<div class="notification__heading">Поступил счет по договору 123-ЗЛ-ОК</div>
+																<a class="btn notification__btn-more" href="#">
+																	<svg class="icon-more-alt_vertical">
+																		<use xlink:href="img/icons/icons.svg#icon-more-alt_vertical"></use>
+																	</svg>
+																</a>
+															</div>
+															<div class="notification__desc">
+																<p>Предварительные выводы неутешительны: повышение уровня гражданского сознания предопределяет высокую востребованность инновационных методов управления процессами.</p>
+															</div>
+															<div class="notification__bar">
+																<a class="notification__bar-link link-base" href="#">Перейти к оплате</a>
+																<div class="notification__bar-date">Сегодня в 14:32</div>
+															</div>
+														</div>
+														<div class="notification__indicator notification__indicator--is-new"></div>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="notification">
+													<div class="notification__inner">
+														<div class="notification__icon">
+															<svg class="icon-chat_stroke">
+																<use xlink:href="img/icons/icons.svg#icon-chat_stroke"></use>
+															</svg>
+														</div>
+														<div class="notification__content">
+															<div class="notification__content-top">
+																<div class="notification__heading">Новый комментарий по сделке 123-ЗЛ-ОК</div>
+																<a class="btn notification__btn-more" href="#">
+																	<svg class="icon-more-alt_vertical">
+																		<use xlink:href="img/icons/icons.svg#icon-more-alt_vertical"></use>
+																	</svg>
+																</a>
+															</div>
+															<div class="notification__desc">
+																<p>текст уведомления</p>
+															</div>
+															<div class="notification__bar">
+																<div class="notification__bar-date">Сегодня в 14:32</div>
+															</div>
+														</div>
+														<div class="notification__indicator notification__indicator--is-new"></div>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="notification notification--is-important">
+													<div class="notification__inner">
+														<div class="notification__icon">
+															<svg class="icon-alert">
+																<use xlink:href="img/icons/icons.svg#icon-alert"></use>
+															</svg>
+														</div>
+														<div class="notification__content">
+															<div class="notification__content-top">
+																<div class="notification__heading">Необходимо обновить документы</div>
+																<a class="btn notification__btn-more" href="#">
+																	<svg class="icon-more-alt_vertical">
+																		<use xlink:href="img/icons/icons.svg#icon-more-alt_vertical"></use>
+																	</svg>
+																</a>
+															</div>
+															<div class="notification__desc">
+																<p>Предварительные выводы неутешительны: повышение уровня гражданского сознания предопределяет высокую востребованность инновационных методов управления процессами.</p>
+															</div>
+															<div class="notification__bar">
+																<a class="notification__bar-link link-base" href="#">Перейти к обновлению</a>
+																<div class="notification__bar-date">Вчера в 15:00</div>
+															</div>
+														</div>
+														<div class="notification__indicator notification__indicator--is-read"></div>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="notification notification--is-important">
+													<div class="notification__inner">
+														<div class="notification__icon">
+															<svg class="icon-alert">
+																<use xlink:href="img/icons/icons.svg#icon-alert"></use>
+															</svg>
+														</div>
+														<div class="notification__content">
+															<div class="notification__content-top">
+																<div class="notification__heading">Необходимо обновить документы</div>
+																<a class="btn notification__btn-more" href="#">
+																	<svg class="icon-more-alt_vertical">
+																		<use xlink:href="img/icons/icons.svg#icon-more-alt_vertical"></use>
+																	</svg>
+																</a>
+															</div>
+															<div class="notification__desc">
+																<p>Предварительные выводы неутешительны: повышение уровня гражданского сознания предопределяет высокую востребованность инновационных методов управления процессами.</p>
+															</div>
+															<div class="notification__bar">
+																<a class="notification__bar-link link-base" href="#">Перейти к обновлению</a>
+																<div class="notification__bar-date">Вчера в 15:00</div>
+															</div>
+														</div>
+														<div class="notification__indicator notification__indicator--is-read"></div>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="popup-notifications__bottom">
+									<a class="popup-notifications__link" href="#">Показать все			</a>
+								</div>
+								<div class="popup-notifications__close" data-popup-close>
+									<svg class="icon-close">
+										<use xlink:href="img/icons/icons.svg#icon-close"></use>
+									</svg>
+								</div>
+							</div>
+						</li>
+						<li class="header-btns__item">
+							<a class="btn header-btns__link" data-target="popup-user-menu">
+								<svg class="icon-user">
+									<use xlink:href="img/icons/icons.svg#icon-user"></use>
+								</svg>
+							</a>
+							<div class="user-menu" data-popup="popup-user-menu">
+								<ul class="user-menu__list">
+									<li class="user-menu__list-item">
+										<a class="user-menu__list-item-link" href="#">
+											<span class="user-menu__list-item-icon">
+												<svg class="icon-user-stroke">
+													<use xlink:href="img/icons/icons.svg#icon-user-stroke"></use>
+												</svg>
+											</span>Профиль
+										</a>
+									</li>
+									<li class="user-menu__list-item">
+										<a class="user-menu__list-item-link" href="#">
+											<span class="user-menu__list-item-icon">
+												<svg class="icon-calendar">
+													<use xlink:href="img/icons/icons.svg#icon-calendar"></use>
+												</svg>
+											</span>Журнал событий
+										</a>
+									</li>
+								</ul>
+								<ul class="user-menu__list">
+									<li class="user-menu__list-item">
+										<a class="user-menu__list-item-link" href="#">
+											<span class="user-menu__list-item-icon">
+												<svg class="icon-logout">
+													<use xlink:href="img/icons/icons.svg#icon-logout"></use>
+												</svg>
+											</span>Выйти
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
 				</div>
 			</header>
 			<div class="main-row">
@@ -354,18 +527,68 @@
 			</div>
 			<div class="modal__heading">Продолжить заполнение?</div>
 			<div class="modal__btns">
-				<a class="btn btn-filling btn-filling--positive" href="#">Да</a>
-				<a class="btn btn-filling btn-filling--negative" href="#">Нет</a>
+				<a class="btn btn-filling btn-filling--positive">Да</a>
+				<a class="btn btn-filling btn-filling--negative" data-fancybox-close>Нет</a>
 			</div>
 		</div>
 		<div class="modal" id="modal-remove-draft">
 			<div class="modal__icon">
 				<img src="img/icon-remove-draft.svg" width="222" height="221" alt="">
 			</div>
-			<div class="modal__heading">Вы уверены, что хотите удалить черновик?</div>
+			<div class="modal__heading">Вы уверены, что хотите
+				<br>удалить черновик?
+			</div>
 			<div class="modal__btns">
-				<a class="btn btn-confirm btn-confirm--positive" href="#">Да</a>
-				<a class="btn btn-confirm btn-confirm--negative" href="#">Нет</a>
+				<a class="btn btn-confirm btn-confirm--positive">Да</a>
+				<a class="btn btn-confirm btn-confirm--negative" data-fancybox-close>Нет</a>
+			</div>
+		</div>
+		<div class="modal" id="modal-block-counterparty">
+			<div class="modal__icon">
+				<img src="img/icon-remove-draft.svg" width="222" height="221" alt="">
+			</div>
+			<div class="modal__heading">Вы уверены, что хотите
+				<br>заблокировать контрагента?
+			</div>
+			<div class="modal__btns">
+				<a class="btn btn-confirm btn-confirm--positive">Да</a>
+				<a class="btn btn-confirm btn-confirm--negative" data-fancybox-close>Нет</a>
+			</div>
+		</div>
+		<div class="modal" id="modal-remove-counterparty">
+			<div class="modal__icon">
+				<img src="img/icon-remove-draft.svg" width="222" height="221" alt="">
+			</div>
+			<div class="modal__heading">Вы уверены, что хотите
+				<br>удалить контрагента?
+			</div>
+			<div class="modal__btns">
+				<a class="btn btn-confirm btn-confirm--positive">Да</a>
+				<a class="btn btn-confirm btn-confirm--negative" data-fancybox-close>Нет</a>
+			</div>
+		</div>
+		<div class="modal" id="modal-block-employeer">
+			<div class="modal__icon">
+				<img src="img/icon-remove-draft.svg" width="222" height="221" alt="">
+			</div>
+			<div class="modal__heading">Вы уверены, что хотите
+				<br>заблокировать сотрудника?
+			</div>
+			<div class="modal__btns">
+				<a class="btn btn-confirm btn-confirm--positive">Да</a>
+				<a class="btn btn-confirm btn-confirm--negative" data-fancybox-close>Нет</a>
+			</div>
+		</div>
+		<div class="modal" id="modal-remove-employeer">
+			<div class="modal__icon">
+				<img src="img/icon-remove-draft.svg" width="222" height="221" alt="">
+			</div>
+			<div class="modal__heading">Вы уверены, что хотите
+				<br>удалить сотрудника?
+			</div>
+			<div class="modal__btns">
+				<a class="btn btn-confirm btn-confirm--positive">Да</a>
+				<a class="btn btn-confirm btn-confirm--negative" data-fancybox-close>Нет</a>
 			</div>
 		</div>
 		<div class="modal-actions modal-actions--annul" id="modal-annul">
@@ -399,8 +622,64 @@
 			</div>
 			<div class="modal-app__heading">Ваша заявка отправлена</div>
 			<div>
-				<a class="btn btn-app" href="#">Перейти к заявке </a>
+				<a class="btn btn-app" href="#">Перейти к заявке</a>
 			</div>
+		</div>
+		<div class="modal" id="modal-counterparty-added">
+			<div class="modal__img">
+				<img src="img/illustration-done.svg" alt="" width="257" height="193">
+			</div>
+			<div class="modal__heading">Контрагент добавлен в систему</div>
+			<div class="modal__btns">
+				<a class="btn btn-details btn-details--theme-light-blue" href="#">Перейти к добавлению сотрудника</a>
+			</div>
+			<a class="modal__close-btn" data-fancybox-close>
+				<svg class="icon-close">
+					<use xlink:href="img/icons/icons.svg#icon-close"></use>
+				</svg>
+			</a>
+		</div>
+		<div class="modal" id="modal-employeer-added">
+			<div class="modal__img">
+				<img src="img/illustration-done.svg" alt="" width="257" height="193">
+			</div>
+			<div class="modal__heading">Сотрудник добавлен</div>
+			<div class="modal__btns">
+				<a class="btn btn-details btn-details--theme-light-blue" href="#">Перейти к списку сотрудников</a>
+			</div>
+			<a class="modal__close-btn" data-fancybox-close>
+				<svg class="icon-close">
+					<use xlink:href="img/icons/icons.svg#icon-close"></use>
+				</svg>
+			</a>
+		</div>
+		<div class="modal" id="modal-counterparties-changes-saved">
+			<div class="modal__img">
+				<img src="img/illustration-done.svg" alt="" width="257" height="193">
+			</div>
+			<div class="modal__heading">Изменения сохранены</div>
+			<div class="modal__btns">
+				<a class="btn btn-details btn-details--theme-light-blue" href="#">Перейти к списку контрагентов</a>
+			</div>
+			<a class="modal__close-btn" data-fancybox-close>
+				<svg class="icon-close">
+					<use xlink:href="img/icons/icons.svg#icon-close"></use>
+				</svg>
+			</a>
+		</div>
+		<div class="modal" id="modal-employeer-changes-saved">
+			<div class="modal__img">
+				<img src="img/illustration-done.svg" alt="" width="257" height="193">
+			</div>
+			<div class="modal__heading">Изменения сохранены</div>
+			<div class="modal__btns">
+				<a class="btn btn-details btn-details--theme-light-blue" href="#">Перейти к списку сотрудников</a>
+			</div>
+			<a class="modal__close-btn" data-fancybox-close>
+				<svg class="icon-close">
+					<use xlink:href="img/icons/icons.svg#icon-close"></use>
+				</svg>
+			</a>
 		</div>
 		<script src="js/app.min.js"></script>
 	</body>

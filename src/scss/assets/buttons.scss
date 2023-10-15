@@ -248,11 +248,28 @@
 		border-radius: 10px;
 		border: 1px solid #E8E8E8;
 		font-size: 16px;
-		padding: 5px 10px;
+		padding: 5px 14px;
 		height: 40px;
 		&:hover {
 			background: #0074e9;
 		}
+
+		&--theme-light-blue {
+			background: #0060CC;
+			&:hover {
+				background: #0450a8;
+			}
+		}
+	}
+
+	&-save {
+		padding: 5px 24px;
+		height: 48px;
+		background: #0060CC;
+		border-radius: 8px;
+		font-weight: 700;
+		font-size: 16px;
+		color: var(--color-white);
 	}
 
 
@@ -271,3 +288,4 @@
 
 	
 }
+

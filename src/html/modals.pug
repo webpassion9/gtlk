@@ -3,16 +3,58 @@
 		img(src="img/icon-filling.svg", width="127" height="126" alt="")
 	.modal__heading Продолжить заполнение?
 	.modal__btns
-		a(href="#").btn.btn-filling.btn-filling--positive Да
-		a(href="#").btn.btn-filling.btn-filling--negative Нет
+		a.btn.btn-filling.btn-filling--positive Да
+		a(data-fancybox-close).btn.btn-filling.btn-filling--negative Нет
 
 .modal#modal-remove-draft
 	.modal__icon
 		img(src="img/icon-remove-draft.svg", width="222" height="221" alt="")
-	.modal__heading Вы уверены, что хотите удалить черновик?
+	.modal__heading Вы уверены, что хотите
+		br
+		| удалить черновик?
 	.modal__btns
-		a(href="#").btn.btn-confirm.btn-confirm--positive Да
-		a(href="#").btn.btn-confirm.btn-confirm--negative Нет
+		a.btn.btn-confirm.btn-confirm--positive Да
+		a(data-fancybox-close).btn.btn-confirm.btn-confirm--negative Нет
+
+.modal#modal-block-counterparty
+	.modal__icon
+		img(src="img/icon-remove-draft.svg", width="222" height="221" alt="")
+	.modal__heading Вы уверены, что хотите
+		br
+		| заблокировать контрагента?
+	.modal__btns
+		a.btn.btn-confirm.btn-confirm--positive Да
+		a(data-fancybox-close).btn.btn-confirm.btn-confirm--negative Нет
+
+.modal#modal-remove-counterparty
+	.modal__icon
+		img(src="img/icon-remove-draft.svg", width="222" height="221" alt="")
+	.modal__heading Вы уверены, что хотите
+		br
+		| удалить контрагента?
+	.modal__btns
+		a.btn.btn-confirm.btn-confirm--positive Да
+		a(data-fancybox-close).btn.btn-confirm.btn-confirm--negative Нет
+
+.modal#modal-block-employeer
+	.modal__icon
+		img(src="img/icon-remove-draft.svg", width="222" height="221" alt="")
+	.modal__heading Вы уверены, что хотите
+		br
+		| заблокировать сотрудника?
+	.modal__btns
+		a.btn.btn-confirm.btn-confirm--positive Да
+		a(data-fancybox-close).btn.btn-confirm.btn-confirm--negative Нет
+
+.modal#modal-remove-employeer
+	.modal__icon
+		img(src="img/icon-remove-draft.svg", width="222" height="221" alt="")
+	.modal__heading Вы уверены, что хотите
+		br
+		| удалить сотрудника?
+	.modal__btns
+		a.btn.btn-confirm.btn-confirm--positive Да
+		a(data-fancybox-close).btn.btn-confirm.btn-confirm--negative Нет
 
 
 .modal-actions.modal-actions--annul#modal-annul
@@ -38,4 +80,40 @@
 		+sprite("icon-done")
 	.modal-app__heading Ваша заявка отправлена
 	div
-		a(href="#").btn.btn-app Перейти к заявке 
+		a(href="#").btn.btn-app Перейти к заявке
+
+.modal#modal-counterparty-added
+	.modal__img
+		img(src="img/illustration-done.svg", alt="" width="257" height="193")
+	.modal__heading Контрагент добавлен в систему
+	.modal__btns
+		a(href="#").btn.btn-details.btn-details--theme-light-blue Перейти к добавлению сотрудника
+	a.modal__close-btn(data-fancybox-close)
+		+sprite("icon-close")
+
+.modal#modal-employeer-added
+	.modal__img
+		img(src="img/illustration-done.svg", alt="" width="257" height="193")
+	.modal__heading Сотрудник добавлен
+	.modal__btns
+		a(href="#").btn.btn-details.btn-details--theme-light-blue Перейти к списку сотрудников
+	a.modal__close-btn(data-fancybox-close)
+		+sprite("icon-close")
+
+.modal#modal-counterparties-changes-saved
+	.modal__img
+		img(src="img/illustration-done.svg", alt="" width="257" height="193")
+	.modal__heading Изменения сохранены
+	.modal__btns
+		a(href="#").btn.btn-details.btn-details--theme-light-blue Перейти к списку контрагентов
+	a.modal__close-btn(data-fancybox-close)
+		+sprite("icon-close")
+
+.modal#modal-employeer-changes-saved
+	.modal__img
+		img(src="img/illustration-done.svg", alt="" width="257" height="193")
+	.modal__heading Изменения сохранены
+	.modal__btns
+		a(href="#").btn.btn-details.btn-details--theme-light-blue Перейти к списку сотрудников
+	a.modal__close-btn(data-fancybox-close)
+		+sprite("icon-close")

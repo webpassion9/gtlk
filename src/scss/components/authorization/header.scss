@@ -1,4 +1,4 @@
-.header {
+.header-auth {
 	background: var(--color-dark);
 	color: var(--color-white);
 
@@ -60,17 +60,19 @@
 		text-align: center;
 		padding-top: 25px;
 	}
+
+	&__phone {
+		font-family: $fontSecond;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 28px;
+		color: var(--color-white);
+		.icon-phone {
+			margin-right: 12px;
+			position: relative;
+			top: 1px;
+		}
+	}
+	
 }
 
-.phone {
-	font-family: $fontSecond;
-	font-weight: 700;
-	font-size: 24px;
-	line-height: 28px;
-	color: var(--color-white);
-	.icon-phone {
-		margin-right: 12px;
-		position: relative;
-		top: 1px;
-	}
-}

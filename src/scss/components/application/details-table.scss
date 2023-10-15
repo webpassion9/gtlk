@@ -1,6 +1,7 @@
 .details-table {
 	font-size: 16px;
 	line-height: 18px;
+	width: 100%;
 	max-width: 840px;
 	table-layout: fixed;
 	th {
@@ -19,6 +20,12 @@
 	}
 
 	&--organization {
+		td {
+			padding-top: 16px;
+			padding-bottom: 16px;
+		}
+	}
+	&--profile {
 		td {
 			padding-top: 16px;
 			padding-bottom: 16px;

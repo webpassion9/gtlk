@@ -1,5 +1,125 @@
-// Header :: Start
 header.header
 	.container
-		
-// Header :: End
+		a(href="#")
+			img(src="img/logo-GTLK_dark.png", width="166" height="52" alt="")
+		ul.header-menu
+			li
+				a(href="#") Компания
+			li
+				a(href="#") Деятельность
+			li
+				a(href="#") Клиентам
+			li
+				a(href="#") Закупки
+			li
+				a(href="#") Инвесторам
+			li
+				a(href="#") Устойчивое развитие
+			li
+				a(href="#") Медиа
+		form.header-search
+			input(type="text").header-search__input
+			.header-search__icon
+				+sprite("icon-loop")
+		ul.header-btns
+			li.header-btns__item
+				a(data-target="popup-notifications").btn.header-btns__link
+					+sprite("icon-bell")
+					.header-btns__item-indicator 2
+				.popup-notifications(data-popup="popup-notifications")
+					.popup-notifications__top
+						.popup-notifications__heading Уведомления
+						a(href="#").popup-notifications__link Прочитать все
+					.popup-notifications__scroll-wrapper
+						.popup-notifications__list
+							ul.popup-notifications__list
+								li
+									.notification
+										.notification__inner
+											.notification__icon
+												+sprite("icon-credit-card")
+											.notification__content
+												.notification__content-top
+													.notification__heading Поступил счет по договору 123-ЗЛ-ОК
+													a(href="#").btn.notification__btn-more
+														+sprite("icon-more-alt_vertical")
+												.notification__desc
+													p Предварительные выводы неутешительны: повышение уровня гражданского сознания предопределяет высокую востребованность инновационных методов управления процессами.
+												.notification__bar
+													a(href="#").notification__bar-link.link-base Перейти к оплате
+													.notification__bar-date Сегодня в 14:32
+											.notification__indicator.notification__indicator--is-new
+								li
+									.notification
+										.notification__inner
+											.notification__icon
+												+sprite("icon-chat_stroke")
+											.notification__content
+												.notification__content-top
+													.notification__heading Новый комментарий по сделке 123-ЗЛ-ОК
+													a(href="#").btn.notification__btn-more
+														+sprite("icon-more-alt_vertical")
+												.notification__desc
+													p текст уведомления
+												.notification__bar
+													.notification__bar-date Сегодня в 14:32
+											.notification__indicator.notification__indicator--is-new
+								li
+									.notification.notification--is-important
+										.notification__inner
+											.notification__icon
+												+sprite("icon-alert")
+											.notification__content
+												.notification__content-top
+													.notification__heading Необходимо обновить документы
+													a(href="#").btn.notification__btn-more
+														+sprite("icon-more-alt_vertical")
+												.notification__desc
+													p Предварительные выводы неутешительны: повышение уровня гражданского сознания предопределяет высокую востребованность инновационных методов управления процессами.
+												.notification__bar
+													a(href="#").notification__bar-link.link-base Перейти к обновлению
+													.notification__bar-date Вчера в 15:00
+											.notification__indicator.notification__indicator--is-read
+								li
+									.notification.notification--is-important
+										.notification__inner
+											.notification__icon
+												+sprite("icon-alert")
+											.notification__content
+												.notification__content-top
+													.notification__heading Необходимо обновить документы
+													a(href="#").btn.notification__btn-more
+														+sprite("icon-more-alt_vertical")
+												.notification__desc
+													p Предварительные выводы неутешительны: повышение уровня гражданского сознания предопределяет высокую востребованность инновационных методов управления процессами.
+												.notification__bar
+													a(href="#").notification__bar-link.link-base Перейти к обновлению
+													.notification__bar-date Вчера в 15:00
+											.notification__indicator.notification__indicator--is-read
+					.popup-notifications__bottom
+						a(href="#").popup-notifications__link Показать все			
+
+					.popup-notifications__close(data-popup-close)
+						+sprite("icon-close")
+
+			li.header-btns__item
+				a(data-target="popup-user-menu").btn.header-btns__link
+					+sprite("icon-user")
+				.user-menu(data-popup="popup-user-menu")
+					ul.user-menu__list
+						li.user-menu__list-item
+							a(href="#").user-menu__list-item-link
+								span.user-menu__list-item-icon
+									+sprite("icon-user-stroke")
+								| Профиль
+						li.user-menu__list-item
+							a(href="#").user-menu__list-item-link
+								span.user-menu__list-item-icon
+									+sprite("icon-calendar")
+								| Журнал событий
+					ul.user-menu__list
+						li.user-menu__list-item
+							a(href="#").user-menu__list-item-link
+								span.user-menu__list-item-icon
+									+sprite("icon-logout")
+								| Выйти

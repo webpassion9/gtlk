@@ -1,0 +1,24 @@
+.org-status {
+	display: inline-flex;
+	align-items: center;
+	height: 20px;
+	border-radius: 16px;
+	gap: 5px;
+	padding: 0 10px;
+	font-size: 12px;
+	line-height: 1;
+	&--active {
+		color: #67CE16;
+		background: rgba(#67CE16,.16);
+		.icon-check {
+			fill: #67CE16;
+		}
+	}
+	&--blocked {
+		color: #CA0000;
+		background: rgba(#CA0000,.16);
+		.icon-check {
+			fill: #CA0000;
+		}
+	}
+}

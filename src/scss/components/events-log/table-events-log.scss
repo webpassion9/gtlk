@@ -1,0 +1,49 @@
+.table-events-log {
+	width: 100%;
+	font-size: 14px;
+	line-height: 17px;
+	color: rgba(0, 0, 0, 0.8);
+	border-collapse: collapse;
+
+	tr {
+		border-bottom: 2px solid #ABABAB;
+	}
+	tbody {
+		tr {
+			transition: .25s;
+			// &:hover {
+			// 	background: #F5F5F5;
+			// }
+			&:last-child {
+				border-width: 1px;
+			}
+		}
+	}
+	th {
+		color: var(--color-gray);
+		font-weight: 400;
+		text-align: left;
+		vertical-align: middle;
+		height: 49px;
+		padding: 5px 15px 5px 0;
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+	td {
+		vertical-align: middle;
+		padding: 10px;
+		height: 107px;
+		padding: 5px 15px 5px 0;
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+}
+
+.td-checkbox-row {
+	display: flex;
+	&__checkbox {
+		margin-right: 20px;
+	}
+}

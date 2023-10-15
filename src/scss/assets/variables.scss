@@ -15,13 +15,14 @@ $fontFourth: OpenSans, Arial, sans-serif;
 	--color-blue: #093E8C;
 	--color-blue-base: #0085FF;
 	--color-green: #159654;
+
+	--sidebar-width: 80px;
 }
 
 .color {
 	&-gray {
 		color: var(--color-gray);
-	}
-
+	}	
 }
 
 // breakpoints

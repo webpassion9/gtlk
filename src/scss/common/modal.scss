@@ -33,6 +33,22 @@
 	&--continue-filling {
 		gap: 35px;
 	}
+	&__close-btn {
+		position: absolute;
+		right: 30px;
+		top: 15px;
+		width: 24px;
+		height: 24px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		.icon-close {
+			width: 14px;
+			height: 14px;
+			fill: #0085FF;
+		}
+	}
 }
 
 body {
@@ -44,5 +60,32 @@ body {
 	}
 	.fancybox__content :focus:not(.carousel__button.is-close) {
 		outline: none;
+	}
+}
+
+
+
+.modal-info {
+	width: 100%;
+	max-width: 543px;
+	background: var(--color-white);
+	border-radius: 8px;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	display: none;
+	&__img {
+
+	}
+
+	.carousel__button.is-close {
+		display: none;
+	}
+}
+
+
+[data-fancybox-close] {
+	svg {
+		pointer-events: none;
 	}
 }

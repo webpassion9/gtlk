@@ -17,7 +17,7 @@ html(lang="ru")
 
 				main.main
 					.content-inner
-						div(style="display:flex;flex-direction:column;align-items:flex-start;gap:10px;")
+						div(style="display:flex;flex-direction:column;align-items:flex-start;gap:10px;padding-bottom: 200px;")
 							a(href="#").btn.btn-submit.btn-submit--size-normal Test
 							a(href="#").btn.btn-submit.btn-submit--size-large Test
 							a(href="#").btn.btn-submit.btn-submit--size-normal.btn-submit--cookies Test
@@ -38,14 +38,161 @@ html(lang="ru")
 							a(href="#").btn.btn-app Test
 							a(href="#").btn.btn-search Test
 							a(href="#").btn.btn-details Test
+							a(href="#").btn.btn-details.btn-details--theme-light-blue Test
+							a(href="#").btn.btn-save Test
 							label.auth-checkbox
 								input(type="checkbox" hidden)
 								span.auth-checkbox__icon
 									+sprite("icon-check")
 								span.auth-checkbox__text Запомнить меня на этом компьютере
+							div(style="display:flex; gap: 30px;")
+								a(href="#").support
+									.support__icon
+										+sprite("icon-chat")
+									.support__heading Служба поддержки
+								a(href="#").support
+									.support__icon
+										+sprite("icon-chat")
+										.support__indicator 1
+									.support__heading Служба поддержки
+							.form-application__row-content.form-application__row-content--width-medium
+								input(type="text" placeholder="Test").input-base
+							.form-application__row-content.form-application__row-content--width-medium
+								input(type="text" placeholder="Test").input-base.is-error
+								.input-error-text Это обязательное поле для заполнения
+							br
+							ul.header-btns
+								li.header-btns__item
+									a(data-target="popup-notifications").btn.header-btns__link
+										+sprite("icon-bell")
+										.header-btns__item-indicator 2
+									.popup-notifications(data-popup="popup-notifications")
+										.popup-notifications__top
+											.popup-notifications__heading Уведомления
+											a(href="#").popup-notifications__link Прочитать все
+										.popup-notifications__scroll-wrapper
+											.popup-notifications__list
+												ul.popup-notifications__list
+													li
+														.notification
+															.notification__inner
+																.notification__icon
+																	+sprite("icon-credit-card")
+																.notification__content
+																	.notification__content-top
+																		.notification__heading Поступил счет по договору 123-ЗЛ-ОК
+																		a(href="#").btn.notification__btn-more
+																			+sprite("icon-more-alt_vertical")
+																	.notification__desc
+																		p Предварительные выводы неутешительны: повышение уровня гражданского сознания предопределяет высокую востребованность инновационных методов управления процессами.
+																	.notification__bar
+																		a(href="#").notification__bar-link.link-base Перейти к оплате
+																		.notification__bar-date Сегодня в 14:32
+																.notification__indicator.notification__indicator--is-new
+													li
+														.notification
+															.notification__inner
+																.notification__icon
+																	+sprite("icon-chat_stroke")
+																.notification__content
+																	.notification__content-top
+																		.notification__heading Новый комментарий по сделке 123-ЗЛ-ОК
+																		a(href="#").btn.notification__btn-more
+																			+sprite("icon-more-alt_vertical")
+																	.notification__desc
+																		p текст уведомления
+																	.notification__bar
+																		.notification__bar-date Сегодня в 14:32
+																.notification__indicator.notification__indicator--is-new
+													li
+														.notification.notification--is-important
+															.notification__inner
+																.notification__icon
+																	+sprite("icon-alert")
+																.notification__content
+																	.notification__content-top
+																		.notification__heading Необходимо обновить документы
+																		a(href="#").btn.notification__btn-more
+																			+sprite("icon-more-alt_vertical")
+																	.notification__desc
+																		p Предварительные выводы неутешительны: повышение уровня гражданского сознания предопределяет высокую востребованность инновационных методов управления процессами.
+																	.notification__bar
+																		a(href="#").notification__bar-link.link-base Перейти к обновлению
+																		.notification__bar-date Вчера в 15:00
+																.notification__indicator.notification__indicator--is-read
+													li
+														.notification.notification--is-important
+															.notification__inner
+																.notification__icon
+																	+sprite("icon-alert")
+																.notification__content
+																	.notification__content-top
+																		.notification__heading Необходимо обновить документы
+																		a(href="#").btn.notification__btn-more
+																			+sprite("icon-more-alt_vertical")
+																	.notification__desc
+																		p Предварительные выводы неутешительны: повышение уровня гражданского сознания предопределяет высокую востребованность инновационных методов управления процессами.
+																	.notification__bar
+																		a(href="#").notification__bar-link.link-base Перейти к обновлению
+																		.notification__bar-date Вчера в 15:00
+																.notification__indicator.notification__indicator--is-read
+										.popup-notifications__bottom
+											a(href="#").popup-notifications__link Показать все			
 
+										.popup-notifications__close(data-popup-close)
+											+sprite("icon-close")
 
+								li.header-btns__item
+									a(data-target="popup-user-menu").btn.header-btns__link
+										+sprite("icon-user")
+									.user-menu(data-popup="popup-user-menu")
+										ul.user-menu__list
+											li.user-menu__list-item
+												a(href="#").user-menu__list-item-link
+													span.user-menu__list-item-icon
+														+sprite("icon-user-stroke")
+													| Профиль
+											li.user-menu__list-item
+												a(href="#").user-menu__list-item-link
+													span.user-menu__list-item-icon
+														+sprite("icon-calendar")
+													| Журнал событий
+										ul.user-menu__list
+											li.user-menu__list-item
+												a(href="#").user-menu__list-item-link
+													span.user-menu__list-item-icon
+														+sprite("icon-logout")
+													| Выйти
+							hr
+							h4(style="margin:0;padding:0;") Модальные окна:
+							ul(style="margin:0;padding:0;")
+								li
+									a(href="#modal-continue-filling" data-fancybox) Продолжить заполнение?
+								li
+									a(href="#modal-remove-draft" data-fancybox) Вы уверены, что хотите удалить черновик?
+								li
+									a(href="#modal-block-counterparty" data-fancybox) Вы уверены, что хотите заблокировать контрагента?
+								li
+									a(href="#modal-remove-counterparty" data-fancybox) Вы уверены, что хотите удалить контрагента?
+								li
+									a(href="#modal-block-employeer" data-fancybox) Вы уверены, что хотите заблокировать сотрудника?
+								li
+									a(href="#modal-remove-employeer" data-fancybox) Вы уверены, что хотите удалить сотрудника?
+								li
+									a(href="#modal-annul" data-fancybox) Аннулировать заявку
+								li
+									a(href="#modal-new-version" data-fancybox) Создать новую версию заявки
+								li
+									a(href="#modal-app-sent" data-fancybox) Ваша заявка отправлена
+								li
+									a(href="#modal-counterparty-added" data-fancybox) Контрагент добавлен в систему
+								li
+									a(href="#modal-employeer-added" data-fancybox) Сотрудник добавлен
+								li
+									a(href="#modal-counterparties-changes-saved" data-fancybox) Изменения сохранены (Контрагент)
+								li
+									a(href="#modal-employeer-changes-saved" data-fancybox) Изменения сохранены (Сотрудник)
 
-
+		include html/modals
 
 		script(src="js/app.min.js")

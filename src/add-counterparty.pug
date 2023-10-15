@@ -1,0 +1,212 @@
+include html/mixins
+
+doctype html
+block head
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no")
+		meta(name="format-detection" content="telephone=no")
+
+		link(rel="stylesheet", href="css/style.min.css")
+
+		title Title
+
+	body
+		.wrapper.wrapper-main
+
+			include html/header
+						
+			.main-row
+
+				aside.sidebar
+					.sidebar__inner
+						.sidebar__section
+							ul.sidebar__nav
+								li.sidebar__nav-item.current
+									a(href="#").sidebar__nav-item-btn
+										.sidebar__nav-item-icon
+											+sprite("icon-file-tray")
+										.sidebar__nav-item-text Заявки
+								li.sidebar__nav-item
+									a(href="#").sidebar__nav-item-btn
+										.sidebar__nav-item-icon
+											+sprite("icon-newspaper")
+										.sidebar__nav-item-text Договоры
+								li.sidebar__nav-item
+									a(href="#").sidebar__nav-item-btn
+										.sidebar__nav-item-icon
+											+sprite("icon-management")
+										.sidebar__nav-item-text Управление контрагентами
+								li.sidebar__nav-item
+									a(href="#").sidebar__nav-item-btn
+										.sidebar__nav-item-icon
+											+sprite("icon-settings")
+										.sidebar__nav-item-text Настройки
+						.sidebar__section.sidebar__section--info
+							ul.sidebar__nav
+								li.sidebar__nav-item
+									a(href="#").sidebar__nav-item-btn
+										.sidebar__nav-item-icon
+											+sprite("icon-book")
+										.sidebar__nav-item-text Справка
+						.sidebar__section
+							a(href="#").support
+								.support__icon
+									+sprite("icon-chat")
+								.support__heading Служба поддержки
+
+				main.main
+					.content
+						.content-inner
+							.form-application__top
+								.go-back.go-back--form-application
+									a(href="#") < Назад
+								.heading-base.heading-base--large Добавление контрагента (юридическое лицо)
+							
+							.wrapper-add-counterparty
+								.form-application__main
+									.form-application__row-items
+										.form-application__row
+											.form-application__row-heading.form-application__row-heading--width-normal
+												.field-heading ИНН
+													span.field-heading__require *
+											.form-application__row-content.form-application__row-content--width-medium
+												.select
+													input(type="text" placeholder="Поиск по названию, ИНН").input-base.input-base--select.select__input
+													.select__icon
+														+sprite("icon-chevron-up")
+													ul.select__list.select__list--supplier
+														li.select__list-item
+															.select__list-item-main МУП "ПАТП №2"
+															.select__list-item-details ИНН 771537455874
+														li.select__list-item
+															.select__list-item-main МУП "ПАТП №22"
+															.select__list-item-details ИНН 771537487477
+														li.select__list-item
+															.select__list-item-main МУП "ПАТП №2223"
+															.select__list-item-details ИНН 771874537455
+														li.select__list-item
+															.select__list-item-main МУП "ПАТП №2332"
+															.select__list-item-details ИНН 771537455874
+										.form-application__row
+											.form-application__row-heading.form-application__row-heading--width-normal
+												.field-heading Краткое наименование организации
+													span.field-heading__require *
+											.form-application__row-content.form-application__row-content--width-medium
+												input(type="text" placeholder="Введите краткое наименование организации").input-base.is-error
+												.input-error-text Это обязательное поле для заполнения
+										.form-application__row
+											.form-application__row-heading.form-application__row-heading--width-normal
+												.field-heading Полное наименование организации
+													span.field-heading__require *
+											.form-application__row-content.form-application__row-content--width-medium
+												textarea.input-base.input-base--textarea
+										.form-application__row
+											.form-application__row-heading.form-application__row-heading--width-normal
+												.field-heading Регион
+											.form-application__row-content.form-application__row-content--width-medium
+												input(type="text").input-base
+										.form-application__row
+											.form-application__row-heading.form-application__row-heading--width-normal
+												.field-heading Адрес
+											.form-application__row-content.form-application__row-content--width-medium
+												textarea.input-base.input-base--textarea
+										.form-application__row
+											.form-application__row-heading.form-application__row-heading--width-normal
+												.field-heading КПП
+											.form-application__row-content.form-application__row-content--width-medium
+												input(type="text" placeholder="test").input-base
+										.form-application__row
+											.form-application__row-heading.form-application__row-heading--width-normal
+												.field-heading ОКПО
+											.form-application__row-content.form-application__row-content--width-medium
+												input(type="text" placeholder="test").input-base
+										.form-application__row
+											.form-application__row-heading.form-application__row-heading--width-normal
+												.field-heading Код ОКОПФ
+											.form-application__row-content.form-application__row-content--width-medium
+												input(type="text").input-base
+										.form-application__row
+											.form-application__row-heading.form-application__row-heading--width-normal
+												.field-heading ОКВЭД
+											.form-application__row-content.form-application__row-content--width-medium
+												input(type="text").input-base
+										.form-application__row
+											.form-application__row-heading.form-application__row-heading--width-normal
+												.field-heading ОКТМО
+											.form-application__row-content.form-application__row-content--width-medium
+												input(type="text").input-base
+										.form-application__row
+											.form-application__row-heading.form-application__row-heading--width-normal
+												.field-heading Телефон
+											.form-application__row-content.form-application__row-content--width-medium
+												input(type="text").input-base
+										.form-application__row
+											.form-application__row-heading.form-application__row-heading--width-normal
+												.field-heading E-mail организации
+													span.field-heading__require *
+											.form-application__row-content.form-application__row-content--width-medium
+												input(type="text").input-base
+										.form-application__row
+											.form-application__row-heading.form-application__row-heading--width-normal
+												.field-heading Код синхронизации
+											.form-application__row-content.form-application__row-content--width-medium
+												input(type="text").input-base
+										.form-application__row
+											.form-application__row-heading.form-application__row-heading--width-normal
+												.field-heading ФИО КМ
+													span.field-heading__require *
+											.form-application__row-content.form-application__row-content--width-medium
+												input(type="text").input-base
+										.form-application__row
+											.form-application__row-heading.form-application__row-heading--width-normal
+												.field-heading E-mail для обращений
+													span.field-heading__require *
+											.form-application__row-content.form-application__row-content--width-medium
+												input(type="text").input-base
+										.form-application__row
+											.form-application__row-heading.form-application__row-heading--width-normal
+												.field-heading Внутренний номер КМ
+													span.field-heading__require *
+											.form-application__row-content.form-application__row-content--width-medium
+												input(type="text").input-base
+										.form-application__row
+											.form-application__row-heading.form-application__row-heading--width-normal
+												.field-heading Мобильный номер КМ
+											.form-application__row-content.form-application__row-content--width-medium
+												input(type="text").input-base
+										.form-application__row
+											.form-application__row-heading.form-application__row-heading--width-normal
+												.field-heading Код синхронизации КМ
+											.form-application__row-content.form-application__row-content--width-medium
+												input(type="text").input-base
+										.form-application__row
+											.form-application__nav
+												a(href="#").btn.btn-save.btn--fullwidth Сохранить
+
+
+					footer.footer
+						.container
+							.footer__section.d-flex.justify-content-end
+								ul.footer__menu
+									li
+										a(href="#") О нас
+									li
+										a(href="#") Реквизиты
+									li
+										a(href="#") Политика в отношении обработки персональных данных в АО “ГТЛК”
+							hr
+							.footer__section.d-flex.justify-content-between.align-items-center
+								.footer__copyright © 2023 АО ГТЛК
+								ul.footer__menu
+									li
+										a(href="tel:88002001299") 8-800-200-12-99
+									li
+										a(href="mailto:gtlk@gtlk.ru") gtlk@gtlk.ru
+									li
+										a(href="#") 125284, г. Москва, Ленинградский проспект д. 31 а, стр. 1
+			
+		include html/modals
+
+		script(src="js/app.min.js")

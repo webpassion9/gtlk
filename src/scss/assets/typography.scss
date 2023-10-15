@@ -87,10 +87,20 @@ video {
     &--app-contacts {
         margin-bottom: 20px;
     }
+    &--employees-list {
+        margin-bottom: 30px;
+    }
+    &--add-access {
+        margin-bottom: 30px;
+    }
 }
 
 .link-base {
     &:hover {
         text-decoration: underline;
     }
+}
+
+.fs-16 {
+    font-size: 16px;
 }

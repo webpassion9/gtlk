@@ -9,7 +9,7 @@
 	</head>
 	<body>
 		<div class="wrapper wrapper-main">
-			<header class="header-main">
+			<header class="header-auth">
 				<div class="container">
 					<a href="#">
 						<img src="img/logo-GTLK_dark.png" width="166" height="52" alt="">
@@ -46,12 +46,12 @@
 						</div>
 					</form>
 					<div class="header-btns">
-						<a class="btn header-btns__item" href="#">
+						<a class="btn header-btns__link" href="#">
 							<svg class="icon-bell">
 								<use xlink:href="img/icons/icons.svg#icon-bell"></use>
 							</svg>
 						</a>
-						<a class="btn header-btns__item" href="#">
+						<a class="btn header-btns__link" href="#">
 							<svg class="icon-user">
 								<use xlink:href="img/icons/icons.svg#icon-user"></use>
 							</svg>
@@ -758,18 +758,68 @@
 			</div>
 			<div class="modal__heading">Продолжить заполнение?</div>
 			<div class="modal__btns">
-				<a class="btn btn-filling btn-filling--positive" href="#">Да</a>
-				<a class="btn btn-filling btn-filling--negative" href="#">Нет</a>
+				<a class="btn btn-filling btn-filling--positive">Да</a>
+				<a class="btn btn-filling btn-filling--negative" data-fancybox-close>Нет</a>
 			</div>
 		</div>
 		<div class="modal" id="modal-remove-draft">
 			<div class="modal__icon">
 				<img src="img/icon-remove-draft.svg" width="222" height="221" alt="">
 			</div>
-			<div class="modal__heading">Вы уверены, что хотите удалить черновик?</div>
+			<div class="modal__heading">Вы уверены, что хотите
+				<br>удалить черновик?
+			</div>
 			<div class="modal__btns">
-				<a class="btn btn-confirm btn-confirm--positive" href="#">Да</a>
-				<a class="btn btn-confirm btn-confirm--negative" href="#">Нет</a>
+				<a class="btn btn-confirm btn-confirm--positive">Да</a>
+				<a class="btn btn-confirm btn-confirm--negative" data-fancybox-close>Нет</a>
+			</div>
+		</div>
+		<div class="modal" id="modal-block-counterparty">
+			<div class="modal__icon">
+				<img src="img/icon-remove-draft.svg" width="222" height="221" alt="">
+			</div>
+			<div class="modal__heading">Вы уверены, что хотите
+				<br>заблокировать контрагента?
+			</div>
+			<div class="modal__btns">
+				<a class="btn btn-confirm btn-confirm--positive">Да</a>
+				<a class="btn btn-confirm btn-confirm--negative" data-fancybox-close>Нет</a>
+			</div>
+		</div>
+		<div class="modal" id="modal-remove-counterparty">
+			<div class="modal__icon">
+				<img src="img/icon-remove-draft.svg" width="222" height="221" alt="">
+			</div>
+			<div class="modal__heading">Вы уверены, что хотите
+				<br>удалить контрагента?
+			</div>
+			<div class="modal__btns">
+				<a class="btn btn-confirm btn-confirm--positive">Да</a>
+				<a class="btn btn-confirm btn-confirm--negative" data-fancybox-close>Нет</a>
+			</div>
+		</div>
+		<div class="modal" id="modal-block-employeer">
+			<div class="modal__icon">
+				<img src="img/icon-remove-draft.svg" width="222" height="221" alt="">
+			</div>
+			<div class="modal__heading">Вы уверены, что хотите
+				<br>заблокировать сотрудника?
+			</div>
+			<div class="modal__btns">
+				<a class="btn btn-confirm btn-confirm--positive">Да</a>
+				<a class="btn btn-confirm btn-confirm--negative" data-fancybox-close>Нет</a>
+			</div>
+		</div>
+		<div class="modal" id="modal-remove-employeer">
+			<div class="modal__icon">
+				<img src="img/icon-remove-draft.svg" width="222" height="221" alt="">
+			</div>
+			<div class="modal__heading">Вы уверены, что хотите
+				<br>удалить сотрудника?
+			</div>
+			<div class="modal__btns">
+				<a class="btn btn-confirm btn-confirm--positive">Да</a>
+				<a class="btn btn-confirm btn-confirm--negative" data-fancybox-close>Нет</a>
 			</div>
 		</div>
 		<div class="modal-actions modal-actions--annul" id="modal-annul">
@@ -803,8 +853,64 @@
 			</div>
 			<div class="modal-app__heading">Ваша заявка отправлена</div>
 			<div>
-				<a class="btn btn-app" href="#">Перейти к заявке </a>
+				<a class="btn btn-app" href="#">Перейти к заявке</a>
 			</div>
+		</div>
+		<div class="modal" id="modal-counterparty-added">
+			<div class="modal__img">
+				<img src="img/illustration-done.svg" alt="" width="257" height="193">
+			</div>
+			<div class="modal__heading">Контрагент добавлен в систему</div>
+			<div class="modal__btns">
+				<a class="btn btn-details btn-details--theme-light-blue" href="#">Перейти к добавлению сотрудника</a>
+			</div>
+			<a class="modal__close-btn" data-fancybox-close>
+				<svg class="icon-close">
+					<use xlink:href="img/icons/icons.svg#icon-close"></use>
+				</svg>
+			</a>
+		</div>
+		<div class="modal" id="modal-employeer-added">
+			<div class="modal__img">
+				<img src="img/illustration-done.svg" alt="" width="257" height="193">
+			</div>
+			<div class="modal__heading">Сотрудник добавлен</div>
+			<div class="modal__btns">
+				<a class="btn btn-details btn-details--theme-light-blue" href="#">Перейти к списку сотрудников</a>
+			</div>
+			<a class="modal__close-btn" data-fancybox-close>
+				<svg class="icon-close">
+					<use xlink:href="img/icons/icons.svg#icon-close"></use>
+				</svg>
+			</a>
+		</div>
+		<div class="modal" id="modal-counterparties-changes-saved">
+			<div class="modal__img">
+				<img src="img/illustration-done.svg" alt="" width="257" height="193">
+			</div>
+			<div class="modal__heading">Изменения сохранены</div>
+			<div class="modal__btns">
+				<a class="btn btn-details btn-details--theme-light-blue" href="#">Перейти к списку контрагентов</a>
+			</div>
+			<a class="modal__close-btn" data-fancybox-close>
+				<svg class="icon-close">
+					<use xlink:href="img/icons/icons.svg#icon-close"></use>
+				</svg>
+			</a>
+		</div>
+		<div class="modal" id="modal-employeer-changes-saved">
+			<div class="modal__img">
+				<img src="img/illustration-done.svg" alt="" width="257" height="193">
+			</div>
+			<div class="modal__heading">Изменения сохранены</div>
+			<div class="modal__btns">
+				<a class="btn btn-details btn-details--theme-light-blue" href="#">Перейти к списку сотрудников</a>
+			</div>
+			<a class="modal__close-btn" data-fancybox-close>
+				<svg class="icon-close">
+					<use xlink:href="img/icons/icons.svg#icon-close"></use>
+				</svg>
+			</a>
 		</div>
 		<script src="js/app.min.js"></script>
 	</body>

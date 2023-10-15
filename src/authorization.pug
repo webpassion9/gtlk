@@ -15,25 +15,25 @@ html(lang="ru")
 	body
 		.wrapper
 
-			header.header
+			header.header-auth
 				.container
-					.header__top
-						a(href="#").header__logo
+					.header-auth__top
+						a(href="#").header-auth__logo
 							img(src="img/logo-GTLK.png", width="214" height="67" alt="")
 						.d-flex.align-items-center
-							a(href="tel:88002001299").phone.header__phone
+							a(href="tel:88002001299").header-auth__phone
 								+sprite("icon-phone")
 								|	8-800-200-12-99
-							a(href="#").btn.btn-menu.header__btn-menu
+							a(href="#").btn.btn-menu.header-auth__btn-menu
 								+sprite("icon-menu")
-					ul.header__menu
+					ul.header-auth__menu
 						li
 							a(href="#") Главная
 						li
 							a(href="#") Компания
 						li
 							a(href="#") Общественная деятельность
-					.header__heading Авторизация
+					.header-auth__heading Авторизация
 			
 			main
 				.container
@@ -55,11 +55,12 @@ html(lang="ru")
 											.btn.btn-show-pass
 												+sprite("icon-eye")
 												+sprite("icon-eye-opened")
-								label.auth-checkbox.auth__checkbox
-									input(type="checkbox" hidden)
-									span.auth-checkbox__icon
-										+sprite("icon-check")
-									span.auth-checkbox__text Запомнить меня на этом компьютере
+								.auth__checkbox-wrapper
+									label.auth-checkbox
+										input(type="checkbox" hidden)
+										span.auth-checkbox__icon
+											+sprite("icon-check")
+										span.auth-checkbox__text Запомнить меня на этом компьютере
 								div
 									input(type="submit" value="Войти").btn.btn-submit.btn-submit--size-large.btn--fullwidth
 						.auth__sep
