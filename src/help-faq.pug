@@ -1,0 +1,174 @@
+include html/mixins
+
+doctype html
+block head
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no")
+		meta(name="format-detection" content="telephone=no")
+
+		link(rel="stylesheet", href="css/style.min.css")
+
+		title Title
+
+	body
+		.wrapper.wrapper-main
+
+			include html/header
+			.main-row
+
+				aside.sidebar
+					.sidebar__inner
+						.sidebar__section
+							ul.sidebar__nav
+								li.sidebar__nav-item.current
+									a(href="#").sidebar__nav-item-btn
+										.sidebar__nav-item-icon
+											+sprite("icon-file-tray")
+										.sidebar__nav-item-text Заявки
+								li.sidebar__nav-item
+									a(href="#").sidebar__nav-item-btn
+										.sidebar__nav-item-icon
+											+sprite("icon-newspaper")
+										.sidebar__nav-item-text Договоры
+								li.sidebar__nav-item
+									a(href="#").sidebar__nav-item-btn
+										.sidebar__nav-item-icon
+											+sprite("icon-doc")
+										.sidebar__nav-item-text Обращения НМЦ
+						.sidebar__section.sidebar__section--info
+							ul.sidebar__nav
+								li.sidebar__nav-item
+									a(href="#").sidebar__nav-item-btn
+										.sidebar__nav-item-icon
+											+sprite("icon-book")
+										.sidebar__nav-item-text Справка
+						.sidebar__section
+							.manager
+								.manager__ava
+									img(src="img/avatar-manager.png", alt="")
+								.manager__name Менеджер Иванова А.А.
+								a(href="#").btn.manager__btn Связаться
+						.sidebar__section
+							a(href="#").support
+								.support__icon
+									+sprite("icon-chat")
+								.support__heading Служба поддержки
+
+				main.main
+					.content
+						.content-inner
+							.go-back
+								a(href="#") < Назад
+							.heading-base.heading-base--help Часто задаваемые вопросы
+							.help
+								.help__heading
+									.help__heading-main Есть вопрос?
+									.help__heading-sub Выберите категорию
+									img(src="img/help-line.svg", width="308" height="214" alt="").help__heading-img
+								ul.help__nav
+									li.help__nav-item
+										a(href="#").help__nav-item-link
+											| Заявки
+											.help__nav-item-icon
+												+sprite("icon-file-tray")
+									li.help__nav-item
+										a(href="#").help__nav-item-link
+											| Договоры
+											.help__nav-item-icon
+												+sprite("icon-newspaper")
+									li.help__nav-item
+										a(href="#").help__nav-item-link
+											| Обращения НМЦ
+											.help__nav-item-icon
+												+sprite("icon-doc")
+									li.help__nav-item
+										a(href="#").help__nav-item-link
+											| Личный кабинет
+											.help__nav-item-icon
+												+sprite("icon-user")
+							
+							.faq
+								.faq__heading Часто задаваемые вопросы
+								.faq__main
+									.faq__item
+										.faq__item-top
+											.faq__item-heading Вопрос?
+											.faq__item-toggle
+												+sprite("icon-plus")
+										.faq__item-content
+											.faq__item-content-inner
+												p Ответ
+									.faq__item
+										.faq__item-top
+											.faq__item-heading Вопрос?
+											.faq__item-toggle
+												+sprite("icon-plus")
+										.faq__item-content
+											.faq__item-content-inner
+												p Ответ Ответ Ответ Ответ Ответ Ответ Ответ Ответ Ответ Ответ Ответ Ответ Ответ Ответ Ответ Ответ Ответ
+									.faq__item
+										.faq__item-top
+											.faq__item-heading Вопрос Вопрос Вопрос Вопрос Вопрос Вопрос Вопрос Вопрос Вопрос?
+											.faq__item-toggle
+												+sprite("icon-plus")
+										.faq__item-content
+											.faq__item-content-inner
+												p Ответ
+									.faq__item
+										.faq__item-top
+											.faq__item-heading Вопрос?
+											.faq__item-toggle
+												+sprite("icon-plus")
+										.faq__item-content
+											.faq__item-content-inner
+												p Ответ
+									.faq__item
+										.faq__item-top
+											.faq__item-heading Вопрос?
+											.faq__item-toggle
+												+sprite("icon-plus")
+										.faq__item-content
+											.faq__item-content-inner
+												p Ответ
+									.faq__item
+										.faq__item-top
+											.faq__item-heading Вопрос Вопрос Вопрос Вопрос Вопрос Вопрос Вопрос Вопрос Вопрос?
+											.faq__item-toggle
+												+sprite("icon-plus")
+										.faq__item-content
+											.faq__item-content-inner
+												p Ответ
+								.help-rate
+									.help-rate__heading Получилось найти ответ?
+									.help-rate__btns
+										a.btn.help-rate__btns-item Да
+											img(src="img/icon-circle-true.svg" width="16" height="16" alt="")
+										a.btn.help-rate__btns-item Нет
+											img(src="img/icon-circle-false.svg" width="16" height="16" alt="")
+
+					footer.footer
+						.container
+							.footer__section.d-flex.justify-content-end
+								ul.footer__menu
+									li
+										a(href="#") О нас
+									li
+										a(href="#") Реквизиты
+									li
+										a(href="#") Политика в отношении обработки персональных данных в АО “ГТЛК”
+							hr
+							.footer__section.d-flex.justify-content-between.align-items-center
+								.footer__copyright © 2023 АО ГТЛК
+								ul.footer__menu
+									li
+										a(href="tel:88002001299") 8-800-200-12-99
+									li
+										a(href="mailto:gtlk@gtlk.ru") gtlk@gtlk.ru
+									li
+										a(href="#") 125284, г. Москва, Ленинградский проспект д. 31 а, стр. 1
+			
+		include html/modals
+
+		script(src="js/app.min.js")

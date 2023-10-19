@@ -55,6 +55,7 @@
 		height: 28px;
 		border: 1px solid;
 		padding: 5px 15px;
+		flex-shrink: 0;
 		&:hover {
 			background: #509AF8;
 			color: var(--color-white);

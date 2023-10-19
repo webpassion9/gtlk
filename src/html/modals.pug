@@ -1,119 +1,239 @@
-.modal.modal--continue-filling#modal-continue-filling
-	.modal__icon
-		img(src="img/icon-filling.svg", width="127" height="126" alt="")
-	.modal__heading Продолжить заполнение?
-	.modal__btns
-		a.btn.btn-filling.btn-filling--positive Да
-		a(data-fancybox-close).btn.btn-filling.btn-filling--negative Нет
+.modal-container#modal-continue-filling
+	.modal.modal--continue-filling
+		.modal__icon
+			img(src="img/icon-filling.svg", width="127" height="126" alt="")
+		.modal__heading Продолжить заполнение?
+		.modal__btns
+			a.btn.btn-filling.btn-filling--positive Да
+			a(data-modal-close).btn.btn-filling.btn-filling--negative Нет
 
-.modal#modal-remove-draft
-	.modal__icon
-		img(src="img/icon-remove-draft.svg", width="222" height="221" alt="")
-	.modal__heading Вы уверены, что хотите
-		br
-		| удалить черновик?
-	.modal__btns
-		a.btn.btn-confirm.btn-confirm--positive Да
-		a(data-fancybox-close).btn.btn-confirm.btn-confirm--negative Нет
+.modal-container#modal-remove-draft
+	.modal
+		.modal__icon
+			img(src="img/icon-remove-draft.svg", width="222" height="221" alt="")
+		.modal__heading Вы уверены, что хотите
+			br
+			| удалить черновик?
+		.modal__btns
+			a.btn.btn-confirm.btn-confirm--positive Да
+			a(data-modal-close).btn.btn-confirm.btn-confirm--negative Нет
 
-.modal#modal-block-counterparty
-	.modal__icon
-		img(src="img/icon-remove-draft.svg", width="222" height="221" alt="")
-	.modal__heading Вы уверены, что хотите
-		br
-		| заблокировать контрагента?
-	.modal__btns
-		a.btn.btn-confirm.btn-confirm--positive Да
-		a(data-fancybox-close).btn.btn-confirm.btn-confirm--negative Нет
+.modal-container#modal-block-counterparty
+	.modal
+		.modal__icon
+			img(src="img/icon-remove-draft.svg", width="222" height="221" alt="")
+		.modal__heading Вы уверены, что хотите
+			br
+			| заблокировать контрагента?
+		.modal__btns
+			a.btn.btn-confirm.btn-confirm--positive Да
+			a(data-modal-close).btn.btn-confirm.btn-confirm--negative Нет
 
-.modal#modal-remove-counterparty
-	.modal__icon
-		img(src="img/icon-remove-draft.svg", width="222" height="221" alt="")
-	.modal__heading Вы уверены, что хотите
-		br
-		| удалить контрагента?
-	.modal__btns
-		a.btn.btn-confirm.btn-confirm--positive Да
-		a(data-fancybox-close).btn.btn-confirm.btn-confirm--negative Нет
+.modal-container#modal-remove-counterparty
+	.modal
+		.modal__icon
+			img(src="img/icon-remove-draft.svg", width="222" height="221" alt="")
+		.modal__heading Вы уверены, что хотите
+			br
+			| удалить контрагента?
+		.modal__btns
+			a.btn.btn-confirm.btn-confirm--positive Да
+			a(data-modal-close).btn.btn-confirm.btn-confirm--negative Нет
 
-.modal#modal-block-employeer
-	.modal__icon
-		img(src="img/icon-remove-draft.svg", width="222" height="221" alt="")
-	.modal__heading Вы уверены, что хотите
-		br
-		| заблокировать сотрудника?
-	.modal__btns
-		a.btn.btn-confirm.btn-confirm--positive Да
-		a(data-fancybox-close).btn.btn-confirm.btn-confirm--negative Нет
+.modal-container#modal-block-employeer
+	.modal
+		.modal__icon
+			img(src="img/icon-remove-draft.svg", width="222" height="221" alt="")
+		.modal__heading Вы уверены, что хотите
+			br
+			| заблокировать сотрудника?
+		.modal__btns
+			a.btn.btn-confirm.btn-confirm--positive Да
+			a(data-modal-close).btn.btn-confirm.btn-confirm--negative Нет
 
-.modal#modal-remove-employeer
-	.modal__icon
-		img(src="img/icon-remove-draft.svg", width="222" height="221" alt="")
-	.modal__heading Вы уверены, что хотите
-		br
-		| удалить сотрудника?
-	.modal__btns
-		a.btn.btn-confirm.btn-confirm--positive Да
-		a(data-fancybox-close).btn.btn-confirm.btn-confirm--negative Нет
+.modal-container#modal-remove-employeer
+	.modal
+		.modal__icon
+			img(src="img/icon-remove-draft.svg", width="222" height="221" alt="")
+		.modal__heading Вы уверены, что хотите
+			br
+			| удалить сотрудника?
+		.modal__btns
+			a.btn.btn-confirm.btn-confirm--positive Да
+			a(data-modal-close).btn.btn-confirm.btn-confirm--negative Нет
 
+.modal-container#modal-annul
+	.modal.modal--annul
+		.modal-actions-heading Аннулировать заявку
+		.modal-actions-text
+			p При аннулировании заявки вы не сможете ее восстановить или заменить. Пожалуйста, убедитесь, что вы действительно хотите аннулировать заявку.
+		.modal-actions-btns
+			a(data-modal-close).btn.btn-nav.btn-nav--cancel Отменить
+			a(href="#").btn.btn-nav.btn-nav--annul Аннулировать
 
-.modal-actions.modal-actions--annul#modal-annul
-	.modal-actions__heading Аннулировать заявку
-	.modal-actions__text
-		p При аннулировании заявки вы не сможете ее восстановить или заменить. Пожалуйста, убедитесь, что вы действительно хотите аннулировать заявку.
-	.modal-actions__btns
-		a(data-fancybox-close).btn.btn-nav.btn-nav--cancel Отменить
-		a(href="#").btn.btn-nav.btn-nav--annul Аннулировать
+.modal-container#modal-new-version
+	.modal.modal--new-version
+		.modal-actions-heading Создать новую версию заявки
+		p При создании новой версии текущая отправленная заявка аннулируется и её статус изменится на «Заменена». Данные заявки скопируются в новую заявку. После заполнения заявки потребуется заново отправить ее на рассмотрение.
+		form.modal-actions-form
+			div
+				textarea(placeholder="Укажите причину замены").input-base.input-base--textarea.input-base--replace-info
+		.modal-actions-btns
+			a(data-modal-close).btn.btn-nav.btn-nav--cancel Отменить
+			a(href="#").btn.btn-nav.btn-nav--continue Продолжить
 
-.modal-actions.modal-actions--new-version#modal-new-version
-	.modal-actions__heading Создать новую версию заявки
-	p При создании новой версии текущая отправленная заявка аннулируется и её статус изменится на «Заменена». Данные заявки скопируются в новую заявку. После заполнения заявки потребуется заново отправить ее на рассмотрение.
-	form
+.modal-container#modal-app-sent
+	.modal.modal--app-sent
+		.modal-app-icon
+			+sprite("icon-done")
+		.modal-app-heading Ваша заявка отправлена
 		div
-			textarea(placeholder="Укажите причину замены").input-base.input-base--textarea.input-base--replace-info
-	.modal-actions__btns
-		a(data-fancybox-close).btn.btn-nav.btn-nav--cancel Отменить
-		a(href="#").btn.btn-nav.btn-nav--continue Продолжить
+			a(href="#").btn.btn-app Перейти к заявке
 
-.modal-app#modal-app-sent
-	.modal-app__icon
-		+sprite("icon-done")
-	.modal-app__heading Ваша заявка отправлена
-	div
-		a(href="#").btn.btn-app Перейти к заявке
+.modal-container#modal-counterparty-added
+	.modal
+		.modal__img
+			img(src="img/illustration-done.svg", alt="" width="257" height="193")
+		.modal__heading Контрагент добавлен в систему
+		.modal__btns
+			a(href="#").btn.btn-details.btn-details--theme-light-blue Перейти к добавлению сотрудника
+		a.modal__close-btn(data-modal-close)
+			+sprite("icon-close")
 
-.modal#modal-counterparty-added
-	.modal__img
-		img(src="img/illustration-done.svg", alt="" width="257" height="193")
-	.modal__heading Контрагент добавлен в систему
-	.modal__btns
-		a(href="#").btn.btn-details.btn-details--theme-light-blue Перейти к добавлению сотрудника
-	a.modal__close-btn(data-fancybox-close)
-		+sprite("icon-close")
+.modal-container#modal-employeer-added
+	.modal
+		.modal__img
+			img(src="img/illustration-done.svg", alt="" width="257" height="193")
+		.modal__heading Сотрудник добавлен
+		.modal__btns
+			a(href="#").btn.btn-details.btn-details--theme-light-blue Перейти к списку сотрудников
+		a.modal__close-btn(data-modal-close)
+			+sprite("icon-close")
 
-.modal#modal-employeer-added
-	.modal__img
-		img(src="img/illustration-done.svg", alt="" width="257" height="193")
-	.modal__heading Сотрудник добавлен
-	.modal__btns
-		a(href="#").btn.btn-details.btn-details--theme-light-blue Перейти к списку сотрудников
-	a.modal__close-btn(data-fancybox-close)
-		+sprite("icon-close")
+.modal-container#modal-counterparties-changes-saved
+	.modal
+		.modal__img
+			img(src="img/illustration-done.svg", alt="" width="257" height="193")
+		.modal__heading Изменения сохранены
+		.modal__btns
+			a(href="#").btn.btn-details.btn-details--theme-light-blue Перейти к списку контрагентов
+		a.modal__close-btn(data-modal-close)
+			+sprite("icon-close")
 
-.modal#modal-counterparties-changes-saved
-	.modal__img
-		img(src="img/illustration-done.svg", alt="" width="257" height="193")
-	.modal__heading Изменения сохранены
-	.modal__btns
-		a(href="#").btn.btn-details.btn-details--theme-light-blue Перейти к списку контрагентов
-	a.modal__close-btn(data-fancybox-close)
-		+sprite("icon-close")
+.modal-container#modal-employeer-changes-saved
+	.modal
+		.modal__img
+			img(src="img/illustration-done.svg", alt="" width="257" height="193")
+		.modal__heading Изменения сохранены
+		.modal__btns
+			a(href="#").btn.btn-details.btn-details--theme-light-blue Перейти к списку сотрудников
+		a.modal__close-btn(data-modal-close)
+			+sprite("icon-close")
 
-.modal#modal-employeer-changes-saved
-	.modal__img
-		img(src="img/illustration-done.svg", alt="" width="257" height="193")
-	.modal__heading Изменения сохранены
-	.modal__btns
-		a(href="#").btn.btn-details.btn-details--theme-light-blue Перейти к списку сотрудников
-	a.modal__close-btn(data-fancybox-close)
-		+sprite("icon-close")
+.modal-container#modal-contact
+	.modal
+		.modal__img
+			img(src="img/illustration-consultant.png", alt="" width="172" height="129")
+		.modal__heading Вы можете связаться с нами
+		.modal__btns.modal__btns--contact
+			.modal__btns-col
+				a(href="#").btn.btn-details.btn-details--theme-gray Связаться с менеджером
+			.modal__btns-col
+				a(href="#").btn.btn-details Служба поддержки
+		a.modal__close-btn(data-modal-close)
+			+sprite("icon-close")
+
+.modal-container#modal-contact-manager
+	.modal.modal--manager
+		.modal__img
+			img(src="img/illustration-consultant.png", alt="" width="502" height="377")
+		.modal__heading Связаться с менеджером
+		ul.contacts-list
+			li
+				a(href="#") 8-800-200-12-99 (доб. 101)
+			li
+				a(href="#") 8-916-555-88-99
+		a.modal__close-btn(data-modal-close)
+			+sprite("icon-close")
+
+.modal-container#modal-request-success
+	.modal.modal--request
+		.modal__img
+			img(src="img/icon-mail-delivered.svg", alt="" width="138" height="126")
+		.request-sent
+			.request-sent__heading Ваше обращение успешно отправлено 
+			.request-sent__text Зарегистрировано под №32134123
+		a.modal__close-btn.modal__close-btn--request(data-modal-close)
+			+sprite("icon-close")
+
+.modal-container#modal-request
+	.modal.modal--request-form
+		.heading-request Создать обращение #3234
+		form.form-request
+			.form-request__section
+				.form-request__heading Выберите тему вопроса
+					span.form-request__heading-request *
+				.form-request__main
+					.select
+						input(type="text" placeholder="Выберите тему").form-request__input.select__input
+						.select__icon
+							+sprite("icon-chevron-up")
+						ul.select__list.select__list--type-of-property
+							li.select__list-item
+								.select__list-item-main Select item 1
+							li.select__list-item
+								.select__list-item-main Select item 2
+							li.select__list-item
+								.select__list-item-main Select item 3
+			.form-request__section
+				.form-request__heading Сообщение
+					span.form-request__heading-request *
+				.form-request__main
+					div
+						textarea(placeholder="Кратко опишите суть обращения").form-request__input#length-require
+					.input-length-info
+						.input-length-info__text
+							+sprite("icon-info")
+							| Длина сообщения не может быть длиннее
+						.input-length-info__count 0/1000
+			.form-request__section
+				.form-request__heading Куда хотите получить ответ
+					span.form-request__heading-request *
+				.form-request__main
+					.select
+						input(type="text" placeholder="").form-request__input.select__input
+						.select__icon
+							+sprite("icon-chevron-up")
+						ul.select__list
+							li.select__list-item
+								.select__list-item-main Select item 1
+							li.select__list-item
+								.select__list-item-main Select item 2
+							li.select__list-item
+								.select__list-item-main Select item 3
+			.form-request__section
+				.form-request__heading Приложите файлы (необязательно)
+				.add-file
+					label.add-file__area
+						.add-file__heading Выберите файл
+						.add-file__desc размер файла - до 3 мб
+							br
+							| Список допустимых форматов: doc, docx, xls, xlsx, РDF, JPG
+						.add-file__uploading-visible
+							img(src="img/loading.gif" width="30" height="30" alt="")
+						input(type="file" accept=".doc, .docx, .xls, .xlsx, .pdf, .jpg" hidden multiple)#fileInput
+					.add-file__uploaded-items
+			div
+				input(type="submit" value="Отправить сообщение").btn.btn-app.btn-app.btn-app--size-large.btn--fullwidth
+
+		a.modal__close-btn.modal__close-btn--request(data-modal-close)
+			+sprite("icon-close")
+
+.modal-container#modal-logout
+	.modal.modal--logout
+		.modal__icon
+			img(src="img/illustration-logout.svg", width="520" height="308" alt="")
+		.modal__heading Вы уверены, что хотите выйти из системы?
+		.modal__btns
+			a.btn.btn-confirm.btn-confirm--positive Да
+			a(data-modal-close).btn.btn-confirm.btn-confirm--negative Нет

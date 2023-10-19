@@ -4,6 +4,12 @@
 	flex-shrink: 0;
 	box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.05);
 
+	// transition: .25s;
+
+	// &:hover {
+	// 	width: 252px;
+	// }
+
 	&__inner {
 		display: flex;
 		flex-direction: column;

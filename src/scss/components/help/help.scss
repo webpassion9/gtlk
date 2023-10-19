@@ -1,0 +1,130 @@
+.help {
+  display: flex;
+  align-items: center;
+  padding: 0 0 0 65px;
+  &__heading {
+    background: var(--color-white);
+    border-radius: 100%;
+    width: 175px;
+    height: 175px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 10px 20px 1px #ACC2D4;
+    gap: 8px;
+    flex-shrink: 0;
+    padding: 0 0 0 18px;
+    position: relative;
+    margin-right: 80px;
+    &-main {
+      font-size: 20px;
+      line-height: 1.2;
+    }
+    &-sub {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 1.2;
+    }
+    &-img {
+      position: absolute;
+      left: -69px;
+      top: -14px;
+      max-width: none;
+      max-height: none;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 308px;
+      height: 214px;
+    }
+  }
+  &__nav {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    &-item {
+      &-link {
+        width: 269px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #F7F9FB;
+        color:  var(--color-black-base);
+        border-radius: 16px;
+        height: 49px;
+        padding: 7px 16px;
+        transition: .25s;
+        &:hover {
+          background: #D0D6F8;
+
+        }
+      }
+      &-icon {
+        flex-shrink: 0;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        svg {
+          fill: var(--color-blue-base);
+          max-width: 22px;
+          max-height: 22px;
+        }
+        .icon-file-tray {}
+      }
+    }
+  }
+}
+
+.help-rate {
+  background: #F7F9FB;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 16px;
+  align-items: center;
+  margin-top: 37px;
+  &__heading {
+    font-size: 18px;
+    line-height: 1;
+  }
+  &__btns {
+    flex-shrink: 0;
+    gap: 10px;
+    &-item {
+      height: 40px;
+      padding: 12px;
+      gap: 12px;
+      color: var(--color-black-base);
+      background: #EAEDFF;
+      border-radius: 10px;
+      &:hover {
+        background: #D0D6F8;
+      }
+    }
+  }
+}
+
+.request-sent {
+  text-align: center;
+  &__heading {
+    font-weight: 700;
+    color: #159655;
+    font-size: 32px;
+    line-height: 42px;
+    &:not(:last-child) {
+      padding-bottom: 60px;
+    }
+  }
+  &__text {
+    font-size: 24px;
+    line-height: 1.2px;
+  }
+}

@@ -38,11 +38,16 @@
 						</li>
 					</ul>
 					<form class="header-search">
-						<input class="header-search__input" type="text">
-						<div class="header-search__icon">
-							<svg class="icon-loop">
-								<use xlink:href="img/icons/icons.svg#icon-loop"></use>
-							</svg>
+						<div class="header-search__input-wrap">
+							<input class="header-search__input" type="text">
+							<div class="header-search__icon">
+								<svg class="icon-loop">
+									<use xlink:href="img/icons/icons.svg#icon-loop"></use>
+								</svg>
+							</div>
+							<div class="header-search__btn">
+								<input class="btn btn-search btn-search--header" type="submit" value="Найти">
+							</div>
 						</div>
 					</form>
 					<ul class="header-btns">
@@ -72,11 +77,20 @@
 														<div class="notification__content">
 															<div class="notification__content-top">
 																<div class="notification__heading">Поступил счет по договору 123-ЗЛ-ОК</div>
-																<a class="btn notification__btn-more" href="#">
-																	<svg class="icon-more-alt_vertical">
-																		<use xlink:href="img/icons/icons.svg#icon-more-alt_vertical"></use>
-																	</svg>
-																</a>
+																<div class="notification__menu">
+																	<div class="tooltip tooltip--notification">
+																		<a class="btn tooltip__btn tooltip__btn--vertical tooltip__btn--notifications">
+																			<svg class="icon-more-alt">
+																				<use xlink:href="img/icons/icons.svg#icon-more-alt"></use>
+																			</svg>
+																		</a>
+																		<ul class="tooltip__menu">
+																			<li class="tooltip__menu-item">
+																				<a class="tooltip__menu-item-link tooltip__menu-item-link--color-black" href="#">Отметить прочитанным</a>
+																			</li>
+																		</ul>
+																	</div>
+																</div>
 															</div>
 															<div class="notification__desc">
 																<p>Предварительные выводы неутешительны: повышение уровня гражданского сознания предопределяет высокую востребованность инновационных методов управления процессами.</p>
@@ -101,11 +115,20 @@
 														<div class="notification__content">
 															<div class="notification__content-top">
 																<div class="notification__heading">Новый комментарий по сделке 123-ЗЛ-ОК</div>
-																<a class="btn notification__btn-more" href="#">
-																	<svg class="icon-more-alt_vertical">
-																		<use xlink:href="img/icons/icons.svg#icon-more-alt_vertical"></use>
-																	</svg>
-																</a>
+																<div class="notification__menu">
+																	<div class="tooltip tooltip--notification">
+																		<a class="btn tooltip__btn tooltip__btn--vertical tooltip__btn--notifications">
+																			<svg class="icon-more-alt">
+																				<use xlink:href="img/icons/icons.svg#icon-more-alt"></use>
+																			</svg>
+																		</a>
+																		<ul class="tooltip__menu">
+																			<li class="tooltip__menu-item">
+																				<a class="tooltip__menu-item-link tooltip__menu-item-link--color-black" href="#">Отметить прочитанным</a>
+																			</li>
+																		</ul>
+																	</div>
+																</div>
 															</div>
 															<div class="notification__desc">
 																<p>текст уведомления</p>
@@ -129,11 +152,20 @@
 														<div class="notification__content">
 															<div class="notification__content-top">
 																<div class="notification__heading">Необходимо обновить документы</div>
-																<a class="btn notification__btn-more" href="#">
-																	<svg class="icon-more-alt_vertical">
-																		<use xlink:href="img/icons/icons.svg#icon-more-alt_vertical"></use>
-																	</svg>
-																</a>
+																<div class="notification__menu">
+																	<div class="tooltip tooltip--notification">
+																		<a class="btn tooltip__btn tooltip__btn--vertical tooltip__btn--notifications">
+																			<svg class="icon-more-alt">
+																				<use xlink:href="img/icons/icons.svg#icon-more-alt"></use>
+																			</svg>
+																		</a>
+																		<ul class="tooltip__menu">
+																			<li class="tooltip__menu-item">
+																				<a class="tooltip__menu-item-link tooltip__menu-item-link--color-black" href="#">Отметить прочитанным</a>
+																			</li>
+																		</ul>
+																	</div>
+																</div>
 															</div>
 															<div class="notification__desc">
 																<p>Предварительные выводы неутешительны: повышение уровня гражданского сознания предопределяет высокую востребованность инновационных методов управления процессами.</p>
@@ -158,11 +190,20 @@
 														<div class="notification__content">
 															<div class="notification__content-top">
 																<div class="notification__heading">Необходимо обновить документы</div>
-																<a class="btn notification__btn-more" href="#">
-																	<svg class="icon-more-alt_vertical">
-																		<use xlink:href="img/icons/icons.svg#icon-more-alt_vertical"></use>
-																	</svg>
-																</a>
+																<div class="notification__menu">
+																	<div class="tooltip tooltip--notification">
+																		<a class="btn tooltip__btn tooltip__btn--vertical tooltip__btn--notifications">
+																			<svg class="icon-more-alt">
+																				<use xlink:href="img/icons/icons.svg#icon-more-alt"></use>
+																			</svg>
+																		</a>
+																		<ul class="tooltip__menu">
+																			<li class="tooltip__menu-item">
+																				<a class="tooltip__menu-item-link tooltip__menu-item-link--color-black" href="#">Отметить прочитанным</a>
+																			</li>
+																		</ul>
+																	</div>
+																</div>
 															</div>
 															<div class="notification__desc">
 																<p>Предварительные выводы неутешительны: повышение уровня гражданского сознания предопределяет высокую востребованность инновационных методов управления процессами.</p>
@@ -783,165 +824,362 @@
 				</main>
 			</div>
 		</div>
-		<div class="modal modal--continue-filling" id="modal-continue-filling">
-			<div class="modal__icon">
-				<img src="img/icon-filling.svg" width="127" height="126" alt="">
-			</div>
-			<div class="modal__heading">Продолжить заполнение?</div>
-			<div class="modal__btns">
-				<a class="btn btn-filling btn-filling--positive">Да</a>
-				<a class="btn btn-filling btn-filling--negative" data-fancybox-close>Нет</a>
-			</div>
-		</div>
-		<div class="modal" id="modal-remove-draft">
-			<div class="modal__icon">
-				<img src="img/icon-remove-draft.svg" width="222" height="221" alt="">
-			</div>
-			<div class="modal__heading">Вы уверены, что хотите
-				<br>удалить черновик?
-			</div>
-			<div class="modal__btns">
-				<a class="btn btn-confirm btn-confirm--positive">Да</a>
-				<a class="btn btn-confirm btn-confirm--negative" data-fancybox-close>Нет</a>
-			</div>
-		</div>
-		<div class="modal" id="modal-block-counterparty">
-			<div class="modal__icon">
-				<img src="img/icon-remove-draft.svg" width="222" height="221" alt="">
-			</div>
-			<div class="modal__heading">Вы уверены, что хотите
-				<br>заблокировать контрагента?
-			</div>
-			<div class="modal__btns">
-				<a class="btn btn-confirm btn-confirm--positive">Да</a>
-				<a class="btn btn-confirm btn-confirm--negative" data-fancybox-close>Нет</a>
-			</div>
-		</div>
-		<div class="modal" id="modal-remove-counterparty">
-			<div class="modal__icon">
-				<img src="img/icon-remove-draft.svg" width="222" height="221" alt="">
-			</div>
-			<div class="modal__heading">Вы уверены, что хотите
-				<br>удалить контрагента?
-			</div>
-			<div class="modal__btns">
-				<a class="btn btn-confirm btn-confirm--positive">Да</a>
-				<a class="btn btn-confirm btn-confirm--negative" data-fancybox-close>Нет</a>
-			</div>
-		</div>
-		<div class="modal" id="modal-block-employeer">
-			<div class="modal__icon">
-				<img src="img/icon-remove-draft.svg" width="222" height="221" alt="">
-			</div>
-			<div class="modal__heading">Вы уверены, что хотите
-				<br>заблокировать сотрудника?
-			</div>
-			<div class="modal__btns">
-				<a class="btn btn-confirm btn-confirm--positive">Да</a>
-				<a class="btn btn-confirm btn-confirm--negative" data-fancybox-close>Нет</a>
-			</div>
-		</div>
-		<div class="modal" id="modal-remove-employeer">
-			<div class="modal__icon">
-				<img src="img/icon-remove-draft.svg" width="222" height="221" alt="">
-			</div>
-			<div class="modal__heading">Вы уверены, что хотите
-				<br>удалить сотрудника?
-			</div>
-			<div class="modal__btns">
-				<a class="btn btn-confirm btn-confirm--positive">Да</a>
-				<a class="btn btn-confirm btn-confirm--negative" data-fancybox-close>Нет</a>
-			</div>
-		</div>
-		<div class="modal-actions modal-actions--annul" id="modal-annul">
-			<div class="modal-actions__heading">Аннулировать заявку</div>
-			<div class="modal-actions__text">
-				<p>При аннулировании заявки вы не сможете ее восстановить или заменить. Пожалуйста, убедитесь, что вы действительно хотите аннулировать заявку.</p>
-			</div>
-			<div class="modal-actions__btns">
-				<a class="btn btn-nav btn-nav--cancel" data-fancybox-close>Отменить</a>
-				<a class="btn btn-nav btn-nav--annul" href="#">Аннулировать</a>
-			</div>
-		</div>
-		<div class="modal-actions modal-actions--new-version" id="modal-new-version">
-			<div class="modal-actions__heading">Создать новую версию заявки</div>
-			<p>При создании новой версии текущая отправленная заявка аннулируется и её статус изменится на «Заменена». Данные заявки скопируются в новую заявку. После заполнения заявки потребуется заново отправить ее на рассмотрение.</p>
-			<form>
-				<div>
-					<textarea class="input-base input-base--textarea input-base--replace-info" placeholder="Укажите причину замены"></textarea>
+		<div class="modal-container" id="modal-continue-filling">
+			<div class="modal modal--continue-filling">
+				<div class="modal__icon">
+					<img src="img/icon-filling.svg" width="127" height="126" alt="">
 				</div>
-			</form>
-			<div class="modal-actions__btns">
-				<a class="btn btn-nav btn-nav--cancel" data-fancybox-close>Отменить</a>
-				<a class="btn btn-nav btn-nav--continue" href="#">Продолжить</a>
+				<div class="modal__heading">Продолжить заполнение?</div>
+				<div class="modal__btns">
+					<a class="btn btn-filling btn-filling--positive">Да</a>
+					<a class="btn btn-filling btn-filling--negative" data-modal-close>Нет</a>
+				</div>
 			</div>
 		</div>
-		<div class="modal-app" id="modal-app-sent">
-			<div class="modal-app__icon">
-				<svg class="icon-done">
-					<use xlink:href="img/icons/icons.svg#icon-done"></use>
-				</svg>
-			</div>
-			<div class="modal-app__heading">Ваша заявка отправлена</div>
-			<div>
-				<a class="btn btn-app" href="#">Перейти к заявке</a>
+		<div class="modal-container" id="modal-remove-draft">
+			<div class="modal">
+				<div class="modal__icon">
+					<img src="img/icon-remove-draft.svg" width="222" height="221" alt="">
+				</div>
+				<div class="modal__heading">Вы уверены, что хотите
+					<br>удалить черновик?
+				</div>
+				<div class="modal__btns">
+					<a class="btn btn-confirm btn-confirm--positive">Да</a>
+					<a class="btn btn-confirm btn-confirm--negative" data-modal-close>Нет</a>
+				</div>
 			</div>
 		</div>
-		<div class="modal" id="modal-counterparty-added">
-			<div class="modal__img">
-				<img src="img/illustration-done.svg" alt="" width="257" height="193">
+		<div class="modal-container" id="modal-block-counterparty">
+			<div class="modal">
+				<div class="modal__icon">
+					<img src="img/icon-remove-draft.svg" width="222" height="221" alt="">
+				</div>
+				<div class="modal__heading">Вы уверены, что хотите
+					<br>заблокировать контрагента?
+				</div>
+				<div class="modal__btns">
+					<a class="btn btn-confirm btn-confirm--positive">Да</a>
+					<a class="btn btn-confirm btn-confirm--negative" data-modal-close>Нет</a>
+				</div>
 			</div>
-			<div class="modal__heading">Контрагент добавлен в систему</div>
-			<div class="modal__btns">
-				<a class="btn btn-details btn-details--theme-light-blue" href="#">Перейти к добавлению сотрудника</a>
-			</div>
-			<a class="modal__close-btn" data-fancybox-close>
-				<svg class="icon-close">
-					<use xlink:href="img/icons/icons.svg#icon-close"></use>
-				</svg>
-			</a>
 		</div>
-		<div class="modal" id="modal-employeer-added">
-			<div class="modal__img">
-				<img src="img/illustration-done.svg" alt="" width="257" height="193">
+		<div class="modal-container" id="modal-remove-counterparty">
+			<div class="modal">
+				<div class="modal__icon">
+					<img src="img/icon-remove-draft.svg" width="222" height="221" alt="">
+				</div>
+				<div class="modal__heading">Вы уверены, что хотите
+					<br>удалить контрагента?
+				</div>
+				<div class="modal__btns">
+					<a class="btn btn-confirm btn-confirm--positive">Да</a>
+					<a class="btn btn-confirm btn-confirm--negative" data-modal-close>Нет</a>
+				</div>
 			</div>
-			<div class="modal__heading">Сотрудник добавлен</div>
-			<div class="modal__btns">
-				<a class="btn btn-details btn-details--theme-light-blue" href="#">Перейти к списку сотрудников</a>
-			</div>
-			<a class="modal__close-btn" data-fancybox-close>
-				<svg class="icon-close">
-					<use xlink:href="img/icons/icons.svg#icon-close"></use>
-				</svg>
-			</a>
 		</div>
-		<div class="modal" id="modal-counterparties-changes-saved">
-			<div class="modal__img">
-				<img src="img/illustration-done.svg" alt="" width="257" height="193">
+		<div class="modal-container" id="modal-block-employeer">
+			<div class="modal">
+				<div class="modal__icon">
+					<img src="img/icon-remove-draft.svg" width="222" height="221" alt="">
+				</div>
+				<div class="modal__heading">Вы уверены, что хотите
+					<br>заблокировать сотрудника?
+				</div>
+				<div class="modal__btns">
+					<a class="btn btn-confirm btn-confirm--positive">Да</a>
+					<a class="btn btn-confirm btn-confirm--negative" data-modal-close>Нет</a>
+				</div>
 			</div>
-			<div class="modal__heading">Изменения сохранены</div>
-			<div class="modal__btns">
-				<a class="btn btn-details btn-details--theme-light-blue" href="#">Перейти к списку контрагентов</a>
-			</div>
-			<a class="modal__close-btn" data-fancybox-close>
-				<svg class="icon-close">
-					<use xlink:href="img/icons/icons.svg#icon-close"></use>
-				</svg>
-			</a>
 		</div>
-		<div class="modal" id="modal-employeer-changes-saved">
-			<div class="modal__img">
-				<img src="img/illustration-done.svg" alt="" width="257" height="193">
+		<div class="modal-container" id="modal-remove-employeer">
+			<div class="modal">
+				<div class="modal__icon">
+					<img src="img/icon-remove-draft.svg" width="222" height="221" alt="">
+				</div>
+				<div class="modal__heading">Вы уверены, что хотите
+					<br>удалить сотрудника?
+				</div>
+				<div class="modal__btns">
+					<a class="btn btn-confirm btn-confirm--positive">Да</a>
+					<a class="btn btn-confirm btn-confirm--negative" data-modal-close>Нет</a>
+				</div>
 			</div>
-			<div class="modal__heading">Изменения сохранены</div>
-			<div class="modal__btns">
-				<a class="btn btn-details btn-details--theme-light-blue" href="#">Перейти к списку сотрудников</a>
+		</div>
+		<div class="modal-container" id="modal-annul">
+			<div class="modal modal--annul">
+				<div class="modal-actions-heading">Аннулировать заявку</div>
+				<div class="modal-actions-text">
+					<p>При аннулировании заявки вы не сможете ее восстановить или заменить. Пожалуйста, убедитесь, что вы действительно хотите аннулировать заявку.</p>
+				</div>
+				<div class="modal-actions-btns">
+					<a class="btn btn-nav btn-nav--cancel" data-modal-close>Отменить</a>
+					<a class="btn btn-nav btn-nav--annul" href="#">Аннулировать</a>
+				</div>
 			</div>
-			<a class="modal__close-btn" data-fancybox-close>
-				<svg class="icon-close">
-					<use xlink:href="img/icons/icons.svg#icon-close"></use>
-				</svg>
-			</a>
+		</div>
+		<div class="modal-container" id="modal-new-version">
+			<div class="modal modal--new-version">
+				<div class="modal-actions-heading">Создать новую версию заявки</div>
+				<p>При создании новой версии текущая отправленная заявка аннулируется и её статус изменится на «Заменена». Данные заявки скопируются в новую заявку. После заполнения заявки потребуется заново отправить ее на рассмотрение.</p>
+				<form class="modal-actions-form">
+					<div>
+						<textarea class="input-base input-base--textarea input-base--replace-info" placeholder="Укажите причину замены"></textarea>
+					</div>
+				</form>
+				<div class="modal-actions-btns">
+					<a class="btn btn-nav btn-nav--cancel" data-modal-close>Отменить</a>
+					<a class="btn btn-nav btn-nav--continue" href="#">Продолжить</a>
+				</div>
+			</div>
+		</div>
+		<div class="modal-container" id="modal-app-sent">
+			<div class="modal modal--app-sent">
+				<div class="modal-app-icon">
+					<svg class="icon-done">
+						<use xlink:href="img/icons/icons.svg#icon-done"></use>
+					</svg>
+				</div>
+				<div class="modal-app-heading">Ваша заявка отправлена</div>
+				<div>
+					<a class="btn btn-app" href="#">Перейти к заявке</a>
+				</div>
+			</div>
+		</div>
+		<div class="modal-container" id="modal-counterparty-added">
+			<div class="modal">
+				<div class="modal__img">
+					<img src="img/illustration-done.svg" alt="" width="257" height="193">
+				</div>
+				<div class="modal__heading">Контрагент добавлен в систему</div>
+				<div class="modal__btns">
+					<a class="btn btn-details btn-details--theme-light-blue" href="#">Перейти к добавлению сотрудника</a>
+				</div>
+				<a class="modal__close-btn" data-modal-close>
+					<svg class="icon-close">
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</a>
+			</div>
+		</div>
+		<div class="modal-container" id="modal-employeer-added">
+			<div class="modal">
+				<div class="modal__img">
+					<img src="img/illustration-done.svg" alt="" width="257" height="193">
+				</div>
+				<div class="modal__heading">Сотрудник добавлен</div>
+				<div class="modal__btns">
+					<a class="btn btn-details btn-details--theme-light-blue" href="#">Перейти к списку сотрудников</a>
+				</div>
+				<a class="modal__close-btn" data-modal-close>
+					<svg class="icon-close">
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</a>
+			</div>
+		</div>
+		<div class="modal-container" id="modal-counterparties-changes-saved">
+			<div class="modal">
+				<div class="modal__img">
+					<img src="img/illustration-done.svg" alt="" width="257" height="193">
+				</div>
+				<div class="modal__heading">Изменения сохранены</div>
+				<div class="modal__btns">
+					<a class="btn btn-details btn-details--theme-light-blue" href="#">Перейти к списку контрагентов</a>
+				</div>
+				<a class="modal__close-btn" data-modal-close>
+					<svg class="icon-close">
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</a>
+			</div>
+		</div>
+		<div class="modal-container" id="modal-employeer-changes-saved">
+			<div class="modal">
+				<div class="modal__img">
+					<img src="img/illustration-done.svg" alt="" width="257" height="193">
+				</div>
+				<div class="modal__heading">Изменения сохранены</div>
+				<div class="modal__btns">
+					<a class="btn btn-details btn-details--theme-light-blue" href="#">Перейти к списку сотрудников</a>
+				</div>
+				<a class="modal__close-btn" data-modal-close>
+					<svg class="icon-close">
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</a>
+			</div>
+		</div>
+		<div class="modal-container" id="modal-contact">
+			<div class="modal">
+				<div class="modal__img">
+					<img src="img/illustration-consultant.png" alt="" width="172" height="129">
+				</div>
+				<div class="modal__heading">Вы можете связаться с нами</div>
+				<div class="modal__btns modal__btns--contact">
+					<div class="modal__btns-col">
+						<a class="btn btn-details btn-details--theme-gray" href="#">Связаться с менеджером</a>
+					</div>
+					<div class="modal__btns-col">
+						<a class="btn btn-details" href="#">Служба поддержки</a>
+					</div>
+				</div>
+				<a class="modal__close-btn" data-modal-close>
+					<svg class="icon-close">
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</a>
+			</div>
+		</div>
+		<div class="modal-container" id="modal-contact-manager">
+			<div class="modal modal--manager">
+				<div class="modal__img">
+					<img src="img/illustration-consultant.png" alt="" width="502" height="377">
+				</div>
+				<div class="modal__heading">Связаться с менеджером</div>
+				<ul class="contacts-list">
+					<li>
+						<a href="#">8-800-200-12-99 (доб. 101)</a>
+					</li>
+					<li>
+						<a href="#">8-916-555-88-99</a>
+					</li>
+				</ul>
+				<a class="modal__close-btn" data-modal-close>
+					<svg class="icon-close">
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</a>
+			</div>
+		</div>
+		<div class="modal-container" id="modal-request-success">
+			<div class="modal modal--request">
+				<div class="modal__img">
+					<img src="img/icon-mail-delivered.svg" alt="" width="138" height="126">
+				</div>
+				<div class="request-sent">
+					<div class="request-sent__heading">Ваше обращение успешно отправлено </div>
+					<div class="request-sent__text">Зарегистрировано под №32134123</div>
+				</div>
+				<a class="modal__close-btn modal__close-btn--request" data-modal-close>
+					<svg class="icon-close">
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</a>
+			</div>
+		</div>
+		<div class="modal-container" id="modal-request">
+			<div class="modal modal--request-form">
+				<div class="heading-request">Создать обращение #3234</div>
+				<form class="form-request">
+					<div class="form-request__section">
+						<div class="form-request__heading">Выберите тему вопроса
+							<span class="form-request__heading-request">*</span>
+						</div>
+						<div class="form-request__main">
+							<div class="select">
+								<input class="form-request__input select__input" type="text" placeholder="Выберите тему">
+								<div class="select__icon">
+									<svg class="icon-chevron-up">
+										<use xlink:href="img/icons/icons.svg#icon-chevron-up"></use>
+									</svg>
+								</div>
+								<ul class="select__list select__list--type-of-property">
+									<li class="select__list-item">
+										<div class="select__list-item-main">Select item 1</div>
+									</li>
+									<li class="select__list-item">
+										<div class="select__list-item-main">Select item 2</div>
+									</li>
+									<li class="select__list-item">
+										<div class="select__list-item-main">Select item 3</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="form-request__section">
+						<div class="form-request__heading">Сообщение
+							<span class="form-request__heading-request">*</span>
+						</div>
+						<div class="form-request__main">
+							<div>
+								<textarea class="form-request__input" placeholder="Кратко опишите суть обращения" id="length-require"></textarea>
+							</div>
+							<div class="input-length-info">
+								<div class="input-length-info__text">
+									<svg class="icon-info">
+										<use xlink:href="img/icons/icons.svg#icon-info"></use>
+									</svg>Длина сообщения не может быть длиннее
+								</div>
+								<div class="input-length-info__count">0/1000</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-request__section">
+						<div class="form-request__heading">Куда хотите получить ответ
+							<span class="form-request__heading-request">*</span>
+						</div>
+						<div class="form-request__main">
+							<div class="select">
+								<input class="form-request__input select__input" type="text" placeholder="">
+								<div class="select__icon">
+									<svg class="icon-chevron-up">
+										<use xlink:href="img/icons/icons.svg#icon-chevron-up"></use>
+									</svg>
+								</div>
+								<ul class="select__list">
+									<li class="select__list-item">
+										<div class="select__list-item-main">Select item 1</div>
+									</li>
+									<li class="select__list-item">
+										<div class="select__list-item-main">Select item 2</div>
+									</li>
+									<li class="select__list-item">
+										<div class="select__list-item-main">Select item 3</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="form-request__section">
+						<div class="form-request__heading">Приложите файлы (необязательно)</div>
+						<div class="add-file">
+							<label class="add-file__area">
+								<div class="add-file__heading">Выберите файл</div>
+								<div class="add-file__desc">размер файла - до 3 мб
+									<br>Список допустимых форматов: doc, docx, xls, xlsx, РDF, JPG
+								</div>
+								<div class="add-file__uploading-visible">
+									<img src="img/loading.gif" width="30" height="30" alt="">
+								</div>
+								<input type="file" accept=".doc, .docx, .xls, .xlsx, .pdf, .jpg" hidden multiple id="fileInput">
+							</label>
+							<div class="add-file__uploaded-items"></div>
+						</div>
+					</div>
+					<div>
+						<input class="btn btn-app btn-app btn-app--size-large btn--fullwidth" type="submit" value="Отправить сообщение">
+					</div>
+				</form>
+				<a class="modal__close-btn modal__close-btn--request" data-modal-close>
+					<svg class="icon-close">
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</a>
+			</div>
+		</div>
+		<div class="modal-container" id="modal-logout">
+			<div class="modal modal--logout">
+				<div class="modal__icon">
+					<img src="img/illustration-logout.svg" width="520" height="308" alt="">
+				</div>
+				<div class="modal__heading">Вы уверены, что хотите выйти из системы?</div>
+				<div class="modal__btns">
+					<a class="btn btn-confirm btn-confirm--positive">Да</a>
+					<a class="btn btn-confirm btn-confirm--negative" data-modal-close>Нет</a>
+				</div>
+			</div>
 		</div>
 		<script src="js/app.min.js"></script>
 	</body>

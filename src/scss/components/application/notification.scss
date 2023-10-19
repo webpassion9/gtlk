@@ -1,8 +1,16 @@
-.notifications-wrapper {
+.notifications-items {
 	padding-right: 27px;
 	display: flex;
 	flex-direction: column;
 	gap: 24px;
+
+	&--base {
+		gap: 10px;
+	}
+}
+
+.notifications-top {
+	padding-bottom: 20px;
 }
 
 .notification {
@@ -52,11 +60,10 @@
 		flex-grow: 1;
 	}
 
-	&__btn-more {
+	&__menu {
 		flex-shrink: 0;
-		width: 20px;
-		height: 20px;
 		margin: 0 -10px 0 0;
+		line-height: 0;
 	}
 	&__desc {
 		font-size: 12px;

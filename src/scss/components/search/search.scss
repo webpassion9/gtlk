@@ -1,0 +1,39 @@
+.search {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+	max-width: 1356px;
+	padding-bottom: 10px;
+	&__item {
+		width: 100%;
+		display: flex;
+		gap: 12px;
+		&-icon {
+			flex-shrink: 0;
+			width: 24px;
+			height: 24px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 4px;
+			svg {
+				fill: var(--color-blue-base);
+			}
+		}
+		&-main {
+			flex-grow: 1;
+		}
+		&-text {
+			display: inline-block;
+			font-size: 20px;
+			line-height: 140%;
+			padding-bottom: 4px;
+			color: var(--color-black-base);
+		}
+		&-info {
+			font-size: 14px;
+			line-height: 20px;
+			color: #7C7979;
+		}
+	}
+}

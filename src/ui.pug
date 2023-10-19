@@ -17,7 +17,7 @@ html(lang="ru")
 
 				main.main
 					.content-inner
-						div(style="display:flex;flex-direction:column;align-items:flex-start;gap:10px;padding-bottom: 200px;")
+						div(style="display:flex;flex-direction:column;align-items:flex-start;gap:10px;padding-bottom: 300px;")
 							a(href="#").btn.btn-submit.btn-submit--size-normal Test
 							a(href="#").btn.btn-submit.btn-submit--size-large Test
 							a(href="#").btn.btn-submit.btn-submit--size-normal.btn-submit--cookies Test
@@ -163,35 +163,101 @@ html(lang="ru")
 													span.user-menu__list-item-icon
 														+sprite("icon-logout")
 													| Выйти
-							hr
 							h4(style="margin:0;padding:0;") Модальные окна:
 							ul(style="margin:0;padding:0;")
 								li
-									a(href="#modal-continue-filling" data-fancybox) Продолжить заполнение?
+									a(href="#modal-continue-filling" data-modal) Продолжить заполнение?
 								li
-									a(href="#modal-remove-draft" data-fancybox) Вы уверены, что хотите удалить черновик?
+									a(href="#modal-remove-draft" data-modal) Вы уверены, что хотите удалить черновик?
 								li
-									a(href="#modal-block-counterparty" data-fancybox) Вы уверены, что хотите заблокировать контрагента?
+									a(href="#modal-block-counterparty" data-modal) Вы уверены, что хотите заблокировать контрагента?
 								li
-									a(href="#modal-remove-counterparty" data-fancybox) Вы уверены, что хотите удалить контрагента?
+									a(href="#modal-remove-counterparty" data-modal) Вы уверены, что хотите удалить контрагента?
 								li
-									a(href="#modal-block-employeer" data-fancybox) Вы уверены, что хотите заблокировать сотрудника?
+									a(href="#modal-block-employeer" data-modal) Вы уверены, что хотите заблокировать сотрудника?
 								li
-									a(href="#modal-remove-employeer" data-fancybox) Вы уверены, что хотите удалить сотрудника?
+									a(href="#modal-remove-employeer" data-modal) Вы уверены, что хотите удалить сотрудника?
 								li
-									a(href="#modal-annul" data-fancybox) Аннулировать заявку
+									a(href="#modal-annul" data-modal) Аннулировать заявку
 								li
-									a(href="#modal-new-version" data-fancybox) Создать новую версию заявки
+									a(href="#modal-new-version" data-modal) Создать новую версию заявки
 								li
-									a(href="#modal-app-sent" data-fancybox) Ваша заявка отправлена
+									a(href="#modal-app-sent" data-modal) Ваша заявка отправлена
 								li
-									a(href="#modal-counterparty-added" data-fancybox) Контрагент добавлен в систему
+									a(href="#modal-counterparty-added" data-modal) Контрагент добавлен в систему
 								li
-									a(href="#modal-employeer-added" data-fancybox) Сотрудник добавлен
+									a(href="#modal-employeer-added" data-modal) Сотрудник добавлен
 								li
-									a(href="#modal-counterparties-changes-saved" data-fancybox) Изменения сохранены (Контрагент)
+									a(href="#modal-counterparties-changes-saved" data-modal) Изменения сохранены (Контрагент)
 								li
-									a(href="#modal-employeer-changes-saved" data-fancybox) Изменения сохранены (Сотрудник)
+									a(href="#modal-employeer-changes-saved" data-modal) Изменения сохранены (Сотрудник)
+								li
+									a(href="#modal-contact" data-modal) Вы можете связаться с нами
+								li
+									a(href="#modal-contact-manager" data-modal) Связаться с менеджером
+								li
+									a(href="#modal-request" data-modal) Создать обращение
+								li
+									a(href="#modal-request-success" data-modal) Ваше обращение успешно отправлено
+								li
+									a(href="#modal-logout" data-modal) Вы уверены, что хотите выйти из системы?
+							.select.select--width-base
+								input(type="text" placeholder="Выберите из списка").input-base.input-base--select.select__input
+								.select__icon
+									+sprite("icon-chevron-up")
+								ul.select__list
+									li.select__list-item
+										.select__list-item-main Test
+									li.select__list-item
+										.select__list-item-main Test 2
+									li.select__list-item
+										.select__list-item-main Test 3
+							.select.select--width-base
+								.input-base.input-base--select.select__input.input-base--no-search Select без поиска
+								.select__icon
+									+sprite("icon-chevron-up")
+								ul.select__list
+									li.select__list-item
+										.select__list-item-main Test
+									li.select__list-item
+										.select__list-item-main Test 2
+									li.select__list-item
+										.select__list-item-main Test 3
+							.select.select--width-base
+								input(type="text" placeholder="Select много опций").input-base.input-base--select.select__input
+								.select__icon
+									+sprite("icon-chevron-up")
+								ul.select__list
+									li.select__list-item
+										.select__list-item-main Test
+									li.select__list-item
+										.select__list-item-main Test 2
+									li.select__list-item
+										.select__list-item-main Test 3
+									li.select__list-item
+										.select__list-item-main Test
+									li.select__list-item
+										.select__list-item-main Test 2
+									li.select__list-item
+										.select__list-item-main Test 3
+									li.select__list-item
+										.select__list-item-main Test
+									li.select__list-item
+										.select__list-item-main Test 2
+									li.select__list-item
+										.select__list-item-main Test 3
+									li.select__list-item
+										.select__list-item-main Test
+									li.select__list-item
+										.select__list-item-main Test 2
+									li.select__list-item
+										.select__list-item-main Test 3
+									li.select__list-item
+										.select__list-item-main Test
+									li.select__list-item
+										.select__list-item-main Test 2
+									li.select__list-item
+										.select__list-item-main Test 3
 
 		include html/modals
 

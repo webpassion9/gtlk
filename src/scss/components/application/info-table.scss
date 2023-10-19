@@ -10,7 +10,7 @@
 	td {
 		padding: 15px 23px;
 		&:first-child {
-			color:rgba(0,0,0,.8);
+			color:rgba(var(--color-black-base));
 			padding-left: 0;
 		}
 		&:last-child {

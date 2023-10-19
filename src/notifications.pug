@@ -1,0 +1,464 @@
+include html/mixins
+
+doctype html
+block head
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no")
+		meta(name="format-detection" content="telephone=no")
+
+		link(rel="stylesheet", href="css/style.min.css")
+
+		title Title
+
+	body
+		.wrapper.wrapper-main
+
+			include html/header
+			.main-row
+
+				aside.sidebar
+					.sidebar__inner
+						.sidebar__section
+							ul.sidebar__nav
+								li.sidebar__nav-item.current
+									a(href="#").sidebar__nav-item-btn
+										.sidebar__nav-item-icon
+											+sprite("icon-file-tray")
+										.sidebar__nav-item-text Заявки
+								li.sidebar__nav-item
+									a(href="#").sidebar__nav-item-btn
+										.sidebar__nav-item-icon
+											+sprite("icon-newspaper")
+										.sidebar__nav-item-text Договоры
+								li.sidebar__nav-item
+									a(href="#").sidebar__nav-item-btn
+										.sidebar__nav-item-icon
+											+sprite("icon-doc")
+										.sidebar__nav-item-text Обращения НМЦ
+						.sidebar__section.sidebar__section--info
+							ul.sidebar__nav
+								li.sidebar__nav-item
+									a(href="#").sidebar__nav-item-btn
+										.sidebar__nav-item-icon
+											+sprite("icon-book")
+										.sidebar__nav-item-text Справка
+						.sidebar__section
+							.manager
+								.manager__ava
+									img(src="img/avatar-manager.png", alt="")
+								.manager__name Менеджер Иванова А.А.
+								a(href="#").btn.manager__btn Связаться
+						.sidebar__section
+							a(href="#").support
+								.support__icon
+									+sprite("icon-chat")
+								.support__heading Служба поддержки
+
+				main.main
+					.content
+						.content-inner
+							.heading-base.heading-base--notifications Уведомления
+							.tabs-notifications
+								ul.tabs-notifications__list
+									li.tabs-notifications__item.current(data-tab-btn)
+										a(href="#all").tabs-notifications__item-link Все уведомления
+									li.tabs-notifications__item(data-tab-btn)
+										a(href="#unread").tabs-notifications__item-link Непрочитанные
+											span.tabs-notifications__item-indicator 7
+									li.tabs-notifications__item(data-tab-btn)
+										a(href="#system").tabs-notifications__item-link Системные
+											span.tabs-notifications__item-indicator 2
+									li.tabs-notifications__item(data-tab-btn)
+										a(href="#requests").tabs-notifications__item-link По заявкам
+											span.tabs-notifications__item-indicator 5
+									li.tabs-notifications__item(data-tab-btn)
+										a(href="#contracts").tabs-notifications__item-link По договорам
+											span.tabs-notifications__item-indicator 5
+								.tabs-notifications__line(data-tab-line)
+							form.form-search
+								.form-search__input-wrapper
+									input(type="text" placeholder="Поиск").form-search__input
+									a.btn.form-search__btn-remove
+										+sprite("icon-close-circle-outline")
+								.form-search__btn
+									input(type="submit" value="Найти").btn.btn-search.btn-search--height-medium
+							.wrapper-notifications
+								.tab-content.current#all
+									.notifications-top
+										a(href="#").link-base Прочитать все
+									.notifications-items.notifications-items--base
+										.notification
+											.notification__inner
+												.notification__icon
+													+sprite("icon-chat_stroke")
+												.notification__content
+													.notification__content-top
+														.notification__heading Новый комментарий по сделке 123-ЗЛ-ОК
+														.notification__menu
+															.tooltip.tooltip--notification
+																a.btn.tooltip__btn.tooltip__btn--vertical.tooltip__btn--notifications
+																	+sprite("icon-more-alt")
+																ul.tooltip__menu
+																	li.tooltip__menu-item
+																		a(href="#").tooltip__menu-item-link.tooltip__menu-item-link--color-black Отметить прочитанным
+													.notification__desc
+														p Предварительные выводы неутешительны: повышение уровня гражданского сознания предопределяет высокую востребованность инновационных методов управления процессами.
+													.notification__bar
+														a(href="#").notification__bar-link.link-base Смотреть
+														.notification__bar-date Сегодня в 14:32
+												.notification__indicator.notification__indicator--is-new
+										.notification
+											.notification__inner
+												.notification__icon
+													+sprite("icon-chat_stroke")
+												.notification__content
+													.notification__content-top
+														.notification__heading Новый комментарий по сделке 123-ЗЛ-ОК
+														.notification__menu
+															.tooltip.tooltip--notification
+																a.btn.tooltip__btn.tooltip__btn--vertical.tooltip__btn--notifications
+																	+sprite("icon-more-alt")
+																ul.tooltip__menu
+																	li.tooltip__menu-item
+																		a(href="#").tooltip__menu-item-link.tooltip__menu-item-link--color-black Отметить прочитанным
+													.notification__desc
+														p текст уведомления
+													.notification__bar
+														.notification__bar-date Сегодня в 14:32
+												.notification__indicator.notification__indicator--is-new
+										.notification.notification--is-important
+											.notification__inner
+												.notification__icon
+													+sprite("icon-alert")
+												.notification__content
+													.notification__content-top
+														.notification__heading Необходимо обновить документы
+														.notification__menu
+															.tooltip.tooltip--notification
+																a.btn.tooltip__btn.tooltip__btn--vertical.tooltip__btn--notifications
+																	+sprite("icon-more-alt")
+																ul.tooltip__menu
+																	li.tooltip__menu-item
+																		a(href="#").tooltip__menu-item-link.tooltip__menu-item-link--color-black Отметить прочитанным
+													.notification__desc
+														p Предварительные выводы неутешительны: повышение уровня гражданского сознания предопределяет высокую востребованность инновационных методов управления процессами.
+													.notification__bar
+														a(href="#").notification__bar-link.link-base Перейти к обновлению
+														.notification__bar-date Вчера в 15:00
+												.notification__indicator.notification__indicator--is-read
+								.tab-content#unread
+									.notifications-top
+										a(href="#").link-base Прочитать все
+									.notifications-items.notifications-items--base
+										.notification
+											.notification__inner
+												.notification__icon
+													+sprite("icon-chat_stroke")
+												.notification__content
+													.notification__content-top
+														.notification__heading Новый комментарий по сделке 123-ЗЛ-ОК
+														.notification__menu
+															.tooltip.tooltip--notification
+																a.btn.tooltip__btn.tooltip__btn--vertical.tooltip__btn--notifications
+																	+sprite("icon-more-alt")
+																ul.tooltip__menu
+																	li.tooltip__menu-item
+																		a(href="#").tooltip__menu-item-link.tooltip__menu-item-link--color-black Отметить прочитанным
+													.notification__desc
+														p Предварительные выводы неутешительны: повышение уровня гражданского сознания предопределяет высокую востребованность инновационных методов управления процессами.
+													.notification__bar
+														a(href="#").notification__bar-link.link-base Смотреть
+														.notification__bar-date Сегодня в 14:32
+												.notification__indicator.notification__indicator--is-new
+										.notification
+											.notification__inner
+												.notification__icon
+													+sprite("icon-chat_stroke")
+												.notification__content
+													.notification__content-top
+														.notification__heading Новый комментарий по сделке 123-ЗЛ-ОК
+														.notification__menu
+															.tooltip.tooltip--notification
+																a.btn.tooltip__btn.tooltip__btn--vertical.tooltip__btn--notifications
+																	+sprite("icon-more-alt")
+																ul.tooltip__menu
+																	li.tooltip__menu-item
+																		a(href="#").tooltip__menu-item-link.tooltip__menu-item-link--color-black Отметить прочитанным
+													.notification__desc
+														p текст уведомления
+													.notification__bar
+														.notification__bar-date Сегодня в 14:32
+												.notification__indicator.notification__indicator--is-new
+										.notification
+											.notification__inner
+												.notification__icon
+													+sprite("icon-chat_stroke")
+												.notification__content
+													.notification__content-top
+														.notification__heading Новый комментарий по сделке 123-ЗЛ-ОК
+														.notification__menu
+															.tooltip.tooltip--notification
+																a.btn.tooltip__btn.tooltip__btn--vertical.tooltip__btn--notifications
+																	+sprite("icon-more-alt")
+																ul.tooltip__menu
+																	li.tooltip__menu-item
+																		a(href="#").tooltip__menu-item-link.tooltip__menu-item-link--color-black Отметить прочитанным
+													.notification__desc
+														p Предварительные выводы неутешительны: повышение уровня гражданского сознания предопределяет высокую востребованность инновационных методов управления процессами.
+													.notification__bar
+														a(href="#").notification__bar-link.link-base Смотреть
+														.notification__bar-date Сегодня в 14:32
+												.notification__indicator.notification__indicator--is-new
+										.notification
+											.notification__inner
+												.notification__icon
+													+sprite("icon-chat_stroke")
+												.notification__content
+													.notification__content-top
+														.notification__heading Новый комментарий по сделке 123-ЗЛ-ОК
+														.notification__menu
+															.tooltip.tooltip--notification
+																a.btn.tooltip__btn.tooltip__btn--vertical.tooltip__btn--notifications
+																	+sprite("icon-more-alt")
+																ul.tooltip__menu
+																	li.tooltip__menu-item
+																		a(href="#").tooltip__menu-item-link.tooltip__menu-item-link--color-black Отметить прочитанным
+													.notification__desc
+														p текст уведомления
+													.notification__bar
+														.notification__bar-date Сегодня в 14:32
+												.notification__indicator.notification__indicator--is-new
+								.tab-content#system
+									.notifications-top
+										a(href="#").link-base Прочитать все
+									.notifications-items.notifications-items--base
+										.notification.notification--is-important
+											.notification__inner
+												.notification__icon
+													+sprite("icon-alert")
+												.notification__content
+													.notification__content-top
+														.notification__heading Необходимо обновить документы
+														.notification__menu
+															.tooltip.tooltip--notification
+																a.btn.tooltip__btn.tooltip__btn--vertical.tooltip__btn--notifications
+																	+sprite("icon-more-alt")
+																ul.tooltip__menu
+																	li.tooltip__menu-item
+																		a(href="#").tooltip__menu-item-link.tooltip__menu-item-link--color-black Отметить прочитанным
+													.notification__desc
+														p Предварительные выводы неутешительны: повышение уровня гражданского сознания предопределяет высокую востребованность инновационных методов управления процессами.
+													.notification__bar
+														a(href="#").notification__bar-link.link-base Перейти к обновлению
+														.notification__bar-date Вчера в 15:00
+												.notification__indicator.notification__indicator--is-read
+										.notification.notification--is-important
+											.notification__inner
+												.notification__icon
+													+sprite("icon-alert")
+												.notification__content
+													.notification__content-top
+														.notification__heading Необходимо обновить документы
+														.notification__menu
+															.tooltip.tooltip--notification
+																a.btn.tooltip__btn.tooltip__btn--vertical.tooltip__btn--notifications
+																	+sprite("icon-more-alt")
+																ul.tooltip__menu
+																	li.tooltip__menu-item
+																		a(href="#").tooltip__menu-item-link.tooltip__menu-item-link--color-black Отметить прочитанным
+													.notification__desc
+														p Предварительные выводы неутешительны: повышение уровня гражданского сознания предопределяет высокую востребованность инновационных методов управления процессами.
+													.notification__bar
+														a(href="#").notification__bar-link.link-base Перейти к обновлению
+														.notification__bar-date Вчера в 15:00
+												.notification__indicator.notification__indicator--is-read
+										.notification.notification--is-important
+											.notification__inner
+												.notification__icon
+													+sprite("icon-alert")
+												.notification__content
+													.notification__content-top
+														.notification__heading Необходимо обновить документы
+														.notification__menu
+															.tooltip.tooltip--notification
+																a.btn.tooltip__btn.tooltip__btn--vertical.tooltip__btn--notifications
+																	+sprite("icon-more-alt")
+																ul.tooltip__menu
+																	li.tooltip__menu-item
+																		a(href="#").tooltip__menu-item-link.tooltip__menu-item-link--color-black Отметить прочитанным
+													.notification__desc
+														p Предварительные выводы неутешительны: повышение уровня гражданского сознания предопределяет высокую востребованность инновационных методов управления процессами.
+													.notification__bar
+														a(href="#").notification__bar-link.link-base Перейти к обновлению
+														.notification__bar-date Вчера в 15:00
+												.notification__indicator.notification__indicator--is-read
+										.notification.notification--is-important
+											.notification__inner
+												.notification__icon
+													+sprite("icon-alert")
+												.notification__content
+													.notification__content-top
+														.notification__heading Необходимо обновить документы
+														.notification__menu
+															.tooltip.tooltip--notification
+																a.btn.tooltip__btn.tooltip__btn--vertical.tooltip__btn--notifications
+																	+sprite("icon-more-alt")
+																ul.tooltip__menu
+																	li.tooltip__menu-item
+																		a(href="#").tooltip__menu-item-link.tooltip__menu-item-link--color-black Отметить прочитанным
+													.notification__desc
+														p Предварительные выводы неутешительны: повышение уровня гражданского сознания предопределяет высокую востребованность инновационных методов управления процессами.
+													.notification__bar
+														a(href="#").notification__bar-link.link-base Перейти к обновлению
+														.notification__bar-date Вчера в 15:00
+												.notification__indicator.notification__indicator--is-read
+								.tab-content#requests
+									.notifications-top
+										a(href="#").link-base Прочитать все
+									.notifications-items.notifications-items--base
+										.notification
+											.notification__inner
+												.notification__icon
+													+sprite("icon-chat_stroke")
+												.notification__content
+													.notification__content-top
+														.notification__heading Новый комментарий по сделке 123-ЗЛ-ОК
+														.notification__menu
+															.tooltip.tooltip--notification
+																a.btn.tooltip__btn.tooltip__btn--vertical.tooltip__btn--notifications
+																	+sprite("icon-more-alt")
+																ul.tooltip__menu
+																	li.tooltip__menu-item
+																		a(href="#").tooltip__menu-item-link.tooltip__menu-item-link--color-black Отметить прочитанным
+													.notification__desc
+														p Предварительные выводы неутешительны: повышение уровня гражданского сознания предопределяет высокую востребованность инновационных методов управления процессами.
+													.notification__bar
+														a(href="#").notification__bar-link.link-base Смотреть
+														.notification__bar-date Сегодня в 14:32
+												.notification__indicator.notification__indicator--is-new
+										.notification
+											.notification__inner
+												.notification__icon
+													+sprite("icon-chat_stroke")
+												.notification__content
+													.notification__content-top
+														.notification__heading Новый комментарий по сделке 123-ЗЛ-ОК
+														.notification__menu
+															.tooltip.tooltip--notification
+																a.btn.tooltip__btn.tooltip__btn--vertical.tooltip__btn--notifications
+																	+sprite("icon-more-alt")
+																ul.tooltip__menu
+																	li.tooltip__menu-item
+																		a(href="#").tooltip__menu-item-link.tooltip__menu-item-link--color-black Отметить прочитанным
+													.notification__desc
+														p текст уведомления
+													.notification__bar
+														.notification__bar-date Сегодня в 14:32
+												.notification__indicator.notification__indicator--is-new
+										.notification.notification--is-important
+											.notification__inner
+												.notification__icon
+													+sprite("icon-alert")
+												.notification__content
+													.notification__content-top
+														.notification__heading Необходимо обновить документы
+														.notification__menu
+															.tooltip.tooltip--notification
+																a.btn.tooltip__btn.tooltip__btn--vertical.tooltip__btn--notifications
+																	+sprite("icon-more-alt")
+																ul.tooltip__menu
+																	li.tooltip__menu-item
+																		a(href="#").tooltip__menu-item-link.tooltip__menu-item-link--color-black Отметить прочитанным
+													.notification__desc
+														p Предварительные выводы неутешительны: повышение уровня гражданского сознания предопределяет высокую востребованность инновационных методов управления процессами.
+													.notification__bar
+														a(href="#").notification__bar-link.link-base Перейти к обновлению
+														.notification__bar-date Вчера в 15:00
+												.notification__indicator.notification__indicator--is-read
+								.tab-content#contracts
+									.notifications-top
+										a(href="#").link-base Прочитать все
+									.notifications-items.notifications-items--base
+										.notification
+											.notification__inner
+												.notification__icon
+													+sprite("icon-chat_stroke")
+												.notification__content
+													.notification__content-top
+														.notification__heading Новый комментарий по сделке 123-ЗЛ-ОК
+														.notification__menu
+															.tooltip.tooltip--notification
+																a.btn.tooltip__btn.tooltip__btn--vertical.tooltip__btn--notifications
+																	+sprite("icon-more-alt")
+																ul.tooltip__menu
+																	li.tooltip__menu-item
+																		a(href="#").tooltip__menu-item-link.tooltip__menu-item-link--color-black Отметить прочитанным
+													.notification__desc
+														p Предварительные выводы неутешительны: повышение уровня гражданского сознания предопределяет высокую востребованность инновационных методов управления процессами.
+													.notification__bar
+														a(href="#").notification__bar-link.link-base Смотреть
+														.notification__bar-date Сегодня в 14:32
+												.notification__indicator.notification__indicator--is-new
+										.notification
+											.notification__inner
+												.notification__icon
+													+sprite("icon-chat_stroke")
+												.notification__content
+													.notification__content-top
+														.notification__heading Новый комментарий по сделке 123-ЗЛ-ОК
+														.notification__menu
+															.tooltip.tooltip--notification
+																a.btn.tooltip__btn.tooltip__btn--vertical.tooltip__btn--notifications
+																	+sprite("icon-more-alt")
+																ul.tooltip__menu
+																	li.tooltip__menu-item
+																		a(href="#").tooltip__menu-item-link.tooltip__menu-item-link--color-black Отметить прочитанным
+													.notification__desc
+														p текст уведомления
+													.notification__bar
+														.notification__bar-date Сегодня в 14:32
+												.notification__indicator.notification__indicator--is-new
+							ul.pagination
+								li.disabled
+									a(href="#")
+										+sprite("icon-chevron-left")
+								li.current
+									a(href="#") 1
+								li
+									a(href="#") 2
+								li
+									a(href="#") ...
+								li
+									a(href="#") 9
+								li
+									a(href="#") 10
+								li
+									a(href="#")
+										+sprite("icon-chevron-right")
+
+					footer.footer
+						.container
+							.footer__section.d-flex.justify-content-end
+								ul.footer__menu
+									li
+										a(href="#") О нас
+									li
+										a(href="#") Реквизиты
+									li
+										a(href="#") Политика в отношении обработки персональных данных в АО “ГТЛК”
+							hr
+							.footer__section.d-flex.justify-content-between.align-items-center
+								.footer__copyright © 2023 АО ГТЛК
+								ul.footer__menu
+									li
+										a(href="tel:88002001299") 8-800-200-12-99
+									li
+										a(href="mailto:gtlk@gtlk.ru") gtlk@gtlk.ru
+									li
+										a(href="#") 125284, г. Москва, Ленинградский проспект д. 31 а, стр. 1
+			
+		include html/modals
+
+		script(src="js/app.min.js")

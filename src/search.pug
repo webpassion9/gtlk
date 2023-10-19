@@ -1,0 +1,151 @@
+include html/mixins
+
+doctype html
+block head
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no")
+		meta(name="format-detection" content="telephone=no")
+
+		link(rel="stylesheet", href="css/style.min.css")
+
+		title Title
+
+	body
+		.wrapper.wrapper-main
+
+			include html/header
+			.main-row
+
+				aside.sidebar
+					.sidebar__inner
+						.sidebar__section
+							ul.sidebar__nav
+								li.sidebar__nav-item.current
+									a(href="#").sidebar__nav-item-btn
+										.sidebar__nav-item-icon
+											+sprite("icon-file-tray")
+										.sidebar__nav-item-text Заявки
+								li.sidebar__nav-item
+									a(href="#").sidebar__nav-item-btn
+										.sidebar__nav-item-icon
+											+sprite("icon-newspaper")
+										.sidebar__nav-item-text Договоры
+								li.sidebar__nav-item
+									a(href="#").sidebar__nav-item-btn
+										.sidebar__nav-item-icon
+											+sprite("icon-doc")
+										.sidebar__nav-item-text Обращения НМЦ
+						.sidebar__section.sidebar__section--info
+							ul.sidebar__nav
+								li.sidebar__nav-item
+									a(href="#").sidebar__nav-item-btn
+										.sidebar__nav-item-icon
+											+sprite("icon-book")
+										.sidebar__nav-item-text Справка
+						.sidebar__section
+							.manager
+								.manager__ava
+									img(src="img/avatar-manager.png", alt="")
+								.manager__name Менеджер Иванова А.А.
+								a(href="#").btn.manager__btn Связаться
+						.sidebar__section
+							a(href="#").support
+								.support__icon
+									+sprite("icon-chat")
+								.support__heading Служба поддержки
+
+				main.main
+					.content
+						.content-inner
+							.heading-base.heading-base--search Результаты поиска
+							
+							form.form-search
+								.form-search__input-wrapper
+									input(type="text" placeholder="Поиск").form-search__input
+									a.btn.form-search__btn-remove
+										+sprite("icon-close-circle-outline")
+								.form-search__btn
+									input(type="submit" value="Найти").btn.btn-search.btn-search--height-medium
+							
+							.search
+								.search__item
+									.search__item-icon
+										+sprite("icon-list")
+									.search__item-main
+										a(href="#").search__item-text Лизинг 
+											mark авто
+											|буса
+										.search__item-info Заявка на лизинг, вчера в 14:32
+								.search__item
+									.search__item-icon
+										+sprite("icon-edit")
+									.search__item-main
+										a(href="#").search__item-text Государственная транспортная лизинговая компания (ГТЛК) заключила новый лизинговый договор по инвестпроекту с использованием средств Фонда национального благосостояния (ФНБ) в рамках нацпроекта «Безопасные качественные дороги». Договор подписан с муниципальным унитарным предприятием горэлектротранспорта «Управление Калужского троллейбуса» г. Калуги на поставку в лизинг 55 
+											mark авто
+											|бусов ЛиАЗ 529267 КПГ и 52 автобусов ПАЗ-422320-04 для работы на местных маршрутах.
+										.search__item-info Новость, 25.07.2023 в 14:32
+								.search__item
+									.search__item-icon
+										+sprite("icon-edit")
+									.search__item-main
+										a(href="#").search__item-text Напомним, что ранее в 2023 году ГТЛК заключила договоры лизинга по программе на поставку 191 
+											mark авто
+											|буса в Астрахань, 100 – во Владимир, 89 – в Кострому, 40 –в Курган.
+										.search__item-info Новость, 20.07.2023 в 14:32
+								.search__item
+									.search__item-icon
+										+sprite("icon-chat_stroke")
+									.search__item-main
+										a(href="#").search__item-text Необходимо добавить в заявку на лизинг автобуса дополнительный набор документов.
+										.search__item-info Комментарий, 20.06.2023 в 14:32
+								.search__item
+									.search__item-icon
+										+sprite("icon-org")
+									.search__item-main
+										a(href="#").search__item-text ООО “Автобусный - Центр Столица”
+										.search__item-info Организация, 15.06.2023 в 14:32
+
+							ul.pagination
+								li.disabled
+									a(href="#")
+										+sprite("icon-chevron-left")
+								li.current
+									a(href="#") 1
+								li
+									a(href="#") 2
+								li
+									a(href="#") ...
+								li
+									a(href="#") 9
+								li
+									a(href="#") 10
+								li
+									a(href="#")
+										+sprite("icon-chevron-right")
+
+					footer.footer
+						.container
+							.footer__section.d-flex.justify-content-end
+								ul.footer__menu
+									li
+										a(href="#") О нас
+									li
+										a(href="#") Реквизиты
+									li
+										a(href="#") Политика в отношении обработки персональных данных в АО “ГТЛК”
+							hr
+							.footer__section.d-flex.justify-content-between.align-items-center
+								.footer__copyright © 2023 АО ГТЛК
+								ul.footer__menu
+									li
+										a(href="tel:88002001299") 8-800-200-12-99
+									li
+										a(href="mailto:gtlk@gtlk.ru") gtlk@gtlk.ru
+									li
+										a(href="#") 125284, г. Москва, Ленинградский проспект д. 31 а, стр. 1
+			
+		include html/modals
+
+		script(src="js/app.min.js")

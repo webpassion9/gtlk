@@ -1,6 +1,6 @@
 .application-docs {
 	&__head {
-		padding-bottom: 30px;
+		padding-bottom: 50px;
 		.application-info {
 			&:not(:last-child) {
 				margin-bottom: 30px;
@@ -36,7 +36,7 @@
 			font-weight: 700;
 			font-size: 18px;
 			line-height: 22px;
-			color: rgba(0, 0, 0, 0.8);
+			color: rgba(var(--color-black-base));
 		}
 		&.opened {
 			.application-docs__section-top .icon-chevron-up {

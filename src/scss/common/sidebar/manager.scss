@@ -28,6 +28,6 @@
 		font-family: $fontThird;
 		font-size: 10px;
 		line-height: 12px;
-		color: rgba(0, 0, 0, 0.8);
+		color: rgba(var(--color-black-base));
 	}
 }

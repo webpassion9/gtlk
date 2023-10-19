@@ -15,36 +15,7 @@ html(lang="ru")
 	body
 		.wrapper.wrapper-main
 
-			header.header-auth
-				.container
-					a(href="#")
-						img(src="img/logo-GTLK_dark.png", width="166" height="52" alt="")
-					ul.header-menu
-						li
-							a(href="#") Компания
-						li
-							a(href="#") Деятельность
-						li
-							a(href="#") Клиентам
-						li
-							a(href="#") Закупки
-						li
-							a(href="#") Инвесторам
-						li
-							a(href="#") Устойчивое развитие
-						li
-							a(href="#") Медиа
-					form.header-search
-						input(type="text").header-search__input
-						.header-search__icon
-							+sprite("icon-loop")
-					.header-btns
-						a(href="#").btn.header-btns__link
-							+sprite("icon-bell")
-						a(href="#").btn.header-btns__link
-							+sprite("icon-user")
-
-						
+			include html/header						
 			.main-row
 
 				aside.sidebar
@@ -91,411 +62,811 @@ html(lang="ru")
 								.heading-base Все заявки
 								div
 									a(href="#").btn.btn-base Новая заявка
-							ul.tabs
-								li.current
-									a(href="#") Заявки
-								li
-									a(href="#") Черновики
+							.tabs
+								ul.tabs__list
+									li.tabs__item(data-tab-btn).current
+										a(href="#tab-requests").tabs__item-link Заявки
+									li.tabs__item(data-tab-btn)
+										a(href="#tab-drafts").tabs__item-link Черновики
+								.tabs__line(data-tab-line)
 							
-							form.application-form
-								.application-form__item
-									input(type="text" placeholder="Регистрационный номер заявки").application-form__item-input
-									.application-form__item-icon
-										+sprite("icon-loop")
-								.application-form__item
-									input(type="text" placeholder="Поиск по совпадению").application-form__item-input
-									.application-form__item-icon
-										+sprite("icon-loop")
-								input(type="submit" value="Найти").btn.btn-search
-							
-							table.application-table
-								thead
-									tr
-										th(style="width:9.6%") Регистрационный номер
-										th(style="width:9.6%") Дата создания
-										th(colspan="6").th-table-inside
-											table
-												thead
-													tr
-														th(colspan="6").th-section-heading Предметы лизинга
-													tr
-														th(style="width:22%") Название предмета
-														th(style="width:17.5%") Поставщик
-														th(style="width:13.67%") Срок поставки
-														th(style="width:18.5%") Стоимость единицы
-														th(style="width:11.67%") Количество
-														th(style="width:16.67%") Стоимость итоговая
-										th(style="width:7%") Документы
-										th(style="width:13.45%") Статус
-								tbody
-									tr
-										td(style="width:9.6%") 123-ЗЛ-ОК
-										td(style="width:9.6%") 12.07.2023
-											br
-											span.color-gray 12:24
-										td(colspan="6").td-table-inside
-											table
-												tr
-													td(style="width:22%") ж/д вагон Хоппер
-													td(style="width:17.5%") ООО «РЖД»
-													td(style="width:13.67%") 01.10.2023
-													td(style="width:18.5%") 1 000 000,00
-													td(style="width:11.67%") 20 ед.
-													td(style="width:16.67%") 20 000 000,00
-												tr
-													td(style="width:22%") ж/д вагон Хоппер
-													td(style="width:17.5%") 
-														.text-one-line ООО «Название длинное длинное длинное
-													td(style="width:13.67%") 03.11.2023
-													td(style="width:18.5%") 50 000 000,00
-													td(style="width:11.67%") 1 ед.
-													td(style="width:16.67%") 50 000 000,00
-												tr
-													td(style="width:22%") ж/д вагон Хоппер
-													td(style="width:17.5%") ООО «Название»
-													td(style="width:13.67%") 03.11.2023
-													td(style="width:18.5%") 50 000 000,00
-													td(style="width:11.67%") 1 ед.
-													td(style="width:16.67%") 50 000 000,00
-												tr
-													td(style="width:22%") ж/д вагон Хоппер
-													td(style="width:17.5%") ООО «Название»
-													td(style="width:13.67%") 03.11.2023
-													td(style="width:18.5%") 50 000 000,00
-													td(style="width:11.67%") 1 ед.
-													td(style="width:16.67%") 50 000 000,00
-												tr
-													td(style="width:22%")
-													td(style="width:17.5%")
-													td(style="width:13.67%")
-													td(style="width:18.5%")
-													td(style="width:11.67%").td-total-selected
-														.total-selected итого														
-													td(style="width:16.67%").td-total-selected
-														.total-selected 70 850 000,00
-										td(style="width:7%").text-center
-											.progress.progress--docs
-												.progress-bar(data-progress="75%")
-												.progress__value-text 75%
-										td(style="width:13.45%")
-											.d-flex.align-items-center.application-nav
-												.status.status--review.status--text-medium На рассмотрении
-												.tooltip
-													a.btn.tooltip__btn
-														+sprite("icon-more-alt")
-													ul.tooltip__menu
-														li.tooltip__menu-item
-															a(href="#").tooltip__menu-item-link Просмотреть
-														li.tooltip__menu-item
-															a(href="#").tooltip__menu-item-link Создать новую версию
-														li.tooltip__menu-item.tooltip__menu-item--cancel
-															a(href="#").tooltip__menu-item-link Аннулировать
-									tr
-										td(style="width:9.6%") 123-ЗЛ-ОК
-										td(style="width:9.6%") 12.07.2023
-											br
-											span.color-gray 12:24
-										td(colspan="6").td-table-inside
-											table
-												tr
-													td(style="width:22%") ж/д вагон Хоппер
-													td(style="width:17.5%") ООО «РЖД»
-													td(style="width:13.67%") 01.10.2023
-													td(style="width:18.5%") 1 000 000,00
-													td(style="width:11.67%") 20 ед.
-													td(style="width:16.67%") 20 000 000,00
-												tr
-													td(style="width:22%")
-													td(style="width:17.5%")
-													td(style="width:13.67%")
-													td(style="width:18.5%")
-													td(style="width:11.67%").td-total-selected
-														.total-selected итого														
-													td(style="width:16.67%").td-total-selected
-														.total-selected 20 000 000,00
-										td(style="width:7%").text-center
-											.progress.progress--docs
-												.progress-bar(data-progress="75%")
-												.progress__value-text 75%
-										td(style="width:13.45%")
-											.d-flex.align-items-center.application-nav
-												.status.status--rejected Отклонена
-												.tooltip
-													a.btn.tooltip__btn
-														+sprite("icon-more-alt")
-													ul.tooltip__menu
-														li.tooltip__menu-item
-															a(href="#").tooltip__menu-item-link Просмотреть
-														li.tooltip__menu-item
-															a(href="#").tooltip__menu-item-link Создать новую версию
-														li.tooltip__menu-item.tooltip__menu-item--cancel
-															a(href="#").tooltip__menu-item-link Аннулировать
-									tr
-										td(style="width:9.6%") 123-ЗЛ-ОК
-										td(style="width:9.6%") 12.07.2023
-											br
-											span.color-gray 12:24
-										td(colspan="6").td-table-inside
-											table
-												tr
-													td(style="width:22%") ж/д вагон Хоппер
-													td(style="width:17.5%") ООО «РЖД»
-													td(style="width:13.67%") 01.10.2023
-													td(style="width:18.5%") 1 000 000,00
-													td(style="width:11.67%") 20 ед.
-													td(style="width:16.67%") 20 000 000,00
-												tr
-													td(style="width:22%") ж/д вагон Хоппер
-													td(style="width:17.5%") 
-														.text-one-line ООО «Название длинное длинное длинное
-													td(style="width:13.67%") 03.11.2023
-													td(style="width:18.5%") 50 000 000,00
-													td(style="width:11.67%") 1 ед.
-													td(style="width:16.67%") 50 000 000,00
-												tr
-													td(style="width:22%") ж/д вагон Хоппер
-													td(style="width:17.5%") ООО «Название»
-													td(style="width:13.67%") 03.11.2023
-													td(style="width:18.5%") 50 000 000,00
-													td(style="width:11.67%") 1 ед.
-													td(style="width:16.67%") 50 000 000,00
-												tr
-													td(style="width:22%") ж/д вагон Хоппер
-													td(style="width:17.5%") ООО «Название»
-													td(style="width:13.67%") 03.11.2023
-													td(style="width:18.5%") 50 000 000,00
-													td(style="width:11.67%") 1 ед.
-													td(style="width:16.67%") 50 000 000,00
-												tr
-													td(style="width:22%")
-													td(style="width:17.5%")
-													td(style="width:13.67%")
-													td(style="width:18.5%")
-													td(style="width:11.67%").td-total-selected
-														.total-selected итого														
-													td(style="width:16.67%").td-total-selected
-														.total-selected 70 850 000,00
-										td(style="width:7%").text-center
-											.progress.progress--docs
-												.progress-bar(data-progress="75%")
-												.progress__value-text 75%
-										td(style="width:13.45%")
-											.d-flex.align-items-center.application-nav
-												.status.status--review На рассмотрении
-												.tooltip
-													a.btn.tooltip__btn
-														+sprite("icon-more-alt")
-													ul.tooltip__menu
-														li.tooltip__menu-item
-															a(href="#").tooltip__menu-item-link Просмотреть
-														li.tooltip__menu-item
-															a(href="#").tooltip__menu-item-link Создать новую версию
-														li.tooltip__menu-item.tooltip__menu-item--cancel
-															a(href="#").tooltip__menu-item-link Аннулировать
-									tr
-										td(style="width:9.6%") 123-ЗЛ-ОК
-										td(style="width:9.6%") 12.07.2023
-											br
-											span.color-gray 12:24
-										td(colspan="6").td-table-inside
-											table
-												tr
-													td(style="width:22%") ж/д вагон Хоппер
-													td(style="width:17.5%") ООО «РЖД»
-													td(style="width:13.67%") 01.10.2023
-													td(style="width:18.5%") 1 000 000,00
-													td(style="width:11.67%") 20 ед.
-													td(style="width:16.67%") 20 000 000,00
-												tr
-													td(style="width:22%") ж/д вагон Хоппер
-													td(style="width:17.5%") 
-														.text-one-line ООО «Название длинное длинное длинное
-													td(style="width:13.67%") 03.11.2023
-													td(style="width:18.5%") 50 000 000,00
-													td(style="width:11.67%") 1 ед.
-													td(style="width:16.67%") 50 000 000,00
-												tr
-													td(style="width:22%") ж/д вагон Хоппер
-													td(style="width:17.5%") ООО «Название»
-													td(style="width:13.67%") 03.11.2023
-													td(style="width:18.5%") 50 000 000,00
-													td(style="width:11.67%") 1 ед.
-													td(style="width:16.67%") 50 000 000,00
-												tr
-													td(style="width:22%") ж/д вагон Хоппер
-													td(style="width:17.5%") ООО «Название»
-													td(style="width:13.67%") 03.11.2023
-													td(style="width:18.5%") 50 000 000,00
-													td(style="width:11.67%") 1 ед.
-													td(style="width:16.67%") 50 000 000,00
-												tr
-													td(style="width:22%")
-													td(style="width:17.5%")
-													td(style="width:13.67%")
-													td(style="width:18.5%")
-													td(style="width:11.67%").td-total-selected
-														.total-selected итого														
-													td(style="width:16.67%").td-total-selected
-														.total-selected 70 850 000,00
-										td(style="width:7%").text-center
-											.progress.progress--docs
-												.progress-bar(data-progress="75%")
-												.progress__value-text 75%
-										td(style="width:13.45%")
-											.d-flex.align-items-center.application-nav
-												.status.status--registered Зарегистрирована
-												.tooltip
-													a.btn.tooltip__btn
-														+sprite("icon-more-alt")
-													ul.tooltip__menu
-														li.tooltip__menu-item
-															a(href="#").tooltip__menu-item-link Просмотреть
-														li.tooltip__menu-item
-															a(href="#").tooltip__menu-item-link Создать новую версию
-														li.tooltip__menu-item.tooltip__menu-item--cancel
-															a(href="#").tooltip__menu-item-link Аннулировать
-									tr
-										td(style="width:9.6%") 123-ЗЛ-ОК
-										td(style="width:9.6%") 12.07.2023
-											br
-											span.color-gray 12:24
-										td(colspan="6").td-table-inside
-											table
-												tr
-													td(style="width:22%") ж/д вагон Хоппер
-													td(style="width:17.5%") ООО «РЖД»
-													td(style="width:13.67%") 01.10.2023
-													td(style="width:18.5%") 1 000 000,00
-													td(style="width:11.67%") 20 ед.
-													td(style="width:16.67%") 20 000 000,00
-												tr
-													td(style="width:22%") ж/д вагон Хоппер
-													td(style="width:17.5%") 
-														.text-one-line ООО «Название длинное длинное длинное
-													td(style="width:13.67%") 03.11.2023
-													td(style="width:18.5%") 50 000 000,00
-													td(style="width:11.67%") 1 ед.
-													td(style="width:16.67%") 50 000 000,00
-												tr
-													td(style="width:22%") ж/д вагон Хоппер
-													td(style="width:17.5%") ООО «Название»
-													td(style="width:13.67%") 03.11.2023
-													td(style="width:18.5%") 50 000 000,00
-													td(style="width:11.67%") 1 ед.
-													td(style="width:16.67%") 50 000 000,00
-												tr
-													td(style="width:22%") ж/д вагон Хоппер
-													td(style="width:17.5%") ООО «Название»
-													td(style="width:13.67%") 03.11.2023
-													td(style="width:18.5%") 50 000 000,00
-													td(style="width:11.67%") 1 ед.
-													td(style="width:16.67%") 50 000 000,00
-												tr
-													td(style="width:22%")
-													td(style="width:17.5%")
-													td(style="width:13.67%")
-													td(style="width:18.5%")
-													td(style="width:11.67%").td-total-selected
-														.total-selected итого														
-													td(style="width:16.67%").td-total-selected
-														.total-selected 70 850 000,00
-										td(style="width:7%").text-center
-											.progress.progress--docs
-												.progress-bar(data-progress="75%")
-												.progress__value-text 75%
-										td(style="width:13.45%")
-											.d-flex.align-items-center.application-nav
-												.status.status--completed Завершена
-												.tooltip
-													a.btn.tooltip__btn
-														+sprite("icon-more-alt")
-													ul.tooltip__menu
-														li.tooltip__menu-item
-															a(href="#").tooltip__menu-item-link Просмотреть
-														li.tooltip__menu-item
-															a(href="#").tooltip__menu-item-link Создать новую версию
-														li.tooltip__menu-item.tooltip__menu-item--cancel
-															a(href="#").tooltip__menu-item-link Аннулировать
-									tr
-										td(style="width:9.6%") 123-ЗЛ-ОК
-										td(style="width:9.6%") 12.07.2023
-											br
-											span.color-gray 12:24
-										td(colspan="6").td-table-inside
-											table
-												tr
-													td(style="width:22%") ж/д вагон Хоппер
-													td(style="width:17.5%") ООО «РЖД»
-													td(style="width:13.67%") 01.10.2023
-													td(style="width:18.5%") 1 000 000,00
-													td(style="width:11.67%") 20 ед.
-													td(style="width:16.67%") 20 000 000,00
-												tr
-													td(style="width:22%") ж/д вагон Хоппер
-													td(style="width:17.5%") 
-														.text-one-line ООО «Название длинное длинное длинное
-													td(style="width:13.67%") 03.11.2023
-													td(style="width:18.5%") 50 000 000,00
-													td(style="width:11.67%") 1 ед.
-													td(style="width:16.67%") 50 000 000,00
-												tr
-													td(style="width:22%") ж/д вагон Хоппер
-													td(style="width:17.5%") ООО «Название»
-													td(style="width:13.67%") 03.11.2023
-													td(style="width:18.5%") 50 000 000,00
-													td(style="width:11.67%") 1 ед.
-													td(style="width:16.67%") 50 000 000,00
-												tr
-													td(style="width:22%") ж/д вагон Хоппер
-													td(style="width:17.5%") ООО «Название»
-													td(style="width:13.67%") 03.11.2023
-													td(style="width:18.5%") 50 000 000,00
-													td(style="width:11.67%") 1 ед.
-													td(style="width:16.67%") 50 000 000,00
-												tr
-													td(style="width:22%")
-													td(style="width:17.5%")
-													td(style="width:13.67%")
-													td(style="width:18.5%")
-													td(style="width:11.67%").td-total-selected
-														.total-selected итого														
-													td(style="width:16.67%").td-total-selected
-														.total-selected 70 850 000,00
-										td(style="width:7%").text-center
-											.progress.progress--docs
-												.progress-bar(data-progress="75%")
-												.progress__value-text 75%
-										td(style="width:13.45%")
-											.d-flex.align-items-center.application-nav
-												.status.status--replaced.status--text-medium Заменена
-												.tooltip
-													a.btn.tooltip__btn
-														+sprite("icon-more-alt")
-													ul.tooltip__menu
-														li.tooltip__menu-item
-															a(href="#").tooltip__menu-item-link Просмотреть
-														li.tooltip__menu-item
-															a(href="#").tooltip__menu-item-link Создать новую версию
-														li.tooltip__menu-item.tooltip__menu-item--cancel
-															a(href="#").tooltip__menu-item-link Аннулировать
+							#tab-requests.tab-content.current
+								form.application-form
+									.application-form__item
+										input(type="text" placeholder="Регистрационный номер заявки").application-form__item-input
+										.application-form__item-icon
+											+sprite("icon-loop")
+									.application-form__item
+										input(type="text" placeholder="Поиск по совпадению").application-form__item-input
+										.application-form__item-icon
+											+sprite("icon-loop")
+									input(type="submit" value="Найти").btn.btn-search
 
-							ul.pagination
-								li.disabled
-									a(href="#")
-										+sprite("icon-chevron-left")
-								li.current
-									a(href="#") 1
-								li
-									a(href="#") 2
-								li
-									a(href="#") ...
-								li
-									a(href="#") 9
-								li
-									a(href="#") 10
-								li
-									a(href="#")
-										+sprite("icon-chevron-right")
+								table.application-table
+									thead
+										tr
+											th(style="width:9.6%") Регистрационный номер
+											th(style="width:9.6%") Дата создания
+											th(colspan="6").th-table-inside
+												table
+													thead
+														tr
+															th(colspan="6").th-section-heading Предметы лизинга
+														tr
+															th(style="width:22%") Название предмета
+															th(style="width:17.5%") Поставщик
+															th(style="width:13.67%") Срок поставки
+															th(style="width:18.5%") Стоимость единицы
+															th(style="width:11.67%") Количество
+															th(style="width:16.67%") Стоимость итоговая
+											th(style="width:7%") Документы
+											th(style="width:13.45%") Статус
+									tbody
+										tr
+											td(style="width:9.6%") 123-ЗЛ-ОК
+											td(style="width:9.6%") 12.07.2023
+												br
+												span.color-gray 12:24
+											td(colspan="6").td-table-inside
+												table
+													tr
+														td(style="width:22%") ж/д вагон Хоппер
+														td(style="width:17.5%") ООО «РЖД»
+														td(style="width:13.67%") 01.10.2023
+														td(style="width:18.5%") 1 000 000,00
+														td(style="width:11.67%") 20 ед.
+														td(style="width:16.67%") 20 000 000,00
+													tr
+														td(style="width:22%") ж/д вагон Хоппер
+														td(style="width:17.5%") 
+															.text-one-line ООО «Название длинное длинное длинное
+														td(style="width:13.67%") 03.11.2023
+														td(style="width:18.5%") 50 000 000,00
+														td(style="width:11.67%") 1 ед.
+														td(style="width:16.67%") 50 000 000,00
+													tr
+														td(style="width:22%") ж/д вагон Хоппер
+														td(style="width:17.5%") ООО «Название»
+														td(style="width:13.67%") 03.11.2023
+														td(style="width:18.5%") 50 000 000,00
+														td(style="width:11.67%") 1 ед.
+														td(style="width:16.67%") 50 000 000,00
+													tr
+														td(style="width:22%") ж/д вагон Хоппер
+														td(style="width:17.5%") ООО «Название»
+														td(style="width:13.67%") 03.11.2023
+														td(style="width:18.5%") 50 000 000,00
+														td(style="width:11.67%") 1 ед.
+														td(style="width:16.67%") 50 000 000,00
+													tr
+														td(style="width:22%")
+														td(style="width:17.5%")
+														td(style="width:13.67%")
+														td(style="width:18.5%")
+														td(style="width:11.67%").td-total-selected
+															.total-selected итого														
+														td(style="width:16.67%").td-total-selected
+															.total-selected 70 850 000,00
+											td(style="width:7%").text-center
+												.progress.progress--docs
+													.progress-bar(data-progress="75%")
+													.progress__value-text 75%
+											td(style="width:13.45%")
+												.d-flex.align-items-center.application-nav
+													.status.status--review.status--text-medium На рассмотрении
+													.tooltip
+														a.btn.tooltip__btn
+															+sprite("icon-more-alt")
+														ul.tooltip__menu
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Просмотреть
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Создать новую версию
+															li.tooltip__menu-item.tooltip__menu-item--cancel
+																a(href="#").tooltip__menu-item-link Аннулировать
+										tr
+											td(style="width:9.6%") 123-ЗЛ-ОК
+											td(style="width:9.6%") 12.07.2023
+												br
+												span.color-gray 12:24
+											td(colspan="6").td-table-inside
+												table
+													tr
+														td(style="width:22%") ж/д вагон Хоппер
+														td(style="width:17.5%") ООО «РЖД»
+														td(style="width:13.67%") 01.10.2023
+														td(style="width:18.5%") 1 000 000,00
+														td(style="width:11.67%") 20 ед.
+														td(style="width:16.67%") 20 000 000,00
+													tr
+														td(style="width:22%")
+														td(style="width:17.5%")
+														td(style="width:13.67%")
+														td(style="width:18.5%")
+														td(style="width:11.67%").td-total-selected
+															.total-selected итого														
+														td(style="width:16.67%").td-total-selected
+															.total-selected 20 000 000,00
+											td(style="width:7%").text-center
+												.progress.progress--docs
+													.progress-bar(data-progress="75%")
+													.progress__value-text 75%
+											td(style="width:13.45%")
+												.d-flex.align-items-center.application-nav
+													.status.status--rejected Отклонена
+													.tooltip
+														a.btn.tooltip__btn
+															+sprite("icon-more-alt")
+														ul.tooltip__menu
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Просмотреть
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Создать новую версию
+															li.tooltip__menu-item.tooltip__menu-item--cancel
+																a(href="#").tooltip__menu-item-link Аннулировать
+										tr
+											td(style="width:9.6%") 123-ЗЛ-ОК
+											td(style="width:9.6%") 12.07.2023
+												br
+												span.color-gray 12:24
+											td(colspan="6").td-table-inside
+												table
+													tr
+														td(style="width:22%") ж/д вагон Хоппер
+														td(style="width:17.5%") ООО «РЖД»
+														td(style="width:13.67%") 01.10.2023
+														td(style="width:18.5%") 1 000 000,00
+														td(style="width:11.67%") 20 ед.
+														td(style="width:16.67%") 20 000 000,00
+													tr
+														td(style="width:22%") ж/д вагон Хоппер
+														td(style="width:17.5%") 
+															.text-one-line ООО «Название длинное длинное длинное
+														td(style="width:13.67%") 03.11.2023
+														td(style="width:18.5%") 50 000 000,00
+														td(style="width:11.67%") 1 ед.
+														td(style="width:16.67%") 50 000 000,00
+													tr
+														td(style="width:22%") ж/д вагон Хоппер
+														td(style="width:17.5%") ООО «Название»
+														td(style="width:13.67%") 03.11.2023
+														td(style="width:18.5%") 50 000 000,00
+														td(style="width:11.67%") 1 ед.
+														td(style="width:16.67%") 50 000 000,00
+													tr
+														td(style="width:22%") ж/д вагон Хоппер
+														td(style="width:17.5%") ООО «Название»
+														td(style="width:13.67%") 03.11.2023
+														td(style="width:18.5%") 50 000 000,00
+														td(style="width:11.67%") 1 ед.
+														td(style="width:16.67%") 50 000 000,00
+													tr
+														td(style="width:22%")
+														td(style="width:17.5%")
+														td(style="width:13.67%")
+														td(style="width:18.5%")
+														td(style="width:11.67%").td-total-selected
+															.total-selected итого														
+														td(style="width:16.67%").td-total-selected
+															.total-selected 70 850 000,00
+											td(style="width:7%").text-center
+												.progress.progress--docs
+													.progress-bar(data-progress="75%")
+													.progress__value-text 75%
+											td(style="width:13.45%")
+												.d-flex.align-items-center.application-nav
+													.status.status--review На рассмотрении
+													.tooltip
+														a.btn.tooltip__btn
+															+sprite("icon-more-alt")
+														ul.tooltip__menu
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Просмотреть
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Создать новую версию
+															li.tooltip__menu-item.tooltip__menu-item--cancel
+																a(href="#").tooltip__menu-item-link Аннулировать
+										tr
+											td(style="width:9.6%") 123-ЗЛ-ОК
+											td(style="width:9.6%") 12.07.2023
+												br
+												span.color-gray 12:24
+											td(colspan="6").td-table-inside
+												table
+													tr
+														td(style="width:22%") ж/д вагон Хоппер
+														td(style="width:17.5%") ООО «РЖД»
+														td(style="width:13.67%") 01.10.2023
+														td(style="width:18.5%") 1 000 000,00
+														td(style="width:11.67%") 20 ед.
+														td(style="width:16.67%") 20 000 000,00
+													tr
+														td(style="width:22%") ж/д вагон Хоппер
+														td(style="width:17.5%") 
+															.text-one-line ООО «Название длинное длинное длинное
+														td(style="width:13.67%") 03.11.2023
+														td(style="width:18.5%") 50 000 000,00
+														td(style="width:11.67%") 1 ед.
+														td(style="width:16.67%") 50 000 000,00
+													tr
+														td(style="width:22%") ж/д вагон Хоппер
+														td(style="width:17.5%") ООО «Название»
+														td(style="width:13.67%") 03.11.2023
+														td(style="width:18.5%") 50 000 000,00
+														td(style="width:11.67%") 1 ед.
+														td(style="width:16.67%") 50 000 000,00
+													tr
+														td(style="width:22%") ж/д вагон Хоппер
+														td(style="width:17.5%") ООО «Название»
+														td(style="width:13.67%") 03.11.2023
+														td(style="width:18.5%") 50 000 000,00
+														td(style="width:11.67%") 1 ед.
+														td(style="width:16.67%") 50 000 000,00
+													tr
+														td(style="width:22%")
+														td(style="width:17.5%")
+														td(style="width:13.67%")
+														td(style="width:18.5%")
+														td(style="width:11.67%").td-total-selected
+															.total-selected итого														
+														td(style="width:16.67%").td-total-selected
+															.total-selected 70 850 000,00
+											td(style="width:7%").text-center
+												.progress.progress--docs
+													.progress-bar(data-progress="75%")
+													.progress__value-text 75%
+											td(style="width:13.45%")
+												.d-flex.align-items-center.application-nav
+													.status.status--registered Зарегистрирована
+													.tooltip
+														a.btn.tooltip__btn
+															+sprite("icon-more-alt")
+														ul.tooltip__menu
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Просмотреть
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Создать новую версию
+															li.tooltip__menu-item.tooltip__menu-item--cancel
+																a(href="#").tooltip__menu-item-link Аннулировать
+										tr
+											td(style="width:9.6%") 123-ЗЛ-ОК
+											td(style="width:9.6%") 12.07.2023
+												br
+												span.color-gray 12:24
+											td(colspan="6").td-table-inside
+												table
+													tr
+														td(style="width:22%") ж/д вагон Хоппер
+														td(style="width:17.5%") ООО «РЖД»
+														td(style="width:13.67%") 01.10.2023
+														td(style="width:18.5%") 1 000 000,00
+														td(style="width:11.67%") 20 ед.
+														td(style="width:16.67%") 20 000 000,00
+													tr
+														td(style="width:22%") ж/д вагон Хоппер
+														td(style="width:17.5%") 
+															.text-one-line ООО «Название длинное длинное длинное
+														td(style="width:13.67%") 03.11.2023
+														td(style="width:18.5%") 50 000 000,00
+														td(style="width:11.67%") 1 ед.
+														td(style="width:16.67%") 50 000 000,00
+													tr
+														td(style="width:22%") ж/д вагон Хоппер
+														td(style="width:17.5%") ООО «Название»
+														td(style="width:13.67%") 03.11.2023
+														td(style="width:18.5%") 50 000 000,00
+														td(style="width:11.67%") 1 ед.
+														td(style="width:16.67%") 50 000 000,00
+													tr
+														td(style="width:22%") ж/д вагон Хоппер
+														td(style="width:17.5%") ООО «Название»
+														td(style="width:13.67%") 03.11.2023
+														td(style="width:18.5%") 50 000 000,00
+														td(style="width:11.67%") 1 ед.
+														td(style="width:16.67%") 50 000 000,00
+													tr
+														td(style="width:22%")
+														td(style="width:17.5%")
+														td(style="width:13.67%")
+														td(style="width:18.5%")
+														td(style="width:11.67%").td-total-selected
+															.total-selected итого														
+														td(style="width:16.67%").td-total-selected
+															.total-selected 70 850 000,00
+											td(style="width:7%").text-center
+												.progress.progress--docs
+													.progress-bar(data-progress="75%")
+													.progress__value-text 75%
+											td(style="width:13.45%")
+												.d-flex.align-items-center.application-nav
+													.status.status--completed Завершена
+													.tooltip
+														a.btn.tooltip__btn
+															+sprite("icon-more-alt")
+														ul.tooltip__menu
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Просмотреть
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Создать новую версию
+															li.tooltip__menu-item.tooltip__menu-item--cancel
+																a(href="#").tooltip__menu-item-link Аннулировать
+										tr
+											td(style="width:9.6%") 123-ЗЛ-ОК
+											td(style="width:9.6%") 12.07.2023
+												br
+												span.color-gray 12:24
+											td(colspan="6").td-table-inside
+												table
+													tr
+														td(style="width:22%") ж/д вагон Хоппер
+														td(style="width:17.5%") ООО «РЖД»
+														td(style="width:13.67%") 01.10.2023
+														td(style="width:18.5%") 1 000 000,00
+														td(style="width:11.67%") 20 ед.
+														td(style="width:16.67%") 20 000 000,00
+													tr
+														td(style="width:22%") ж/д вагон Хоппер
+														td(style="width:17.5%") 
+															.text-one-line ООО «Название длинное длинное длинное
+														td(style="width:13.67%") 03.11.2023
+														td(style="width:18.5%") 50 000 000,00
+														td(style="width:11.67%") 1 ед.
+														td(style="width:16.67%") 50 000 000,00
+													tr
+														td(style="width:22%") ж/д вагон Хоппер
+														td(style="width:17.5%") ООО «Название»
+														td(style="width:13.67%") 03.11.2023
+														td(style="width:18.5%") 50 000 000,00
+														td(style="width:11.67%") 1 ед.
+														td(style="width:16.67%") 50 000 000,00
+													tr
+														td(style="width:22%") ж/д вагон Хоппер
+														td(style="width:17.5%") ООО «Название»
+														td(style="width:13.67%") 03.11.2023
+														td(style="width:18.5%") 50 000 000,00
+														td(style="width:11.67%") 1 ед.
+														td(style="width:16.67%") 50 000 000,00
+													tr
+														td(style="width:22%")
+														td(style="width:17.5%")
+														td(style="width:13.67%")
+														td(style="width:18.5%")
+														td(style="width:11.67%").td-total-selected
+															.total-selected итого														
+														td(style="width:16.67%").td-total-selected
+															.total-selected 70 850 000,00
+											td(style="width:7%").text-center
+												.progress.progress--docs
+													.progress-bar(data-progress="75%")
+													.progress__value-text 75%
+											td(style="width:13.45%")
+												.d-flex.align-items-center.application-nav
+													.status.status--replaced.status--text-medium Заменена
+													.tooltip
+														a.btn.tooltip__btn
+															+sprite("icon-more-alt")
+														ul.tooltip__menu
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Просмотреть
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Создать новую версию
+															li.tooltip__menu-item.tooltip__menu-item--cancel
+																a(href="#").tooltip__menu-item-link Аннулировать
+								
+								ul.pagination
+									li.disabled
+										a(href="#")
+											+sprite("icon-chevron-left")
+									li.current
+										a(href="#") 1
+									li
+										a(href="#") 2
+									li
+										a(href="#") ...
+									li
+										a(href="#") 9
+									li
+										a(href="#") 10
+									li
+										a(href="#")
+											+sprite("icon-chevron-right")
+							
+							#tab-drafts.tab-content
+								form.application-form
+									.application-form__item
+										input(type="text" placeholder="Поиск").application-form__item-input
+										.application-form__item-icon
+											+sprite("icon-loop")
+									input(type="submit" value="Найти").btn.btn-search
+								
+								table.application-table
+									thead
+										tr
+											th(style="width:9.6%") Регистрационный номер
+											th(style="width:9.6%") Дата создания
+											th(colspan="6").th-table-inside
+												table
+													thead
+														tr
+															th(colspan="6").th-section-heading Предметы лизинга
+														tr
+															th(style="width:22%") Название предмета
+															th(style="width:17.5%") Поставщик
+															th(style="width:13.67%") Срок поставки
+															th(style="width:18.5%") Стоимость единицы
+															th(style="width:11.67%") Количество
+															th(style="width:16.67%") Стоимость итоговая
+											th(style="width:7%") Документы
+											th(style="width:13.45%") Статус
+									tbody
+										tr
+											td(style="width:9.6%") 123-ЗЛ-ОК
+											td(style="width:9.6%") 12.07.2023
+												br
+												span.color-gray 12:24
+											td(colspan="6").td-table-inside
+												table
+													tr
+														td(style="width:22%") ж/д вагон Хоппер
+														td(style="width:17.5%") ООО «РЖД»
+														td(style="width:13.67%") 01.10.2023
+														td(style="width:18.5%") 1 000 000,00
+														td(style="width:11.67%") 20 ед.
+														td(style="width:16.67%") 20 000 000,00
+													tr
+														td(style="width:22%") ж/д вагон Хоппер
+														td(style="width:17.5%") 
+															.text-one-line ООО «Название длинное длинное длинное
+														td(style="width:13.67%") 03.11.2023
+														td(style="width:18.5%") 50 000 000,00
+														td(style="width:11.67%") 1 ед.
+														td(style="width:16.67%") 50 000 000,00
+													tr
+														td(style="width:22%") ж/д вагон Хоппер
+														td(style="width:17.5%") ООО «Название»
+														td(style="width:13.67%") 03.11.2023
+														td(style="width:18.5%") 50 000 000,00
+														td(style="width:11.67%") 1 ед.
+														td(style="width:16.67%") 50 000 000,00
+													tr
+														td(style="width:22%") ж/д вагон Хоппер
+														td(style="width:17.5%") ООО «Название»
+														td(style="width:13.67%") 03.11.2023
+														td(style="width:18.5%") 50 000 000,00
+														td(style="width:11.67%") 1 ед.
+														td(style="width:16.67%") 50 000 000,00
+													tr
+														td(style="width:22%")
+														td(style="width:17.5%")
+														td(style="width:13.67%")
+														td(style="width:18.5%")
+														td(style="width:11.67%").td-total-selected
+															.total-selected итого														
+														td(style="width:16.67%").td-total-selected
+															.total-selected 70 850 000,00
+											td(style="width:7%").text-center
+												.progress.progress--docs
+													.progress-bar(data-progress="75%")
+													.progress__value-text 75%
+											td(style="width:13.45%")
+												.d-flex.align-items-center.application-nav
+													.status.status--draft Черновик
+													.tooltip
+														a.btn.tooltip__btn
+															+sprite("icon-more-alt")
+														ul.tooltip__menu
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Просмотреть
+															li.tooltip__menu-item
+																a(href="#modal-continue-filling" data-modal).tooltip__menu-item-link Продолжить заполнение
+															li.tooltip__menu-item.tooltip__menu-item--cancel
+																a(href="#modal-remove-draft" data-modal).tooltip__menu-item-link Удалить черновик
+										tr
+											td(style="width:9.6%") 123-ЗЛ-ОК
+											td(style="width:9.6%") 12.07.2023
+												br
+												span.color-gray 12:24
+											td(colspan="6").td-table-inside
+												table
+													tr
+														td(style="width:22%") ж/д вагон Хоппер
+														td(style="width:17.5%") ООО «РЖД»
+														td(style="width:13.67%") 01.10.2023
+														td(style="width:18.5%") 1 000 000,00
+														td(style="width:11.67%") 20 ед.
+														td(style="width:16.67%") 20 000 000,00
+													tr
+														td(style="width:22%")
+														td(style="width:17.5%")
+														td(style="width:13.67%")
+														td(style="width:18.5%")
+														td(style="width:11.67%").td-total-selected
+															.total-selected итого														
+														td(style="width:16.67%").td-total-selected
+															.total-selected 20 000 000,00
+											td(style="width:7%").text-center
+												.progress.progress--docs
+													.progress-bar(data-progress="75%")
+													.progress__value-text 75%
+											td(style="width:13.45%")
+												.d-flex.align-items-center.application-nav
+													.status.status--draft Черновик
+													.tooltip
+														a.btn.tooltip__btn
+															+sprite("icon-more-alt")
+														ul.tooltip__menu
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Просмотреть
+															li.tooltip__menu-item
+																a(href="#modal-continue-filling" data-modal).tooltip__menu-item-link Продолжить заполнение
+															li.tooltip__menu-item.tooltip__menu-item--cancel
+																a(href="#modal-remove-draft" data-modal).tooltip__menu-item-link Удалить черновик
+										tr
+											td(style="width:9.6%") 123-ЗЛ-ОК
+											td(style="width:9.6%") 12.07.2023
+												br
+												span.color-gray 12:24
+											td(colspan="6").td-table-inside
+												table
+													tr
+														td(style="width:22%") ж/д вагон Хоппер
+														td(style="width:17.5%") ООО «РЖД»
+														td(style="width:13.67%") 01.10.2023
+														td(style="width:18.5%") 1 000 000,00
+														td(style="width:11.67%") 20 ед.
+														td(style="width:16.67%") 20 000 000,00
+													tr
+														td(style="width:22%") ж/д вагон Хоппер
+														td(style="width:17.5%") 
+															.text-one-line ООО «Название длинное длинное длинное
+														td(style="width:13.67%") 03.11.2023
+														td(style="width:18.5%") 50 000 000,00
+														td(style="width:11.67%") 1 ед.
+														td(style="width:16.67%") 50 000 000,00
+													tr
+														td(style="width:22%") ж/д вагон Хоппер
+														td(style="width:17.5%") ООО «Название»
+														td(style="width:13.67%") 03.11.2023
+														td(style="width:18.5%") 50 000 000,00
+														td(style="width:11.67%") 1 ед.
+														td(style="width:16.67%") 50 000 000,00
+													tr
+														td(style="width:22%") ж/д вагон Хоппер
+														td(style="width:17.5%") ООО «Название»
+														td(style="width:13.67%") 03.11.2023
+														td(style="width:18.5%") 50 000 000,00
+														td(style="width:11.67%") 1 ед.
+														td(style="width:16.67%") 50 000 000,00
+													tr
+														td(style="width:22%")
+														td(style="width:17.5%")
+														td(style="width:13.67%")
+														td(style="width:18.5%")
+														td(style="width:11.67%").td-total-selected
+															.total-selected итого														
+														td(style="width:16.67%").td-total-selected
+															.total-selected 70 850 000,00
+											td(style="width:7%").text-center
+												.progress.progress--docs
+													.progress-bar(data-progress="75%")
+													.progress__value-text 75%
+											td(style="width:13.45%")
+												.d-flex.align-items-center.application-nav
+													.status.status--draft Черновик
+													.tooltip
+														a.btn.tooltip__btn
+															+sprite("icon-more-alt")
+														ul.tooltip__menu
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Просмотреть
+															li.tooltip__menu-item
+																a(href="#modal-continue-filling" data-modal).tooltip__menu-item-link Продолжить заполнение
+															li.tooltip__menu-item.tooltip__menu-item--cancel
+																a(href="#modal-remove-draft" data-modal).tooltip__menu-item-link Удалить черновик
+										tr
+											td(style="width:9.6%") 123-ЗЛ-ОК
+											td(style="width:9.6%") 12.07.2023
+												br
+												span.color-gray 12:24
+											td(colspan="6").td-table-inside
+												table
+													tr
+														td(style="width:22%") ж/д вагон Хоппер
+														td(style="width:17.5%") ООО «РЖД»
+														td(style="width:13.67%") 01.10.2023
+														td(style="width:18.5%") 1 000 000,00
+														td(style="width:11.67%") 20 ед.
+														td(style="width:16.67%") 20 000 000,00
+													tr
+														td(style="width:22%") ж/д вагон Хоппер
+														td(style="width:17.5%") 
+															.text-one-line ООО «Название длинное длинное длинное
+														td(style="width:13.67%") 03.11.2023
+														td(style="width:18.5%") 50 000 000,00
+														td(style="width:11.67%") 1 ед.
+														td(style="width:16.67%") 50 000 000,00
+													tr
+														td(style="width:22%") ж/д вагон Хоппер
+														td(style="width:17.5%") ООО «Название»
+														td(style="width:13.67%") 03.11.2023
+														td(style="width:18.5%") 50 000 000,00
+														td(style="width:11.67%") 1 ед.
+														td(style="width:16.67%") 50 000 000,00
+													tr
+														td(style="width:22%") ж/д вагон Хоппер
+														td(style="width:17.5%") ООО «Название»
+														td(style="width:13.67%") 03.11.2023
+														td(style="width:18.5%") 50 000 000,00
+														td(style="width:11.67%") 1 ед.
+														td(style="width:16.67%") 50 000 000,00
+													tr
+														td(style="width:22%")
+														td(style="width:17.5%")
+														td(style="width:13.67%")
+														td(style="width:18.5%")
+														td(style="width:11.67%").td-total-selected
+															.total-selected итого														
+														td(style="width:16.67%").td-total-selected
+															.total-selected 70 850 000,00
+											td(style="width:7%").text-center
+												.progress.progress--docs
+													.progress-bar(data-progress="75%")
+													.progress__value-text 75%
+											td(style="width:13.45%")
+												.d-flex.align-items-center.application-nav
+													.status.status--draft Черновик
+													.tooltip
+														a.btn.tooltip__btn
+															+sprite("icon-more-alt")
+														ul.tooltip__menu
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Просмотреть
+															li.tooltip__menu-item
+																a(href="#modal-continue-filling" data-modal).tooltip__menu-item-link Продолжить заполнение
+															li.tooltip__menu-item.tooltip__menu-item--cancel
+																a(href="#modal-remove-draft" data-modal).tooltip__menu-item-link Удалить черновик
+										tr
+											td(style="width:9.6%") 123-ЗЛ-ОК
+											td(style="width:9.6%") 12.07.2023
+												br
+												span.color-gray 12:24
+											td(colspan="6").td-table-inside
+												table
+													tr
+														td(style="width:22%") ж/д вагон Хоппер
+														td(style="width:17.5%") ООО «РЖД»
+														td(style="width:13.67%") 01.10.2023
+														td(style="width:18.5%") 1 000 000,00
+														td(style="width:11.67%") 20 ед.
+														td(style="width:16.67%") 20 000 000,00
+													tr
+														td(style="width:22%") ж/д вагон Хоппер
+														td(style="width:17.5%") 
+															.text-one-line ООО «Название длинное длинное длинное
+														td(style="width:13.67%") 03.11.2023
+														td(style="width:18.5%") 50 000 000,00
+														td(style="width:11.67%") 1 ед.
+														td(style="width:16.67%") 50 000 000,00
+													tr
+														td(style="width:22%") ж/д вагон Хоппер
+														td(style="width:17.5%") ООО «Название»
+														td(style="width:13.67%") 03.11.2023
+														td(style="width:18.5%") 50 000 000,00
+														td(style="width:11.67%") 1 ед.
+														td(style="width:16.67%") 50 000 000,00
+													tr
+														td(style="width:22%") ж/д вагон Хоппер
+														td(style="width:17.5%") ООО «Название»
+														td(style="width:13.67%") 03.11.2023
+														td(style="width:18.5%") 50 000 000,00
+														td(style="width:11.67%") 1 ед.
+														td(style="width:16.67%") 50 000 000,00
+													tr
+														td(style="width:22%")
+														td(style="width:17.5%")
+														td(style="width:13.67%")
+														td(style="width:18.5%")
+														td(style="width:11.67%").td-total-selected
+															.total-selected итого														
+														td(style="width:16.67%").td-total-selected
+															.total-selected 70 850 000,00
+											td(style="width:7%").text-center
+												.progress.progress--docs
+													.progress-bar(data-progress="75%")
+													.progress__value-text 75%
+											td(style="width:13.45%")
+												.d-flex.align-items-center.application-nav
+													.status.status--draft Черновик
+													.tooltip
+														a.btn.tooltip__btn
+															+sprite("icon-more-alt")
+														ul.tooltip__menu
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Просмотреть
+															li.tooltip__menu-item
+																a(href="#modal-continue-filling" data-modal).tooltip__menu-item-link Продолжить заполнение
+															li.tooltip__menu-item.tooltip__menu-item--cancel
+																a(href="#modal-remove-draft" data-modal).tooltip__menu-item-link Удалить черновик
+										tr
+											td(style="width:9.6%") 123-ЗЛ-ОК
+											td(style="width:9.6%") 12.07.2023
+												br
+												span.color-gray 12:24
+											td(colspan="6").td-table-inside
+												table
+													tr
+														td(style="width:22%") ж/д вагон Хоппер
+														td(style="width:17.5%") ООО «РЖД»
+														td(style="width:13.67%") 01.10.2023
+														td(style="width:18.5%") 1 000 000,00
+														td(style="width:11.67%") 20 ед.
+														td(style="width:16.67%") 20 000 000,00
+													tr
+														td(style="width:22%") ж/д вагон Хоппер
+														td(style="width:17.5%") 
+															.text-one-line ООО «Название длинное длинное длинное
+														td(style="width:13.67%") 03.11.2023
+														td(style="width:18.5%") 50 000 000,00
+														td(style="width:11.67%") 1 ед.
+														td(style="width:16.67%") 50 000 000,00
+													tr
+														td(style="width:22%") ж/д вагон Хоппер
+														td(style="width:17.5%") ООО «Название»
+														td(style="width:13.67%") 03.11.2023
+														td(style="width:18.5%") 50 000 000,00
+														td(style="width:11.67%") 1 ед.
+														td(style="width:16.67%") 50 000 000,00
+													tr
+														td(style="width:22%") ж/д вагон Хоппер
+														td(style="width:17.5%") ООО «Название»
+														td(style="width:13.67%") 03.11.2023
+														td(style="width:18.5%") 50 000 000,00
+														td(style="width:11.67%") 1 ед.
+														td(style="width:16.67%") 50 000 000,00
+													tr
+														td(style="width:22%")
+														td(style="width:17.5%")
+														td(style="width:13.67%")
+														td(style="width:18.5%")
+														td(style="width:11.67%").td-total-selected
+															.total-selected итого														
+														td(style="width:16.67%").td-total-selected
+															.total-selected 70 850 000,00
+											td(style="width:7%").text-center
+												.progress.progress--docs
+													.progress-bar(data-progress="75%")
+													.progress__value-text 75%
+											td(style="width:13.45%")
+												.d-flex.align-items-center.application-nav
+													.status.status--draft Черновик
+													.tooltip
+														a.btn.tooltip__btn
+															+sprite("icon-more-alt")
+														ul.tooltip__menu
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Просмотреть
+															li.tooltip__menu-item
+																a(href="#modal-continue-filling" data-modal).tooltip__menu-item-link Продолжить заполнение
+															li.tooltip__menu-item.tooltip__menu-item--cancel
+																a(href="#modal-remove-draft" data-modal).tooltip__menu-item-link Удалить черновик
+
+								ul.pagination
+									li.disabled
+										a(href="#")
+											+sprite("icon-chevron-left")
+									li.current
+										a(href="#") 1
+									li
+										a(href="#") 2
+									li
+										a(href="#") ...
+									li
+										a(href="#") 9
+									li
+										a(href="#") 10
+									li
+										a(href="#")
+											+sprite("icon-chevron-right")
 
 					footer.footer
 						.container

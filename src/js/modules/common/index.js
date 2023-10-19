@@ -1,6 +1,7 @@
-import { initializeFancybox } from './fancybox.js';
 import { initializeSelect } from './select.js';
 import { initializeTooltip } from './tooltip.js';
 import { progressCircle } from './progressCircle.js';
+import { tabs } from './tabs.js';
+import { modalInit } from './modal.js';
 
-export { initializeFancybox, initializeSelect, initializeTooltip, progressCircle };
+export { initializeSelect, initializeTooltip, progressCircle, tabs, modalInit };

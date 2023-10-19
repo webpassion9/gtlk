@@ -1,6 +1,7 @@
 .tooltip {
 	position: relative;
 	display: inline-block;
+	line-height: 0;
 	&__menu {
 		position: absolute;
 		right: 15px;
@@ -26,11 +27,16 @@
 				padding: 10px 15px;
 				color: #0085FF;
 				font-size: 14px;
+				line-height: 20px;
 				background: var(--color-white);
 				cursor: pointer;
 				transition: .25s;
 				&:hover {
 					background: #F5F5F5;
+				}
+
+				&--color-black {
+					color: rgba(var(--color-black-base));
 				}
 			}
 			&:not(:last-child) {
@@ -52,6 +58,23 @@
 		height: 48px;
 		&--vertical {
 			transform: rotate(90deg);
+		}
+		&--notifications {
+			width: 20px;
+			height: 20px;
+			.icon-more-alt {
+				fill: rgba(0,0,0,.38);
+				height: 3px;
+				width: 12px;
+			}
+		}
+	}
+
+	&--notification {
+		.tooltip {
+			&__menu {
+				right: 0px;
+			}
 		}
 	}
 }

@@ -1,7 +1,7 @@
 .total-sum {
 	&__text {
 		font-weight: 700;
-		color: rgba(0, 0, 0, 0.8);
+		color: rgba(var(--color-black-base));
 	}
 	&__value {
 		color: #0085FF;

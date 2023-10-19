@@ -2,7 +2,7 @@
 	width: 100%;
 	font-size: 14px;
 	line-height: 17px;
-	color: rgba(0, 0, 0, 0.8);
+	color: rgba(var(--color-black-base));
 	border-collapse: collapse;
 	table-layout: fixed;
 	tbody {

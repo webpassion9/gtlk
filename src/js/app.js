@@ -1,8 +1,8 @@
 import * as flsFunctions from "./modules/functions.js";
 // import Swiper, { Navigation, Pagination } from 'swiper';
 // import 'swiper/css/bundle';
-import { Fancybox } from "@fancyapps/ui";
-import "@fancyapps/ui/dist/fancybox.css";
+// import { Fancybox } from "@fancyapps/ui";
+// import "@fancyapps/ui/dist/fancybox.css";
 import PerfectScrollbar from 'perfect-scrollbar';
 
 flsFunctions.isWebp();
@@ -27,10 +27,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //
 
-import { initializeSelect, initializeTooltip } from './modules/common/index.js';
+import { initializeSelect, initializeTooltip, modalInit, tabs } from './modules/common/index.js';
 
 initializeSelect();
 initializeTooltip();
+tabs();
+modalInit();
 
 //
 
@@ -53,28 +55,46 @@ docsToggle();
 
 //
 
-const tableWrapper = document.querySelector('.table-wrapper');
-
-if (tableWrapper) {
+document.querySelectorAll('.table-wrapper').forEach(tableWrapper => {
   const ps = new PerfectScrollbar(tableWrapper, {});
   ps.update();
-}
+});
 
-const popupNotificationsList = document.querySelector('.popup-notifications__scroll-wrapper');
-
-if (popupNotificationsList) {
+document.querySelectorAll('.popup-notifications__scroll-wrapper').forEach(popupNotificationsList => {
   const psPopup = new PerfectScrollbar(popupNotificationsList, {});
   psPopup.update();
-}
+});
+
+document.querySelectorAll('.select__list').forEach(selectList => {
+  const psSelect = new PerfectScrollbar(selectList, {});
+  psSelect.update();
+});
+
 
 //
 
-import { targetPopup } from './modules/header/index.js';
+import { targetPopup, headerSearch } from './modules/header/index.js';
 
 targetPopup();
+headerSearch();
 
 //
 
 import { checkboxCheckAll } from './modules/event-log/index.js';
 
 checkboxCheckAll();
+
+//
+
+import { searchClear } from './modules/notifications/index.js';
+
+searchClear();
+
+//
+
+import { faq, lengthRequire, checkFilling, uploadFile } from './modules/help/index.js';
+
+faq();
+lengthRequire();
+checkFilling();
+uploadFile();

@@ -17,7 +17,7 @@
 	}
 
 	&-submit {
-		background: #0060CC;
+		background: var(--color-blue2);
 		border-radius: 10px;
 		font-weight: 700;
 		font-family: $fontThird;
@@ -211,7 +211,7 @@
 	}
 
 	&-app {
-		background: #0060CC;
+		background: var(--color-blue2);
 		border-radius: 8px;
 		font-weight: 700;
 		font-size: 18px;
@@ -224,6 +224,14 @@
 
 		&:hover {
 			background: #0054b4;
+		}
+
+		&--size-large {
+			height: 66px;
+			font-weight: 700;
+			font-size: 22px;
+			line-height: 150%;
+			color: #F2F2F2;
 		}
 	}
 
@@ -240,6 +248,16 @@
 			background: #0085FF;
 			color: var(--color-white);
 		}
+
+		&--header {
+			width: auto;
+			min-width: 85px;
+			height: 28px;
+		}
+
+		&--height-medium {
+			height: 36px;
+		}
 	}
 
 	&-details {
@@ -255,9 +273,23 @@
 		}
 
 		&--theme-light-blue {
-			background: #0060CC;
+			background: var(--color-blue2);
 			&:hover {
 				background: #0450a8;
+			}
+		}
+		&--theme-outline-white {
+			background: var(--color-white);
+			color: rgba(var(--color-black-base));
+			&:hover {
+				background: #E8E8E8;
+			}
+		}
+		&--theme-gray {
+			background: #EAEDFF;
+			color: rgba(var(--color-black-base));
+			&:hover {
+				background: #D0D6F8;
 			}
 		}
 	}
@@ -265,7 +297,7 @@
 	&-save {
 		padding: 5px 24px;
 		height: 48px;
-		background: #0060CC;
+		background: var(--color-blue2);
 		border-radius: 8px;
 		font-weight: 700;
 		font-size: 16px;

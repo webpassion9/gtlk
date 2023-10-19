@@ -86,7 +86,7 @@
 .icon-chat_stroke {
 	width: 21px;
 	height: 20px;
-	fill: rgba(0,0,0,.8);
+	fill: rgba(var(--color-black-base));
 }
 
 .icon-more-alt_vertical {
@@ -165,7 +165,7 @@
 	width: 24px;
 	height: 24px;
 	fill: none;
-	stroke: rgba(0,0,0,.8);
+	stroke: rgba(var(--color-black-base));
 }
 
 .icon-management {
@@ -197,4 +197,34 @@
 .icon-calendar {
 	width: 24px;
 	height: 24px;
+}
+
+.icon-edit {
+	width: 24px;
+	height: 24px;
+}
+
+.icon-list {
+	width: 20px;
+	height: 18px;
+}
+
+.icon-org {
+	width: 18px;
+	height: 18px;
+}
+
+.icon-close-circle-outline {
+	width: 24px;
+	height: 24px;
+}
+
+.icon-circle-false {
+	width: 16px;
+	height: 16px;
+}
+
+.icon-circle-true {
+	width: 16px;
+	height: 16px;
 }

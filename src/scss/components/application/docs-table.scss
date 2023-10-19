@@ -2,7 +2,7 @@
 	width: 100%;
 	font-size: 14px;
 	line-height: 17px;
-	color: rgba(0, 0, 0, 0.8);
+	color: rgba(var(--color-black-base));
 	border-top: 1px solid #CECECE;
 	border-collapse: collapse;
 	max-width: 1660px;
@@ -39,7 +39,7 @@
 			font-size: 15px;
 			font-weight: 700;
 			line-height: 20px;
-			color: rgba(0, 0, 0, 0.8);
+			color: rgba(var(--color-black-base));
 			// border-top: 2px solid #A2A2A2;
 			padding-top: 20px;
 		}

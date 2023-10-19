@@ -9,6 +9,8 @@
 		flex-grow: 1;
 	}
 	&__side {
+		float: right;
+		order: 2;
 		margin-left: 115px;
 		width: 413px;
 		flex-shrink: 0;
@@ -22,16 +24,32 @@
 			&:not(:last-child) {
 				border-bottom: 1px solid #BEBEBE;
 			}
-			&:last-child {
-				padding-bottom: 0;
-			}
 
 			&--first {
 				padding-top: 70px;
 				padding-bottom: 65px;
 			}
 			&--actions {
-				min-height: 460px;
+				// min-height: 460px;
+			}
+		}
+	}
+}
+
+body {
+	&.tab-docs-active {
+		.application-content__side-section:not(.application-content__side-section--first) {
+			display: none;
+		}
+		.application-content {
+			display: block;
+			&__side {
+				float: right;
+			}
+			&::after {
+				content: "";
+				clear: both;
+				display: table;
 			}
 		}
 	}

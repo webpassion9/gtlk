@@ -38,8 +38,13 @@
 			}
 			&-icon {
 				flex-shrink: 0;
+				width: 24px;
+				height: 24px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
 				svg {
-					fill: #0060CC;
+					fill: var(--color-blue2);
 				}
 			}
 		}

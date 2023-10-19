@@ -113,12 +113,6 @@ body.preload {
 	float: right;
 }
 
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
 .two-lines-overflow {
   overflow: hidden;
   text-overflow: ellipsis;
