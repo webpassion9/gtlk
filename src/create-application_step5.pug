@@ -46,10 +46,14 @@ html(lang="ru")
 										.sidebar__nav-item-text Справка
 						.sidebar__section
 							.manager
-								.manager__ava
-									img(src="img/avatar-manager.png", alt="")
-								.manager__name Менеджер Иванова А.А.
-								a(href="#").btn.manager__btn Связаться
+								.manager__main
+									.manager__ava
+										img(src="img/avatar-manager.png", alt="")
+									.manager__name Менеджер Иванова А.А.
+									a(href="#").btn.manager__btn Связаться
+								.manager__contacts
+									a(href="#").btn.btn-contacts
+										img(src="img/icon-viber.svg" width="32" height="32" alt="")
 						.sidebar__section
 							a(href="#").support
 								.support__icon
@@ -62,28 +66,42 @@ html(lang="ru")
 							.form-application__top
 								.go-back.go-back--form-application
 									a(href="#") < Назад в мои заявки
-								.heading-base.heading-base--large Новая заявка
+								.heading-base.heading-base--large.form-application__top-heading.is-lg-visible Новая заявка
 							.form-application__steps
 								ul.form-steps
 									li.form-steps__item.active
-										.form-steps__item-text Заявитель
+										.form-steps__item-text 
+											span.is-lg-hidden Шаг 1: 
+											|  Заявитель
 									li.form-steps__item.active
-										.form-steps__item-text Контактное лицо по сделке
+										.form-steps__item-text 
+											span.is-lg-hidden Шаг 2: 
+											|  Контактное лицо по сделке
 									li.form-steps__item.active
-										.form-steps__item-text Руководитель организации
+										.form-steps__item-text 
+											span.is-lg-hidden Шаг 3: 
+											|  Руководитель организации
 									li.form-steps__item.active
-										.form-steps__item-text Предмет лизинга/аренды
-									li.form-steps__item.active
-										.form-steps__item-text Условия лизинга/аренды
+										.form-steps__item-text 
+											span.is-lg-hidden Шаг 4: 
+											|  Предмет лизинга/аренды
+									li.form-steps__item.active.current
+										.form-steps__item-text 
+											span.is-lg-hidden Шаг 5: 
+											|  Условия лизинга/аренды
 									li.form-steps__item
-										.form-steps__item-text Дополнительные условия
+										.form-steps__item-text 
+											span.is-lg-hidden Шаг 6: 
+											|  Дополнительные условия
 									li.form-steps__item
-										.form-steps__item-text Загрузить документы
+										.form-steps__item-text 
+											span.is-lg-hidden Шаг 7: 
+											|  Загрузить документы
 							
 							.form-application__main.form-application__main--step4
-								.form-application__row-items.form-application__row-items--gap-medium
+								.form-application__row-items.form-application__row-items--create-app.form-application__row-items--gap-medium
 									.form-application__row
-										.heading-base.heading-base--medium Порядок и сроки оплаты поставщику
+										.heading-base.heading-base--medium.form-application__section-heading Порядок и сроки оплаты поставщику
 									.form-application__row
 										.form-application__row-heading.form-application__row-heading--width-small
 											.field-heading Наименование платежа
@@ -123,9 +141,9 @@ html(lang="ru")
 											.field-heading Порядок и срок оплаты
 										.form-application__row-content.form-application__row-content--width-medium
 											input(type="text" placeholder="Укажите значение").input-base
-								.form-application__row-items.form-application__row-items--gap-medium
+								.form-application__row-items.form-application__row-items--create-app.form-application__row-items--gap-medium
 									.form-application__row
-										.heading-base.heading-base--medium Планируемые условия договора лизинга
+										.heading-base.heading-base--medium.form-application__section-heading Планируемые условия договора лизинга
 									.form-application__row
 										.form-application__row-heading.form-application__row-heading--width-small
 											.field-heading График платежей
@@ -184,17 +202,17 @@ html(lang="ru")
 														.select__list-item-main 2
 													li.select__list-item
 														.select__list-item-main 3
-									.form-application__row
+									.form-application__row.form-application__row--switcher
 										.form-application__row-heading.form-application__row-heading--width-small
 											.field-heading Госпрограмма
 												span.field-heading__require *
 										.form-application__row-content.form-application__row-content--width-medium
 											label.switcher
-												input(type="checkbox")
+												input(type="checkbox" checked)
 												.switcher__trigger
 												.switcher__back
 									.form-application__row
-										.form-application__nav
+										.form-application__nav.form-application__nav--create-app
 											a(href="#").btn.btn-nav.btn-nav--back Назад
 											a(href="#").btn.btn-nav.btn-nav--continue Продолжить
 											a(href="#").btn.btn-nav.btn-nav--save Сохранить

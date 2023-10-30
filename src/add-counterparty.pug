@@ -59,19 +59,18 @@ html(lang="ru")
 				main.main
 					.content
 						.content-inner
-							.form-application__top
-								.go-back.go-back--form-application
-									a(href="#") < Назад
-								.heading-base.heading-base--large Добавление контрагента (юридическое лицо)
+							.go-back.go-back--form-application
+								a(href="#") < Назад
+							.heading-base.heading-base--large Добавление контрагента (юридическое лицо)
 							
 							.wrapper-add-counterparty
-								.form-application__main
-									.form-application__row-items
-										.form-application__row
-											.form-application__row-heading.form-application__row-heading--width-normal
+								.form-counterparty
+									.form-counterparty__row-items
+										.form-counterparty__row
+											.form-counterparty__row-heading.form-counterparty__row-heading--width-normal
 												.field-heading ИНН
 													span.field-heading__require *
-											.form-application__row-content.form-application__row-content--width-medium
+											.form-counterparty__row-content.form-counterparty__row-content--width-medium
 												.select
 													input(type="text" placeholder="Поиск по названию, ИНН").input-base.input-base--select.select__input
 													.select__icon
@@ -89,100 +88,103 @@ html(lang="ru")
 														li.select__list-item
 															.select__list-item-main МУП "ПАТП №2332"
 															.select__list-item-details ИНН 771537455874
-										.form-application__row
-											.form-application__row-heading.form-application__row-heading--width-normal
+														li.select__list-item
+															.select__list-item-main МУП "ПАТП №2332"
+															.select__list-item-details ИНН 771537455874
+										.form-counterparty__row
+											.form-counterparty__row-heading.form-counterparty__row-heading--width-normal
 												.field-heading Краткое наименование организации
 													span.field-heading__require *
-											.form-application__row-content.form-application__row-content--width-medium
+											.form-counterparty__row-content.form-counterparty__row-content--width-medium
 												input(type="text" placeholder="Введите краткое наименование организации").input-base.is-error
 												.input-error-text Это обязательное поле для заполнения
-										.form-application__row
-											.form-application__row-heading.form-application__row-heading--width-normal
+										.form-counterparty__row
+											.form-counterparty__row-heading.form-counterparty__row-heading--width-normal
 												.field-heading Полное наименование организации
 													span.field-heading__require *
-											.form-application__row-content.form-application__row-content--width-medium
+											.form-counterparty__row-content.form-counterparty__row-content--width-medium
 												textarea.input-base.input-base--textarea
-										.form-application__row
-											.form-application__row-heading.form-application__row-heading--width-normal
+										.form-counterparty__row
+											.form-counterparty__row-heading.form-counterparty__row-heading--width-normal
 												.field-heading Регион
-											.form-application__row-content.form-application__row-content--width-medium
+											.form-counterparty__row-content.form-counterparty__row-content--width-medium
 												input(type="text").input-base
-										.form-application__row
-											.form-application__row-heading.form-application__row-heading--width-normal
+										.form-counterparty__row
+											.form-counterparty__row-heading.form-counterparty__row-heading--width-normal
 												.field-heading Адрес
-											.form-application__row-content.form-application__row-content--width-medium
+											.form-counterparty__row-content.form-counterparty__row-content--width-medium
 												textarea.input-base.input-base--textarea
-										.form-application__row
-											.form-application__row-heading.form-application__row-heading--width-normal
+										.form-counterparty__row
+											.form-counterparty__row-heading.form-counterparty__row-heading--width-normal
 												.field-heading КПП
-											.form-application__row-content.form-application__row-content--width-medium
+											.form-counterparty__row-content.form-counterparty__row-content--width-medium
 												input(type="text" placeholder="test").input-base
-										.form-application__row
-											.form-application__row-heading.form-application__row-heading--width-normal
+										.form-counterparty__row
+											.form-counterparty__row-heading.form-counterparty__row-heading--width-normal
 												.field-heading ОКПО
-											.form-application__row-content.form-application__row-content--width-medium
+											.form-counterparty__row-content.form-counterparty__row-content--width-medium
 												input(type="text" placeholder="test").input-base
-										.form-application__row
-											.form-application__row-heading.form-application__row-heading--width-normal
+										.form-counterparty__row
+											.form-counterparty__row-heading.form-counterparty__row-heading--width-normal
 												.field-heading Код ОКОПФ
-											.form-application__row-content.form-application__row-content--width-medium
+											.form-counterparty__row-content.form-counterparty__row-content--width-medium
 												input(type="text").input-base
-										.form-application__row
-											.form-application__row-heading.form-application__row-heading--width-normal
+										.form-counterparty__row
+											.form-counterparty__row-heading.form-counterparty__row-heading--width-normal
 												.field-heading ОКВЭД
-											.form-application__row-content.form-application__row-content--width-medium
+											.form-counterparty__row-content.form-counterparty__row-content--width-medium
 												input(type="text").input-base
-										.form-application__row
-											.form-application__row-heading.form-application__row-heading--width-normal
+										.form-counterparty__row
+											.form-counterparty__row-heading.form-counterparty__row-heading--width-normal
 												.field-heading ОКТМО
-											.form-application__row-content.form-application__row-content--width-medium
+											.form-counterparty__row-content.form-counterparty__row-content--width-medium
 												input(type="text").input-base
-										.form-application__row
-											.form-application__row-heading.form-application__row-heading--width-normal
+										.form-counterparty__row
+											.form-counterparty__row-heading.form-counterparty__row-heading--width-normal
 												.field-heading Телефон
-											.form-application__row-content.form-application__row-content--width-medium
+											.form-counterparty__row-content.form-counterparty__row-content--width-medium
 												input(type="text").input-base
-										.form-application__row
-											.form-application__row-heading.form-application__row-heading--width-normal
+										.form-counterparty__row
+											.form-counterparty__row-heading.form-counterparty__row-heading--width-normal
 												.field-heading E-mail организации
 													span.field-heading__require *
-											.form-application__row-content.form-application__row-content--width-medium
+											.form-counterparty__row-content.form-counterparty__row-content--width-medium
 												input(type="text").input-base
-										.form-application__row
-											.form-application__row-heading.form-application__row-heading--width-normal
+										.form-counterparty__row
+											.form-counterparty__row-heading.form-counterparty__row-heading--width-normal
 												.field-heading Код синхронизации
-											.form-application__row-content.form-application__row-content--width-medium
+											.form-counterparty__row-content.form-counterparty__row-content--width-medium
 												input(type="text").input-base
-										.form-application__row
-											.form-application__row-heading.form-application__row-heading--width-normal
+										.form-counterparty__row
+											.form-counterparty__row-heading.form-counterparty__row-heading--width-normal
 												.field-heading ФИО КМ
 													span.field-heading__require *
-											.form-application__row-content.form-application__row-content--width-medium
+											.form-counterparty__row-content.form-counterparty__row-content--width-medium
 												input(type="text").input-base
-										.form-application__row
-											.form-application__row-heading.form-application__row-heading--width-normal
+										.form-counterparty__row
+											.form-counterparty__row-heading.form-counterparty__row-heading--width-normal
 												.field-heading E-mail для обращений
 													span.field-heading__require *
-											.form-application__row-content.form-application__row-content--width-medium
+											.form-counterparty__row-content.form-counterparty__row-content--width-medium
 												input(type="text").input-base
-										.form-application__row
-											.form-application__row-heading.form-application__row-heading--width-normal
+										.form-counterparty__row
+											.form-counterparty__row-heading.form-counterparty__row-heading--width-normal
 												.field-heading Внутренний номер КМ
 													span.field-heading__require *
-											.form-application__row-content.form-application__row-content--width-medium
+											.form-counterparty__row-content.form-counterparty__row-content--width-medium
 												input(type="text").input-base
-										.form-application__row
-											.form-application__row-heading.form-application__row-heading--width-normal
+										.form-counterparty__row
+											.form-counterparty__row-heading.form-counterparty__row-heading--width-normal
 												.field-heading Мобильный номер КМ
-											.form-application__row-content.form-application__row-content--width-medium
+											.form-counterparty__row-content.form-counterparty__row-content--width-medium
 												input(type="text").input-base
-										.form-application__row
-											.form-application__row-heading.form-application__row-heading--width-normal
+										.form-counterparty__row
+											.form-counterparty__row-heading.form-counterparty__row-heading--width-normal
 												.field-heading Код синхронизации КМ
-											.form-application__row-content.form-application__row-content--width-medium
+											.form-counterparty__row-content.form-counterparty__row-content--width-medium
 												input(type="text").input-base
-										.form-application__row
-											.form-application__nav
+										.form-counterparty__row
+											.form-counterparty__nav
 												a(href="#").btn.btn-save.btn--fullwidth Сохранить
 
 

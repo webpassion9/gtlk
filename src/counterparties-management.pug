@@ -58,8 +58,8 @@ html(lang="ru")
 				main.main
 					.content
 						.content-inner
-							.d-flex.justify-content-between.align-items-center
-								.heading-base Все контрагенты
+							.counterparties-top
+								.heading-base.heading-base--normal Все контрагенты
 								div
 									a(href="#").btn.btn-base Добавить контрагента
 							
@@ -68,7 +68,16 @@ html(lang="ru")
 									input(type="text" placeholder="Поиск").application-form__item-input
 									.application-form__item-icon
 										+sprite("icon-loop")
-							.table-wrapper
+							
+							.application-info.application-info--base.application-info--page-counterparties.application-info--width-large.is-lg-hidden
+								.application-info__main
+									.application-info__icon
+										img(src="img/icon-swipe.svg" width="28" height="28" alt="")
+									.application-info__text
+										.application-info__text-heading Используйте свайп пальцем для просмотра таблицы
+									.application-info__close
+										+sprite("icon-close")
+							.scroll-wrapper
 								table.table-counterparties
 									thead
 										tr

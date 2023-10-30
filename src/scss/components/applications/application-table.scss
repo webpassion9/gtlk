@@ -1,12 +1,17 @@
 .application-table {
-	width: 100%;
-	font-size: 14px;
-	line-height: 17px;
-	color: rgba(var(--color-black-base));
+	color: var(--color-black-base);
 	border-top: 1px solid #E6E6E6;
 	border-collapse: collapse;
 	table-layout: fixed;
+	min-width: 1560px;
+	max-width: 1710px;
 	// max-width: 1485px;
+	font-size: 11px;
+	line-height: 14px;
+	@media (min-width: $lg) {
+		font-size: 14px;
+		line-height: 17px;
+	}
 	tbody {
 		tr {
 			transition: .25s;
@@ -20,6 +25,12 @@
 				}
 				.application-table td:first-child {
 					border: 0 !important;
+				}
+			}
+			&:last-child, &:nth-last-child(2):not(:first-child) {
+				.tooltip__menu {
+					top: auto;
+					bottom: 100%;
 				}
 			}
 		}
@@ -84,9 +95,9 @@
 
 }
 
-.application-nav {
-	gap: 15px;
-}
+// .application-nav {
+// 	gap: 15px;
+// }
 
 .total-selected {
 	background: #F4F4F4;

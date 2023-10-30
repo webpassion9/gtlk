@@ -55,8 +55,9 @@
 		}
 		&-tooltip {
 			position: absolute;
-			left: calc(100% + 10px);
-			bottom: 5px;
+			right: 0;
+			top: 30px;
+			z-index: 10;
 			flex-direction: row;
 			padding: 16px;
 			height: 49px;
@@ -71,6 +72,13 @@
 			visibility: hidden;
 
 			transition: .25s;
+			@media (min-width: $lg) {
+				right: auto;
+				left: calc(100% + 10px);
+				bottom: 5px;
+				top: auto;
+				
+			}
 		}
 	}
 }

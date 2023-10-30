@@ -13,9 +13,18 @@ export function targetPopup() {
 				if (popup) {
 					if (openedPopup) {
 						openedPopup.classList.remove('opened');
+						
+						buttons.forEach(function (btn) {
+							btn.classList.remove('active');
+						});
 					}
 					openedPopup = popup;
 					popup.classList.add('opened');
+					
+					buttons.forEach(function (btn) {
+						btn.classList.remove('active');
+					});
+					button.classList.add('active');
 				}
 			});
 		});
@@ -27,6 +36,10 @@ export function targetPopup() {
 				if (popup) {
 					popup.classList.remove('opened');
 					openedPopup = null;
+					
+					buttons.forEach(function (btn) {
+						btn.classList.remove('active');
+					});
 				}
 			});
 		});
@@ -37,10 +50,11 @@ export function targetPopup() {
 			if (isOutsidePopup && openedPopup) {
 				openedPopup.classList.remove('opened');
 				openedPopup = null;
+				
+				buttons.forEach(function (btn) {
+					btn.classList.remove('active');
+				});
 			}
 		});
 	});
-	
-	
 }
-

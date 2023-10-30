@@ -1,8 +1,6 @@
 import svgSprite from "gulp-svg-sprite";
 import cheerio from "gulp-cheerio";
 
-const excludedFileName = 'icon-doc.svg';
-
 export const svgSprive = () => {
     return app.gulp.src(`${app.path.src.svgicons}`,{})
         .pipe(app.plugins.plumber(
@@ -22,7 +20,7 @@ export const svgSprive = () => {
         }))
         .pipe(cheerio({
             run: function ($) {
-              $('svg[id]:not(#icon-chat)').each(function () {
+              $('svg[id]:not(#icon-chat,#icon-viber)').each(function () {
                 $(this).removeAttr('fill');
                 $(this).find('[fill]').removeAttr('fill');
                 $(this).find('[stroke]').removeAttr('stroke');

@@ -1,0 +1,18 @@
+.header {
+	background: var(--color-white);
+	@media (min-width: $lg) {
+		border-bottom: 1px solid #EEEEEE;
+	}
+	&>.container {
+		max-width: none;
+		gap: 15px;
+		display: flex;
+		justify-content: space-between;
+		padding: 5px 16px 5px;
+		align-items: center;
+		@media (min-width: $lg) {
+			align-items: flex-start;
+			padding: 15px 45px 7px;
+		}
+	}
+}

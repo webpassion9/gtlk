@@ -1,11 +1,21 @@
 .table-counterparties {
 	width: 100%;
-	font-size: 14px;
-	line-height: 17px;
-	color: rgba(var(--color-black-base));
+	color: var(--color-black-base);
 	border-top: 1px solid #E6E6E6;
 	border-collapse: collapse;
 	table-layout: fixed;
+	font-size: 11px;
+	line-height: 14px;
+	@media (max-width: $lg - 1px) {
+		.fs-16 {
+			font-size: 11px;
+			line-height: 14px;
+		}
+	}
+	@media (min-width: $lg) {
+		font-size: 14px;
+		line-height: 17px;
+	}
 	tbody {
 		tr {
 			transition: .25s;
@@ -42,10 +52,13 @@
 	}
 }
 
-.table-wrapper {
+.scroll-wrapper {
 	width: 100%;
 	overflow: hidden;
 	position: relative;
+	@media (max-width: $lg - 1px) {
+		padding-bottom: 14px;
+	}
 
 	.ps__rail-x {
 		position: absolute;
@@ -53,6 +66,12 @@
 		bottom: 0;
 		height: 4px;
 		width: 100%;
+		@media (max-width: $lg - 1px) {
+			height: 15px;
+			border-top: 1px solid #D6D6D6;
+			border-bottom: 1px solid #D6D6D6;
+			
+		}
 	}
 	
 	.ps__rail-y {
@@ -64,6 +83,12 @@
 		height: 4px;
 		border-radius: 12px;
 		position: absolute;
+		@media (max-width: $lg - 1px) {
+			height: 9px;
+			border-radius: 4px;
+			background: #D7F1FD;
+			top: 2px;
+		}
 	}
 
 }

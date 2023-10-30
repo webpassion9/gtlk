@@ -52,11 +52,11 @@ export function tabs() {
         tabsList.forEach(item => item.classList.remove('current'));
         tab.classList.add('current');
         
-        if (tab.querySelector('a').hasAttribute('data-tab-docs')) {
-          document.body.classList.add('tab-docs-active');
-        } else {
-          document.body.classList.remove('tab-docs-active');
-        }
+        // if (tab.querySelector('a').hasAttribute('data-tab-docs')) {
+        //   document.body.classList.add('tab-docs-active');
+        // } else {
+        //   document.body.classList.remove('tab-docs-active');
+        // }
         
         if (tabsLine) {
           tabsLine.style.width = tab.offsetWidth + 'px';

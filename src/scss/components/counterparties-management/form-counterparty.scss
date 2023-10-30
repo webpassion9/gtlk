@@ -1,0 +1,50 @@
+.form-counterparty {
+	padding-top: 20px;
+	@media (min-width: $lg) {
+		padding-top: 50px;
+	}
+	&__row-items {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		@media (min-width: $lg) {
+			gap: 38px;
+		}
+		&:not(:first-child) {
+			padding-top: 33px;
+		}
+	}
+	&__row {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		min-height: 34px;
+		@media (min-width: $lg) {
+			flex-direction: row;
+		}
+		&.hidden {
+			display: none;
+		}
+		&-heading {
+			width: 100%;
+			padding-bottom: 10px;
+			@media (min-width: $lg) {
+				width: 240px;
+				padding-right: 10px;
+				padding-bottom: 0;
+			}
+		}
+		&-content {
+			width: 100%;
+			flex-grow: 1;
+			position: relative;
+			@media (min-width: $lg) {
+				width: auto;
+			}
+		}
+	}
+	&__nav {
+		width: 100%;
+	}
+
+}

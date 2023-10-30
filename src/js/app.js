@@ -49,13 +49,15 @@ progressCircle();
 
 //
 
-import { docsToggle } from './modules/application/index.js';
+import { docsToggle, statusToggle, sectionToggle } from './modules/application/index.js';
 
 docsToggle();
+statusToggle();
+sectionToggle();
 
 //
 
-document.querySelectorAll('.table-wrapper').forEach(tableWrapper => {
+document.querySelectorAll('.scroll-wrapper').forEach(tableWrapper => {
   const ps = new PerfectScrollbar(tableWrapper, {});
   ps.update();
 });

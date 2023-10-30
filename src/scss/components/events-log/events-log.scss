@@ -4,6 +4,9 @@
 }
 
 .events-log-bar {
-	padding-top: 10px;
-	padding-bottom: 40px;
+	padding-bottom: 30px;
+	@media (min-width: $md) {
+		padding-top: 10px;
+		padding-bottom: 40px;
+	}
 }

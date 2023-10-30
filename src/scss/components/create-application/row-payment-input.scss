@@ -1,9 +1,16 @@
 
 .row-payment-input {
 	display: flex;
-	gap: 15px;
+	gap: 8px;
+	flex-direction: column;
+	@media (min-width: $lg) {
+		gap: 15px;
+		flex-direction: row;
+	}
 	&__col-select {
-		width: 205px;
+		@media (min-width: $lg) {
+			width: 205px;
+		}
 	}
 	&__col-input {
 		flex-grow: 1;

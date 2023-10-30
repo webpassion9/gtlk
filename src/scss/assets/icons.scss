@@ -86,7 +86,7 @@
 .icon-chat_stroke {
 	width: 21px;
 	height: 20px;
-	fill: rgba(var(--color-black-base));
+	fill: var(--color-black-base);
 }
 
 .icon-more-alt_vertical {
@@ -165,7 +165,7 @@
 	width: 24px;
 	height: 24px;
 	fill: none;
-	stroke: rgba(var(--color-black-base));
+	stroke: var(--color-black-base);
 }
 
 .icon-management {
@@ -227,4 +227,9 @@
 .icon-circle-true {
 	width: 16px;
 	height: 16px;
+}
+
+.icon-swipe {
+	width: 30px;
+	height: 30px;
 }

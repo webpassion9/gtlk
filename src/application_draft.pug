@@ -45,12 +45,17 @@ html(lang="ru")
 										.sidebar__nav-item-icon
 											+sprite("icon-book")
 										.sidebar__nav-item-text Справка
+											span.show-on-hover  по системе
 						.sidebar__section
 							.manager
-								.manager__ava
-									img(src="img/avatar-manager.png", alt="")
-								.manager__name Менеджер Иванова А.А.
-								a(href="#").btn.manager__btn Связаться
+								.manager__main
+									.manager__ava
+										img(src="img/avatar-manager.png", alt="")
+									.manager__name Менеджер Иванова А.А.
+									a(href="#").btn.manager__btn Связаться
+								.manager__contacts
+									a(href="#").btn.btn-contacts
+										img(src="img/icon-viber.svg" width="32" height="32" alt="")
 						.sidebar__section
 							a(href="#").support
 								.support__icon
@@ -60,34 +65,21 @@ html(lang="ru")
 				main.main
 					.content
 						.content-inner.application-content
-							.application-content__side
-								.application-content__side-section.application-content__side-section--first
-									.d-flex.justify-content-center
-										.application-status.application-status--draft Черновик
-									ul.application-steps
-										li.application-steps__item.current Черновик
-										li.application-steps__item Зарегистрирована
-										li.application-steps__item На рассмотрении
-										li.application-steps__item Завершена
-								.application-content__side-section.application-content__side-section--actions
-									.heading-base Действия
-									ul.application-action-links
-										li
-											a(href="#").link-base Продолжить заполнение заявки
 							.application-content__main
-								.go-back
-									a(href="#") < Назад в мои заявки
-								.application-top
-									.application-top__heading
-										.heading-base Заявка от 12.07.2023
-									div Заявка на лизинг транспортного средства
-								.application-info.application-info--base
-									.application-info__main
-										.application-info__icon
-											+sprite("icon-info")
-										.application-info__text
-											.application-info__text-heading Продолжите заполнение заявки
-									a(href="#").btn.application-info__btn Продолжите заполнение
+								.is-xl-visible
+									.go-back.is-lg-visible
+										a(href="#") < Назад в мои заявки
+									.application-top
+										.application-top__heading
+											.heading-base Заявка 123-ЗЛ-ОК от 12.07.2023
+										div Заявка на лизинг транспортного средства
+									.application-info.application-info--base
+										.application-info__main
+											.application-info__icon
+												+sprite("icon-info")
+											.application-info__text
+												.application-info__text-heading Продолжите заполнение заявки
+										a(href="#").btn.application-info__btn Продолжите заполнение
 								.application-main
 									.tabs.tabs--application
 										ul.tabs__list
@@ -102,129 +94,130 @@ html(lang="ru")
 									.tab-content.current#application-main
 										.application-main__section
 											.heading-base.heading-base--application Заявитель
-											table.details-table
+											table.details-table.details-table--application
 												tr
-													td Полное наименование организации
+													td(style="width:255px;") Полное наименование организации
 													td МУНИЦИПАЛЬНОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ Г.КАЗАНИ "ПАССАЖИРСКОЕ ABTOTPAHCПOPTHOE ПРЕДПРИЯТИЕ Хв2"
 												tr
-													td ИНН
+													td(style="width:255px;") ИНН
 													td 1660005127
 												tr
-													td КПП
+													td(style="width:255px;") КПП
 													td 166001001
 										.application-main__section
 											.heading-base.heading-base--application Предмет лизинга/аренды
-											table.details-table
+											table.details-table.details-table--application
 												tr
-													td(style="width: 51.5%") Вид имущества
+													td(style="width:255px;") Вид имущества
 													td Транспортное средство
 												tr
-													td(style="width: 51.5%") Ставка НДС
+													td(style="width:255px;") Ставка НДС
 													td 20%
 												tr
-													td(style="width: 51.5%") Предметы лизинга
+													td(style="width:255px;") Предметы лизинга
 													td
-											table.application-table
-												thead
-													tr
-														th Название предмета
-														th Поставщик
-														th Срок поставки
-														th Спецификация
-														th Стоимость единицы
-														th Количество
-														th Стоимость итоговая
-												tbody
-													tr
-														td ж/д вагон Хоппер
-														td ООО «РЖД»
-														td 120 дней
-														td Метан (КПГ)
-														td 1 000 000,00 ₽
-														td 20 ед.
-														td 20 000 000,00 ₽
-													tr
-														td ж/д вагон Хоппер
-														td ООО «РЖД»
-														td 120 дней
-														td Метан (КПГ)
-														td 1 000 000,00 ₽
-														td 20 ед.
-														td 20 000 000,00 ₽
-													tr
-														td ж/д вагон Хоппер
-														td ООО «РЖД»
-														td 120 дней
-														td Метан (КПГ)
-														td 1 000 000,00 ₽
-														td 20 ед.
-														td 20 000 000,00 ₽
-													tr
-														td ж/д вагон Хоппер
-														td ООО «РЖД»
-														td 120 дней
-														td Метан (КПГ)
-														td 1 000 000,00 ₽
-														td 20 ед.
-														td 20 000 000,00 ₽
-													tr
-														td
-														td
-														td
-														td
-														td
-														td итого
-														td 70 850 000,00 ₽
+											.scroll-wrapper
+												table.table-app-item
+													thead
+														tr
+															th Название предмета
+															th Поставщик
+															th Срок поставки
+															th Спецификация
+															th Стоимость единицы
+															th Количество
+															th Стоимость итоговая
+													tbody
+														tr
+															td ж/д вагон Хоппер
+															td ООО «РЖД»
+															td 120 дней
+															td Метан (КПГ)
+															td 1 000 000,00 ₽
+															td 20 ед.
+															td 20 000 000,00 ₽
+														tr
+															td ж/д вагон Хоппер
+															td ООО «РЖД»
+															td 120 дней
+															td Метан (КПГ)
+															td 1 000 000,00 ₽
+															td 20 ед.
+															td 20 000 000,00 ₽
+														tr
+															td ж/д вагон Хоппер
+															td ООО «РЖД»
+															td 120 дней
+															td Метан (КПГ)
+															td 1 000 000,00 ₽
+															td 20 ед.
+															td 20 000 000,00 ₽
+														tr
+															td ж/д вагон Хоппер
+															td ООО «РЖД»
+															td 120 дней
+															td Метан (КПГ)
+															td 1 000 000,00 ₽
+															td 20 ед.
+															td 20 000 000,00 ₽
+														tr
+															td
+															td
+															td
+															td
+															td
+															td.td-total-selected итого
+															td.td-total-selected 70 850 000,00 ₽
 											
 										.application-main__section
 											.heading-base.heading-base--application Условия лизинга/аренды
-											table.details-table
+											table.details-table.details-table--application
 												tbody
 													tr
 														th(colspan="2") Порядок и сроки оплаты поставщику
 													tr
-														td Наименование платежа
+														td(style="width:255px;") Наименование платежа
 														td Аванс
 													tr
-														td Размер аванса
+														td(style="width:255px;") Размер аванса
 														td 30%
 													tr
-														td Порядок и срок оплаты
+														td(style="width:255px;") Порядок и срок оплаты
 														td ...
-											table.details-table
+											table.details-table.details-table--application
 												tbody
 													tr
 														th(colspan="2") Планируемые условия договора лизинга
 													tr
-														td График платежей
+														td(style="width:255px;") График платежей
 														td Аннуитет (равными частями)
 													tr
-														td Срок лизинга, мес.
+														td(style="width:255px;") Срок лизинга, мес.
 														td 85
 													tr
-														td Авансовый платёж, %
+														td(style="width:255px;") Авансовый платёж, %
 														td 0
 													tr
-														td Страхователь
+														td(style="width:255px;") Страхователь
 														td Арендодатор
 													tr
-														td Балансодержатель
+														td(style="width:255px;") Балансодержатель
 														td Арендодатор
 													tr
-														td Госпрограмма
+														td(style="width:255px;") Госпрограмма
 														td Да
 										.application-main__section
 											.heading-base.heading-base--application Дополнительные условия
-											table.details-table
+											table.details-table.details-table--application
 												tbody
 													tr
-														td Монтажные работы
+														td(style="width:255px;") Монтажные работы
 														td —
 													tr
-														td Пусконаладочные работы
+														td(style="width:255px;") Пусконаладочные работы
 														td —
 													tr
-														td Другое
+														td(style="width:255px;") Другое
 														td —
 									
 									.tab-content#application-docs
@@ -247,516 +240,517 @@ html(lang="ru")
 													div
 														+sprite("icon-chevron-up")
 												.application-docs__content
-													table.docs-table
-														thead
-															tr
-																th(style="width: 48%") Название документа
-																th(style="width: 14%") Вид документа
-																th(style="width: 38%") Загрузка
-														tbody
-															tr
-																td
-																	.table-td-main
-																		label.checkbox-base
-																			input(type="checkbox" hidden)
-																			span.checkbox-base__icon
-																				+sprite("icon-check")
-																		| Анкета Лизингополучателя/Обеспечителя
-																td Анкета клиента
-																td
-																	.upload
-																		div Название документа.format
-																		.doc-info-bar
-																			.notice
-																				.notice__icon
+													.scroll-wrapper
+														table.docs-table
+															thead
+																tr
+																	th(style="width: 48%") Название документа
+																	th(style="width: 14%") Вид документа
+																	th(style="width: 38%") Загрузка
+															tbody
+																tr
+																	td
+																		.table-td-main
+																			label.checkbox-base
+																				input(type="checkbox" hidden)
+																				span.checkbox-base__icon
 																					+sprite("icon-check")
-																				.notice__text Загружен
-																			.notice
-																				.notice__icon
+																			| Анкета Лизингополучателя/Обеспечителя
+																	td Анкета клиента
+																	td
+																		.upload
+																			div Название документа.format
+																			.doc-info-bar
+																				.notice
+																					.notice__icon
+																						+sprite("icon-check")
+																					.notice__text Загружен
+																				.notice
+																					.notice__icon
+																						+sprite("icon-check")
+																					.notice__text Подписан
+																				label.btn.btn-action
+																					+sprite("icon-plus") 
+																					| Добавить файл
+																					input(type="file" hidden)
+																tr
+																	td
+																		.table-td-main
+																			label.checkbox-base
+																				input(type="checkbox" hidden)
+																				span.checkbox-base__icon
 																					+sprite("icon-check")
-																				.notice__text Подписан
-																			label.btn.btn-action
-																				+sprite("icon-plus") 
-																				| Добавить файл
-																				input(type="file" hidden)
-															tr
-																td
-																	.table-td-main
-																		label.checkbox-base
-																			input(type="checkbox" hidden)
-																			span.checkbox-base__icon
-																				+sprite("icon-check")
-																		| Устав в действующей редакции со всеми изменениями (с отметкой о регистрации в ФНС)
-																td Устав
-																td
-																	.upload.disabled
-																		div
-																			label.btn.btn-upload
-																				.btn-upload__icon
-																					+sprite("icon-attachment")
-																				| Загрузить с устройства
-																				input(type="file" hidden)
-																		.upload__info Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3
-															tr
-																td
-																	.table-td-main
-																		label.checkbox-base
-																			input(type="checkbox" hidden)
-																			span.checkbox-base__icon
-																				+sprite("icon-check")
-																		| Выписка из ЕГРЮЛ с установочными данными учредителей и руководителя, выданная не позднее 30 дней на дату ее предоставления в ПАО «ГТЛК» (удостоверенная нотариально либо оригинал)
-																td Выписка из ЕГРЮЛ
-																td
-																	.upload.disabled
-																		div
-																			label.btn.btn-upload
-																				.btn-upload__icon
-																					+sprite("icon-attachment")
-																				| Загрузить с устройства
-																				input(type="file" hidden)
-																		.upload__info Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3
-															tr
-																td
-																	.table-td-main
-																		label.checkbox-base
-																			input(type="checkbox" hidden)
-																			span.checkbox-base__icon
-																				+sprite("icon-check")
-																		| Свидетельство о внесении записи в ЕГРЮЛ о юридическом лице, либо Свидетельство о внесении в ЕГРЮЛ записи о юридическом лице, зарегистрированном до 01.07.2002 г.
-																td Свидетельство ОГРН
-																td
-																	.upload
-																		div Название документа.format
-																		.doc-info-bar
-																			.notice
-																				.notice__icon
+																			| Устав в действующей редакции со всеми изменениями (с отметкой о регистрации в ФНС)
+																	td Устав
+																	td
+																		.upload.disabled
+																			div
+																				label.btn.btn-upload
+																					.btn-upload__icon
+																						+sprite("icon-attachment")
+																					| Загрузить с устройства
+																					input(type="file" hidden)
+																			.upload__info Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3
+																tr
+																	td
+																		.table-td-main
+																			label.checkbox-base
+																				input(type="checkbox" hidden)
+																				span.checkbox-base__icon
 																					+sprite("icon-check")
-																				.notice__text Загружен
-																			label.btn.btn-action
-																				+sprite("icon-pencil") 
-																				| Подписать
-																				input(type="file" hidden)
-																			label.btn.btn-action
-																				+sprite("icon-plus") 
-																				| Добавить файл
-																				input(type="file" hidden)
-															tr
-																td
-																	.table-td-main
-																		label.checkbox-base
-																			input(type="checkbox" hidden)
-																			span.checkbox-base__icon
-																				+sprite("icon-check")
-																		| Выписка из ЕГРЮЛ с установочными данными учредителей и руководителя, выданная не позднее 30 дней на дату ее предоставления в ПАО «ГТЛК» (удостоверенная нотариально либо оригинал)
-																td Выписка из ЕГРЮЛ
-																td
-																	.upload.disabled
-																		div
-																			label.btn.btn-upload
-																				.btn-upload__icon
-																					+sprite("icon-attachment")
-																				| Загрузить с устройства
-																				input(type="file" hidden)
-																		.upload__info Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3
-															tr
-																td
-																	.table-td-main
-																		label.checkbox-base
-																			input(type="checkbox" hidden)
-																			span.checkbox-base__icon
-																				+sprite("icon-check")
-																		| Выписка из ЕГРЮЛ с установочными данными учредителей и руководителя, выданная не позднее 30 дней на дату ее предоставления в ПАО «ГТЛК» (удостоверенная нотариально либо оригинал)
-																td Выписка из ЕГРЮЛ
-																td
-																	.upload.disabled
-																		div
-																			label.btn.btn-upload
-																				.btn-upload__icon
-																					+sprite("icon-attachment")
-																				| Загрузить с устройства
-																				input(type="file" hidden)
-																		.upload__info Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3
-															tr
-																td
-																	.table-td-main
-																		label.checkbox-base
-																			input(type="checkbox" hidden)
-																			span.checkbox-base__icon
-																				+sprite("icon-check")
-																		| Выписка из ЕГРЮЛ с установочными данными учредителей и руководителя, выданная не позднее 30 дней на дату ее предоставления в ПАО «ГТЛК» (удостоверенная нотариально либо оригинал)
-																td Протокол (решение) уполномоченного орган... длинное длинное длинное название
-																td
-																	.upload.disabled
-																		div
-																			label.btn.btn-upload
-																				.btn-upload__icon
-																					+sprite("icon-attachment")
-																				| Загрузить с устройства
-																				input(type="file" hidden)
-																		.upload__info Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3
-															tr
-																td
-																	.table-td-main
-																		label.checkbox-base
-																			input(type="checkbox" hidden)
-																			span.checkbox-base__icon
-																				+sprite("icon-check")
-																		| Выписка из ЕГРЮЛ с установочными данными учредителей и руководителя, выданная не позднее 30 дней на дату ее предоставления в ПАО «ГТЛК» (удостоверенная нотариально либо оригинал)
-																td Выписка из ЕГРЮЛ
-																td
-																	.upload.disabled
-																		div
-																			label.btn.btn-upload
-																				.btn-upload__icon
-																					+sprite("icon-attachment")
-																				| Загрузить с устройства
-																				input(type="file" hidden)
-																		.upload__info Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3
+																			| Выписка из ЕГРЮЛ с установочными данными учредителей и руководителя, выданная не позднее 30 дней на дату ее предоставления в ПАО «ГТЛК» (удостоверенная нотариально либо оригинал)
+																	td Выписка из ЕГРЮЛ
+																	td
+																		.upload.disabled
+																			div
+																				label.btn.btn-upload
+																					.btn-upload__icon
+																						+sprite("icon-attachment")
+																					| Загрузить с устройства
+																					input(type="file" hidden)
+																			.upload__info Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3
+																tr
+																	td
+																		.table-td-main
+																			label.checkbox-base
+																				input(type="checkbox" hidden)
+																				span.checkbox-base__icon
+																					+sprite("icon-check")
+																			| Свидетельство о внесении записи в ЕГРЮЛ о юридическом лице, либо Свидетельство о внесении в ЕГРЮЛ записи о юридическом лице, зарегистрированном до 01.07.2002 г.
+																	td Свидетельство ОГРН
+																	td
+																		.upload
+																			div Название документа.format
+																			.doc-info-bar
+																				.notice
+																					.notice__icon
+																						+sprite("icon-check")
+																					.notice__text Загружен
+																				a.btn.btn-action
+																					+sprite("icon-pencil") 
+																					| Подписать
+																				label.btn.btn-action
+																					+sprite("icon-plus") 
+																					| Добавить файл
+																					input(type="file" hidden)
+																tr
+																	td
+																		.table-td-main
+																			label.checkbox-base
+																				input(type="checkbox" hidden)
+																				span.checkbox-base__icon
+																					+sprite("icon-check")
+																			| Выписка из ЕГРЮЛ с установочными данными учредителей и руководителя, выданная не позднее 30 дней на дату ее предоставления в ПАО «ГТЛК» (удостоверенная нотариально либо оригинал)
+																	td Выписка из ЕГРЮЛ
+																	td
+																		.upload.disabled
+																			div
+																				label.btn.btn-upload
+																					.btn-upload__icon
+																						+sprite("icon-attachment")
+																					| Загрузить с устройства
+																					input(type="file" hidden)
+																			.upload__info Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3
+																tr
+																	td
+																		.table-td-main
+																			label.checkbox-base
+																				input(type="checkbox" hidden)
+																				span.checkbox-base__icon
+																					+sprite("icon-check")
+																			| Выписка из ЕГРЮЛ с установочными данными учредителей и руководителя, выданная не позднее 30 дней на дату ее предоставления в ПАО «ГТЛК» (удостоверенная нотариально либо оригинал)
+																	td Выписка из ЕГРЮЛ
+																	td
+																		.upload.disabled
+																			div
+																				label.btn.btn-upload
+																					.btn-upload__icon
+																						+sprite("icon-attachment")
+																					| Загрузить с устройства
+																					input(type="file" hidden)
+																			.upload__info Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3
+																tr
+																	td
+																		.table-td-main
+																			label.checkbox-base
+																				input(type="checkbox" hidden)
+																				span.checkbox-base__icon
+																					+sprite("icon-check")
+																			| Выписка из ЕГРЮЛ с установочными данными учредителей и руководителя, выданная не позднее 30 дней на дату ее предоставления в ПАО «ГТЛК» (удостоверенная нотариально либо оригинал)
+																	td Протокол (решение) уполномоченного орган... длинное длинное длинное название
+																	td
+																		.upload.disabled
+																			div
+																				label.btn.btn-upload
+																					.btn-upload__icon
+																						+sprite("icon-attachment")
+																					| Загрузить с устройства
+																					input(type="file" hidden)
+																			.upload__info Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3
+																tr
+																	td
+																		.table-td-main
+																			label.checkbox-base
+																				input(type="checkbox" hidden)
+																				span.checkbox-base__icon
+																					+sprite("icon-check")
+																			| Выписка из ЕГРЮЛ с установочными данными учредителей и руководителя, выданная не позднее 30 дней на дату ее предоставления в ПАО «ГТЛК» (удостоверенная нотариально либо оригинал)
+																	td Выписка из ЕГРЮЛ
+																	td
+																		.upload.disabled
+																			div
+																				label.btn.btn-upload
+																					.btn-upload__icon
+																						+sprite("icon-attachment")
+																					| Загрузить с устройства
+																					input(type="file" hidden)
+																			.upload__info Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3
 											.application-docs__section
 												.application-docs__section-top
 													.application-docs__section-heading Бухгалтерские и финансовые
 													div
 														+sprite("icon-chevron-up")
 												.application-docs__content
-													table.docs-table
-														thead
-															tr
-																th(style="width: 48%") Название документа
-																th(style="width: 14%") Вид документа
-																th(style="width: 38%") Загрузка
-														tbody.docs-table__section
-															tr
-																td
-																	.table-td-main
-																		label.checkbox-base
-																			input(type="checkbox" hidden)
-																			span.checkbox-base__icon
-																				+sprite("icon-check")
-																		| Анкета Лизингополучателя/Обеспечителя
-																td Анкета клиента
-																td
-																	.upload
-																		div Название документа.format
-																		.doc-info-bar
-																			.notice
-																				.notice__icon
+													.scroll-wrapper
+														table.docs-table
+															thead
+																tr
+																	th(style="width: 48%") Название документа
+																	th(style="width: 14%") Вид документа
+																	th(style="width: 38%") Загрузка
+															tbody.docs-table__section
+																tr
+																	td
+																		.table-td-main
+																			label.checkbox-base
+																				input(type="checkbox" hidden)
+																				span.checkbox-base__icon
 																					+sprite("icon-check")
-																				.notice__text Загружен
-																			.notice
-																				.notice__icon
+																			| Анкета Лизингополучателя/Обеспечителя
+																	td Анкета клиента
+																	td
+																		.upload
+																			div Название документа.format
+																			.doc-info-bar
+																				.notice
+																					.notice__icon
+																						+sprite("icon-check")
+																					.notice__text Загружен
+																				.notice
+																					.notice__icon
+																						+sprite("icon-check")
+																					.notice__text Подписан
+																				label.btn.btn-action
+																					+sprite("icon-plus") 
+																					| Добавить файл
+																					input(type="file" hidden)
+																tr
+																	td
+																		.table-td-main
+																			label.checkbox-base
+																				input(type="checkbox" hidden)
+																				span.checkbox-base__icon
 																					+sprite("icon-check")
-																				.notice__text Подписан
-																			label.btn.btn-action
-																				+sprite("icon-plus") 
-																				| Добавить файл
-																				input(type="file" hidden)
-															tr
-																td
-																	.table-td-main
-																		label.checkbox-base
-																			input(type="checkbox" hidden)
-																			span.checkbox-base__icon
-																				+sprite("icon-check")
-																		| Устав в действующей редакции со всеми изменениями (с отметкой о регистрации в ФНС)
-																td Устав
-																td
-																	.upload.disabled
-																		div
-																			label.btn.btn-upload
-																				.btn-upload__icon
-																					+sprite("icon-attachment")
-																				| Загрузить с устройства
-																				input(type="file" hidden)
-																		.upload__info Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3
-														tbody.docs-table__section
-															tr
-																th(colspan="3").docs-table__subheading Бухгалтерская отчётность за последние 5 отчётных периодов
-															tr
-																td
-																	.table-td-main
-																		label.checkbox-base
-																			input(type="checkbox" hidden)
-																			span.checkbox-base__icon
-																				+sprite("icon-check")
-																		| Анкета Лизингополучателя/Обеспечителя
-																td Анкета клиента
-																td
-																	.upload
-																		div Название документа.format
-																		.doc-info-bar
-																			.notice
-																				.notice__icon
+																			| Устав в действующей редакции со всеми изменениями (с отметкой о регистрации в ФНС)
+																	td Устав
+																	td
+																		.upload.disabled
+																			div
+																				label.btn.btn-upload
+																					.btn-upload__icon
+																						+sprite("icon-attachment")
+																					| Загрузить с устройства
+																					input(type="file" hidden)
+																			.upload__info Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3
+															tbody.docs-table__section
+																tr
+																	th(colspan="3").docs-table__subheading Бухгалтерская отчётность за последние 5 отчётных периодов
+																tr
+																	td
+																		.table-td-main
+																			label.checkbox-base
+																				input(type="checkbox" hidden)
+																				span.checkbox-base__icon
 																					+sprite("icon-check")
-																				.notice__text Загружен
-																			.notice
-																				.notice__icon
+																			| Анкета Лизингополучателя/Обеспечителя
+																	td Анкета клиента
+																	td
+																		.upload
+																			div Название документа.format
+																			.doc-info-bar
+																				.notice
+																					.notice__icon
+																						+sprite("icon-check")
+																					.notice__text Загружен
+																				.notice
+																					.notice__icon
+																						+sprite("icon-check")
+																					.notice__text Подписан
+																				label.btn.btn-action
+																					+sprite("icon-plus") 
+																					| Добавить файл
+																					input(type="file" hidden)
+																tr
+																	td
+																		.table-td-main
+																			label.checkbox-base
+																				input(type="checkbox" hidden)
+																				span.checkbox-base__icon
 																					+sprite("icon-check")
-																				.notice__text Подписан
-																			label.btn.btn-action
-																				+sprite("icon-plus") 
-																				| Добавить файл
-																				input(type="file" hidden)
-															tr
-																td
-																	.table-td-main
-																		label.checkbox-base
-																			input(type="checkbox" hidden)
-																			span.checkbox-base__icon
-																				+sprite("icon-check")
-																		| Устав в действующей редакции со всеми изменениями (с отметкой о регистрации в ФНС)
-																td Устав
-																td
-																	.upload.disabled
-																		div
-																			label.btn.btn-upload
-																				.btn-upload__icon
-																					+sprite("icon-attachment")
-																				| Загрузить с устройства
-																				input(type="file" hidden)
-																		.upload__info Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3
-														tbody.docs-table__section
-															tr
-																th(colspan="3").docs-table__subheading Бухгалтерская отчётность за последние 5 отчётных периодов
-															tr
-																td
-																	.table-td-main
-																		label.checkbox-base
-																			input(type="checkbox" hidden)
-																			span.checkbox-base__icon
-																				+sprite("icon-check")
-																		| Анкета Лизингополучателя/Обеспечителя
-																td Анкета клиента
-																td
-																	.upload
-																		div Название документа.format
-																		.doc-info-bar
-																			.notice
-																				.notice__icon
+																			| Устав в действующей редакции со всеми изменениями (с отметкой о регистрации в ФНС)
+																	td Устав
+																	td
+																		.upload.disabled
+																			div
+																				label.btn.btn-upload
+																					.btn-upload__icon
+																						+sprite("icon-attachment")
+																					| Загрузить с устройства
+																					input(type="file" hidden)
+																			.upload__info Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3
+															tbody.docs-table__section
+																tr
+																	th(colspan="3").docs-table__subheading Бухгалтерская отчётность за последние 5 отчётных периодов
+																tr
+																	td
+																		.table-td-main
+																			label.checkbox-base
+																				input(type="checkbox" hidden)
+																				span.checkbox-base__icon
 																					+sprite("icon-check")
-																				.notice__text Загружен
-																			.notice
-																				.notice__icon
+																			| Анкета Лизингополучателя/Обеспечителя
+																	td Анкета клиента
+																	td
+																		.upload
+																			div Название документа.format
+																			.doc-info-bar
+																				.notice
+																					.notice__icon
+																						+sprite("icon-check")
+																					.notice__text Загружен
+																				.notice
+																					.notice__icon
+																						+sprite("icon-check")
+																					.notice__text Подписан
+																				label.btn.btn-action
+																					+sprite("icon-plus") 
+																					| Добавить файл
+																					input(type="file" hidden)
+																tr
+																	td
+																		.table-td-main
+																			label.checkbox-base
+																				input(type="checkbox" hidden)
+																				span.checkbox-base__icon
 																					+sprite("icon-check")
-																				.notice__text Подписан
-																			label.btn.btn-action
-																				+sprite("icon-plus") 
-																				| Добавить файл
-																				input(type="file" hidden)
-															tr
-																td
-																	.table-td-main
-																		label.checkbox-base
-																			input(type="checkbox" hidden)
-																			span.checkbox-base__icon
-																				+sprite("icon-check")
-																		| Устав в действующей редакции со всеми изменениями (с отметкой о регистрации в ФНС)
-																td Устав
-																td
-																	.upload.disabled
-																		div
-																			label.btn.btn-upload
-																				.btn-upload__icon
-																					+sprite("icon-attachment")
-																				| Загрузить с устройства
-																				input(type="file" hidden)
-																		.upload__info Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3
-														tbody.docs-table__section
-															tr
-																td
-																	.table-td-main
-																		label.checkbox-base
-																			input(type="checkbox" hidden)
-																			span.checkbox-base__icon
-																				+sprite("icon-check")
-																		| Анкета Лизингополучателя/Обеспечителя
-																td Анкета клиента
-																td
-																	.upload
-																		div Название документа.format
-																		.doc-info-bar
-																			.notice
-																				.notice__icon
+																			| Устав в действующей редакции со всеми изменениями (с отметкой о регистрации в ФНС)
+																	td Устав
+																	td
+																		.upload.disabled
+																			div
+																				label.btn.btn-upload
+																					.btn-upload__icon
+																						+sprite("icon-attachment")
+																					| Загрузить с устройства
+																					input(type="file" hidden)
+																			.upload__info Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3
+															tbody.docs-table__section
+																tr
+																	td
+																		.table-td-main
+																			label.checkbox-base
+																				input(type="checkbox" hidden)
+																				span.checkbox-base__icon
 																					+sprite("icon-check")
-																				.notice__text Загружен
-																			.notice
-																				.notice__icon
+																			| Анкета Лизингополучателя/Обеспечителя
+																	td Анкета клиента
+																	td
+																		.upload
+																			div Название документа.format
+																			.doc-info-bar
+																				.notice
+																					.notice__icon
+																						+sprite("icon-check")
+																					.notice__text Загружен
+																				.notice
+																					.notice__icon
+																						+sprite("icon-check")
+																					.notice__text Подписан
+																				label.btn.btn-action
+																					+sprite("icon-plus") 
+																					| Добавить файл
+																					input(type="file" hidden)
+																tr
+																	td
+																		.table-td-main
+																			label.checkbox-base
+																				input(type="checkbox" hidden)
+																				span.checkbox-base__icon
 																					+sprite("icon-check")
-																				.notice__text Подписан
-																			label.btn.btn-action
-																				+sprite("icon-plus") 
-																				| Добавить файл
-																				input(type="file" hidden)
-															tr
-																td
-																	.table-td-main
-																		label.checkbox-base
-																			input(type="checkbox" hidden)
-																			span.checkbox-base__icon
-																				+sprite("icon-check")
-																		| Устав в действующей редакции со всеми изменениями (с отметкой о регистрации в ФНС)
-																td Устав
-																td
-																	.upload.disabled
-																		div
-																			label.btn.btn-upload
-																				.btn-upload__icon
-																					+sprite("icon-attachment")
-																				| Загрузить с устройства
-																				input(type="file" hidden)
-																		.upload__info Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3
-														tbody.docs-table__section
-															tr
-																th(colspan="3").docs-table__subheading 
-																	.table-td-main
-																		label.checkbox-base
-																			input(type="checkbox" hidden)
-																			span.checkbox-base__icon
-																				+sprite("icon-check")
-																		| Принадлежу к Группе компаний
-															tr
-																td
-																	.table-td-main
-																		label.checkbox-base
-																			input(type="checkbox" hidden)
-																			span.checkbox-base__icon
-																				+sprite("icon-check")
-																		| Анкета Лизингополучателя/Обеспечителя
-																td Анкета клиента
-																td
-																	.upload
-																		div Название документа.format
-																		.doc-info-bar
-																			.notice
-																				.notice__icon
+																			| Устав в действующей редакции со всеми изменениями (с отметкой о регистрации в ФНС)
+																	td Устав
+																	td
+																		.upload.disabled
+																			div
+																				label.btn.btn-upload
+																					.btn-upload__icon
+																						+sprite("icon-attachment")
+																					| Загрузить с устройства
+																					input(type="file" hidden)
+																			.upload__info Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3
+															tbody.docs-table__section
+																tr
+																	th(colspan="3").docs-table__subheading 
+																		.table-td-main
+																			label.checkbox-base
+																				input(type="checkbox" hidden)
+																				span.checkbox-base__icon
 																					+sprite("icon-check")
-																				.notice__text Загружен
-																			.notice
-																				.notice__icon
+																			| Принадлежу к Группе компаний
+																tr
+																	td
+																		.table-td-main
+																			label.checkbox-base
+																				input(type="checkbox" hidden)
+																				span.checkbox-base__icon
 																					+sprite("icon-check")
-																				.notice__text Подписан
-																			label.btn.btn-action
-																				+sprite("icon-plus") 
-																				| Добавить файл
-																				input(type="file" hidden)
-															tr
-																td
-																	.table-td-main
-																		label.checkbox-base
-																			input(type="checkbox" hidden)
-																			span.checkbox-base__icon
-																				+sprite("icon-check")
-																		| Устав в действующей редакции со всеми изменениями (с отметкой о регистрации в ФНС)
-																td Устав
-																td
-																	.upload.disabled
-																		div
-																			label.btn.btn-upload
-																				.btn-upload__icon
-																					+sprite("icon-attachment")
-																				| Загрузить с устройства
-																				input(type="file" hidden)
-																		.upload__info Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3
+																			| Анкета Лизингополучателя/Обеспечителя
+																	td Анкета клиента
+																	td
+																		.upload
+																			div Название документа.format
+																			.doc-info-bar
+																				.notice
+																					.notice__icon
+																						+sprite("icon-check")
+																					.notice__text Загружен
+																				.notice
+																					.notice__icon
+																						+sprite("icon-check")
+																					.notice__text Подписан
+																				label.btn.btn-action
+																					+sprite("icon-plus") 
+																					| Добавить файл
+																					input(type="file" hidden)
+																tr
+																	td
+																		.table-td-main
+																			label.checkbox-base
+																				input(type="checkbox" hidden)
+																				span.checkbox-base__icon
+																					+sprite("icon-check")
+																			| Устав в действующей редакции со всеми изменениями (с отметкой о регистрации в ФНС)
+																	td Устав
+																	td
+																		.upload.disabled
+																			div
+																				label.btn.btn-upload
+																					.btn-upload__icon
+																						+sprite("icon-attachment")
+																					| Загрузить с устройства
+																					input(type="file" hidden)
+																			.upload__info Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3
 											.application-docs__section
 												.application-docs__section-top
 													.application-docs__section-heading Прочие
 													div
 														+sprite("icon-chevron-up")
 												.application-docs__content
-													table.docs-table
-														thead
-															tr
-																th(style="width: 48%") Название документа
-																th(style="width: 14%") Вид документа
-																th(style="width: 38%") Загрузка
-														tbody
-															tr
-																td
-																	.table-td-main
-																		.table-td-alert
-																			+sprite("icon-circle-alert")
-																		label.checkbox-base
-																			input(type="checkbox" hidden)
-																			span.checkbox-base__icon
-																				+sprite("icon-check")
-																		| Анкета Лизингополучателя/Обеспечителя
-																td Анкета клиента
-																td
-																	.upload
-																		div Название документа.format
-																		.doc-info-bar
-																			.notice
-																				.notice__icon
+													.scroll-wrapper
+														table.docs-table
+															thead
+																tr
+																	th(style="width: 48%") Название документа
+																	th(style="width: 14%") Вид документа
+																	th(style="width: 38%") Загрузка
+															tbody
+																tr
+																	td
+																		.table-td-main
+																			.table-td-alert
+																				+sprite("icon-circle-alert")
+																			label.checkbox-base
+																				input(type="checkbox" hidden)
+																				span.checkbox-base__icon
 																					+sprite("icon-check")
-																				.notice__text Загружен
-																			.notice
-																				.notice__icon
+																			| Анкета Лизингополучателя/Обеспечителя
+																	td Анкета клиента
+																	td
+																		.upload
+																			div Название документа.format
+																			.doc-info-bar
+																				.notice
+																					.notice__icon
+																						+sprite("icon-check")
+																					.notice__text Загружен
+																				.notice
+																					.notice__icon
+																						+sprite("icon-check")
+																					.notice__text Подписан
+																				label.btn.btn-action
+																					+sprite("icon-plus") 
+																					| Добавить файл
+																					input(type="file" hidden)
+																tr
+																	td
+																		.table-td-main
+																			label.checkbox-base
+																				input(type="checkbox" hidden)
+																				span.checkbox-base__icon
 																					+sprite("icon-check")
-																				.notice__text Подписан
-																			label.btn.btn-action
-																				+sprite("icon-plus") 
-																				| Добавить файл
-																				input(type="file" hidden)
-															tr
-																td
-																	.table-td-main
-																		label.checkbox-base
-																			input(type="checkbox" hidden)
-																			span.checkbox-base__icon
-																				+sprite("icon-check")
-																		| Устав в действующей редакции со всеми изменениями (с отметкой о регистрации в ФНС)
-																td Устав
-																td
-																	.upload.disabled
-																		div
-																			label.btn.btn-upload
-																				.btn-upload__icon
-																					+sprite("icon-attachment")
-																				| Загрузить с устройства
-																				input(type="file" hidden)
-																		.upload__info Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3
-															tr
-																td
-																	.table-td-main
-																		label.checkbox-base
-																			input(type="checkbox" hidden)
-																			span.checkbox-base__icon
-																				+sprite("icon-check")
-																		| Выписка из ЕГРЮЛ с установочными данными учредителей и руководителя, выданная не позднее 30 дней на дату ее предоставления в ПАО «ГТЛК» (удостоверенная нотариально либо оригинал)
-																td Выписка из ЕГРЮЛ
-																td
-																	.upload.disabled
-																		div
-																			label.btn.btn-upload
-																				.btn-upload__icon
-																					+sprite("icon-attachment")
-																				| Загрузить с устройства
-																				input(type="file" hidden)
-																		.upload__info Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3
-															tr
-																td
-																	.table-td-main
-																		label.checkbox-base
-																			input(type="checkbox" hidden)
-																			span.checkbox-base__icon
-																				+sprite("icon-check")
-																		| Свидетельство о внесении записи в ЕГРЮЛ о юридическом лице, либо Свидетельство о внесении в ЕГРЮЛ записи о юридическом лице, зарегистрированном до 01.07.2002 г.
-																td Свидетельство ОГРН
-																td
-																	.upload
-																		div Название документа.format
-																		.doc-info-bar
-																			.notice
-																				.notice__icon
+																			| Устав в действующей редакции со всеми изменениями (с отметкой о регистрации в ФНС)
+																	td Устав
+																	td
+																		.upload.disabled
+																			div
+																				label.btn.btn-upload
+																					.btn-upload__icon
+																						+sprite("icon-attachment")
+																					| Загрузить с устройства
+																					input(type="file" hidden)
+																			.upload__info Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3
+																tr
+																	td
+																		.table-td-main
+																			label.checkbox-base
+																				input(type="checkbox" hidden)
+																				span.checkbox-base__icon
 																					+sprite("icon-check")
-																				.notice__text Загружен
-																			label.btn.btn-action
-																				+sprite("icon-pencil") 
-																				| Подписать
-																				input(type="file" hidden)
-																			label.btn.btn-action
-																				+sprite("icon-plus") 
-																				| Добавить файл
-																				input(type="file" hidden)
+																			| Выписка из ЕГРЮЛ с установочными данными учредителей и руководителя, выданная не позднее 30 дней на дату ее предоставления в ПАО «ГТЛК» (удостоверенная нотариально либо оригинал)
+																	td Выписка из ЕГРЮЛ
+																	td
+																		.upload.disabled
+																			div
+																				label.btn.btn-upload
+																					.btn-upload__icon
+																						+sprite("icon-attachment")
+																					| Загрузить с устройства
+																					input(type="file" hidden)
+																			.upload__info Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3
+																tr
+																	td
+																		.table-td-main
+																			label.checkbox-base
+																				input(type="checkbox" hidden)
+																				span.checkbox-base__icon
+																					+sprite("icon-check")
+																			| Свидетельство о внесении записи в ЕГРЮЛ о юридическом лице, либо Свидетельство о внесении в ЕГРЮЛ записи о юридическом лице, зарегистрированном до 01.07.2002 г.
+																	td Свидетельство ОГРН
+																	td
+																		.upload
+																			div Название документа.format
+																			.doc-info-bar
+																				.notice
+																					.notice__icon
+																						+sprite("icon-check")
+																					.notice__text Загружен
+																				a.btn.btn-action
+																					+sprite("icon-pencil") 
+																					| Подписать
+																				label.btn.btn-action
+																					+sprite("icon-plus") 
+																					| Добавить файл
+																					input(type="file" hidden)
 											.application-docs__section
 												.application-docs__section-top
 													label.checkbox-base.application-docs__section-top-check
@@ -767,101 +761,101 @@ html(lang="ru")
 													.application-docs__section-top-arrow.hidden
 														+sprite("icon-chevron-up")
 												.application-docs__content
-													table.docs-table
-														thead
-															tr
-																th(style="width: 48%") Название документа
-																th(style="width: 14%") Вид документа
-																th(style="width: 38%") Загрузка
-														tbody
-															tr
-																td
-																	.table-td-main
-																		.table-td-alert
-																			+sprite("icon-circle-alert")
-																		label.checkbox-base
-																			input(type="checkbox" hidden)
-																			span.checkbox-base__icon
-																				+sprite("icon-check")
-																		| Анкета Лизингополучателя/Обеспечителя
-																td Анкета клиента
-																td
-																	.upload
-																		div Название документа.format
-																		.doc-info-bar
-																			.notice
-																				.notice__icon
+													.scroll-wrapper
+														table.docs-table
+															thead
+																tr
+																	th(style="width: 48%") Название документа
+																	th(style="width: 14%") Вид документа
+																	th(style="width: 38%") Загрузка
+															tbody
+																tr
+																	td
+																		.table-td-main
+																			.table-td-alert
+																				+sprite("icon-circle-alert")
+																			label.checkbox-base
+																				input(type="checkbox" hidden)
+																				span.checkbox-base__icon
 																					+sprite("icon-check")
-																				.notice__text Загружен
-																			.notice
-																				.notice__icon
+																			| Анкета Лизингополучателя/Обеспечителя
+																	td Анкета клиента
+																	td
+																		.upload
+																			div Название документа.format
+																			.doc-info-bar
+																				.notice
+																					.notice__icon
+																						+sprite("icon-check")
+																					.notice__text Загружен
+																				.notice
+																					.notice__icon
+																						+sprite("icon-check")
+																					.notice__text Подписан
+																				label.btn.btn-action
+																					+sprite("icon-plus") 
+																					| Добавить файл
+																					input(type="file" hidden)
+																tr
+																	td
+																		.table-td-main
+																			label.checkbox-base
+																				input(type="checkbox" hidden)
+																				span.checkbox-base__icon
 																					+sprite("icon-check")
-																				.notice__text Подписан
-																			label.btn.btn-action
-																				+sprite("icon-plus") 
-																				| Добавить файл
-																				input(type="file" hidden)
-															tr
-																td
-																	.table-td-main
-																		label.checkbox-base
-																			input(type="checkbox" hidden)
-																			span.checkbox-base__icon
-																				+sprite("icon-check")
-																		| Устав в действующей редакции со всеми изменениями (с отметкой о регистрации в ФНС)
-																td Устав
-																td
-																	.upload.disabled
-																		div
-																			label.btn.btn-upload
-																				.btn-upload__icon
-																					+sprite("icon-attachment")
-																				| Загрузить с устройства
-																				input(type="file" hidden)
-																		.upload__info Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3
-															tr
-																td
-																	.table-td-main
-																		label.checkbox-base
-																			input(type="checkbox" hidden)
-																			span.checkbox-base__icon
-																				+sprite("icon-check")
-																		| Выписка из ЕГРЮЛ с установочными данными учредителей и руководителя, выданная не позднее 30 дней на дату ее предоставления в ПАО «ГТЛК» (удостоверенная нотариально либо оригинал)
-																td Выписка из ЕГРЮЛ
-																td
-																	.upload.disabled
-																		div
-																			label.btn.btn-upload
-																				.btn-upload__icon
-																					+sprite("icon-attachment")
-																				| Загрузить с устройства
-																				input(type="file" hidden)
-																		.upload__info Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3
-															tr
-																td
-																	.table-td-main
-																		label.checkbox-base
-																			input(type="checkbox" hidden)
-																			span.checkbox-base__icon
-																				+sprite("icon-check")
-																		| Свидетельство о внесении записи в ЕГРЮЛ о юридическом лице, либо Свидетельство о внесении в ЕГРЮЛ записи о юридическом лице, зарегистрированном до 01.07.2002 г.
-																td Свидетельство ОГРН
-																td
-																	.upload
-																		div Название документа.format
-																		.doc-info-bar
-																			.notice
-																				.notice__icon
+																			| Устав в действующей редакции со всеми изменениями (с отметкой о регистрации в ФНС)
+																	td Устав
+																	td
+																		.upload.disabled
+																			div
+																				label.btn.btn-upload
+																					.btn-upload__icon
+																						+sprite("icon-attachment")
+																					| Загрузить с устройства
+																					input(type="file" hidden)
+																			.upload__info Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3
+																tr
+																	td
+																		.table-td-main
+																			label.checkbox-base
+																				input(type="checkbox" hidden)
+																				span.checkbox-base__icon
 																					+sprite("icon-check")
-																				.notice__text Загружен
-																			label.btn.btn-action
-																				+sprite("icon-pencil") 
-																				| Подписать
-																				input(type="file" hidden)
-																			label.btn.btn-action
-																				+sprite("icon-plus") 
-																				| Добавить файл
-																				input(type="file" hidden)
+																			| Выписка из ЕГРЮЛ с установочными данными учредителей и руководителя, выданная не позднее 30 дней на дату ее предоставления в ПАО «ГТЛК» (удостоверенная нотариально либо оригинал)
+																	td Выписка из ЕГРЮЛ
+																	td
+																		.upload.disabled
+																			div
+																				label.btn.btn-upload
+																					.btn-upload__icon
+																						+sprite("icon-attachment")
+																					| Загрузить с устройства
+																					input(type="file" hidden)
+																			.upload__info Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3
+																tr
+																	td
+																		.table-td-main
+																			label.checkbox-base
+																				input(type="checkbox" hidden)
+																				span.checkbox-base__icon
+																					+sprite("icon-check")
+																			| Свидетельство о внесении записи в ЕГРЮЛ о юридическом лице, либо Свидетельство о внесении в ЕГРЮЛ записи о юридическом лице, зарегистрированном до 01.07.2002 г.
+																	td Свидетельство ОГРН
+																	td
+																		.upload
+																			div Название документа.format
+																			.doc-info-bar
+																				.notice
+																					.notice__icon
+																						+sprite("icon-check")
+																					.notice__text Загружен
+																				a.btn.btn-action
+																					+sprite("icon-pencil") 
+																					| Подписать
+																				label.btn.btn-action
+																					+sprite("icon-plus") 
+																					| Добавить файл
+																					input(type="file" hidden)
 
 									.tab-content#application-request
 										ul.applications-list
@@ -890,7 +884,91 @@ html(lang="ru")
 																.applications-list__item-heading Заявка 123-ЗЛ-ОК/2
 																.applications-list__item-info (создана 05.06.2023, заменена 25.06.2023)
 															.applications-list__item-tooltip Заявка активна
+							.application-content__side
+								.is-xl-hidden
+									.application-top
+										.application-top__heading
+											.heading-base.heading-base--normal Заявка 123-ЗЛ-ОК от 12.07.2023
+										div Заявка на лизинг транспортного средства
+									.application-info.application-info--base
+										.application-info__main
+											.application-info__icon
+												+sprite("icon-info")
+											.application-info__text
+												.application-info__text-heading Продолжите заполнение заявки
+										a(href="#").btn.application-info__btn Продолжите заполнение
+								.application-content__side-section.application-content__side-section--first
+									.d-flex.justify-content-center
+										.application-status.application-status--draft Черновик
+									
+									.container-app-steps
+										ul.application-steps
+											li.application-steps__item.current Черновик
+											li.application-steps__item Зарегистрирована
+											li.application-steps__item На рассмотрении
+											li.application-steps__item Завершена
+									.is-xl-hidden.toggle-app-steps-wrapper
+										a.toggle-app-steps
+											span.toggle-app-steps__text Скрыть историю статусов
+											span.toggle-app-steps__icon
+												+sprite("icon-chevron-up")
+								.application-content__side-section.application-content__side-section--actions(data-toggle-container)
+									div(data-toggle-btn).heading-base.heading-base--normal.heading-app-side Действия
+										span.heading-app-side__icon.is-xl-hidden
+											+sprite("icon-chevron-up")
+									div(data-toggle-content).application-content__side-section-content
+										ul.application-action-links
+											li
+												a(href="#").link-base Продолжить заполнение заявки
 								
+								.application-content__side-section(data-toggle-container)
+									div(data-toggle-btn).heading-base.heading-base--normal.heading-app-side.opened Комментарии и замечания
+										span.heading-app-side__icon.is-xl-hidden
+											+sprite("icon-chevron-up")
+									div(data-toggle-content).application-content__side-section-content
+										.notifications-items
+											.notification
+												.notification__inner
+													.notification__icon
+														+sprite("icon-chat_stroke")
+													.notification__content
+														.notification__content-top
+															.notification__heading Новый комментарий по сделке 123-ЗЛ-ОК
+															.notification__menu
+																.tooltip.tooltip--notification
+																	a.btn.tooltip__btn.tooltip__btn--vertical.tooltip__btn--notifications
+																		+sprite("icon-more-alt")
+																	ul.tooltip__menu
+																		li.tooltip__menu-item
+																			a(href="#").tooltip__menu-item-link.tooltip__menu-item-link--color-black Отметить прочитанным
+														.notification__desc
+															p Предварительные выводы неутешительны: повышение уровня гражданского сознания предопределяет высокую востребованность инновационных методов управления процессами.
+														.notification__bar
+															a(href="#").notification__bar-link.link-base Смотреть
+															.notification__bar-date Сегодня в 14:32
+													.notification__indicator.notification__indicator--is-new
+											.notification.notification--is-important
+												.notification__inner
+													.notification__icon
+														+sprite("icon-alert")
+													.notification__content
+														.notification__content-top
+															.notification__heading Необходимо обновить документы
+															.notification__menu
+																.tooltip.tooltip--notification
+																	a.btn.tooltip__btn.tooltip__btn--vertical.tooltip__btn--notifications
+																		+sprite("icon-more-alt")
+																	ul.tooltip__menu
+																		li.tooltip__menu-item
+																			a(href="#").tooltip__menu-item-link.tooltip__menu-item-link--color-black Отметить прочитанным
+														.notification__desc
+															p Предварительные выводы неутешительны: повышение уровня гражданского сознания предопределяет высокую востребованность инновационных методов управления процессами.
+														.notification__bar
+															a(href="#").notification__bar-link.link-base Перейти к обновлению
+															.notification__bar-date Вчера в 15:00
+													.notification__indicator.notification__indicator--is-read
+
+
 					footer.footer
 						.container
 							.footer__section.d-flex.justify-content-end

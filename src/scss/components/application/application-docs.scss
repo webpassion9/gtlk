@@ -36,7 +36,7 @@
 			font-weight: 700;
 			font-size: 18px;
 			line-height: 22px;
-			color: rgba(var(--color-black-base));
+			color: var(--color-black-base);
 		}
 		&.opened {
 			.application-docs__section-top .icon-chevron-up {
@@ -49,5 +49,6 @@
 		display: none;
 		overflow: hidden;
 		padding-bottom: 10px;
+		max-width: 100%;
 	} 
 }

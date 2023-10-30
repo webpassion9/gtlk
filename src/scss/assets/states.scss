@@ -2,6 +2,7 @@
 	text-align: center;
 }
 
+
 .text-right {
 	text-align: right;
 }
@@ -71,6 +72,11 @@
 	}
 }
 
+.is-fhd-hidden {
+	@media (min-width: 1920px) {
+		display: none;
+	}
+}
 
 /* ==================== */
 

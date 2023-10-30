@@ -46,10 +46,14 @@ html(lang="ru")
 										.sidebar__nav-item-text Справка
 						.sidebar__section
 							.manager
-								.manager__ava
-									img(src="img/avatar-manager.png", alt="")
-								.manager__name Менеджер Иванова А.А.
-								a(href="#").btn.manager__btn Связаться
+								.manager__main
+									.manager__ava
+										img(src="img/avatar-manager.png", alt="")
+									.manager__name Менеджер Иванова А.А.
+									a(href="#").btn.manager__btn Связаться
+								.manager__contacts
+									a(href="#").btn.btn-contacts
+										img(src="img/icon-viber.svg" width="32" height="32" alt="")
 						.sidebar__section
 							a(href="#").support
 								.support__icon
@@ -70,7 +74,7 @@ html(lang="ru")
 									.application-main__section
 										.application-main__section
 											.heading-base.heading-base--application Заявитель
-											table.details-table
+											table.details-table.details-table--application
 												tr
 													td Полное наименование организации
 													td МУНИЦИПАЛЬНОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ Г.КАЗАНИ "ПАССАЖИРСКОЕ ABTOTPAHCПOPTHOE ПРЕДПРИЯТИЕ Хв2"
@@ -83,7 +87,7 @@ html(lang="ru")
 											
 									.application-main__section.application-main__section--item.application-main__section--width-medium
 										.heading-base.heading-base--application Предмет лизинга/аренды
-										table.details-table
+										table.details-table.details-table--application
 											tr
 												td(style="width: 51.5%") Вид имущества
 												td Транспортное средство
@@ -93,61 +97,62 @@ html(lang="ru")
 											tr
 												td(style="width: 51.5%") Предметы лизинга
 												td
-										table.application-table
-											thead
-												tr
-													th Название предмета
-													th Поставщик
-													th Срок поставки
-													th Спецификация
-													th Стоимость единицы
-													th Количество
-													th Стоимость итоговая
-											tbody
-												tr
-													td ж/д вагон Хоппер
-													td ООО «РЖД»
-													td 120 дней
-													td Метан (КПГ)
-													td 1 000 000,00 ₽
-													td 20 ед.
-													td 20 000 000,00 ₽
-												tr
-													td ж/д вагон Хоппер
-													td ООО «РЖД»
-													td 120 дней
-													td Метан (КПГ)
-													td 1 000 000,00 ₽
-													td 20 ед.
-													td 20 000 000,00 ₽
-												tr
-													td ж/д вагон Хоппер
-													td ООО «РЖД»
-													td 120 дней
-													td Метан (КПГ)
-													td 1 000 000,00 ₽
-													td 20 ед.
-													td 20 000 000,00 ₽
-												tr
-													td ж/д вагон Хоппер
-													td ООО «РЖД»
-													td 120 дней
-													td Метан (КПГ)
-													td 1 000 000,00 ₽
-													td 20 ед.
-													td 20 000 000,00 ₽
-												tr
-													td
-													td
-													td
-													td
-													td
-													td итого
-													td 70 850 000,00 ₽
+										.scroll-wrapper
+											table.table-app-item.table-app-item--page-preview
+												thead
+													tr
+														th Название предмета
+														th Поставщик
+														th Срок поставки
+														th Спецификация
+														th Стоимость единицы
+														th Количество
+														th Стоимость итоговая
+												tbody
+													tr
+														td ж/д вагон Хоппер
+														td ООО «РЖД»
+														td 120 дней
+														td Метан (КПГ)
+														td 1 000 000,00 ₽
+														td 20 ед.
+														td 20 000 000,00 ₽
+													tr
+														td ж/д вагон Хоппер
+														td ООО «РЖД»
+														td 120 дней
+														td Метан (КПГ)
+														td 1 000 000,00 ₽
+														td 20 ед.
+														td 20 000 000,00 ₽
+													tr
+														td ж/д вагон Хоппер
+														td ООО «РЖД»
+														td 120 дней
+														td Метан (КПГ)
+														td 1 000 000,00 ₽
+														td 20 ед.
+														td 20 000 000,00 ₽
+													tr
+														td ж/д вагон Хоппер
+														td ООО «РЖД»
+														td 120 дней
+														td Метан (КПГ)
+														td 1 000 000,00 ₽
+														td 20 ед.
+														td 20 000 000,00 ₽
+													tr
+														td
+														td
+														td
+														td
+														td
+														td.td-total-selected итого
+														td.td-total-selected 70 850 000,00 ₽
 									
 									.application-main__section
 										.heading-base.heading-base--application Условия лизинга/аренды
-										table.details-table
+										table.details-table.details-table--application
 											tbody
 												tr
 													th(colspan="2") Порядок и сроки оплаты поставщику
@@ -160,7 +165,7 @@ html(lang="ru")
 												tr
 													td Порядок и срок оплаты
 													td ...
-										table.details-table
+										table.details-table.details-table--application
 											tbody
 												tr
 													th(colspan="2") Планируемые условия договора лизинга
@@ -219,7 +224,7 @@ html(lang="ru")
 													+sprite("icon-check")
 												span.checkbox-base__text Я даю свое согласие на обработку персональных данных и соглашаюсь с условиями политики конфиденциальности
 										.application-agreement__text Отправляя форму, вы даете согласие на обработку персональных данных, указанных вами в заявке, в соответствии с требованиями Федерального закона от 27.07.2016 г. № 152-ФЗ “О персональных данных”
-									.application-main__section.form-application__nav.form-application__nav--preview
+									.application-main__section.form-application__nav.form-application__nav--create-app.form-application__nav--preview
 										a(href="#").btn.btn-nav.btn-nav--continue.disabled Заявка подписана
 										a(href="#modal-app-sent" data-modal).btn.btn-nav.btn-nav--continue Отправить
 										a(href="#").btn.btn-nav.btn-nav--save Сохранить

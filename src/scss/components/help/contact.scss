@@ -1,16 +1,41 @@
 .contact {
 	display: flex;
   gap: 15px;
-	padding-top: 275px;
+	padding-top: 30px;
+	flex-direction: column;
+	align-items: center;
+	@media (max-width: $md - 1px) {
+		text-align: center;
+	}
+	@media (min-width: $md) {
+		align-items: flex-start;
+		padding-top: 100px;
+		flex-direction: row;
+	}
+	@media (min-width: $lg) {
+		padding-top: 275px;
+	}
+	&__col-img {
+		flex-shrink: 0;
+	}
+	&__col-main {
+
+	}
 	&__heading {
 		font-size: 20px;
 		line-height: 22px;
-		margin-bottom: 35px;
+		margin-bottom: 15px;
+		@media (min-width: $md) {
+			margin-bottom: 35px;
+		}
 	}
 	&__btns {
 		display: flex;
 		gap: 15px;
 		flex-wrap: wrap;
+		@media (max-width: $md - 1px) {
+			justify-content: center;
+		}
 		.btn-details {
 			min-width: 225px;
 		}
@@ -24,13 +49,19 @@
 	max-width: 339px;
 	flex-direction: column;
 	display: flex;
-	gap: 15px;
+	gap: 10px;
+	@media (min-width: $md) {
+		gap: 15px;
+	}
 	&>li {
 		width: 100%;
 		&>a {
-			font-size: 24px;
+			font-size: 20px;
 			line-height: 1.2;
 			color: #253F94;
+			@media (min-width: $md) {
+				font-size: 24px;
+			}
 		}
 	}
 }

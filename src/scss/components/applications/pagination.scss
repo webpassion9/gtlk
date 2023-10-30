@@ -20,7 +20,7 @@
 			font-weight: 700;
 			font-size: 14px;
 			line-height: 20px;
-			color: rgba(var(--color-black-base));
+			color: var(--color-black-base);
 			font-family: $fontThird;
 			transition: .25s;
 			svg {

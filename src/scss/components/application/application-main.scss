@@ -6,7 +6,10 @@
 		}
 		&--item {
 			&:not(:last-child) {
-				padding-bottom: 80px;
+				padding-bottom: 40px;
+				@media (min-width: $lg) {
+					padding-bottom: 80px;
+				}
 			}
 		}
 		&--width-medium {
@@ -16,12 +19,26 @@
 	&__row {
 		width: 100%;
 		display: flex;
-		gap: 40px;
+		flex-wrap: wrap;
+		gap: 20px;
+		@media (min-width: $lg) {
+			gap: 30px;
+		}
+		@media (min-width: $xl) {
+			flex-wrap: nowrap;
+			gap: 40px;
+		}
 		&-col-first {
 			flex-grow: 1;
+			@media (min-width: $lg) {
+				width: 59%;
+			}
 		}
 		&-col-sec {
-			width: 691px;
+			@media (min-width: $xl) {
+				width: 41%;
+				// width: 691px;
+			}
 		}
 	}
 }

@@ -46,10 +46,14 @@ html(lang="ru")
 										.sidebar__nav-item-text Справка
 						.sidebar__section
 							.manager
-								.manager__ava
-									img(src="img/avatar-manager.png", alt="")
-								.manager__name Менеджер Иванова А.А.
-								a(href="#").btn.manager__btn Связаться
+								.manager__main
+									.manager__ava
+										img(src="img/avatar-manager.png", alt="")
+									.manager__name Менеджер Иванова А.А.
+									a(href="#").btn.manager__btn Связаться
+								.manager__contacts
+									a(href="#").btn.btn-contacts
+										img(src="img/icon-viber.svg" width="32" height="32" alt="")
 						.sidebar__section
 							a(href="#").support
 								.support__icon
@@ -78,95 +82,95 @@ html(lang="ru")
 										.application-main__row.application-main__section
 											.application-main__row-col-first
 												.application-main__section
-													table.details-table
+													table.details-table.details-table--application
 														tr
-															td(style="width:27%") Ф.И.О. контактного лица со стороны Заявителя
-															td(style="width:73%") Абдулхаков Артур Маратович
+															td.td-details-main Ф.И.О. контактного лица со стороны Заявителя
+															td.td-details-content Абдулхаков Артур Маратович
 														tr
-															td(style="width:27%") E-mail
-															td(style="width:73%") kpatp-2@yandex.ru
+															td.td-details-main E-mail
+															td.td-details-content kpatp-2@yandex.ru
 														tr
-															td(style="width:27%") Телефон
-															td(style="width:73%") +7 (843) 262-06-76
+															td.td-details-main Телефон
+															td.td-details-content +7 (843) 262-06-76
 											.application-main__row-col-sec
 												.application-main__section
-													.heading-base.heading-base--application Контактная информация
+													.heading-base.heading-base--normal.heading-base--application Контактная информация
 													table.info-table
 														tbody
 															tr
-																td Менеджер
+																td.td-info-main Менеджер
 																td Анна
 															tr
-																td E-mail для обращений
+																td.td-info-main E-mail для обращений
 																td Ivanova@gtlk.ru
 															tr
-																td Внутренний номер сотрудника
+																td.td-info-main Внутренний номер сотрудника
 																td 8-800-200-12-99 (доб. 101)
 															tr
-																td Мобильный телефон
+																td.td-info-main Мобильный телефон
 																td 8-916-555-88-99
 									.tab-content#profile-org
 										.application-main__row.application-main__section
 											.application-main__row-col-first
 												.application-main__section
-													table.details-table.details-table--organization
+													table.details-table.details-table--application.details-table--organization
 														tr
-															td(style="width:29%") Полное наименование организации
-															td(style="width:71%") МУНИЦИПАЛЬНОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ Г.КАЗАНИ "ПАССАЖИРСКОЕ ABTOTPAHCПOPTHOE ПРЕДПРИЯТИЕ Хв2"
+															td.td-details-org-main Полное наименование организации
+															td.td-details-org-content МУНИЦИПАЛЬНОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ Г.КАЗАНИ "ПАССАЖИРСКОЕ ABTOTPAHCПOPTHOE ПРЕДПРИЯТИЕ Хв2"
 														tr
-															td(style="width:29%") Краткое наименование
-															td(style="width:71%") МУП "ПАТП №2
+															td.td-details-org-main Краткое наименование
+															td.td-details-org-content МУП "ПАТП №2
 														tr
-															td(style="width:29%") Ф.И.О. руководител
-															td(style="width:71%") Мухаметшин Альберт Ахатович
+															td.td-details-org-main Ф.И.О. руководител
+															td.td-details-org-content Мухаметшин Альберт Ахатович
 														tr
-															td(style="width:29%") E-mail
-															td(style="width:71%") kpatp-2@yandex.ru
+															td.td-details-org-main E-mail
+															td.td-details-org-content kpatp-2@yandex.ru
 														tr
-															td(style="width:29%") Телефон
-															td(style="width:71%") +7 (843) 262-06-76
+															td.td-details-org-main Телефон
+															td.td-details-org-content +7 (843) 262-06-76
 														tr
-															td(style="width:29%") Факс
-															td(style="width:71%") +7 (843) 262-06-76
+															td.td-details-org-main Факс
+															td.td-details-org-content +7 (843) 262-06-76
 														tr
-															td(style="width:29%") ИНН
-															td(style="width:71%") 1660005127
+															td.td-details-org-main ИНН
+															td.td-details-org-content 1660005127
 														tr
-															td(style="width:29%") КПП
-															td(style="width:71%") 166001001
+															td.td-details-org-main КПП
+															td.td-details-org-content 166001001
 														tr
-															td(style="width:29%") ОГРН
-															td(style="width:71%") 1021603617133
+															td.td-details-org-main ОГРН
+															td.td-details-org-content 1021603617133
 														tr
-															td(style="width:29%") ОКПО
-															td(style="width:71%") 05151873
+															td.td-details-org-main ОКПО
+															td.td-details-org-content 05151873
 														tr
-															td(style="width:29%") Код ОКОПФ
-															td(style="width:71%") 1 10 00
+															td.td-details-org-main Код ОКОПФ
+															td.td-details-org-content 1 10 00
 														tr
-															td(style="width:29%") ОКВЭД
-															td(style="width:71%") 01
+															td.td-details-org-main ОКВЭД
+															td.td-details-org-content 01
 														tr
-															td(style="width:29%") ОКТМО
-															td(style="width:71%") 36602404
+															td.td-details-org-main ОКТМО
+															td.td-details-org-content 36602404
 														tr
-															td(style="width:29%") Фактический адрес
-															td(style="width:71%") 420087, Республика Татарстан, город Казань, улица Крылова, дом 3
+															td.td-details-org-main Фактический адрес
+															td.td-details-org-content 420087, Республика Татарстан, город Казань, улица Крылова, дом 3
 														tr
-															td(style="width:29%") Юридический адрес
-															td(style="width:71%") 420087, Республика Татарстан, город Казань, улица Крылова, дом 3
+															td.td-details-org-main Юридический адрес
+															td.td-details-org-content 420087, Республика Татарстан, город Казань, улица Крылова, дом 3
 														tr
-															td(style="width:29%") Расчетный счет
-															td(style="width:71%") 4060281020000000058
+															td.td-details-org-main Расчетный счет
+															td.td-details-org-content 4060281020000000058
 														tr
-															td(style="width:29%") Банк
-															td(style="width:71%") ООО КБЭР «Банк-Казани»
+															td.td-details-org-main Банк
+															td.td-details-org-content ООО КБЭР «Банк-Казани»
 														tr
-															td(style="width:29%") Корреспондентский счет
-															td(style="width:71%") 30101810100000000844
+															td.td-details-org-main Корреспондентский счет
+															td.td-details-org-content 30101810100000000844
 														tr
-															td(style="width:29%") БИК
-															td(style="width:71%") 049205844
+															td.td-details-org-main БИК
+															td.td-details-org-content 049205844
 
 					footer.footer
 						.container

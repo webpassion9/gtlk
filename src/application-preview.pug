@@ -46,10 +46,14 @@ html(lang="ru")
 										.sidebar__nav-item-text Справка
 						.sidebar__section
 							.manager
-								.manager__ava
-									img(src="img/avatar-manager.png", alt="")
-								.manager__name Менеджер Иванова А.А.
-								a(href="#").btn.manager__btn Связаться
+								.manager__main
+									.manager__ava
+										img(src="img/avatar-manager.png", alt="")
+									.manager__name Менеджер Иванова А.А.
+									a(href="#").btn.manager__btn Связаться
+								.manager__contacts
+									a(href="#").btn.btn-contacts
+										img(src="img/icon-viber.svg" width="32" height="32" alt="")
 						.sidebar__section
 							a(href="#").support
 								.support__icon
@@ -71,29 +75,29 @@ html(lang="ru")
 										.application-main__row-col-first
 											.application-main__section
 												.heading-base.heading-base--application Заявитель
-												table.details-table
+												table.details-table.details-table--application
 													tr
-														td Полное наименование организации
+														td(style="width:255px;") Полное наименование организации
 														td МУНИЦИПАЛЬНОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ Г.КАЗАНИ "ПАССАЖИРСКОЕ ABTOTPAHCПOPTHOE ПРЕДПРИЯТИЕ Хв2"
 													tr
-														td Телефон
+														td(style="width:255px;") Телефон
 														td +7 (843) 262-06-76
 													tr
-														td E-mail
+														td(style="width:255px;") E-mail
 														td kpatp-2@yandex.ru
 													tr
-														td Факс
+														td(style="width:255px;") Факс
 														td +7 (843) 262-06-72
 													tr
-														td ИНН
+														td(style="width:255px;") ИНН
 														td 1660005127
 													tr
-														td КПП
+														td(style="width:255px;") КПП
 														td 166001001
 										.application-main__row-col-sec
 											.application-main__section
 												.heading-base.heading-base--application Контактное лицо по сделке
-												table.details-table
+												table.details-table.details-table--application
 													tr
 														td ФИО
 														td Абдулхаков Артур Маратович
@@ -108,7 +112,7 @@ html(lang="ru")
 														td kpatp-2@yandex.ru
 											.application-main__section
 												.heading-base.heading-base--application Руководитель организации
-												table.details-table
+												table.details-table.details-table--application
 													tr
 														td ФИО
 														td Абдулхаков Артур Маратович
@@ -118,123 +122,124 @@ html(lang="ru")
 											
 									.application-main__section.application-main__section--item
 										.heading-base.heading-base--application Предмет лизинга/аренды
-										table.details-table
+										table.details-table.details-table--application
 											tr
-												td(style="width: 51.5%") Вид имущества
+												td(style="width:255px;") Вид имущества
 												td Транспортное средство
 											tr
-												td(style="width: 51.5%") Ставка НДС
+												td(style="width:255px;") Ставка НДС
 												td 20%
 											tr
-												td(style="width: 51.5%") Предметы лизинга
+												td(style="width:255px;") Предметы лизинга
 												td
-										table.application-table
-											thead
-												tr
-													th Название предмета
-													th Поставщик
-													th Срок поставки
-													th Спецификация
-													th Стоимость единицы
-													th Количество
-													th Стоимость итоговая
-											tbody
-												tr
-													td ж/д вагон Хоппер
-													td ООО «РЖД»
-													td 120 дней
-													td Метан (КПГ)
-													td 1 000 000,00 ₽
-													td 20 ед.
-													td 20 000 000,00 ₽
-												tr
-													td ж/д вагон Хоппер
-													td ООО «РЖД»
-													td 120 дней
-													td Метан (КПГ)
-													td 1 000 000,00 ₽
-													td 20 ед.
-													td 20 000 000,00 ₽
-												tr
-													td ж/д вагон Хоппер
-													td ООО «РЖД»
-													td 120 дней
-													td Метан (КПГ)
-													td 1 000 000,00 ₽
-													td 20 ед.
-													td 20 000 000,00 ₽
-												tr
-													td ж/д вагон Хоппер
-													td ООО «РЖД»
-													td 120 дней
-													td Метан (КПГ)
-													td 1 000 000,00 ₽
-													td 20 ед.
-													td 20 000 000,00 ₽
-												tr
-													td
-													td
-													td
-													td
-													td
-													td итого
-													td 70 850 000,00 ₽
+										.scroll-wrapper
+											table.table-app-item.table-app-item--page-preview
+												thead
+													tr
+														th Название предмета
+														th Поставщик
+														th Срок поставки
+														th Спецификация
+														th Стоимость единицы
+														th Количество
+														th Стоимость итоговая
+												tbody
+													tr
+														td ж/д вагон Хоппер
+														td ООО «РЖД»
+														td 120 дней
+														td Метан (КПГ)
+														td 1 000 000,00 ₽
+														td 20 ед.
+														td 20 000 000,00 ₽
+													tr
+														td ж/д вагон Хоппер
+														td ООО «РЖД»
+														td 120 дней
+														td Метан (КПГ)
+														td 1 000 000,00 ₽
+														td 20 ед.
+														td 20 000 000,00 ₽
+													tr
+														td ж/д вагон Хоппер
+														td ООО «РЖД»
+														td 120 дней
+														td Метан (КПГ)
+														td 1 000 000,00 ₽
+														td 20 ед.
+														td 20 000 000,00 ₽
+													tr
+														td ж/д вагон Хоппер
+														td ООО «РЖД»
+														td 120 дней
+														td Метан (КПГ)
+														td 1 000 000,00 ₽
+														td 20 ед.
+														td 20 000 000,00 ₽
+													tr
+														td
+														td
+														td
+														td
+														td
+														td.td-total-selected итого
+														td.td-total-selected 70 850 000,00 ₽
 									
 									.application-main__row.application-main__section
 										.application-main__row-col-first
 											.application-main__section
 												.heading-base.heading-base--application Условия лизинга/аренды
-												table.details-table
+												table.details-table.details-table--application
 													tbody
 														tr
 															th(colspan="2") Порядок и сроки оплаты поставщику
 														tr
-															td Наименование платежа
+															td(style="width:255px;") Наименование платежа
 															td Аванс
 														tr
-															td Размер аванса
+															td(style="width:255px;") Размер аванса
 															td 30%
 														tr
-															td Порядок и срок оплаты
+															td(style="width:255px;") Порядок и срок оплаты
 															td ...
-												table.details-table
+												table.details-table.details-table--application
 													tbody
 														tr
 															th(colspan="2") Планируемые условия договора лизинга
 														tr
-															td График платежей
+															td(style="width:255px;") График платежей
 															td Аннуитет (равными частями)
 														tr
-															td Срок лизинга, мес.
+															td(style="width:255px;") Срок лизинга, мес.
 															td 85
 														tr
-															td Авансовый платёж, %
+															td(style="width:255px;") Авансовый платёж, %
 															td 0
 														tr
-															td Страхователь
+															td(style="width:255px;") Страхователь
 															td Арендодатор
 														tr
-															td Балансодержатель
+															td(style="width:255px;") Балансодержатель
 															td Арендодатор
 														tr
-															td График платежей
+															td(style="width:255px;") График платежей
 															td Аннуитет (равными частями)
 														tr
-															td Срок лизинга
+															td(style="width:255px;") Срок лизинга
 															td 85 месяцев
 										.application-main__row-col-sec
 											.application-main__section
 												.heading-base.heading-base--application Дополнительные условия
-												table.details-table
+												table.details-table.details-table--application
 													tbody
 														tr
-															td Монтажные работы
+															td(style="width:255px;") Монтажные работы
 															td —
 														tr
-															td Пусконаладочные работы
+															td(style="width:255px;") Пусконаладочные работы
 															td —
 														tr
-															td Другое
+															td(style="width:255px;") Другое
 															td —
 									.application-main__section
 										.heading-base.heading-base--application Документы
@@ -270,12 +275,12 @@ html(lang="ru")
 													+sprite("icon-check")
 												span.checkbox-base__text Я даю свое согласие на обработку персональных данных и соглашаюсь с условиями политики конфиденциальности
 										.application-agreement__text Отправляя форму, вы даете согласие на обработку персональных данных, указанных вами в заявке, в соответствии с требованиями Федерального закона от 27.07.2016 г. № 152-ФЗ “О персональных данных”
-									.application-main__section.form-application__nav.form-application__nav--preview
+									.application-main__section.form-application__nav.form-application__nav--create-app.form-application__nav--preview
 										a(href="#").btn.btn-nav.btn-nav--continue Подписать
 										a(href="#").btn.btn-nav.btn-nav--continue.disabled-send Отправить
 										a(href="#").btn.btn-nav.btn-nav--save Сохранить
 										a(href="#").btn.btn-nav.btn-nav--back-cancel Отменить и вернуться назад
-									.application-main__section.form-application__nav.form-application__nav--preview
+									.application-main__section.form-application__nav.form-application__nav--create-app.form-application__nav--preview
 										a(href="#").btn.btn-nav.btn-nav--waiting
 											+sprite("icon-loading")
 											| Ожидается подписание в Диадок

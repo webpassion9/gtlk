@@ -2,7 +2,7 @@
 	width: 100%;
 	font-size: 14px;
 	line-height: 17px;
-	color: rgba(var(--color-black-base));
+	color: var(--color-black-base);
 	border-collapse: collapse;
 
 	tr {
@@ -16,6 +16,10 @@
 			// }
 			&:last-child {
 				border-width: 1px;
+				.tooltip__menu {
+					top: auto;
+					bottom: 0;
+				}
 			}
 		}
 	}

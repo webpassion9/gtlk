@@ -1,10 +1,10 @@
 .docs-table {
-	width: 100%;
 	font-size: 14px;
 	line-height: 17px;
-	color: rgba(var(--color-black-base));
+	color: var(--color-black-base);
 	border-top: 1px solid #CECECE;
 	border-collapse: collapse;
+	min-width: 1000px;
 	max-width: 1660px;
 	table-layout: fixed;
 	tbody {
@@ -39,7 +39,7 @@
 			font-size: 15px;
 			font-weight: 700;
 			line-height: 20px;
-			color: rgba(var(--color-black-base));
+			color: var(--color-black-base);
 			// border-top: 2px solid #A2A2A2;
 			padding-top: 20px;
 		}

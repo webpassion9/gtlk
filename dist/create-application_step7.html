@@ -11,7 +11,7 @@
 		<div class="wrapper wrapper-main">
 			<header class="header">
 				<div class="container">
-					<a href="#">
+					<a class="header-logo" href="#">
 						<img src="img/logo-GTLK_dark.png" width="166" height="52" alt="">
 					</a>
 					<ul class="header-menu">
@@ -51,6 +51,13 @@
 						</div>
 					</form>
 					<ul class="header-btns">
+						<li class="header-btns__item is-lg-hidden">
+							<a class="btn header-btns__link" href="#">
+								<svg class="icon-loop">
+									<use xlink:href="img/icons/icons.svg#icon-loop"></use>
+								</svg>
+							</a>
+						</li>
 						<li class="header-btns__item">
 							<a class="btn header-btns__link" data-target="popup-notifications">
 								<svg class="icon-bell">
@@ -230,7 +237,109 @@
 								</div>
 							</div>
 						</li>
-						<li class="header-btns__item">
+						<li class="header-btns__item is-lg-hidden">
+							<a class="btn header-btns__link" data-target="popup-menu">
+								<svg class="icon-menu">
+									<use xlink:href="img/icons/icons.svg#icon-menu"></use>
+								</svg>
+							</a>
+							<div class="user-menu user-menu--mobile" data-popup="popup-menu">
+								<ul class="user-menu__list">
+									<li class="user-menu__list-item">
+										<a class="user-menu__list-item-link" href="#">
+											<span class="user-menu__list-item-icon">
+												<svg class="icon-file-tray">
+													<use xlink:href="img/icons/icons.svg#icon-file-tray"></use>
+												</svg>
+											</span>Заявки
+										</a>
+									</li>
+									<li class="user-menu__list-item">
+										<a class="user-menu__list-item-link" href="#">
+											<span class="user-menu__list-item-icon">
+												<svg class="icon-newspaper">
+													<use xlink:href="img/icons/icons.svg#icon-newspaper"></use>
+												</svg>
+											</span>Договоры
+										</a>
+									</li>
+									<li class="user-menu__list-item">
+										<a class="user-menu__list-item-link" href="#">
+											<span class="user-menu__list-item-icon">
+												<svg class="icon-doc">
+													<use xlink:href="img/icons/icons.svg#icon-doc"></use>
+												</svg>
+											</span>Обращения НМЦ
+										</a>
+									</li>
+								</ul>
+								<ul class="user-menu__list">
+									<li class="user-menu__list-item">
+										<a class="user-menu__list-item-link" href="#">
+											<span class="user-menu__list-item-icon">
+												<svg class="icon-user">
+													<use xlink:href="img/icons/icons.svg#icon-user"></use>
+												</svg>
+											</span>Профиль
+										</a>
+									</li>
+									<li class="user-menu__list-item">
+										<a class="user-menu__list-item-link" href="#">
+											<span class="user-menu__list-item-icon">
+												<svg class="icon-calendar">
+													<use xlink:href="img/icons/icons.svg#icon-calendar"></use>
+												</svg>
+											</span>Журнал событий
+										</a>
+									</li>
+									<li class="user-menu__list-item">
+										<a class="user-menu__list-item-link" href="#">
+											<span class="user-menu__list-item-icon">
+												<svg class="icon-book">
+													<use xlink:href="img/icons/icons.svg#icon-book"></use>
+												</svg>
+											</span>Справка по системе
+										</a>
+									</li>
+								</ul>
+								<ul class="user-menu__list">
+									<li class="user-menu__list-item">
+										<div class="manager manager--view-full">
+											<div class="manager__main">
+												<div class="manager__ava">
+													<img src="img/avatar-manager.png" alt="">
+												</div>
+												<div class="manager__name">Менеджер Иванова А.А.</div>
+											</div>
+											<div class="manager__contacts">
+												<a class="btn manager__btn" href="#">Связаться</a>
+											</div>
+										</div>
+									</li>
+								</ul>
+								<ul class="user-menu__list">
+									<li class="user-menu__list-item">
+										<a class="user-menu__list-item-link" href="#">
+											<span class="user-menu__list-item-icon">
+												<svg class="icon-chat">
+													<use xlink:href="img/icons/icons.svg#icon-chat"></use>
+												</svg>
+											</span>Служба поддержки
+										</a>
+									</li>
+									<li class="user-menu__list-item">
+										<a class="user-menu__list-item-link" href="#">
+											<span class="user-menu__list-item-icon">
+												<svg class="icon-logout">
+													<use xlink:href="img/icons/icons.svg#icon-logout"></use>
+												</svg>
+											</span>Выйти
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="header-btns__item is-lg-visible">
 							<a class="btn header-btns__link" data-target="popup-user-menu">
 								<svg class="icon-user">
 									<use xlink:href="img/icons/icons.svg#icon-user"></use>
@@ -326,11 +435,18 @@
 						</div>
 						<div class="sidebar__section">
 							<div class="manager">
-								<div class="manager__ava">
-									<img src="img/avatar-manager.png" alt="">
+								<div class="manager__main">
+									<div class="manager__ava">
+										<img src="img/avatar-manager.png" alt="">
+									</div>
+									<div class="manager__name">Менеджер Иванова А.А.</div>
+									<a class="btn manager__btn" href="#">Связаться</a>
 								</div>
-								<div class="manager__name">Менеджер Иванова А.А.</div>
-								<a class="btn manager__btn" href="#">Связаться</a>
+								<div class="manager__contacts">
+									<a class="btn btn-contacts" href="#">
+										<img src="img/icon-viber.svg" width="32" height="32" alt="">
+									</a>
+								</div>
 							</div>
 						</div>
 						<div class="sidebar__section">
@@ -352,30 +468,44 @@
 								<div class="go-back go-back--form-application">
 									<a href="#">< Назад в мои заявки</a>
 								</div>
-								<div class="heading-base heading-base--large">Новая заявка</div>
+								<div class="heading-base form-application__top-heading heading-base--large is-lg-visible">Новая заявка</div>
 							</div>
 							<div class="form-application__steps">
 								<ul class="form-steps">
 									<li class="form-steps__item active">
-										<div class="form-steps__item-text">Заявитель</div>
+										<div class="form-steps__item-text"> 
+											<span class="is-lg-hidden">Шаг 1: </span> Заявитель
+										</div>
 									</li>
 									<li class="form-steps__item active">
-										<div class="form-steps__item-text">Контактное лицо по сделке</div>
+										<div class="form-steps__item-text"> 
+											<span class="is-lg-hidden">Шаг 2: </span> Контактное лицо по сделке
+										</div>
 									</li>
 									<li class="form-steps__item active">
-										<div class="form-steps__item-text">Руководитель организации</div>
+										<div class="form-steps__item-text"> 
+											<span class="is-lg-hidden">Шаг 3: </span> Руководитель организации
+										</div>
 									</li>
 									<li class="form-steps__item active">
-										<div class="form-steps__item-text">Предмет лизинга/аренды</div>
+										<div class="form-steps__item-text"> 
+											<span class="is-lg-hidden">Шаг 4: </span> Предмет лизинга/аренды
+										</div>
 									</li>
 									<li class="form-steps__item active">
-										<div class="form-steps__item-text">Условия лизинга/аренды</div>
+										<div class="form-steps__item-text"> 
+											<span class="is-lg-hidden">Шаг 5: </span> Условия лизинга/аренды
+										</div>
 									</li>
 									<li class="form-steps__item active">
-										<div class="form-steps__item-text">Дополнительные условия</div>
+										<div class="form-steps__item-text"> 
+											<span class="is-lg-hidden">Шаг 6: </span> Дополнительные условия
+										</div>
 									</li>
-									<li class="form-steps__item">
-										<div class="form-steps__item-text">Загрузить документы</div>
+									<li class="form-steps__item active current">
+										<div class="form-steps__item-text"> 
+											<span class="is-lg-hidden">Шаг 7: </span> Загрузить документы
+										</div>
 									</li>
 								</ul>
 							</div>
@@ -442,283 +572,285 @@
 											</div>
 										</div>
 										<div class="application-docs__content">
-											<table class="docs-table">
-												<thead>
-													<tr>
-														<th style="width: 48%">Название документа</th>
-														<th style="width: 14%">Вид документа</th>
-														<th style="width: 38%">Загрузка</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>
-															<div class="table-td-main">
-																<label class="checkbox-base">
-																	<input type="checkbox" hidden>
-																	<span class="checkbox-base__icon">
-																		<svg class="icon-check">
-																			<use xlink:href="img/icons/icons.svg#icon-check"></use>
-																		</svg>
-																	</span>
-																</label>Анкета Лизингополучателя/Обеспечителя
-															</div>
-														</td>
-														<td>Анкета клиента</td>
-														<td>
-															<div class="upload">
-																<div>Название документа.format</div>
-																<div class="doc-info-bar">
-																	<div class="notice">
-																		<div class="notice__icon">
+											<div class="scroll-wrapper">
+												<table class="docs-table">
+													<thead>
+														<tr>
+															<th style="width: 48%">Название документа</th>
+															<th style="width: 14%">Вид документа</th>
+															<th style="width: 38%">Загрузка</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>
+																<div class="table-td-main">
+																	<label class="checkbox-base">
+																		<input type="checkbox" hidden>
+																		<span class="checkbox-base__icon">
 																			<svg class="icon-check">
 																				<use xlink:href="img/icons/icons.svg#icon-check"></use>
 																			</svg>
+																		</span>
+																	</label>Анкета Лизингополучателя/Обеспечителя
+																</div>
+															</td>
+															<td>Анкета клиента</td>
+															<td>
+																<div class="upload">
+																	<div>Название документа.format</div>
+																	<div class="doc-info-bar">
+																		<div class="notice">
+																			<div class="notice__icon">
+																				<svg class="icon-check">
+																					<use xlink:href="img/icons/icons.svg#icon-check"></use>
+																				</svg>
+																			</div>
+																			<div class="notice__text">Загружен</div>
 																		</div>
-																		<div class="notice__text">Загружен</div>
+																		<div class="notice">
+																			<div class="notice__icon">
+																				<svg class="icon-check">
+																					<use xlink:href="img/icons/icons.svg#icon-check"></use>
+																				</svg>
+																			</div>
+																			<div class="notice__text">Подписан</div>
+																		</div>
+																		<label class="btn btn-action">
+																			<svg class="icon-plus">
+																				<use xlink:href="img/icons/icons.svg#icon-plus"></use>
+																			</svg>Добавить файл
+																			<input type="file" hidden>
+																		</label>
 																	</div>
-																	<div class="notice">
-																		<div class="notice__icon">
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td>
+																<div class="table-td-main">
+																	<label class="checkbox-base">
+																		<input type="checkbox" hidden>
+																		<span class="checkbox-base__icon">
 																			<svg class="icon-check">
 																				<use xlink:href="img/icons/icons.svg#icon-check"></use>
 																			</svg>
-																		</div>
-																		<div class="notice__text">Подписан</div>
+																		</span>
+																	</label>Устав в действующей редакции со всеми изменениями (с отметкой о регистрации в ФНС)
+																</div>
+															</td>
+															<td>Устав</td>
+															<td>
+																<div class="upload disabled">
+																	<div>
+																		<label class="btn btn-upload">
+																			<div class="btn-upload__icon">
+																				<svg class="icon-attachment">
+																					<use xlink:href="img/icons/icons.svg#icon-attachment"></use>
+																				</svg>
+																			</div>Загрузить с устройства
+																			<input type="file" hidden>
+																		</label>
 																	</div>
-																	<label class="btn btn-action">
-																		<svg class="icon-plus">
-																			<use xlink:href="img/icons/icons.svg#icon-plus"></use>
-																		</svg>Добавить файл
-																		<input type="file" hidden>
-																	</label>
+																	<div class="upload__info">Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3</div>
 																</div>
-															</div>
-														</td>
-													</tr>
-													<tr>
-														<td>
-															<div class="table-td-main">
-																<label class="checkbox-base">
-																	<input type="checkbox" hidden>
-																	<span class="checkbox-base__icon">
-																		<svg class="icon-check">
-																			<use xlink:href="img/icons/icons.svg#icon-check"></use>
-																		</svg>
-																	</span>
-																</label>Устав в действующей редакции со всеми изменениями (с отметкой о регистрации в ФНС)
-															</div>
-														</td>
-														<td>Устав</td>
-														<td>
-															<div class="upload disabled">
-																<div>
-																	<label class="btn btn-upload">
-																		<div class="btn-upload__icon">
-																			<svg class="icon-attachment">
-																				<use xlink:href="img/icons/icons.svg#icon-attachment"></use>
-																			</svg>
-																		</div>Загрузить с устройства
-																		<input type="file" hidden>
-																	</label>
-																</div>
-																<div class="upload__info">Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3</div>
-															</div>
-														</td>
-													</tr>
-													<tr>
-														<td>
-															<div class="table-td-main">
-																<label class="checkbox-base">
-																	<input type="checkbox" hidden>
-																	<span class="checkbox-base__icon">
-																		<svg class="icon-check">
-																			<use xlink:href="img/icons/icons.svg#icon-check"></use>
-																		</svg>
-																	</span>
-																</label>Выписка из ЕГРЮЛ с установочными данными учредителей и руководителя, выданная не позднее 30 дней на дату ее предоставления в ПАО «ГТЛК» (удостоверенная нотариально либо оригинал)
-															</div>
-														</td>
-														<td>Выписка из ЕГРЮЛ</td>
-														<td>
-															<div class="upload disabled">
-																<div>
-																	<label class="btn btn-upload">
-																		<div class="btn-upload__icon">
-																			<svg class="icon-attachment">
-																				<use xlink:href="img/icons/icons.svg#icon-attachment"></use>
-																			</svg>
-																		</div>Загрузить с устройства
-																		<input type="file" hidden>
-																	</label>
-																</div>
-																<div class="upload__info">Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3</div>
-															</div>
-														</td>
-													</tr>
-													<tr>
-														<td>
-															<div class="table-td-main">
-																<label class="checkbox-base">
-																	<input type="checkbox" hidden>
-																	<span class="checkbox-base__icon">
-																		<svg class="icon-check">
-																			<use xlink:href="img/icons/icons.svg#icon-check"></use>
-																		</svg>
-																	</span>
-																</label>Свидетельство о внесении записи в ЕГРЮЛ о юридическом лице, либо Свидетельство о внесении в ЕГРЮЛ записи о юридическом лице, зарегистрированном до 01.07.2002 г.
-															</div>
-														</td>
-														<td>Свидетельство ОГРН</td>
-														<td>
-															<div class="upload">
-																<div>Название документа.format</div>
-																<div class="doc-info-bar">
-																	<div class="notice">
-																		<div class="notice__icon">
+															</td>
+														</tr>
+														<tr>
+															<td>
+																<div class="table-td-main">
+																	<label class="checkbox-base">
+																		<input type="checkbox" hidden>
+																		<span class="checkbox-base__icon">
 																			<svg class="icon-check">
 																				<use xlink:href="img/icons/icons.svg#icon-check"></use>
 																			</svg>
-																		</div>
-																		<div class="notice__text">Загружен</div>
+																		</span>
+																	</label>Выписка из ЕГРЮЛ с установочными данными учредителей и руководителя, выданная не позднее 30 дней на дату ее предоставления в ПАО «ГТЛК» (удостоверенная нотариально либо оригинал)
+																</div>
+															</td>
+															<td>Выписка из ЕГРЮЛ</td>
+															<td>
+																<div class="upload disabled">
+																	<div>
+																		<label class="btn btn-upload">
+																			<div class="btn-upload__icon">
+																				<svg class="icon-attachment">
+																					<use xlink:href="img/icons/icons.svg#icon-attachment"></use>
+																				</svg>
+																			</div>Загрузить с устройства
+																			<input type="file" hidden>
+																		</label>
 																	</div>
-																	<label class="btn btn-action">
-																		<svg class="icon-pencil">
-																			<use xlink:href="img/icons/icons.svg#icon-pencil"></use>
-																		</svg>Подписать
-																		<input type="file" hidden>
-																	</label>
-																	<label class="btn btn-action">
-																		<svg class="icon-plus">
-																			<use xlink:href="img/icons/icons.svg#icon-plus"></use>
-																		</svg>Добавить файл
-																		<input type="file" hidden>
-																	</label>
+																	<div class="upload__info">Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3</div>
 																</div>
-															</div>
-														</td>
-													</tr>
-													<tr>
-														<td>
-															<div class="table-td-main">
-																<label class="checkbox-base">
-																	<input type="checkbox" hidden>
-																	<span class="checkbox-base__icon">
-																		<svg class="icon-check">
-																			<use xlink:href="img/icons/icons.svg#icon-check"></use>
-																		</svg>
-																	</span>
-																</label>Выписка из ЕГРЮЛ с установочными данными учредителей и руководителя, выданная не позднее 30 дней на дату ее предоставления в ПАО «ГТЛК» (удостоверенная нотариально либо оригинал)
-															</div>
-														</td>
-														<td>Выписка из ЕГРЮЛ</td>
-														<td>
-															<div class="upload disabled">
-																<div>
-																	<label class="btn btn-upload">
-																		<div class="btn-upload__icon">
-																			<svg class="icon-attachment">
-																				<use xlink:href="img/icons/icons.svg#icon-attachment"></use>
+															</td>
+														</tr>
+														<tr>
+															<td>
+																<div class="table-td-main">
+																	<label class="checkbox-base">
+																		<input type="checkbox" hidden>
+																		<span class="checkbox-base__icon">
+																			<svg class="icon-check">
+																				<use xlink:href="img/icons/icons.svg#icon-check"></use>
 																			</svg>
-																		</div>Загрузить с устройства
-																		<input type="file" hidden>
-																	</label>
+																		</span>
+																	</label>Свидетельство о внесении записи в ЕГРЮЛ о юридическом лице, либо Свидетельство о внесении в ЕГРЮЛ записи о юридическом лице, зарегистрированном до 01.07.2002 г.
 																</div>
-																<div class="upload__info">Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3</div>
-															</div>
-														</td>
-													</tr>
-													<tr>
-														<td>
-															<div class="table-td-main">
-																<label class="checkbox-base">
-																	<input type="checkbox" hidden>
-																	<span class="checkbox-base__icon">
-																		<svg class="icon-check">
-																			<use xlink:href="img/icons/icons.svg#icon-check"></use>
-																		</svg>
-																	</span>
-																</label>Выписка из ЕГРЮЛ с установочными данными учредителей и руководителя, выданная не позднее 30 дней на дату ее предоставления в ПАО «ГТЛК» (удостоверенная нотариально либо оригинал)
-															</div>
-														</td>
-														<td>Выписка из ЕГРЮЛ</td>
-														<td>
-															<div class="upload disabled">
-																<div>
-																	<label class="btn btn-upload">
-																		<div class="btn-upload__icon">
-																			<svg class="icon-attachment">
-																				<use xlink:href="img/icons/icons.svg#icon-attachment"></use>
+															</td>
+															<td>Свидетельство ОГРН</td>
+															<td>
+																<div class="upload">
+																	<div>Название документа.format</div>
+																	<div class="doc-info-bar">
+																		<div class="notice">
+																			<div class="notice__icon">
+																				<svg class="icon-check">
+																					<use xlink:href="img/icons/icons.svg#icon-check"></use>
+																				</svg>
+																			</div>
+																			<div class="notice__text">Загружен</div>
+																		</div>
+																		<label class="btn btn-action">
+																			<svg class="icon-pencil">
+																				<use xlink:href="img/icons/icons.svg#icon-pencil"></use>
+																			</svg>Подписать
+																			<input type="file" hidden>
+																		</label>
+																		<label class="btn btn-action">
+																			<svg class="icon-plus">
+																				<use xlink:href="img/icons/icons.svg#icon-plus"></use>
+																			</svg>Добавить файл
+																			<input type="file" hidden>
+																		</label>
+																	</div>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td>
+																<div class="table-td-main">
+																	<label class="checkbox-base">
+																		<input type="checkbox" hidden>
+																		<span class="checkbox-base__icon">
+																			<svg class="icon-check">
+																				<use xlink:href="img/icons/icons.svg#icon-check"></use>
 																			</svg>
-																		</div>Загрузить с устройства
-																		<input type="file" hidden>
-																	</label>
+																		</span>
+																	</label>Выписка из ЕГРЮЛ с установочными данными учредителей и руководителя, выданная не позднее 30 дней на дату ее предоставления в ПАО «ГТЛК» (удостоверенная нотариально либо оригинал)
 																</div>
-																<div class="upload__info">Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3</div>
-															</div>
-														</td>
-													</tr>
-													<tr>
-														<td>
-															<div class="table-td-main">
-																<label class="checkbox-base">
-																	<input type="checkbox" hidden>
-																	<span class="checkbox-base__icon">
-																		<svg class="icon-check">
-																			<use xlink:href="img/icons/icons.svg#icon-check"></use>
-																		</svg>
-																	</span>
-																</label>Выписка из ЕГРЮЛ с установочными данными учредителей и руководителя, выданная не позднее 30 дней на дату ее предоставления в ПАО «ГТЛК» (удостоверенная нотариально либо оригинал)
-															</div>
-														</td>
-														<td>Протокол (решение) уполномоченного орган... длинное длинное длинное название</td>
-														<td>
-															<div class="upload disabled">
-																<div>
-																	<label class="btn btn-upload">
-																		<div class="btn-upload__icon">
-																			<svg class="icon-attachment">
-																				<use xlink:href="img/icons/icons.svg#icon-attachment"></use>
+															</td>
+															<td>Выписка из ЕГРЮЛ</td>
+															<td>
+																<div class="upload disabled">
+																	<div>
+																		<label class="btn btn-upload">
+																			<div class="btn-upload__icon">
+																				<svg class="icon-attachment">
+																					<use xlink:href="img/icons/icons.svg#icon-attachment"></use>
+																				</svg>
+																			</div>Загрузить с устройства
+																			<input type="file" hidden>
+																		</label>
+																	</div>
+																	<div class="upload__info">Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3</div>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td>
+																<div class="table-td-main">
+																	<label class="checkbox-base">
+																		<input type="checkbox" hidden>
+																		<span class="checkbox-base__icon">
+																			<svg class="icon-check">
+																				<use xlink:href="img/icons/icons.svg#icon-check"></use>
 																			</svg>
-																		</div>Загрузить с устройства
-																		<input type="file" hidden>
-																	</label>
+																		</span>
+																	</label>Выписка из ЕГРЮЛ с установочными данными учредителей и руководителя, выданная не позднее 30 дней на дату ее предоставления в ПАО «ГТЛК» (удостоверенная нотариально либо оригинал)
 																</div>
-																<div class="upload__info">Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3</div>
-															</div>
-														</td>
-													</tr>
-													<tr>
-														<td>
-															<div class="table-td-main">
-																<label class="checkbox-base">
-																	<input type="checkbox" hidden>
-																	<span class="checkbox-base__icon">
-																		<svg class="icon-check">
-																			<use xlink:href="img/icons/icons.svg#icon-check"></use>
-																		</svg>
-																	</span>
-																</label>Выписка из ЕГРЮЛ с установочными данными учредителей и руководителя, выданная не позднее 30 дней на дату ее предоставления в ПАО «ГТЛК» (удостоверенная нотариально либо оригинал)
-															</div>
-														</td>
-														<td>Выписка из ЕГРЮЛ</td>
-														<td>
-															<div class="upload disabled">
-																<div>
-																	<label class="btn btn-upload">
-																		<div class="btn-upload__icon">
-																			<svg class="icon-attachment">
-																				<use xlink:href="img/icons/icons.svg#icon-attachment"></use>
+															</td>
+															<td>Выписка из ЕГРЮЛ</td>
+															<td>
+																<div class="upload disabled">
+																	<div>
+																		<label class="btn btn-upload">
+																			<div class="btn-upload__icon">
+																				<svg class="icon-attachment">
+																					<use xlink:href="img/icons/icons.svg#icon-attachment"></use>
+																				</svg>
+																			</div>Загрузить с устройства
+																			<input type="file" hidden>
+																		</label>
+																	</div>
+																	<div class="upload__info">Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3</div>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td>
+																<div class="table-td-main">
+																	<label class="checkbox-base">
+																		<input type="checkbox" hidden>
+																		<span class="checkbox-base__icon">
+																			<svg class="icon-check">
+																				<use xlink:href="img/icons/icons.svg#icon-check"></use>
 																			</svg>
-																		</div>Загрузить с устройства
-																		<input type="file" hidden>
-																	</label>
+																		</span>
+																	</label>Выписка из ЕГРЮЛ с установочными данными учредителей и руководителя, выданная не позднее 30 дней на дату ее предоставления в ПАО «ГТЛК» (удостоверенная нотариально либо оригинал)
 																</div>
-																<div class="upload__info">Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3</div>
-															</div>
-														</td>
-													</tr>
-												</tbody>
-											</table>
+															</td>
+															<td>Протокол (решение) уполномоченного орган... длинное длинное длинное название</td>
+															<td>
+																<div class="upload disabled">
+																	<div>
+																		<label class="btn btn-upload">
+																			<div class="btn-upload__icon">
+																				<svg class="icon-attachment">
+																					<use xlink:href="img/icons/icons.svg#icon-attachment"></use>
+																				</svg>
+																			</div>Загрузить с устройства
+																			<input type="file" hidden>
+																		</label>
+																	</div>
+																	<div class="upload__info">Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3</div>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td>
+																<div class="table-td-main">
+																	<label class="checkbox-base">
+																		<input type="checkbox" hidden>
+																		<span class="checkbox-base__icon">
+																			<svg class="icon-check">
+																				<use xlink:href="img/icons/icons.svg#icon-check"></use>
+																			</svg>
+																		</span>
+																	</label>Выписка из ЕГРЮЛ с установочными данными учредителей и руководителя, выданная не позднее 30 дней на дату ее предоставления в ПАО «ГТЛК» (удостоверенная нотариально либо оригинал)
+																</div>
+															</td>
+															<td>Выписка из ЕГРЮЛ</td>
+															<td>
+																<div class="upload disabled">
+																	<div>
+																		<label class="btn btn-upload">
+																			<div class="btn-upload__icon">
+																				<svg class="icon-attachment">
+																					<use xlink:href="img/icons/icons.svg#icon-attachment"></use>
+																				</svg>
+																			</div>Загрузить с устройства
+																			<input type="file" hidden>
+																		</label>
+																	</div>
+																	<div class="upload__info">Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3</div>
+																</div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
 										</div>
 									</div>
 									<div class="application-docs__section">
@@ -731,415 +863,417 @@
 											</div>
 										</div>
 										<div class="application-docs__content">
-											<table class="docs-table">
-												<thead>
-													<tr>
-														<th style="width: 48%">Название документа</th>
-														<th style="width: 14%">Вид документа</th>
-														<th style="width: 38%">Загрузка</th>
-													</tr>
-												</thead>
-												<tbody class="docs-table__section">
-													<tr>
-														<td>
-															<div class="table-td-main">
-																<label class="checkbox-base">
-																	<input type="checkbox" hidden>
-																	<span class="checkbox-base__icon">
-																		<svg class="icon-check">
-																			<use xlink:href="img/icons/icons.svg#icon-check"></use>
-																		</svg>
-																	</span>
-																</label>Анкета Лизингополучателя/Обеспечителя
-															</div>
-														</td>
-														<td>Анкета клиента</td>
-														<td>
-															<div class="upload">
-																<div>Название документа.format</div>
-																<div class="doc-info-bar">
-																	<div class="notice">
-																		<div class="notice__icon">
+											<div class="scroll-wrapper">
+												<table class="docs-table">
+													<thead>
+														<tr>
+															<th style="width: 48%">Название документа</th>
+															<th style="width: 14%">Вид документа</th>
+															<th style="width: 38%">Загрузка</th>
+														</tr>
+													</thead>
+													<tbody class="docs-table__section">
+														<tr>
+															<td>
+																<div class="table-td-main">
+																	<label class="checkbox-base">
+																		<input type="checkbox" hidden>
+																		<span class="checkbox-base__icon">
 																			<svg class="icon-check">
 																				<use xlink:href="img/icons/icons.svg#icon-check"></use>
 																			</svg>
+																		</span>
+																	</label>Анкета Лизингополучателя/Обеспечителя
+																</div>
+															</td>
+															<td>Анкета клиента</td>
+															<td>
+																<div class="upload">
+																	<div>Название документа.format</div>
+																	<div class="doc-info-bar">
+																		<div class="notice">
+																			<div class="notice__icon">
+																				<svg class="icon-check">
+																					<use xlink:href="img/icons/icons.svg#icon-check"></use>
+																				</svg>
+																			</div>
+																			<div class="notice__text">Загружен</div>
 																		</div>
-																		<div class="notice__text">Загружен</div>
+																		<div class="notice">
+																			<div class="notice__icon">
+																				<svg class="icon-check">
+																					<use xlink:href="img/icons/icons.svg#icon-check"></use>
+																				</svg>
+																			</div>
+																			<div class="notice__text">Подписан</div>
+																		</div>
+																		<label class="btn btn-action">
+																			<svg class="icon-plus">
+																				<use xlink:href="img/icons/icons.svg#icon-plus"></use>
+																			</svg>Добавить файл
+																			<input type="file" hidden>
+																		</label>
 																	</div>
-																	<div class="notice">
-																		<div class="notice__icon">
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td>
+																<div class="table-td-main">
+																	<label class="checkbox-base">
+																		<input type="checkbox" hidden>
+																		<span class="checkbox-base__icon">
 																			<svg class="icon-check">
 																				<use xlink:href="img/icons/icons.svg#icon-check"></use>
 																			</svg>
-																		</div>
-																		<div class="notice__text">Подписан</div>
+																		</span>
+																	</label>Устав в действующей редакции со всеми изменениями (с отметкой о регистрации в ФНС)
+																</div>
+															</td>
+															<td>Устав</td>
+															<td>
+																<div class="upload disabled">
+																	<div>
+																		<label class="btn btn-upload">
+																			<div class="btn-upload__icon">
+																				<svg class="icon-attachment">
+																					<use xlink:href="img/icons/icons.svg#icon-attachment"></use>
+																				</svg>
+																			</div>Загрузить с устройства
+																			<input type="file" hidden>
+																		</label>
 																	</div>
-																	<label class="btn btn-action">
-																		<svg class="icon-plus">
-																			<use xlink:href="img/icons/icons.svg#icon-plus"></use>
-																		</svg>Добавить файл
-																		<input type="file" hidden>
-																	</label>
+																	<div class="upload__info">Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3</div>
 																</div>
-															</div>
-														</td>
-													</tr>
-													<tr>
-														<td>
-															<div class="table-td-main">
-																<label class="checkbox-base">
-																	<input type="checkbox" hidden>
-																	<span class="checkbox-base__icon">
-																		<svg class="icon-check">
-																			<use xlink:href="img/icons/icons.svg#icon-check"></use>
-																		</svg>
-																	</span>
-																</label>Устав в действующей редакции со всеми изменениями (с отметкой о регистрации в ФНС)
-															</div>
-														</td>
-														<td>Устав</td>
-														<td>
-															<div class="upload disabled">
-																<div>
-																	<label class="btn btn-upload">
-																		<div class="btn-upload__icon">
-																			<svg class="icon-attachment">
-																				<use xlink:href="img/icons/icons.svg#icon-attachment"></use>
-																			</svg>
-																		</div>Загрузить с устройства
-																		<input type="file" hidden>
-																	</label>
-																</div>
-																<div class="upload__info">Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3</div>
-															</div>
-														</td>
-													</tr>
-												</tbody>
-												<tbody class="docs-table__section">
-													<tr>
-														<th class="docs-table__subheading" colspan="3">Бухгалтерская отчётность за последние 5 отчётных периодов</th>
-													</tr>
-													<tr>
-														<td>
-															<div class="table-td-main">
-																<label class="checkbox-base">
-																	<input type="checkbox" hidden>
-																	<span class="checkbox-base__icon">
-																		<svg class="icon-check">
-																			<use xlink:href="img/icons/icons.svg#icon-check"></use>
-																		</svg>
-																	</span>
-																</label>Анкета Лизингополучателя/Обеспечителя
-															</div>
-														</td>
-														<td>Анкета клиента</td>
-														<td>
-															<div class="upload">
-																<div>Название документа.format</div>
-																<div class="doc-info-bar">
-																	<div class="notice">
-																		<div class="notice__icon">
+															</td>
+														</tr>
+													</tbody>
+													<tbody class="docs-table__section">
+														<tr>
+															<th class="docs-table__subheading" colspan="3">Бухгалтерская отчётность за последние 5 отчётных периодов</th>
+														</tr>
+														<tr>
+															<td>
+																<div class="table-td-main">
+																	<label class="checkbox-base">
+																		<input type="checkbox" hidden>
+																		<span class="checkbox-base__icon">
 																			<svg class="icon-check">
 																				<use xlink:href="img/icons/icons.svg#icon-check"></use>
 																			</svg>
+																		</span>
+																	</label>Анкета Лизингополучателя/Обеспечителя
+																</div>
+															</td>
+															<td>Анкета клиента</td>
+															<td>
+																<div class="upload">
+																	<div>Название документа.format</div>
+																	<div class="doc-info-bar">
+																		<div class="notice">
+																			<div class="notice__icon">
+																				<svg class="icon-check">
+																					<use xlink:href="img/icons/icons.svg#icon-check"></use>
+																				</svg>
+																			</div>
+																			<div class="notice__text">Загружен</div>
 																		</div>
-																		<div class="notice__text">Загружен</div>
+																		<div class="notice">
+																			<div class="notice__icon">
+																				<svg class="icon-check">
+																					<use xlink:href="img/icons/icons.svg#icon-check"></use>
+																				</svg>
+																			</div>
+																			<div class="notice__text">Подписан</div>
+																		</div>
+																		<label class="btn btn-action">
+																			<svg class="icon-plus">
+																				<use xlink:href="img/icons/icons.svg#icon-plus"></use>
+																			</svg>Добавить файл
+																			<input type="file" hidden>
+																		</label>
 																	</div>
-																	<div class="notice">
-																		<div class="notice__icon">
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td>
+																<div class="table-td-main">
+																	<label class="checkbox-base">
+																		<input type="checkbox" hidden>
+																		<span class="checkbox-base__icon">
 																			<svg class="icon-check">
 																				<use xlink:href="img/icons/icons.svg#icon-check"></use>
 																			</svg>
-																		</div>
-																		<div class="notice__text">Подписан</div>
+																		</span>
+																	</label>Устав в действующей редакции со всеми изменениями (с отметкой о регистрации в ФНС)
+																</div>
+															</td>
+															<td>Устав</td>
+															<td>
+																<div class="upload disabled">
+																	<div>
+																		<label class="btn btn-upload">
+																			<div class="btn-upload__icon">
+																				<svg class="icon-attachment">
+																					<use xlink:href="img/icons/icons.svg#icon-attachment"></use>
+																				</svg>
+																			</div>Загрузить с устройства
+																			<input type="file" hidden>
+																		</label>
 																	</div>
-																	<label class="btn btn-action">
-																		<svg class="icon-plus">
-																			<use xlink:href="img/icons/icons.svg#icon-plus"></use>
-																		</svg>Добавить файл
-																		<input type="file" hidden>
-																	</label>
+																	<div class="upload__info">Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3</div>
 																</div>
-															</div>
-														</td>
-													</tr>
-													<tr>
-														<td>
-															<div class="table-td-main">
-																<label class="checkbox-base">
-																	<input type="checkbox" hidden>
-																	<span class="checkbox-base__icon">
-																		<svg class="icon-check">
-																			<use xlink:href="img/icons/icons.svg#icon-check"></use>
-																		</svg>
-																	</span>
-																</label>Устав в действующей редакции со всеми изменениями (с отметкой о регистрации в ФНС)
-															</div>
-														</td>
-														<td>Устав</td>
-														<td>
-															<div class="upload disabled">
-																<div>
-																	<label class="btn btn-upload">
-																		<div class="btn-upload__icon">
-																			<svg class="icon-attachment">
-																				<use xlink:href="img/icons/icons.svg#icon-attachment"></use>
-																			</svg>
-																		</div>Загрузить с устройства
-																		<input type="file" hidden>
-																	</label>
-																</div>
-																<div class="upload__info">Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3</div>
-															</div>
-														</td>
-													</tr>
-												</tbody>
-												<tbody class="docs-table__section">
-													<tr>
-														<th class="docs-table__subheading" colspan="3">Бухгалтерская отчётность за последние 5 отчётных периодов</th>
-													</tr>
-													<tr>
-														<td>
-															<div class="table-td-main">
-																<label class="checkbox-base">
-																	<input type="checkbox" hidden>
-																	<span class="checkbox-base__icon">
-																		<svg class="icon-check">
-																			<use xlink:href="img/icons/icons.svg#icon-check"></use>
-																		</svg>
-																	</span>
-																</label>Анкета Лизингополучателя/Обеспечителя
-															</div>
-														</td>
-														<td>Анкета клиента</td>
-														<td>
-															<div class="upload">
-																<div>Название документа.format</div>
-																<div class="doc-info-bar">
-																	<div class="notice">
-																		<div class="notice__icon">
+															</td>
+														</tr>
+													</tbody>
+													<tbody class="docs-table__section">
+														<tr>
+															<th class="docs-table__subheading" colspan="3">Бухгалтерская отчётность за последние 5 отчётных периодов</th>
+														</tr>
+														<tr>
+															<td>
+																<div class="table-td-main">
+																	<label class="checkbox-base">
+																		<input type="checkbox" hidden>
+																		<span class="checkbox-base__icon">
 																			<svg class="icon-check">
 																				<use xlink:href="img/icons/icons.svg#icon-check"></use>
 																			</svg>
+																		</span>
+																	</label>Анкета Лизингополучателя/Обеспечителя
+																</div>
+															</td>
+															<td>Анкета клиента</td>
+															<td>
+																<div class="upload">
+																	<div>Название документа.format</div>
+																	<div class="doc-info-bar">
+																		<div class="notice">
+																			<div class="notice__icon">
+																				<svg class="icon-check">
+																					<use xlink:href="img/icons/icons.svg#icon-check"></use>
+																				</svg>
+																			</div>
+																			<div class="notice__text">Загружен</div>
 																		</div>
-																		<div class="notice__text">Загружен</div>
+																		<div class="notice">
+																			<div class="notice__icon">
+																				<svg class="icon-check">
+																					<use xlink:href="img/icons/icons.svg#icon-check"></use>
+																				</svg>
+																			</div>
+																			<div class="notice__text">Подписан</div>
+																		</div>
+																		<label class="btn btn-action">
+																			<svg class="icon-plus">
+																				<use xlink:href="img/icons/icons.svg#icon-plus"></use>
+																			</svg>Добавить файл
+																			<input type="file" hidden>
+																		</label>
 																	</div>
-																	<div class="notice">
-																		<div class="notice__icon">
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td>
+																<div class="table-td-main">
+																	<label class="checkbox-base">
+																		<input type="checkbox" hidden>
+																		<span class="checkbox-base__icon">
 																			<svg class="icon-check">
 																				<use xlink:href="img/icons/icons.svg#icon-check"></use>
 																			</svg>
-																		</div>
-																		<div class="notice__text">Подписан</div>
+																		</span>
+																	</label>Устав в действующей редакции со всеми изменениями (с отметкой о регистрации в ФНС)
+																</div>
+															</td>
+															<td>Устав</td>
+															<td>
+																<div class="upload disabled">
+																	<div>
+																		<label class="btn btn-upload">
+																			<div class="btn-upload__icon">
+																				<svg class="icon-attachment">
+																					<use xlink:href="img/icons/icons.svg#icon-attachment"></use>
+																				</svg>
+																			</div>Загрузить с устройства
+																			<input type="file" hidden>
+																		</label>
 																	</div>
-																	<label class="btn btn-action">
-																		<svg class="icon-plus">
-																			<use xlink:href="img/icons/icons.svg#icon-plus"></use>
-																		</svg>Добавить файл
-																		<input type="file" hidden>
-																	</label>
+																	<div class="upload__info">Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3</div>
 																</div>
-															</div>
-														</td>
-													</tr>
-													<tr>
-														<td>
-															<div class="table-td-main">
-																<label class="checkbox-base">
-																	<input type="checkbox" hidden>
-																	<span class="checkbox-base__icon">
-																		<svg class="icon-check">
-																			<use xlink:href="img/icons/icons.svg#icon-check"></use>
-																		</svg>
-																	</span>
-																</label>Устав в действующей редакции со всеми изменениями (с отметкой о регистрации в ФНС)
-															</div>
-														</td>
-														<td>Устав</td>
-														<td>
-															<div class="upload disabled">
-																<div>
-																	<label class="btn btn-upload">
-																		<div class="btn-upload__icon">
-																			<svg class="icon-attachment">
-																				<use xlink:href="img/icons/icons.svg#icon-attachment"></use>
-																			</svg>
-																		</div>Загрузить с устройства
-																		<input type="file" hidden>
-																	</label>
-																</div>
-																<div class="upload__info">Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3</div>
-															</div>
-														</td>
-													</tr>
-												</tbody>
-												<tbody class="docs-table__section">
-													<tr>
-														<td>
-															<div class="table-td-main">
-																<label class="checkbox-base">
-																	<input type="checkbox" hidden>
-																	<span class="checkbox-base__icon">
-																		<svg class="icon-check">
-																			<use xlink:href="img/icons/icons.svg#icon-check"></use>
-																		</svg>
-																	</span>
-																</label>Анкета Лизингополучателя/Обеспечителя
-															</div>
-														</td>
-														<td>Анкета клиента</td>
-														<td>
-															<div class="upload">
-																<div>Название документа.format</div>
-																<div class="doc-info-bar">
-																	<div class="notice">
-																		<div class="notice__icon">
+															</td>
+														</tr>
+													</tbody>
+													<tbody class="docs-table__section">
+														<tr>
+															<td>
+																<div class="table-td-main">
+																	<label class="checkbox-base">
+																		<input type="checkbox" hidden>
+																		<span class="checkbox-base__icon">
 																			<svg class="icon-check">
 																				<use xlink:href="img/icons/icons.svg#icon-check"></use>
 																			</svg>
+																		</span>
+																	</label>Анкета Лизингополучателя/Обеспечителя
+																</div>
+															</td>
+															<td>Анкета клиента</td>
+															<td>
+																<div class="upload">
+																	<div>Название документа.format</div>
+																	<div class="doc-info-bar">
+																		<div class="notice">
+																			<div class="notice__icon">
+																				<svg class="icon-check">
+																					<use xlink:href="img/icons/icons.svg#icon-check"></use>
+																				</svg>
+																			</div>
+																			<div class="notice__text">Загружен</div>
 																		</div>
-																		<div class="notice__text">Загружен</div>
+																		<div class="notice">
+																			<div class="notice__icon">
+																				<svg class="icon-check">
+																					<use xlink:href="img/icons/icons.svg#icon-check"></use>
+																				</svg>
+																			</div>
+																			<div class="notice__text">Подписан</div>
+																		</div>
+																		<label class="btn btn-action">
+																			<svg class="icon-plus">
+																				<use xlink:href="img/icons/icons.svg#icon-plus"></use>
+																			</svg>Добавить файл
+																			<input type="file" hidden>
+																		</label>
 																	</div>
-																	<div class="notice">
-																		<div class="notice__icon">
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td>
+																<div class="table-td-main">
+																	<label class="checkbox-base">
+																		<input type="checkbox" hidden>
+																		<span class="checkbox-base__icon">
 																			<svg class="icon-check">
 																				<use xlink:href="img/icons/icons.svg#icon-check"></use>
 																			</svg>
-																		</div>
-																		<div class="notice__text">Подписан</div>
+																		</span>
+																	</label>Устав в действующей редакции со всеми изменениями (с отметкой о регистрации в ФНС)
+																</div>
+															</td>
+															<td>Устав</td>
+															<td>
+																<div class="upload disabled">
+																	<div>
+																		<label class="btn btn-upload">
+																			<div class="btn-upload__icon">
+																				<svg class="icon-attachment">
+																					<use xlink:href="img/icons/icons.svg#icon-attachment"></use>
+																				</svg>
+																			</div>Загрузить с устройства
+																			<input type="file" hidden>
+																		</label>
 																	</div>
-																	<label class="btn btn-action">
-																		<svg class="icon-plus">
-																			<use xlink:href="img/icons/icons.svg#icon-plus"></use>
-																		</svg>Добавить файл
-																		<input type="file" hidden>
-																	</label>
+																	<div class="upload__info">Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3</div>
 																</div>
-															</div>
-														</td>
-													</tr>
-													<tr>
-														<td>
-															<div class="table-td-main">
-																<label class="checkbox-base">
-																	<input type="checkbox" hidden>
-																	<span class="checkbox-base__icon">
-																		<svg class="icon-check">
-																			<use xlink:href="img/icons/icons.svg#icon-check"></use>
-																		</svg>
-																	</span>
-																</label>Устав в действующей редакции со всеми изменениями (с отметкой о регистрации в ФНС)
-															</div>
-														</td>
-														<td>Устав</td>
-														<td>
-															<div class="upload disabled">
-																<div>
-																	<label class="btn btn-upload">
-																		<div class="btn-upload__icon">
-																			<svg class="icon-attachment">
-																				<use xlink:href="img/icons/icons.svg#icon-attachment"></use>
-																			</svg>
-																		</div>Загрузить с устройства
-																		<input type="file" hidden>
-																	</label>
-																</div>
-																<div class="upload__info">Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3</div>
-															</div>
-														</td>
-													</tr>
-												</tbody>
-												<tbody class="docs-table__section">
-													<tr>
-														<th class="docs-table__subheading" colspan="3"> 
-															<div class="table-td-main">
-																<label class="checkbox-base">
-																	<input type="checkbox" hidden>
-																	<span class="checkbox-base__icon">
-																		<svg class="icon-check">
-																			<use xlink:href="img/icons/icons.svg#icon-check"></use>
-																		</svg>
-																	</span>
-																</label>Принадлежу к Группе компаний
-															</div>
-														</th>
-													</tr>
-													<tr>
-														<td>
-															<div class="table-td-main">
-																<label class="checkbox-base">
-																	<input type="checkbox" hidden>
-																	<span class="checkbox-base__icon">
-																		<svg class="icon-check">
-																			<use xlink:href="img/icons/icons.svg#icon-check"></use>
-																		</svg>
-																	</span>
-																</label>Анкета Лизингополучателя/Обеспечителя
-															</div>
-														</td>
-														<td>Анкета клиента</td>
-														<td>
-															<div class="upload">
-																<div>Название документа.format</div>
-																<div class="doc-info-bar">
-																	<div class="notice">
-																		<div class="notice__icon">
+															</td>
+														</tr>
+													</tbody>
+													<tbody class="docs-table__section">
+														<tr>
+															<th class="docs-table__subheading" colspan="3"> 
+																<div class="table-td-main">
+																	<label class="checkbox-base">
+																		<input type="checkbox" hidden>
+																		<span class="checkbox-base__icon">
 																			<svg class="icon-check">
 																				<use xlink:href="img/icons/icons.svg#icon-check"></use>
 																			</svg>
-																		</div>
-																		<div class="notice__text">Загружен</div>
-																	</div>
-																	<div class="notice">
-																		<div class="notice__icon">
+																		</span>
+																	</label>Принадлежу к Группе компаний
+																</div>
+															</th>
+														</tr>
+														<tr>
+															<td>
+																<div class="table-td-main">
+																	<label class="checkbox-base">
+																		<input type="checkbox" hidden>
+																		<span class="checkbox-base__icon">
 																			<svg class="icon-check">
 																				<use xlink:href="img/icons/icons.svg#icon-check"></use>
 																			</svg>
+																		</span>
+																	</label>Анкета Лизингополучателя/Обеспечителя
+																</div>
+															</td>
+															<td>Анкета клиента</td>
+															<td>
+																<div class="upload">
+																	<div>Название документа.format</div>
+																	<div class="doc-info-bar">
+																		<div class="notice">
+																			<div class="notice__icon">
+																				<svg class="icon-check">
+																					<use xlink:href="img/icons/icons.svg#icon-check"></use>
+																				</svg>
+																			</div>
+																			<div class="notice__text">Загружен</div>
 																		</div>
-																		<div class="notice__text">Подписан</div>
+																		<div class="notice">
+																			<div class="notice__icon">
+																				<svg class="icon-check">
+																					<use xlink:href="img/icons/icons.svg#icon-check"></use>
+																				</svg>
+																			</div>
+																			<div class="notice__text">Подписан</div>
+																		</div>
+																		<label class="btn btn-action">
+																			<svg class="icon-plus">
+																				<use xlink:href="img/icons/icons.svg#icon-plus"></use>
+																			</svg>Добавить файл
+																			<input type="file" hidden>
+																		</label>
 																	</div>
-																	<label class="btn btn-action">
-																		<svg class="icon-plus">
-																			<use xlink:href="img/icons/icons.svg#icon-plus"></use>
-																		</svg>Добавить файл
-																		<input type="file" hidden>
-																	</label>
 																</div>
-															</div>
-														</td>
-													</tr>
-													<tr>
-														<td>
-															<div class="table-td-main">
-																<label class="checkbox-base">
-																	<input type="checkbox" hidden>
-																	<span class="checkbox-base__icon">
-																		<svg class="icon-check">
-																			<use xlink:href="img/icons/icons.svg#icon-check"></use>
-																		</svg>
-																	</span>
-																</label>Устав в действующей редакции со всеми изменениями (с отметкой о регистрации в ФНС)
-															</div>
-														</td>
-														<td>Устав</td>
-														<td>
-															<div class="upload disabled">
-																<div>
-																	<label class="btn btn-upload">
-																		<div class="btn-upload__icon">
-																			<svg class="icon-attachment">
-																				<use xlink:href="img/icons/icons.svg#icon-attachment"></use>
+															</td>
+														</tr>
+														<tr>
+															<td>
+																<div class="table-td-main">
+																	<label class="checkbox-base">
+																		<input type="checkbox" hidden>
+																		<span class="checkbox-base__icon">
+																			<svg class="icon-check">
+																				<use xlink:href="img/icons/icons.svg#icon-check"></use>
 																			</svg>
-																		</div>Загрузить с устройства
-																		<input type="file" hidden>
-																	</label>
+																		</span>
+																	</label>Устав в действующей редакции со всеми изменениями (с отметкой о регистрации в ФНС)
 																</div>
-																<div class="upload__info">Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3</div>
-															</div>
-														</td>
-													</tr>
-												</tbody>
-											</table>
+															</td>
+															<td>Устав</td>
+															<td>
+																<div class="upload disabled">
+																	<div>
+																		<label class="btn btn-upload">
+																			<div class="btn-upload__icon">
+																				<svg class="icon-attachment">
+																					<use xlink:href="img/icons/icons.svg#icon-attachment"></use>
+																				</svg>
+																			</div>Загрузить с устройства
+																			<input type="file" hidden>
+																		</label>
+																	</div>
+																	<div class="upload__info">Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3</div>
+																</div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
 										</div>
 									</div>
 									<div class="application-docs__section">
@@ -1152,168 +1286,170 @@
 											</div>
 										</div>
 										<div class="application-docs__content">
-											<table class="docs-table">
-												<thead>
-													<tr>
-														<th style="width: 48%">Название документа</th>
-														<th style="width: 14%">Вид документа</th>
-														<th style="width: 38%">Загрузка</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>
-															<div class="table-td-main">
-																<div class="table-td-alert">
-																	<svg class="icon-circle-alert">
-																		<use xlink:href="img/icons/icons.svg#icon-circle-alert"></use>
-																	</svg>
-																</div>
-																<label class="checkbox-base">
-																	<input type="checkbox" hidden>
-																	<span class="checkbox-base__icon">
-																		<svg class="icon-check">
-																			<use xlink:href="img/icons/icons.svg#icon-check"></use>
+											<div class="scroll-wrapper">
+												<table class="docs-table">
+													<thead>
+														<tr>
+															<th style="width: 48%">Название документа</th>
+															<th style="width: 14%">Вид документа</th>
+															<th style="width: 38%">Загрузка</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>
+																<div class="table-td-main">
+																	<div class="table-td-alert">
+																		<svg class="icon-circle-alert">
+																			<use xlink:href="img/icons/icons.svg#icon-circle-alert"></use>
 																		</svg>
-																	</span>
-																</label>Анкета Лизингополучателя/Обеспечителя
-															</div>
-														</td>
-														<td>Анкета клиента</td>
-														<td>
-															<div class="upload">
-																<div>Название документа.format</div>
-																<div class="doc-info-bar">
-																	<div class="notice">
-																		<div class="notice__icon">
+																	</div>
+																	<label class="checkbox-base">
+																		<input type="checkbox" hidden>
+																		<span class="checkbox-base__icon">
 																			<svg class="icon-check">
 																				<use xlink:href="img/icons/icons.svg#icon-check"></use>
 																			</svg>
+																		</span>
+																	</label>Анкета Лизингополучателя/Обеспечителя
+																</div>
+															</td>
+															<td>Анкета клиента</td>
+															<td>
+																<div class="upload">
+																	<div>Название документа.format</div>
+																	<div class="doc-info-bar">
+																		<div class="notice">
+																			<div class="notice__icon">
+																				<svg class="icon-check">
+																					<use xlink:href="img/icons/icons.svg#icon-check"></use>
+																				</svg>
+																			</div>
+																			<div class="notice__text">Загружен</div>
 																		</div>
-																		<div class="notice__text">Загружен</div>
+																		<div class="notice">
+																			<div class="notice__icon">
+																				<svg class="icon-check">
+																					<use xlink:href="img/icons/icons.svg#icon-check"></use>
+																				</svg>
+																			</div>
+																			<div class="notice__text">Подписан</div>
+																		</div>
+																		<label class="btn btn-action">
+																			<svg class="icon-plus">
+																				<use xlink:href="img/icons/icons.svg#icon-plus"></use>
+																			</svg>Добавить файл
+																			<input type="file" hidden>
+																		</label>
 																	</div>
-																	<div class="notice">
-																		<div class="notice__icon">
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td>
+																<div class="table-td-main">
+																	<label class="checkbox-base">
+																		<input type="checkbox" hidden>
+																		<span class="checkbox-base__icon">
 																			<svg class="icon-check">
 																				<use xlink:href="img/icons/icons.svg#icon-check"></use>
 																			</svg>
-																		</div>
-																		<div class="notice__text">Подписан</div>
+																		</span>
+																	</label>Устав в действующей редакции со всеми изменениями (с отметкой о регистрации в ФНС)
+																</div>
+															</td>
+															<td>Устав</td>
+															<td>
+																<div class="upload disabled">
+																	<div>
+																		<label class="btn btn-upload">
+																			<div class="btn-upload__icon">
+																				<svg class="icon-attachment">
+																					<use xlink:href="img/icons/icons.svg#icon-attachment"></use>
+																				</svg>
+																			</div>Загрузить с устройства
+																			<input type="file" hidden>
+																		</label>
 																	</div>
-																	<label class="btn btn-action">
-																		<svg class="icon-plus">
-																			<use xlink:href="img/icons/icons.svg#icon-plus"></use>
-																		</svg>Добавить файл
-																		<input type="file" hidden>
-																	</label>
+																	<div class="upload__info">Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3</div>
 																</div>
-															</div>
-														</td>
-													</tr>
-													<tr>
-														<td>
-															<div class="table-td-main">
-																<label class="checkbox-base">
-																	<input type="checkbox" hidden>
-																	<span class="checkbox-base__icon">
-																		<svg class="icon-check">
-																			<use xlink:href="img/icons/icons.svg#icon-check"></use>
-																		</svg>
-																	</span>
-																</label>Устав в действующей редакции со всеми изменениями (с отметкой о регистрации в ФНС)
-															</div>
-														</td>
-														<td>Устав</td>
-														<td>
-															<div class="upload disabled">
-																<div>
-																	<label class="btn btn-upload">
-																		<div class="btn-upload__icon">
-																			<svg class="icon-attachment">
-																				<use xlink:href="img/icons/icons.svg#icon-attachment"></use>
-																			</svg>
-																		</div>Загрузить с устройства
-																		<input type="file" hidden>
-																	</label>
-																</div>
-																<div class="upload__info">Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3</div>
-															</div>
-														</td>
-													</tr>
-													<tr>
-														<td>
-															<div class="table-td-main">
-																<label class="checkbox-base">
-																	<input type="checkbox" hidden>
-																	<span class="checkbox-base__icon">
-																		<svg class="icon-check">
-																			<use xlink:href="img/icons/icons.svg#icon-check"></use>
-																		</svg>
-																	</span>
-																</label>Выписка из ЕГРЮЛ с установочными данными учредителей и руководителя, выданная не позднее 30 дней на дату ее предоставления в ПАО «ГТЛК» (удостоверенная нотариально либо оригинал)
-															</div>
-														</td>
-														<td>Выписка из ЕГРЮЛ</td>
-														<td>
-															<div class="upload disabled">
-																<div>
-																	<label class="btn btn-upload">
-																		<div class="btn-upload__icon">
-																			<svg class="icon-attachment">
-																				<use xlink:href="img/icons/icons.svg#icon-attachment"></use>
-																			</svg>
-																		</div>Загрузить с устройства
-																		<input type="file" hidden>
-																	</label>
-																</div>
-																<div class="upload__info">Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3</div>
-															</div>
-														</td>
-													</tr>
-													<tr>
-														<td>
-															<div class="table-td-main">
-																<label class="checkbox-base">
-																	<input type="checkbox" hidden>
-																	<span class="checkbox-base__icon">
-																		<svg class="icon-check">
-																			<use xlink:href="img/icons/icons.svg#icon-check"></use>
-																		</svg>
-																	</span>
-																</label>Свидетельство о внесении записи в ЕГРЮЛ о юридическом лице, либо Свидетельство о внесении в ЕГРЮЛ записи о юридическом лице, зарегистрированном до 01.07.2002 г.
-															</div>
-														</td>
-														<td>Свидетельство ОГРН</td>
-														<td>
-															<div class="upload">
-																<div>Название документа.format</div>
-																<div class="doc-info-bar">
-																	<div class="notice">
-																		<div class="notice__icon">
+															</td>
+														</tr>
+														<tr>
+															<td>
+																<div class="table-td-main">
+																	<label class="checkbox-base">
+																		<input type="checkbox" hidden>
+																		<span class="checkbox-base__icon">
 																			<svg class="icon-check">
 																				<use xlink:href="img/icons/icons.svg#icon-check"></use>
 																			</svg>
-																		</div>
-																		<div class="notice__text">Загружен</div>
-																	</div>
-																	<label class="btn btn-action">
-																		<svg class="icon-pencil">
-																			<use xlink:href="img/icons/icons.svg#icon-pencil"></use>
-																		</svg>Подписать
-																		<input type="file" hidden>
-																	</label>
-																	<label class="btn btn-action">
-																		<svg class="icon-plus">
-																			<use xlink:href="img/icons/icons.svg#icon-plus"></use>
-																		</svg>Добавить файл
-																		<input type="file" hidden>
-																	</label>
+																		</span>
+																	</label>Выписка из ЕГРЮЛ с установочными данными учредителей и руководителя, выданная не позднее 30 дней на дату ее предоставления в ПАО «ГТЛК» (удостоверенная нотариально либо оригинал)
 																</div>
-															</div>
-														</td>
-													</tr>
-												</tbody>
-											</table>
+															</td>
+															<td>Выписка из ЕГРЮЛ</td>
+															<td>
+																<div class="upload disabled">
+																	<div>
+																		<label class="btn btn-upload">
+																			<div class="btn-upload__icon">
+																				<svg class="icon-attachment">
+																					<use xlink:href="img/icons/icons.svg#icon-attachment"></use>
+																				</svg>
+																			</div>Загрузить с устройства
+																			<input type="file" hidden>
+																		</label>
+																	</div>
+																	<div class="upload__info">Загрузите ОДИН файл, каждый до 3 мб, формат: pdf, word, format3</div>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td>
+																<div class="table-td-main">
+																	<label class="checkbox-base">
+																		<input type="checkbox" hidden>
+																		<span class="checkbox-base__icon">
+																			<svg class="icon-check">
+																				<use xlink:href="img/icons/icons.svg#icon-check"></use>
+																			</svg>
+																		</span>
+																	</label>Свидетельство о внесении записи в ЕГРЮЛ о юридическом лице, либо Свидетельство о внесении в ЕГРЮЛ записи о юридическом лице, зарегистрированном до 01.07.2002 г.
+																</div>
+															</td>
+															<td>Свидетельство ОГРН</td>
+															<td>
+																<div class="upload">
+																	<div>Название документа.format</div>
+																	<div class="doc-info-bar">
+																		<div class="notice">
+																			<div class="notice__icon">
+																				<svg class="icon-check">
+																					<use xlink:href="img/icons/icons.svg#icon-check"></use>
+																				</svg>
+																			</div>
+																			<div class="notice__text">Загружен</div>
+																		</div>
+																		<label class="btn btn-action">
+																			<svg class="icon-pencil">
+																				<use xlink:href="img/icons/icons.svg#icon-pencil"></use>
+																			</svg>Подписать
+																			<input type="file" hidden>
+																		</label>
+																		<label class="btn btn-action">
+																			<svg class="icon-plus">
+																				<use xlink:href="img/icons/icons.svg#icon-plus"></use>
+																			</svg>Добавить файл
+																			<input type="file" hidden>
+																		</label>
+																	</div>
+																</div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
 										</div>
 									</div>
 									<div class="application-docs__section">
@@ -1746,47 +1882,47 @@
 										</div>
 									</div>
 								</div>
-								<div class="form-application__row-items form-application__row-items--gap-medium">
-									<div class="form-application__row">
-										<div class="application-info application-info--done application-info--width-large">
-											<div class="application-info__main">
-												<div class="application-info__icon">
-													<svg class="icon-done">
-														<use xlink:href="img/icons/icons.svg#icon-done"></use>
-													</svg>
-												</div>
-												<div class="application-info__text">
-													<div class="application-info__text-heading">Вы загрузили обязательные документы. Остальные документы можете загрузить позже.</div>
+							</div>
+							<div class="form-application__row-items form-application__row-items--gap-medium">
+								<div class="form-application__row">
+									<div class="application-info application-info--done application-info--width-large">
+										<div class="application-info__main">
+											<div class="application-info__icon">
+												<svg class="icon-done">
+													<use xlink:href="img/icons/icons.svg#icon-done"></use>
+												</svg>
+											</div>
+											<div class="application-info__text">
+												<div class="application-info__text-heading">Вы загрузили обязательные документы. Остальные документы можете загрузить позже.</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-application__row">
+									<div class="application-info application-info--rejected application-info--width-large">
+										<div class="application-info__main">
+											<div class="application-info__icon">
+												<svg class="icon-circle-alert">
+													<use xlink:href="img/icons/icons.svg#icon-circle-alert"></use>
+												</svg>
+											</div>
+											<div class="application-info__text">
+												<div class="application-info__text-heading">Документы, отмеченные символом
+													<span class="application-info__text-heading-icon">
+														<svg class="icon-circle-alert">
+															<use xlink:href="img/icons/icons.svg#icon-circle-alert"></use>
+														</svg>
+													</span>, обязательны к загрузке. Не загрузив их, вы не сможете продолжить
 												</div>
 											</div>
 										</div>
 									</div>
-									<div class="form-application__row">
-										<div class="application-info application-info--rejected application-info--width-large">
-											<div class="application-info__main">
-												<div class="application-info__icon">
-													<svg class="icon-circle-alert">
-														<use xlink:href="img/icons/icons.svg#icon-circle-alert"></use>
-													</svg>
-												</div>
-												<div class="application-info__text">
-													<div class="application-info__text-heading">Документы, отмеченные символом
-														<span class="application-info__text-heading-icon">
-															<svg class="icon-circle-alert">
-																<use xlink:href="img/icons/icons.svg#icon-circle-alert"></use>
-															</svg>
-														</span>, обязательны к загрузке. Не загрузив их, вы не сможете продолжить
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="form-application__row">
-										<div class="form-application__nav">
-											<a class="btn btn-nav btn-nav--back" href="#">Назад</a>
-											<a class="btn btn-nav btn-nav--continue" href="#">Продолжить</a>
-											<a class="btn btn-nav btn-nav--save" href="#">Сохранить</a>
-										</div>
+								</div>
+								<div class="form-application__row">
+									<div class="form-application__nav form-application__nav--create-app">
+										<a class="btn btn-nav btn-nav--back" href="#">Назад</a>
+										<a class="btn btn-nav btn-nav--continue" href="#">Продолжить</a>
+										<a class="btn btn-nav btn-nav--save" href="#">Сохранить</a>
 									</div>
 								</div>
 							</div>
@@ -1851,6 +1987,11 @@
 					<a class="btn btn-confirm btn-confirm--positive">Да</a>
 					<a class="btn btn-confirm btn-confirm--negative" data-modal-close>Нет</a>
 				</div>
+				<a class="modal__close-btn is-lg-hidden" data-modal-close>
+					<svg class="icon-close">
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</a>
 			</div>
 		</div>
 		<div class="modal-container" id="modal-block-counterparty">
@@ -1865,6 +2006,11 @@
 					<a class="btn btn-confirm btn-confirm--positive">Да</a>
 					<a class="btn btn-confirm btn-confirm--negative" data-modal-close>Нет</a>
 				</div>
+				<a class="modal__close-btn is-lg-hidden" data-modal-close>
+					<svg class="icon-close">
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</a>
 			</div>
 		</div>
 		<div class="modal-container" id="modal-remove-counterparty">
@@ -1879,6 +2025,11 @@
 					<a class="btn btn-confirm btn-confirm--positive">Да</a>
 					<a class="btn btn-confirm btn-confirm--negative" data-modal-close>Нет</a>
 				</div>
+				<a class="modal__close-btn is-lg-hidden" data-modal-close>
+					<svg class="icon-close">
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</a>
 			</div>
 		</div>
 		<div class="modal-container" id="modal-block-employeer">
@@ -1907,6 +2058,11 @@
 					<a class="btn btn-confirm btn-confirm--positive">Да</a>
 					<a class="btn btn-confirm btn-confirm--negative" data-modal-close>Нет</a>
 				</div>
+				<a class="modal__close-btn is-lg-hidden" data-modal-close>
+					<svg class="icon-close">
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</a>
 			</div>
 		</div>
 		<div class="modal-container" id="modal-annul">
@@ -1934,6 +2090,11 @@
 					<a class="btn btn-nav btn-nav--cancel" data-modal-close>Отменить</a>
 					<a class="btn btn-nav btn-nav--continue" href="#">Продолжить</a>
 				</div>
+				<a class="modal__close-btn is-lg-hidden" data-modal-close>
+					<svg class="icon-close">
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</a>
 			</div>
 		</div>
 		<div class="modal-container" id="modal-app-sent">
@@ -2182,6 +2343,11 @@
 					<a class="btn btn-confirm btn-confirm--positive">Да</a>
 					<a class="btn btn-confirm btn-confirm--negative" data-modal-close>Нет</a>
 				</div>
+				<a class="modal__close-btn is-lg-hidden" data-modal-close>
+					<svg class="icon-close">
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</a>
 			</div>
 		</div>
 		<script src="js/app.min.js"></script>

@@ -3,19 +3,28 @@
 	margin: 0;
 	padding: 0;
 	display: flex;
-	gap: 10px;
+	@media (min-width: $lg) {
+		gap: 10px;
+	}
 	&>li {
 		&>a {
-			height: 70px;
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			padding: 5px;
 			border-bottom: 1px solid rgba(#707070, .3);
-			color: rgba(var(--color-black-base));
-			font-size: 18px;
+			color: var(--color-black-base);
 			line-height: 1.2;
 			transition: .25s;
+			text-align: center;
+			
+			font-size: 14px;
+			height: 40px;
+			padding: 5px 3px;
+			@media (min-width: $lg) {
+				padding: 5px;
+				height: 70px;
+				font-size: 18px;
+			}
 		}
 		&.current {
 			&>a {

@@ -36,7 +36,7 @@
 				}
 
 				&--color-black {
-					color: rgba(var(--color-black-base));
+					color: var(--color-black-base);
 				}
 			}
 			&:not(:last-child) {

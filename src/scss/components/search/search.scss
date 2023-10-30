@@ -1,9 +1,12 @@
 .search {
 	display: flex;
 	flex-direction: column;
-	gap: 32px;
+	gap: 20px;
 	max-width: 1356px;
 	padding-bottom: 10px;
+	@media (min-width: $lg) {
+		gap: 32px;
+	}
 	&__item {
 		width: 100%;
 		display: flex;
@@ -25,10 +28,13 @@
 		}
 		&-text {
 			display: inline-block;
-			font-size: 20px;
-			line-height: 140%;
 			padding-bottom: 4px;
 			color: var(--color-black-base);
+			line-height: 140%;
+			font-size: 16px;
+			@media (min-width: $lg) {
+				font-size: 20px;
+			}
 		}
 		&-info {
 			font-size: 14px;

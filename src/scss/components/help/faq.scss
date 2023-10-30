@@ -1,10 +1,16 @@
 .faq {
 	max-width: 567px;
-	padding-top: 95px;
+	padding-top: 50px;
+	@media (min-width: $md) {
+		padding-top: 95px;
+	}
 	&__heading {
 		font-size: 24px;
 		line-height: 1.2;
 		padding-bottom: 24px;
+		@media (max-width: $md - 1px) {
+			text-align: center;
+		}
 	}
 	&__main {
 

@@ -11,7 +11,7 @@
 		<div class="wrapper wrapper-main">
 			<header class="header">
 				<div class="container">
-					<a href="#">
+					<a class="header-logo" href="#">
 						<img src="img/logo-GTLK_dark.png" width="166" height="52" alt="">
 					</a>
 					<ul class="header-menu">
@@ -51,6 +51,13 @@
 						</div>
 					</form>
 					<ul class="header-btns">
+						<li class="header-btns__item is-lg-hidden">
+							<a class="btn header-btns__link" href="#">
+								<svg class="icon-loop">
+									<use xlink:href="img/icons/icons.svg#icon-loop"></use>
+								</svg>
+							</a>
+						</li>
 						<li class="header-btns__item">
 							<a class="btn header-btns__link" data-target="popup-notifications">
 								<svg class="icon-bell">
@@ -230,7 +237,109 @@
 								</div>
 							</div>
 						</li>
-						<li class="header-btns__item">
+						<li class="header-btns__item is-lg-hidden">
+							<a class="btn header-btns__link" data-target="popup-menu">
+								<svg class="icon-menu">
+									<use xlink:href="img/icons/icons.svg#icon-menu"></use>
+								</svg>
+							</a>
+							<div class="user-menu user-menu--mobile" data-popup="popup-menu">
+								<ul class="user-menu__list">
+									<li class="user-menu__list-item">
+										<a class="user-menu__list-item-link" href="#">
+											<span class="user-menu__list-item-icon">
+												<svg class="icon-file-tray">
+													<use xlink:href="img/icons/icons.svg#icon-file-tray"></use>
+												</svg>
+											</span>Заявки
+										</a>
+									</li>
+									<li class="user-menu__list-item">
+										<a class="user-menu__list-item-link" href="#">
+											<span class="user-menu__list-item-icon">
+												<svg class="icon-newspaper">
+													<use xlink:href="img/icons/icons.svg#icon-newspaper"></use>
+												</svg>
+											</span>Договоры
+										</a>
+									</li>
+									<li class="user-menu__list-item">
+										<a class="user-menu__list-item-link" href="#">
+											<span class="user-menu__list-item-icon">
+												<svg class="icon-doc">
+													<use xlink:href="img/icons/icons.svg#icon-doc"></use>
+												</svg>
+											</span>Обращения НМЦ
+										</a>
+									</li>
+								</ul>
+								<ul class="user-menu__list">
+									<li class="user-menu__list-item">
+										<a class="user-menu__list-item-link" href="#">
+											<span class="user-menu__list-item-icon">
+												<svg class="icon-user">
+													<use xlink:href="img/icons/icons.svg#icon-user"></use>
+												</svg>
+											</span>Профиль
+										</a>
+									</li>
+									<li class="user-menu__list-item">
+										<a class="user-menu__list-item-link" href="#">
+											<span class="user-menu__list-item-icon">
+												<svg class="icon-calendar">
+													<use xlink:href="img/icons/icons.svg#icon-calendar"></use>
+												</svg>
+											</span>Журнал событий
+										</a>
+									</li>
+									<li class="user-menu__list-item">
+										<a class="user-menu__list-item-link" href="#">
+											<span class="user-menu__list-item-icon">
+												<svg class="icon-book">
+													<use xlink:href="img/icons/icons.svg#icon-book"></use>
+												</svg>
+											</span>Справка по системе
+										</a>
+									</li>
+								</ul>
+								<ul class="user-menu__list">
+									<li class="user-menu__list-item">
+										<div class="manager manager--view-full">
+											<div class="manager__main">
+												<div class="manager__ava">
+													<img src="img/avatar-manager.png" alt="">
+												</div>
+												<div class="manager__name">Менеджер Иванова А.А.</div>
+											</div>
+											<div class="manager__contacts">
+												<a class="btn manager__btn" href="#">Связаться</a>
+											</div>
+										</div>
+									</li>
+								</ul>
+								<ul class="user-menu__list">
+									<li class="user-menu__list-item">
+										<a class="user-menu__list-item-link" href="#">
+											<span class="user-menu__list-item-icon">
+												<svg class="icon-chat">
+													<use xlink:href="img/icons/icons.svg#icon-chat"></use>
+												</svg>
+											</span>Служба поддержки
+										</a>
+									</li>
+									<li class="user-menu__list-item">
+										<a class="user-menu__list-item-link" href="#">
+											<span class="user-menu__list-item-icon">
+												<svg class="icon-logout">
+													<use xlink:href="img/icons/icons.svg#icon-logout"></use>
+												</svg>
+											</span>Выйти
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="header-btns__item is-lg-visible">
 							<a class="btn header-btns__link" data-target="popup-user-menu">
 								<svg class="icon-user">
 									<use xlink:href="img/icons/icons.svg#icon-user"></use>
@@ -325,11 +434,18 @@
 					</div>
 					<div class="sidebar__section">
 						<div class="manager">
-							<div class="manager__ava">
-								<img src="img/avatar-manager.png" alt="">
+							<div class="manager__main">
+								<div class="manager__ava">
+									<img src="img/avatar-manager.png" alt="">
+								</div>
+								<div class="manager__name">Менеджер Иванова А.А.</div>
+								<a class="btn manager__btn" href="#">Связаться</a>
 							</div>
-							<div class="manager__name">Менеджер Иванова А.А.</div>
-							<a class="btn manager__btn" href="#">Связаться</a>
+							<div class="manager__contacts">
+								<a class="btn btn-contacts" href="#">
+									<img src="img/icon-viber.svg" width="32" height="32" alt="">
+								</a>
+							</div>
 						</div>
 					</div>
 					<div class="sidebar__section">
@@ -347,9 +463,24 @@
 					<div class="content">
 						<div class="content-inner">
 							<div class="d-flex justify-content-between align-items-center">
-								<div class="heading-base">Все заявки</div>
+								<div class="heading-base heading-base--normal">Все заявки</div>
 								<div>
 									<a class="btn btn-base" href="#">Новая заявка</a>
+								</div>
+							</div>
+							<div class="application-info application-info--base application-info--width-large is-lg-hidden application-info--page-apps">
+								<div class="application-info__main">
+									<div class="application-info__icon">
+										<img src="img/icon-swipe.svg" width="28" height="28" alt="">
+									</div>
+									<div class="application-info__text">
+										<div class="application-info__text-heading">Используйте свайп пальцем для просмотра таблицы</div>
+									</div>
+									<div class="application-info__close">
+										<svg class="icon-close">
+											<use xlink:href="img/icons/icons.svg#icon-close"></use>
+										</svg>
+									</div>
 								</div>
 							</div>
 							<div class="tabs">
@@ -364,544 +495,548 @@
 								<div class="tabs__line" data-tab-line></div>
 							</div>
 							<div class="tab-content current" id="tab-requests">
-								<form class="application-form">
-									<div class="application-form__item">
-										<input class="application-form__item-input" type="text" placeholder="Регистрационный номер заявки">
-										<div class="application-form__item-icon">
+								<form class="app-search-form">
+									<div class="app-search-form__item">
+										<input class="app-search-form__item-input" type="text" placeholder="Регистрационный номер заявки">
+										<div class="app-search-form__item-icon">
 											<svg class="icon-loop">
 												<use xlink:href="img/icons/icons.svg#icon-loop"></use>
 											</svg>
 										</div>
 									</div>
-									<div class="application-form__item">
-										<input class="application-form__item-input" type="text" placeholder="Поиск по совпадению">
-										<div class="application-form__item-icon">
+									<div class="app-search-form__item">
+										<input class="app-search-form__item-input" type="text" placeholder="Поиск по совпадению">
+										<div class="app-search-form__item-icon">
 											<svg class="icon-loop">
 												<use xlink:href="img/icons/icons.svg#icon-loop"></use>
 											</svg>
 										</div>
 									</div>
-									<input class="btn btn-search" type="submit" value="Найти">
+									<div class="app-search-form__item">
+										<input class="btn btn-search" type="submit" value="Найти">
+									</div>
 								</form>
-								<table class="application-table">
-									<thead>
-										<tr>
-											<th style="width:9.6%">Регистрационный номер</th>
-											<th style="width:9.6%">Дата создания</th>
-											<th class="th-table-inside" colspan="6">
-												<table>
-													<thead>
+								<div class="scroll-wrapper">
+									<table class="application-table">
+										<thead>
+											<tr>
+												<th style="width:9.6%">Регистрационный номер</th>
+												<th style="width:9.6%">Дата создания</th>
+												<th class="th-table-inside" colspan="6">
+													<table>
+														<thead>
+															<tr>
+																<th class="th-section-heading" colspan="6">Предметы лизинга</th>
+															</tr>
+															<tr>
+																<th style="width:22%">Название предмета</th>
+																<th style="width:17.5%">Поставщик</th>
+																<th style="width:13.67%">Срок поставки</th>
+																<th style="width:18.5%">Стоимость единицы</th>
+																<th style="width:11.67%">Количество</th>
+																<th style="width:16.67%">Стоимость итоговая</th>
+															</tr>
+														</thead>
+													</table>
+												</th>
+												<th style="width:7%">Документы</th>
+												<th style="width:13.45%">Статус</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td style="width:9.6%">123-ЗЛ-ОК</td>
+												<td style="width:9.6%">12.07.2023
+													<br>
+													<span class="color-gray">12:24</span>
+												</td>
+												<td class="td-table-inside" colspan="6">
+													<table>
 														<tr>
-															<th class="th-section-heading" colspan="6">Предметы лизинга</th>
+															<td style="width:22%">ж/д вагон Хоппер</td>
+															<td style="width:17.5%">ООО «РЖД»</td>
+															<td style="width:13.67%">01.10.2023</td>
+															<td style="width:18.5%">1 000 000,00</td>
+															<td style="width:11.67%">20 ед.</td>
+															<td style="width:16.67%">20 000 000,00</td>
 														</tr>
 														<tr>
-															<th style="width:22%">Название предмета</th>
-															<th style="width:17.5%">Поставщик</th>
-															<th style="width:13.67%">Срок поставки</th>
-															<th style="width:18.5%">Стоимость единицы</th>
-															<th style="width:11.67%">Количество</th>
-															<th style="width:16.67%">Стоимость итоговая</th>
+															<td style="width:22%">ж/д вагон Хоппер</td>
+															<td style="width:17.5%"> 
+																<div class="text-one-line">ООО «Название длинное длинное длинное</div>
+															</td>
+															<td style="width:13.67%">03.11.2023</td>
+															<td style="width:18.5%">50 000 000,00</td>
+															<td style="width:11.67%">1 ед.</td>
+															<td style="width:16.67%">50 000 000,00</td>
 														</tr>
-													</thead>
-												</table>
-											</th>
-											<th style="width:7%">Документы</th>
-											<th style="width:13.45%">Статус</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td style="width:9.6%">123-ЗЛ-ОК</td>
-											<td style="width:9.6%">12.07.2023
-												<br>
-												<span class="color-gray">12:24</span>
-											</td>
-											<td class="td-table-inside" colspan="6">
-												<table>
-													<tr>
-														<td style="width:22%">ж/д вагон Хоппер</td>
-														<td style="width:17.5%">ООО «РЖД»</td>
-														<td style="width:13.67%">01.10.2023</td>
-														<td style="width:18.5%">1 000 000,00</td>
-														<td style="width:11.67%">20 ед.</td>
-														<td style="width:16.67%">20 000 000,00</td>
-													</tr>
-													<tr>
-														<td style="width:22%">ж/д вагон Хоппер</td>
-														<td style="width:17.5%"> 
-															<div class="text-one-line">ООО «Название длинное длинное длинное</div>
-														</td>
-														<td style="width:13.67%">03.11.2023</td>
-														<td style="width:18.5%">50 000 000,00</td>
-														<td style="width:11.67%">1 ед.</td>
-														<td style="width:16.67%">50 000 000,00</td>
-													</tr>
-													<tr>
-														<td style="width:22%">ж/д вагон Хоппер</td>
-														<td style="width:17.5%">ООО «Название»</td>
-														<td style="width:13.67%">03.11.2023</td>
-														<td style="width:18.5%">50 000 000,00</td>
-														<td style="width:11.67%">1 ед.</td>
-														<td style="width:16.67%">50 000 000,00</td>
-													</tr>
-													<tr>
-														<td style="width:22%">ж/д вагон Хоппер</td>
-														<td style="width:17.5%">ООО «Название»</td>
-														<td style="width:13.67%">03.11.2023</td>
-														<td style="width:18.5%">50 000 000,00</td>
-														<td style="width:11.67%">1 ед.</td>
-														<td style="width:16.67%">50 000 000,00</td>
-													</tr>
-													<tr>
-														<td style="width:22%"></td>
-														<td style="width:17.5%"></td>
-														<td style="width:13.67%"></td>
-														<td style="width:18.5%"></td>
-														<td class="td-total-selected" style="width:11.67%">
-															<div class="total-selected">итого														</div>
-														</td>
-														<td class="td-total-selected" style="width:16.67%">
-															<div class="total-selected">70 850 000,00</div>
-														</td>
-													</tr>
-												</table>
-											</td>
-											<td class="text-center" style="width:7%">
-												<div class="progress progress--docs">
-													<div class="progress-bar" data-progress="75%"></div>
-													<div class="progress__value-text">75%</div>
-												</div>
-											</td>
-											<td style="width:13.45%">
-												<div class="d-flex align-items-center application-nav">
-													<div class="status status--review status--text-medium">На рассмотрении</div>
-													<div class="tooltip">
-														<a class="btn tooltip__btn">
-															<svg class="icon-more-alt">
-																<use xlink:href="img/icons/icons.svg#icon-more-alt"></use>
-															</svg>
-														</a>
-														<ul class="tooltip__menu">
-															<li class="tooltip__menu-item">
-																<a class="tooltip__menu-item-link" href="#">Просмотреть</a>
-															</li>
-															<li class="tooltip__menu-item">
-																<a class="tooltip__menu-item-link" href="#">Создать новую версию</a>
-															</li>
-															<li class="tooltip__menu-item tooltip__menu-item--cancel">
-																<a class="tooltip__menu-item-link" href="#">Аннулировать</a>
-															</li>
-														</ul>
+														<tr>
+															<td style="width:22%">ж/д вагон Хоппер</td>
+															<td style="width:17.5%">ООО «Название»</td>
+															<td style="width:13.67%">03.11.2023</td>
+															<td style="width:18.5%">50 000 000,00</td>
+															<td style="width:11.67%">1 ед.</td>
+															<td style="width:16.67%">50 000 000,00</td>
+														</tr>
+														<tr>
+															<td style="width:22%">ж/д вагон Хоппер</td>
+															<td style="width:17.5%">ООО «Название»</td>
+															<td style="width:13.67%">03.11.2023</td>
+															<td style="width:18.5%">50 000 000,00</td>
+															<td style="width:11.67%">1 ед.</td>
+															<td style="width:16.67%">50 000 000,00</td>
+														</tr>
+														<tr>
+															<td style="width:22%"></td>
+															<td style="width:17.5%"></td>
+															<td style="width:13.67%"></td>
+															<td style="width:18.5%"></td>
+															<td class="td-total-selected" style="width:11.67%">
+																<div class="total-selected">итого														</div>
+															</td>
+															<td class="td-total-selected" style="width:16.67%">
+																<div class="total-selected">70 850 000,00</div>
+															</td>
+														</tr>
+													</table>
+												</td>
+												<td class="text-center" style="width:7%">
+													<div class="progress progress--docs">
+														<div class="progress-bar" data-progress="75%"></div>
+														<div class="progress__value-text">75%</div>
 													</div>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<td style="width:9.6%">123-ЗЛ-ОК</td>
-											<td style="width:9.6%">12.07.2023
-												<br>
-												<span class="color-gray">12:24</span>
-											</td>
-											<td class="td-table-inside" colspan="6">
-												<table>
-													<tr>
-														<td style="width:22%">ж/д вагон Хоппер</td>
-														<td style="width:17.5%">ООО «РЖД»</td>
-														<td style="width:13.67%">01.10.2023</td>
-														<td style="width:18.5%">1 000 000,00</td>
-														<td style="width:11.67%">20 ед.</td>
-														<td style="width:16.67%">20 000 000,00</td>
-													</tr>
-													<tr>
-														<td style="width:22%"></td>
-														<td style="width:17.5%"></td>
-														<td style="width:13.67%"></td>
-														<td style="width:18.5%"></td>
-														<td class="td-total-selected" style="width:11.67%">
-															<div class="total-selected">итого														</div>
-														</td>
-														<td class="td-total-selected" style="width:16.67%">
-															<div class="total-selected">20 000 000,00</div>
-														</td>
-													</tr>
-												</table>
-											</td>
-											<td class="text-center" style="width:7%">
-												<div class="progress progress--docs">
-													<div class="progress-bar" data-progress="75%"></div>
-													<div class="progress__value-text">75%</div>
-												</div>
-											</td>
-											<td style="width:13.45%">
-												<div class="d-flex align-items-center application-nav">
-													<div class="status status--rejected">Отклонена</div>
-													<div class="tooltip">
-														<a class="btn tooltip__btn">
-															<svg class="icon-more-alt">
-																<use xlink:href="img/icons/icons.svg#icon-more-alt"></use>
-															</svg>
-														</a>
-														<ul class="tooltip__menu">
-															<li class="tooltip__menu-item">
-																<a class="tooltip__menu-item-link" href="#">Просмотреть</a>
-															</li>
-															<li class="tooltip__menu-item">
-																<a class="tooltip__menu-item-link" href="#">Создать новую версию</a>
-															</li>
-															<li class="tooltip__menu-item tooltip__menu-item--cancel">
-																<a class="tooltip__menu-item-link" href="#">Аннулировать</a>
-															</li>
-														</ul>
+												</td>
+												<td style="width:13.45%">
+													<div class="d-flex align-items-center">
+														<div class="status status--review status--text-medium">На рассмотрении</div>
+														<div class="tooltip">
+															<a class="btn tooltip__btn">
+																<svg class="icon-more-alt">
+																	<use xlink:href="img/icons/icons.svg#icon-more-alt"></use>
+																</svg>
+															</a>
+															<ul class="tooltip__menu">
+																<li class="tooltip__menu-item">
+																	<a class="tooltip__menu-item-link" href="#">Просмотреть</a>
+																</li>
+																<li class="tooltip__menu-item">
+																	<a class="tooltip__menu-item-link" href="#">Создать новую версию</a>
+																</li>
+																<li class="tooltip__menu-item tooltip__menu-item--cancel">
+																	<a class="tooltip__menu-item-link" href="#">Аннулировать</a>
+																</li>
+															</ul>
+														</div>
 													</div>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<td style="width:9.6%">123-ЗЛ-ОК</td>
-											<td style="width:9.6%">12.07.2023
-												<br>
-												<span class="color-gray">12:24</span>
-											</td>
-											<td class="td-table-inside" colspan="6">
-												<table>
-													<tr>
-														<td style="width:22%">ж/д вагон Хоппер</td>
-														<td style="width:17.5%">ООО «РЖД»</td>
-														<td style="width:13.67%">01.10.2023</td>
-														<td style="width:18.5%">1 000 000,00</td>
-														<td style="width:11.67%">20 ед.</td>
-														<td style="width:16.67%">20 000 000,00</td>
-													</tr>
-													<tr>
-														<td style="width:22%">ж/д вагон Хоппер</td>
-														<td style="width:17.5%"> 
-															<div class="text-one-line">ООО «Название длинное длинное длинное</div>
-														</td>
-														<td style="width:13.67%">03.11.2023</td>
-														<td style="width:18.5%">50 000 000,00</td>
-														<td style="width:11.67%">1 ед.</td>
-														<td style="width:16.67%">50 000 000,00</td>
-													</tr>
-													<tr>
-														<td style="width:22%">ж/д вагон Хоппер</td>
-														<td style="width:17.5%">ООО «Название»</td>
-														<td style="width:13.67%">03.11.2023</td>
-														<td style="width:18.5%">50 000 000,00</td>
-														<td style="width:11.67%">1 ед.</td>
-														<td style="width:16.67%">50 000 000,00</td>
-													</tr>
-													<tr>
-														<td style="width:22%">ж/д вагон Хоппер</td>
-														<td style="width:17.5%">ООО «Название»</td>
-														<td style="width:13.67%">03.11.2023</td>
-														<td style="width:18.5%">50 000 000,00</td>
-														<td style="width:11.67%">1 ед.</td>
-														<td style="width:16.67%">50 000 000,00</td>
-													</tr>
-													<tr>
-														<td style="width:22%"></td>
-														<td style="width:17.5%"></td>
-														<td style="width:13.67%"></td>
-														<td style="width:18.5%"></td>
-														<td class="td-total-selected" style="width:11.67%">
-															<div class="total-selected">итого														</div>
-														</td>
-														<td class="td-total-selected" style="width:16.67%">
-															<div class="total-selected">70 850 000,00</div>
-														</td>
-													</tr>
-												</table>
-											</td>
-											<td class="text-center" style="width:7%">
-												<div class="progress progress--docs">
-													<div class="progress-bar" data-progress="75%"></div>
-													<div class="progress__value-text">75%</div>
-												</div>
-											</td>
-											<td style="width:13.45%">
-												<div class="d-flex align-items-center application-nav">
-													<div class="status status--review">На рассмотрении</div>
-													<div class="tooltip">
-														<a class="btn tooltip__btn">
-															<svg class="icon-more-alt">
-																<use xlink:href="img/icons/icons.svg#icon-more-alt"></use>
-															</svg>
-														</a>
-														<ul class="tooltip__menu">
-															<li class="tooltip__menu-item">
-																<a class="tooltip__menu-item-link" href="#">Просмотреть</a>
-															</li>
-															<li class="tooltip__menu-item">
-																<a class="tooltip__menu-item-link" href="#">Создать новую версию</a>
-															</li>
-															<li class="tooltip__menu-item tooltip__menu-item--cancel">
-																<a class="tooltip__menu-item-link" href="#">Аннулировать</a>
-															</li>
-														</ul>
+												</td>
+											</tr>
+											<tr>
+												<td style="width:9.6%">123-ЗЛ-ОК</td>
+												<td style="width:9.6%">12.07.2023
+													<br>
+													<span class="color-gray">12:24</span>
+												</td>
+												<td class="td-table-inside" colspan="6">
+													<table>
+														<tr>
+															<td style="width:22%">ж/д вагон Хоппер</td>
+															<td style="width:17.5%">ООО «РЖД»</td>
+															<td style="width:13.67%">01.10.2023</td>
+															<td style="width:18.5%">1 000 000,00</td>
+															<td style="width:11.67%">20 ед.</td>
+															<td style="width:16.67%">20 000 000,00</td>
+														</tr>
+														<tr>
+															<td style="width:22%"></td>
+															<td style="width:17.5%"></td>
+															<td style="width:13.67%"></td>
+															<td style="width:18.5%"></td>
+															<td class="td-total-selected" style="width:11.67%">
+																<div class="total-selected">итого														</div>
+															</td>
+															<td class="td-total-selected" style="width:16.67%">
+																<div class="total-selected">20 000 000,00</div>
+															</td>
+														</tr>
+													</table>
+												</td>
+												<td class="text-center" style="width:7%">
+													<div class="progress progress--docs">
+														<div class="progress-bar" data-progress="75%"></div>
+														<div class="progress__value-text">75%</div>
 													</div>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<td style="width:9.6%">123-ЗЛ-ОК</td>
-											<td style="width:9.6%">12.07.2023
-												<br>
-												<span class="color-gray">12:24</span>
-											</td>
-											<td class="td-table-inside" colspan="6">
-												<table>
-													<tr>
-														<td style="width:22%">ж/д вагон Хоппер</td>
-														<td style="width:17.5%">ООО «РЖД»</td>
-														<td style="width:13.67%">01.10.2023</td>
-														<td style="width:18.5%">1 000 000,00</td>
-														<td style="width:11.67%">20 ед.</td>
-														<td style="width:16.67%">20 000 000,00</td>
-													</tr>
-													<tr>
-														<td style="width:22%">ж/д вагон Хоппер</td>
-														<td style="width:17.5%"> 
-															<div class="text-one-line">ООО «Название длинное длинное длинное</div>
-														</td>
-														<td style="width:13.67%">03.11.2023</td>
-														<td style="width:18.5%">50 000 000,00</td>
-														<td style="width:11.67%">1 ед.</td>
-														<td style="width:16.67%">50 000 000,00</td>
-													</tr>
-													<tr>
-														<td style="width:22%">ж/д вагон Хоппер</td>
-														<td style="width:17.5%">ООО «Название»</td>
-														<td style="width:13.67%">03.11.2023</td>
-														<td style="width:18.5%">50 000 000,00</td>
-														<td style="width:11.67%">1 ед.</td>
-														<td style="width:16.67%">50 000 000,00</td>
-													</tr>
-													<tr>
-														<td style="width:22%">ж/д вагон Хоппер</td>
-														<td style="width:17.5%">ООО «Название»</td>
-														<td style="width:13.67%">03.11.2023</td>
-														<td style="width:18.5%">50 000 000,00</td>
-														<td style="width:11.67%">1 ед.</td>
-														<td style="width:16.67%">50 000 000,00</td>
-													</tr>
-													<tr>
-														<td style="width:22%"></td>
-														<td style="width:17.5%"></td>
-														<td style="width:13.67%"></td>
-														<td style="width:18.5%"></td>
-														<td class="td-total-selected" style="width:11.67%">
-															<div class="total-selected">итого														</div>
-														</td>
-														<td class="td-total-selected" style="width:16.67%">
-															<div class="total-selected">70 850 000,00</div>
-														</td>
-													</tr>
-												</table>
-											</td>
-											<td class="text-center" style="width:7%">
-												<div class="progress progress--docs">
-													<div class="progress-bar" data-progress="75%"></div>
-													<div class="progress__value-text">75%</div>
-												</div>
-											</td>
-											<td style="width:13.45%">
-												<div class="d-flex align-items-center application-nav">
-													<div class="status status--registered">Зарегистрирована</div>
-													<div class="tooltip">
-														<a class="btn tooltip__btn">
-															<svg class="icon-more-alt">
-																<use xlink:href="img/icons/icons.svg#icon-more-alt"></use>
-															</svg>
-														</a>
-														<ul class="tooltip__menu">
-															<li class="tooltip__menu-item">
-																<a class="tooltip__menu-item-link" href="#">Просмотреть</a>
-															</li>
-															<li class="tooltip__menu-item">
-																<a class="tooltip__menu-item-link" href="#">Создать новую версию</a>
-															</li>
-															<li class="tooltip__menu-item tooltip__menu-item--cancel">
-																<a class="tooltip__menu-item-link" href="#">Аннулировать</a>
-															</li>
-														</ul>
+												</td>
+												<td style="width:13.45%">
+													<div class="d-flex align-items-center">
+														<div class="status status--rejected">Отклонена</div>
+														<div class="tooltip">
+															<a class="btn tooltip__btn">
+																<svg class="icon-more-alt">
+																	<use xlink:href="img/icons/icons.svg#icon-more-alt"></use>
+																</svg>
+															</a>
+															<ul class="tooltip__menu">
+																<li class="tooltip__menu-item">
+																	<a class="tooltip__menu-item-link" href="#">Просмотреть</a>
+																</li>
+																<li class="tooltip__menu-item">
+																	<a class="tooltip__menu-item-link" href="#">Создать новую версию</a>
+																</li>
+																<li class="tooltip__menu-item tooltip__menu-item--cancel">
+																	<a class="tooltip__menu-item-link" href="#">Аннулировать</a>
+																</li>
+															</ul>
+														</div>
 													</div>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<td style="width:9.6%">123-ЗЛ-ОК</td>
-											<td style="width:9.6%">12.07.2023
-												<br>
-												<span class="color-gray">12:24</span>
-											</td>
-											<td class="td-table-inside" colspan="6">
-												<table>
-													<tr>
-														<td style="width:22%">ж/д вагон Хоппер</td>
-														<td style="width:17.5%">ООО «РЖД»</td>
-														<td style="width:13.67%">01.10.2023</td>
-														<td style="width:18.5%">1 000 000,00</td>
-														<td style="width:11.67%">20 ед.</td>
-														<td style="width:16.67%">20 000 000,00</td>
-													</tr>
-													<tr>
-														<td style="width:22%">ж/д вагон Хоппер</td>
-														<td style="width:17.5%"> 
-															<div class="text-one-line">ООО «Название длинное длинное длинное</div>
-														</td>
-														<td style="width:13.67%">03.11.2023</td>
-														<td style="width:18.5%">50 000 000,00</td>
-														<td style="width:11.67%">1 ед.</td>
-														<td style="width:16.67%">50 000 000,00</td>
-													</tr>
-													<tr>
-														<td style="width:22%">ж/д вагон Хоппер</td>
-														<td style="width:17.5%">ООО «Название»</td>
-														<td style="width:13.67%">03.11.2023</td>
-														<td style="width:18.5%">50 000 000,00</td>
-														<td style="width:11.67%">1 ед.</td>
-														<td style="width:16.67%">50 000 000,00</td>
-													</tr>
-													<tr>
-														<td style="width:22%">ж/д вагон Хоппер</td>
-														<td style="width:17.5%">ООО «Название»</td>
-														<td style="width:13.67%">03.11.2023</td>
-														<td style="width:18.5%">50 000 000,00</td>
-														<td style="width:11.67%">1 ед.</td>
-														<td style="width:16.67%">50 000 000,00</td>
-													</tr>
-													<tr>
-														<td style="width:22%"></td>
-														<td style="width:17.5%"></td>
-														<td style="width:13.67%"></td>
-														<td style="width:18.5%"></td>
-														<td class="td-total-selected" style="width:11.67%">
-															<div class="total-selected">итого														</div>
-														</td>
-														<td class="td-total-selected" style="width:16.67%">
-															<div class="total-selected">70 850 000,00</div>
-														</td>
-													</tr>
-												</table>
-											</td>
-											<td class="text-center" style="width:7%">
-												<div class="progress progress--docs">
-													<div class="progress-bar" data-progress="75%"></div>
-													<div class="progress__value-text">75%</div>
-												</div>
-											</td>
-											<td style="width:13.45%">
-												<div class="d-flex align-items-center application-nav">
-													<div class="status status--completed">Завершена</div>
-													<div class="tooltip">
-														<a class="btn tooltip__btn">
-															<svg class="icon-more-alt">
-																<use xlink:href="img/icons/icons.svg#icon-more-alt"></use>
-															</svg>
-														</a>
-														<ul class="tooltip__menu">
-															<li class="tooltip__menu-item">
-																<a class="tooltip__menu-item-link" href="#">Просмотреть</a>
-															</li>
-															<li class="tooltip__menu-item">
-																<a class="tooltip__menu-item-link" href="#">Создать новую версию</a>
-															</li>
-															<li class="tooltip__menu-item tooltip__menu-item--cancel">
-																<a class="tooltip__menu-item-link" href="#">Аннулировать</a>
-															</li>
-														</ul>
+												</td>
+											</tr>
+											<tr>
+												<td style="width:9.6%">123-ЗЛ-ОК</td>
+												<td style="width:9.6%">12.07.2023
+													<br>
+													<span class="color-gray">12:24</span>
+												</td>
+												<td class="td-table-inside" colspan="6">
+													<table>
+														<tr>
+															<td style="width:22%">ж/д вагон Хоппер</td>
+															<td style="width:17.5%">ООО «РЖД»</td>
+															<td style="width:13.67%">01.10.2023</td>
+															<td style="width:18.5%">1 000 000,00</td>
+															<td style="width:11.67%">20 ед.</td>
+															<td style="width:16.67%">20 000 000,00</td>
+														</tr>
+														<tr>
+															<td style="width:22%">ж/д вагон Хоппер</td>
+															<td style="width:17.5%"> 
+																<div class="text-one-line">ООО «Название длинное длинное длинное</div>
+															</td>
+															<td style="width:13.67%">03.11.2023</td>
+															<td style="width:18.5%">50 000 000,00</td>
+															<td style="width:11.67%">1 ед.</td>
+															<td style="width:16.67%">50 000 000,00</td>
+														</tr>
+														<tr>
+															<td style="width:22%">ж/д вагон Хоппер</td>
+															<td style="width:17.5%">ООО «Название»</td>
+															<td style="width:13.67%">03.11.2023</td>
+															<td style="width:18.5%">50 000 000,00</td>
+															<td style="width:11.67%">1 ед.</td>
+															<td style="width:16.67%">50 000 000,00</td>
+														</tr>
+														<tr>
+															<td style="width:22%">ж/д вагон Хоппер</td>
+															<td style="width:17.5%">ООО «Название»</td>
+															<td style="width:13.67%">03.11.2023</td>
+															<td style="width:18.5%">50 000 000,00</td>
+															<td style="width:11.67%">1 ед.</td>
+															<td style="width:16.67%">50 000 000,00</td>
+														</tr>
+														<tr>
+															<td style="width:22%"></td>
+															<td style="width:17.5%"></td>
+															<td style="width:13.67%"></td>
+															<td style="width:18.5%"></td>
+															<td class="td-total-selected" style="width:11.67%">
+																<div class="total-selected">итого														</div>
+															</td>
+															<td class="td-total-selected" style="width:16.67%">
+																<div class="total-selected">70 850 000,00</div>
+															</td>
+														</tr>
+													</table>
+												</td>
+												<td class="text-center" style="width:7%">
+													<div class="progress progress--docs">
+														<div class="progress-bar" data-progress="75%"></div>
+														<div class="progress__value-text">75%</div>
 													</div>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<td style="width:9.6%">123-ЗЛ-ОК</td>
-											<td style="width:9.6%">12.07.2023
-												<br>
-												<span class="color-gray">12:24</span>
-											</td>
-											<td class="td-table-inside" colspan="6">
-												<table>
-													<tr>
-														<td style="width:22%">ж/д вагон Хоппер</td>
-														<td style="width:17.5%">ООО «РЖД»</td>
-														<td style="width:13.67%">01.10.2023</td>
-														<td style="width:18.5%">1 000 000,00</td>
-														<td style="width:11.67%">20 ед.</td>
-														<td style="width:16.67%">20 000 000,00</td>
-													</tr>
-													<tr>
-														<td style="width:22%">ж/д вагон Хоппер</td>
-														<td style="width:17.5%"> 
-															<div class="text-one-line">ООО «Название длинное длинное длинное</div>
-														</td>
-														<td style="width:13.67%">03.11.2023</td>
-														<td style="width:18.5%">50 000 000,00</td>
-														<td style="width:11.67%">1 ед.</td>
-														<td style="width:16.67%">50 000 000,00</td>
-													</tr>
-													<tr>
-														<td style="width:22%">ж/д вагон Хоппер</td>
-														<td style="width:17.5%">ООО «Название»</td>
-														<td style="width:13.67%">03.11.2023</td>
-														<td style="width:18.5%">50 000 000,00</td>
-														<td style="width:11.67%">1 ед.</td>
-														<td style="width:16.67%">50 000 000,00</td>
-													</tr>
-													<tr>
-														<td style="width:22%">ж/д вагон Хоппер</td>
-														<td style="width:17.5%">ООО «Название»</td>
-														<td style="width:13.67%">03.11.2023</td>
-														<td style="width:18.5%">50 000 000,00</td>
-														<td style="width:11.67%">1 ед.</td>
-														<td style="width:16.67%">50 000 000,00</td>
-													</tr>
-													<tr>
-														<td style="width:22%"></td>
-														<td style="width:17.5%"></td>
-														<td style="width:13.67%"></td>
-														<td style="width:18.5%"></td>
-														<td class="td-total-selected" style="width:11.67%">
-															<div class="total-selected">итого														</div>
-														</td>
-														<td class="td-total-selected" style="width:16.67%">
-															<div class="total-selected">70 850 000,00</div>
-														</td>
-													</tr>
-												</table>
-											</td>
-											<td class="text-center" style="width:7%">
-												<div class="progress progress--docs">
-													<div class="progress-bar" data-progress="75%"></div>
-													<div class="progress__value-text">75%</div>
-												</div>
-											</td>
-											<td style="width:13.45%">
-												<div class="d-flex align-items-center application-nav">
-													<div class="status status--replaced status--text-medium">Заменена</div>
-													<div class="tooltip">
-														<a class="btn tooltip__btn">
-															<svg class="icon-more-alt">
-																<use xlink:href="img/icons/icons.svg#icon-more-alt"></use>
-															</svg>
-														</a>
-														<ul class="tooltip__menu">
-															<li class="tooltip__menu-item">
-																<a class="tooltip__menu-item-link" href="#">Просмотреть</a>
-															</li>
-															<li class="tooltip__menu-item">
-																<a class="tooltip__menu-item-link" href="#">Создать новую версию</a>
-															</li>
-															<li class="tooltip__menu-item tooltip__menu-item--cancel">
-																<a class="tooltip__menu-item-link" href="#">Аннулировать</a>
-															</li>
-														</ul>
+												</td>
+												<td style="width:13.45%">
+													<div class="d-flex align-items-center">
+														<div class="status status--review">На рассмотрении</div>
+														<div class="tooltip">
+															<a class="btn tooltip__btn">
+																<svg class="icon-more-alt">
+																	<use xlink:href="img/icons/icons.svg#icon-more-alt"></use>
+																</svg>
+															</a>
+															<ul class="tooltip__menu">
+																<li class="tooltip__menu-item">
+																	<a class="tooltip__menu-item-link" href="#">Просмотреть</a>
+																</li>
+																<li class="tooltip__menu-item">
+																	<a class="tooltip__menu-item-link" href="#">Создать новую версию</a>
+																</li>
+																<li class="tooltip__menu-item tooltip__menu-item--cancel">
+																	<a class="tooltip__menu-item-link" href="#">Аннулировать</a>
+																</li>
+															</ul>
+														</div>
 													</div>
-												</div>
-											</td>
-										</tr>
-									</tbody>
-								</table>
+												</td>
+											</tr>
+											<tr>
+												<td style="width:9.6%">123-ЗЛ-ОК</td>
+												<td style="width:9.6%">12.07.2023
+													<br>
+													<span class="color-gray">12:24</span>
+												</td>
+												<td class="td-table-inside" colspan="6">
+													<table>
+														<tr>
+															<td style="width:22%">ж/д вагон Хоппер</td>
+															<td style="width:17.5%">ООО «РЖД»</td>
+															<td style="width:13.67%">01.10.2023</td>
+															<td style="width:18.5%">1 000 000,00</td>
+															<td style="width:11.67%">20 ед.</td>
+															<td style="width:16.67%">20 000 000,00</td>
+														</tr>
+														<tr>
+															<td style="width:22%">ж/д вагон Хоппер</td>
+															<td style="width:17.5%"> 
+																<div class="text-one-line">ООО «Название длинное длинное длинное</div>
+															</td>
+															<td style="width:13.67%">03.11.2023</td>
+															<td style="width:18.5%">50 000 000,00</td>
+															<td style="width:11.67%">1 ед.</td>
+															<td style="width:16.67%">50 000 000,00</td>
+														</tr>
+														<tr>
+															<td style="width:22%">ж/д вагон Хоппер</td>
+															<td style="width:17.5%">ООО «Название»</td>
+															<td style="width:13.67%">03.11.2023</td>
+															<td style="width:18.5%">50 000 000,00</td>
+															<td style="width:11.67%">1 ед.</td>
+															<td style="width:16.67%">50 000 000,00</td>
+														</tr>
+														<tr>
+															<td style="width:22%">ж/д вагон Хоппер</td>
+															<td style="width:17.5%">ООО «Название»</td>
+															<td style="width:13.67%">03.11.2023</td>
+															<td style="width:18.5%">50 000 000,00</td>
+															<td style="width:11.67%">1 ед.</td>
+															<td style="width:16.67%">50 000 000,00</td>
+														</tr>
+														<tr>
+															<td style="width:22%"></td>
+															<td style="width:17.5%"></td>
+															<td style="width:13.67%"></td>
+															<td style="width:18.5%"></td>
+															<td class="td-total-selected" style="width:11.67%">
+																<div class="total-selected">итого														</div>
+															</td>
+															<td class="td-total-selected" style="width:16.67%">
+																<div class="total-selected">70 850 000,00</div>
+															</td>
+														</tr>
+													</table>
+												</td>
+												<td class="text-center" style="width:7%">
+													<div class="progress progress--docs">
+														<div class="progress-bar" data-progress="75%"></div>
+														<div class="progress__value-text">75%</div>
+													</div>
+												</td>
+												<td style="width:13.45%">
+													<div class="d-flex align-items-center">
+														<div class="status status--registered">Зарегистрирована</div>
+														<div class="tooltip">
+															<a class="btn tooltip__btn">
+																<svg class="icon-more-alt">
+																	<use xlink:href="img/icons/icons.svg#icon-more-alt"></use>
+																</svg>
+															</a>
+															<ul class="tooltip__menu">
+																<li class="tooltip__menu-item">
+																	<a class="tooltip__menu-item-link" href="#">Просмотреть</a>
+																</li>
+																<li class="tooltip__menu-item">
+																	<a class="tooltip__menu-item-link" href="#">Создать новую версию</a>
+																</li>
+																<li class="tooltip__menu-item tooltip__menu-item--cancel">
+																	<a class="tooltip__menu-item-link" href="#">Аннулировать</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="width:9.6%">123-ЗЛ-ОК</td>
+												<td style="width:9.6%">12.07.2023
+													<br>
+													<span class="color-gray">12:24</span>
+												</td>
+												<td class="td-table-inside" colspan="6">
+													<table>
+														<tr>
+															<td style="width:22%">ж/д вагон Хоппер</td>
+															<td style="width:17.5%">ООО «РЖД»</td>
+															<td style="width:13.67%">01.10.2023</td>
+															<td style="width:18.5%">1 000 000,00</td>
+															<td style="width:11.67%">20 ед.</td>
+															<td style="width:16.67%">20 000 000,00</td>
+														</tr>
+														<tr>
+															<td style="width:22%">ж/д вагон Хоппер</td>
+															<td style="width:17.5%"> 
+																<div class="text-one-line">ООО «Название длинное длинное длинное</div>
+															</td>
+															<td style="width:13.67%">03.11.2023</td>
+															<td style="width:18.5%">50 000 000,00</td>
+															<td style="width:11.67%">1 ед.</td>
+															<td style="width:16.67%">50 000 000,00</td>
+														</tr>
+														<tr>
+															<td style="width:22%">ж/д вагон Хоппер</td>
+															<td style="width:17.5%">ООО «Название»</td>
+															<td style="width:13.67%">03.11.2023</td>
+															<td style="width:18.5%">50 000 000,00</td>
+															<td style="width:11.67%">1 ед.</td>
+															<td style="width:16.67%">50 000 000,00</td>
+														</tr>
+														<tr>
+															<td style="width:22%">ж/д вагон Хоппер</td>
+															<td style="width:17.5%">ООО «Название»</td>
+															<td style="width:13.67%">03.11.2023</td>
+															<td style="width:18.5%">50 000 000,00</td>
+															<td style="width:11.67%">1 ед.</td>
+															<td style="width:16.67%">50 000 000,00</td>
+														</tr>
+														<tr>
+															<td style="width:22%"></td>
+															<td style="width:17.5%"></td>
+															<td style="width:13.67%"></td>
+															<td style="width:18.5%"></td>
+															<td class="td-total-selected" style="width:11.67%">
+																<div class="total-selected">итого														</div>
+															</td>
+															<td class="td-total-selected" style="width:16.67%">
+																<div class="total-selected">70 850 000,00</div>
+															</td>
+														</tr>
+													</table>
+												</td>
+												<td class="text-center" style="width:7%">
+													<div class="progress progress--docs">
+														<div class="progress-bar" data-progress="75%"></div>
+														<div class="progress__value-text">75%</div>
+													</div>
+												</td>
+												<td style="width:13.45%">
+													<div class="d-flex align-items-center">
+														<div class="status status--completed">Завершена</div>
+														<div class="tooltip">
+															<a class="btn tooltip__btn">
+																<svg class="icon-more-alt">
+																	<use xlink:href="img/icons/icons.svg#icon-more-alt"></use>
+																</svg>
+															</a>
+															<ul class="tooltip__menu">
+																<li class="tooltip__menu-item">
+																	<a class="tooltip__menu-item-link" href="#">Просмотреть</a>
+																</li>
+																<li class="tooltip__menu-item">
+																	<a class="tooltip__menu-item-link" href="#">Создать новую версию</a>
+																</li>
+																<li class="tooltip__menu-item tooltip__menu-item--cancel">
+																	<a class="tooltip__menu-item-link" href="#">Аннулировать</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="width:9.6%">123-ЗЛ-ОК</td>
+												<td style="width:9.6%">12.07.2023
+													<br>
+													<span class="color-gray">12:24</span>
+												</td>
+												<td class="td-table-inside" colspan="6">
+													<table>
+														<tr>
+															<td style="width:22%">ж/д вагон Хоппер</td>
+															<td style="width:17.5%">ООО «РЖД»</td>
+															<td style="width:13.67%">01.10.2023</td>
+															<td style="width:18.5%">1 000 000,00</td>
+															<td style="width:11.67%">20 ед.</td>
+															<td style="width:16.67%">20 000 000,00</td>
+														</tr>
+														<tr>
+															<td style="width:22%">ж/д вагон Хоппер</td>
+															<td style="width:17.5%"> 
+																<div class="text-one-line">ООО «Название длинное длинное длинное</div>
+															</td>
+															<td style="width:13.67%">03.11.2023</td>
+															<td style="width:18.5%">50 000 000,00</td>
+															<td style="width:11.67%">1 ед.</td>
+															<td style="width:16.67%">50 000 000,00</td>
+														</tr>
+														<tr>
+															<td style="width:22%">ж/д вагон Хоппер</td>
+															<td style="width:17.5%">ООО «Название»</td>
+															<td style="width:13.67%">03.11.2023</td>
+															<td style="width:18.5%">50 000 000,00</td>
+															<td style="width:11.67%">1 ед.</td>
+															<td style="width:16.67%">50 000 000,00</td>
+														</tr>
+														<tr>
+															<td style="width:22%">ж/д вагон Хоппер</td>
+															<td style="width:17.5%">ООО «Название»</td>
+															<td style="width:13.67%">03.11.2023</td>
+															<td style="width:18.5%">50 000 000,00</td>
+															<td style="width:11.67%">1 ед.</td>
+															<td style="width:16.67%">50 000 000,00</td>
+														</tr>
+														<tr>
+															<td style="width:22%"></td>
+															<td style="width:17.5%"></td>
+															<td style="width:13.67%"></td>
+															<td style="width:18.5%"></td>
+															<td class="td-total-selected" style="width:11.67%">
+																<div class="total-selected">итого														</div>
+															</td>
+															<td class="td-total-selected" style="width:16.67%">
+																<div class="total-selected">70 850 000,00</div>
+															</td>
+														</tr>
+													</table>
+												</td>
+												<td class="text-center" style="width:7%">
+													<div class="progress progress--docs">
+														<div class="progress-bar" data-progress="75%"></div>
+														<div class="progress__value-text">75%</div>
+													</div>
+												</td>
+												<td style="width:13.45%">
+													<div class="d-flex align-items-center">
+														<div class="status status--replaced status--text-medium">Заменена</div>
+														<div class="tooltip">
+															<a class="btn tooltip__btn">
+																<svg class="icon-more-alt">
+																	<use xlink:href="img/icons/icons.svg#icon-more-alt"></use>
+																</svg>
+															</a>
+															<ul class="tooltip__menu">
+																<li class="tooltip__menu-item">
+																	<a class="tooltip__menu-item-link" href="#">Просмотреть</a>
+																</li>
+																<li class="tooltip__menu-item">
+																	<a class="tooltip__menu-item-link" href="#">Создать новую версию</a>
+																</li>
+																<li class="tooltip__menu-item tooltip__menu-item--cancel">
+																	<a class="tooltip__menu-item-link" href="#">Аннулировать</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 								<ul class="pagination">
 									<li class="disabled">
 										<a href="#">
@@ -935,536 +1070,540 @@
 								</ul>
 							</div>
 							<div class="tab-content" id="tab-drafts">
-								<form class="application-form">
-									<div class="application-form__item">
-										<input class="application-form__item-input" type="text" placeholder="Поиск">
-										<div class="application-form__item-icon">
+								<form class="app-search-form">
+									<div class="app-search-form__item">
+										<input class="app-search-form__item-input" type="text" placeholder="Поиск">
+										<div class="app-search-form__item-icon">
 											<svg class="icon-loop">
 												<use xlink:href="img/icons/icons.svg#icon-loop"></use>
 											</svg>
 										</div>
 									</div>
-									<input class="btn btn-search" type="submit" value="Найти">
+									<div class="app-search-form__item">
+										<input class="btn btn-search" type="submit" value="Найти">
+									</div>
 								</form>
-								<table class="application-table">
-									<thead>
-										<tr>
-											<th style="width:9.6%">Регистрационный номер</th>
-											<th style="width:9.6%">Дата создания</th>
-											<th class="th-table-inside" colspan="6">
-												<table>
-													<thead>
+								<div class="scroll-wrapper">
+									<table class="application-table">
+										<thead>
+											<tr>
+												<th style="width:9.6%">Регистрационный номер</th>
+												<th style="width:9.6%">Дата создания</th>
+												<th class="th-table-inside" colspan="6">
+													<table>
+														<thead>
+															<tr>
+																<th class="th-section-heading" colspan="6">Предметы лизинга</th>
+															</tr>
+															<tr>
+																<th style="width:22%">Название предмета</th>
+																<th style="width:17.5%">Поставщик</th>
+																<th style="width:13.67%">Срок поставки</th>
+																<th style="width:18.5%">Стоимость единицы</th>
+																<th style="width:11.67%">Количество</th>
+																<th style="width:16.67%">Стоимость итоговая</th>
+															</tr>
+														</thead>
+													</table>
+												</th>
+												<th style="width:7%">Документы</th>
+												<th style="width:13.45%">Статус</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td style="width:9.6%">123-ЗЛ-ОК</td>
+												<td style="width:9.6%">12.07.2023
+													<br>
+													<span class="color-gray">12:24</span>
+												</td>
+												<td class="td-table-inside" colspan="6">
+													<table>
 														<tr>
-															<th class="th-section-heading" colspan="6">Предметы лизинга</th>
+															<td style="width:22%">ж/д вагон Хоппер</td>
+															<td style="width:17.5%">ООО «РЖД»</td>
+															<td style="width:13.67%">01.10.2023</td>
+															<td style="width:18.5%">1 000 000,00</td>
+															<td style="width:11.67%">20 ед.</td>
+															<td style="width:16.67%">20 000 000,00</td>
 														</tr>
 														<tr>
-															<th style="width:22%">Название предмета</th>
-															<th style="width:17.5%">Поставщик</th>
-															<th style="width:13.67%">Срок поставки</th>
-															<th style="width:18.5%">Стоимость единицы</th>
-															<th style="width:11.67%">Количество</th>
-															<th style="width:16.67%">Стоимость итоговая</th>
+															<td style="width:22%">ж/д вагон Хоппер</td>
+															<td style="width:17.5%"> 
+																<div class="text-one-line">ООО «Название длинное длинное длинное</div>
+															</td>
+															<td style="width:13.67%">03.11.2023</td>
+															<td style="width:18.5%">50 000 000,00</td>
+															<td style="width:11.67%">1 ед.</td>
+															<td style="width:16.67%">50 000 000,00</td>
 														</tr>
-													</thead>
-												</table>
-											</th>
-											<th style="width:7%">Документы</th>
-											<th style="width:13.45%">Статус</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td style="width:9.6%">123-ЗЛ-ОК</td>
-											<td style="width:9.6%">12.07.2023
-												<br>
-												<span class="color-gray">12:24</span>
-											</td>
-											<td class="td-table-inside" colspan="6">
-												<table>
-													<tr>
-														<td style="width:22%">ж/д вагон Хоппер</td>
-														<td style="width:17.5%">ООО «РЖД»</td>
-														<td style="width:13.67%">01.10.2023</td>
-														<td style="width:18.5%">1 000 000,00</td>
-														<td style="width:11.67%">20 ед.</td>
-														<td style="width:16.67%">20 000 000,00</td>
-													</tr>
-													<tr>
-														<td style="width:22%">ж/д вагон Хоппер</td>
-														<td style="width:17.5%"> 
-															<div class="text-one-line">ООО «Название длинное длинное длинное</div>
-														</td>
-														<td style="width:13.67%">03.11.2023</td>
-														<td style="width:18.5%">50 000 000,00</td>
-														<td style="width:11.67%">1 ед.</td>
-														<td style="width:16.67%">50 000 000,00</td>
-													</tr>
-													<tr>
-														<td style="width:22%">ж/д вагон Хоппер</td>
-														<td style="width:17.5%">ООО «Название»</td>
-														<td style="width:13.67%">03.11.2023</td>
-														<td style="width:18.5%">50 000 000,00</td>
-														<td style="width:11.67%">1 ед.</td>
-														<td style="width:16.67%">50 000 000,00</td>
-													</tr>
-													<tr>
-														<td style="width:22%">ж/д вагон Хоппер</td>
-														<td style="width:17.5%">ООО «Название»</td>
-														<td style="width:13.67%">03.11.2023</td>
-														<td style="width:18.5%">50 000 000,00</td>
-														<td style="width:11.67%">1 ед.</td>
-														<td style="width:16.67%">50 000 000,00</td>
-													</tr>
-													<tr>
-														<td style="width:22%"></td>
-														<td style="width:17.5%"></td>
-														<td style="width:13.67%"></td>
-														<td style="width:18.5%"></td>
-														<td class="td-total-selected" style="width:11.67%">
-															<div class="total-selected">итого														</div>
-														</td>
-														<td class="td-total-selected" style="width:16.67%">
-															<div class="total-selected">70 850 000,00</div>
-														</td>
-													</tr>
-												</table>
-											</td>
-											<td class="text-center" style="width:7%">
-												<div class="progress progress--docs">
-													<div class="progress-bar" data-progress="75%"></div>
-													<div class="progress__value-text">75%</div>
-												</div>
-											</td>
-											<td style="width:13.45%">
-												<div class="d-flex align-items-center application-nav">
-													<div class="status status--draft">Черновик</div>
-													<div class="tooltip">
-														<a class="btn tooltip__btn">
-															<svg class="icon-more-alt">
-																<use xlink:href="img/icons/icons.svg#icon-more-alt"></use>
-															</svg>
-														</a>
-														<ul class="tooltip__menu">
-															<li class="tooltip__menu-item">
-																<a class="tooltip__menu-item-link" href="#">Просмотреть</a>
-															</li>
-															<li class="tooltip__menu-item">
-																<a class="tooltip__menu-item-link" href="#modal-continue-filling" data-modal>Продолжить заполнение</a>
-															</li>
-															<li class="tooltip__menu-item tooltip__menu-item--cancel">
-																<a class="tooltip__menu-item-link" href="#modal-remove-draft" data-modal>Удалить черновик</a>
-															</li>
-														</ul>
+														<tr>
+															<td style="width:22%">ж/д вагон Хоппер</td>
+															<td style="width:17.5%">ООО «Название»</td>
+															<td style="width:13.67%">03.11.2023</td>
+															<td style="width:18.5%">50 000 000,00</td>
+															<td style="width:11.67%">1 ед.</td>
+															<td style="width:16.67%">50 000 000,00</td>
+														</tr>
+														<tr>
+															<td style="width:22%">ж/д вагон Хоппер</td>
+															<td style="width:17.5%">ООО «Название»</td>
+															<td style="width:13.67%">03.11.2023</td>
+															<td style="width:18.5%">50 000 000,00</td>
+															<td style="width:11.67%">1 ед.</td>
+															<td style="width:16.67%">50 000 000,00</td>
+														</tr>
+														<tr>
+															<td style="width:22%"></td>
+															<td style="width:17.5%"></td>
+															<td style="width:13.67%"></td>
+															<td style="width:18.5%"></td>
+															<td class="td-total-selected" style="width:11.67%">
+																<div class="total-selected">итого														</div>
+															</td>
+															<td class="td-total-selected" style="width:16.67%">
+																<div class="total-selected">70 850 000,00</div>
+															</td>
+														</tr>
+													</table>
+												</td>
+												<td class="text-center" style="width:7%">
+													<div class="progress progress--docs">
+														<div class="progress-bar" data-progress="75%"></div>
+														<div class="progress__value-text">75%</div>
 													</div>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<td style="width:9.6%">123-ЗЛ-ОК</td>
-											<td style="width:9.6%">12.07.2023
-												<br>
-												<span class="color-gray">12:24</span>
-											</td>
-											<td class="td-table-inside" colspan="6">
-												<table>
-													<tr>
-														<td style="width:22%">ж/д вагон Хоппер</td>
-														<td style="width:17.5%">ООО «РЖД»</td>
-														<td style="width:13.67%">01.10.2023</td>
-														<td style="width:18.5%">1 000 000,00</td>
-														<td style="width:11.67%">20 ед.</td>
-														<td style="width:16.67%">20 000 000,00</td>
-													</tr>
-													<tr>
-														<td style="width:22%"></td>
-														<td style="width:17.5%"></td>
-														<td style="width:13.67%"></td>
-														<td style="width:18.5%"></td>
-														<td class="td-total-selected" style="width:11.67%">
-															<div class="total-selected">итого														</div>
-														</td>
-														<td class="td-total-selected" style="width:16.67%">
-															<div class="total-selected">20 000 000,00</div>
-														</td>
-													</tr>
-												</table>
-											</td>
-											<td class="text-center" style="width:7%">
-												<div class="progress progress--docs">
-													<div class="progress-bar" data-progress="75%"></div>
-													<div class="progress__value-text">75%</div>
-												</div>
-											</td>
-											<td style="width:13.45%">
-												<div class="d-flex align-items-center application-nav">
-													<div class="status status--draft">Черновик</div>
-													<div class="tooltip">
-														<a class="btn tooltip__btn">
-															<svg class="icon-more-alt">
-																<use xlink:href="img/icons/icons.svg#icon-more-alt"></use>
-															</svg>
-														</a>
-														<ul class="tooltip__menu">
-															<li class="tooltip__menu-item">
-																<a class="tooltip__menu-item-link" href="#">Просмотреть</a>
-															</li>
-															<li class="tooltip__menu-item">
-																<a class="tooltip__menu-item-link" href="#modal-continue-filling" data-modal>Продолжить заполнение</a>
-															</li>
-															<li class="tooltip__menu-item tooltip__menu-item--cancel">
-																<a class="tooltip__menu-item-link" href="#modal-remove-draft" data-modal>Удалить черновик</a>
-															</li>
-														</ul>
+												</td>
+												<td style="width:13.45%">
+													<div class="d-flex align-items-center">
+														<div class="status status--draft">Черновик</div>
+														<div class="tooltip">
+															<a class="btn tooltip__btn">
+																<svg class="icon-more-alt">
+																	<use xlink:href="img/icons/icons.svg#icon-more-alt"></use>
+																</svg>
+															</a>
+															<ul class="tooltip__menu">
+																<li class="tooltip__menu-item">
+																	<a class="tooltip__menu-item-link" href="#">Просмотреть</a>
+																</li>
+																<li class="tooltip__menu-item">
+																	<a class="tooltip__menu-item-link" href="#modal-continue-filling" data-modal>Продолжить заполнение</a>
+																</li>
+																<li class="tooltip__menu-item tooltip__menu-item--cancel">
+																	<a class="tooltip__menu-item-link" href="#modal-remove-draft" data-modal>Удалить черновик</a>
+																</li>
+															</ul>
+														</div>
 													</div>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<td style="width:9.6%">123-ЗЛ-ОК</td>
-											<td style="width:9.6%">12.07.2023
-												<br>
-												<span class="color-gray">12:24</span>
-											</td>
-											<td class="td-table-inside" colspan="6">
-												<table>
-													<tr>
-														<td style="width:22%">ж/д вагон Хоппер</td>
-														<td style="width:17.5%">ООО «РЖД»</td>
-														<td style="width:13.67%">01.10.2023</td>
-														<td style="width:18.5%">1 000 000,00</td>
-														<td style="width:11.67%">20 ед.</td>
-														<td style="width:16.67%">20 000 000,00</td>
-													</tr>
-													<tr>
-														<td style="width:22%">ж/д вагон Хоппер</td>
-														<td style="width:17.5%"> 
-															<div class="text-one-line">ООО «Название длинное длинное длинное</div>
-														</td>
-														<td style="width:13.67%">03.11.2023</td>
-														<td style="width:18.5%">50 000 000,00</td>
-														<td style="width:11.67%">1 ед.</td>
-														<td style="width:16.67%">50 000 000,00</td>
-													</tr>
-													<tr>
-														<td style="width:22%">ж/д вагон Хоппер</td>
-														<td style="width:17.5%">ООО «Название»</td>
-														<td style="width:13.67%">03.11.2023</td>
-														<td style="width:18.5%">50 000 000,00</td>
-														<td style="width:11.67%">1 ед.</td>
-														<td style="width:16.67%">50 000 000,00</td>
-													</tr>
-													<tr>
-														<td style="width:22%">ж/д вагон Хоппер</td>
-														<td style="width:17.5%">ООО «Название»</td>
-														<td style="width:13.67%">03.11.2023</td>
-														<td style="width:18.5%">50 000 000,00</td>
-														<td style="width:11.67%">1 ед.</td>
-														<td style="width:16.67%">50 000 000,00</td>
-													</tr>
-													<tr>
-														<td style="width:22%"></td>
-														<td style="width:17.5%"></td>
-														<td style="width:13.67%"></td>
-														<td style="width:18.5%"></td>
-														<td class="td-total-selected" style="width:11.67%">
-															<div class="total-selected">итого														</div>
-														</td>
-														<td class="td-total-selected" style="width:16.67%">
-															<div class="total-selected">70 850 000,00</div>
-														</td>
-													</tr>
-												</table>
-											</td>
-											<td class="text-center" style="width:7%">
-												<div class="progress progress--docs">
-													<div class="progress-bar" data-progress="75%"></div>
-													<div class="progress__value-text">75%</div>
-												</div>
-											</td>
-											<td style="width:13.45%">
-												<div class="d-flex align-items-center application-nav">
-													<div class="status status--draft">Черновик</div>
-													<div class="tooltip">
-														<a class="btn tooltip__btn">
-															<svg class="icon-more-alt">
-																<use xlink:href="img/icons/icons.svg#icon-more-alt"></use>
-															</svg>
-														</a>
-														<ul class="tooltip__menu">
-															<li class="tooltip__menu-item">
-																<a class="tooltip__menu-item-link" href="#">Просмотреть</a>
-															</li>
-															<li class="tooltip__menu-item">
-																<a class="tooltip__menu-item-link" href="#modal-continue-filling" data-modal>Продолжить заполнение</a>
-															</li>
-															<li class="tooltip__menu-item tooltip__menu-item--cancel">
-																<a class="tooltip__menu-item-link" href="#modal-remove-draft" data-modal>Удалить черновик</a>
-															</li>
-														</ul>
+												</td>
+											</tr>
+											<tr>
+												<td style="width:9.6%">123-ЗЛ-ОК</td>
+												<td style="width:9.6%">12.07.2023
+													<br>
+													<span class="color-gray">12:24</span>
+												</td>
+												<td class="td-table-inside" colspan="6">
+													<table>
+														<tr>
+															<td style="width:22%">ж/д вагон Хоппер</td>
+															<td style="width:17.5%">ООО «РЖД»</td>
+															<td style="width:13.67%">01.10.2023</td>
+															<td style="width:18.5%">1 000 000,00</td>
+															<td style="width:11.67%">20 ед.</td>
+															<td style="width:16.67%">20 000 000,00</td>
+														</tr>
+														<tr>
+															<td style="width:22%"></td>
+															<td style="width:17.5%"></td>
+															<td style="width:13.67%"></td>
+															<td style="width:18.5%"></td>
+															<td class="td-total-selected" style="width:11.67%">
+																<div class="total-selected">итого														</div>
+															</td>
+															<td class="td-total-selected" style="width:16.67%">
+																<div class="total-selected">20 000 000,00</div>
+															</td>
+														</tr>
+													</table>
+												</td>
+												<td class="text-center" style="width:7%">
+													<div class="progress progress--docs">
+														<div class="progress-bar" data-progress="75%"></div>
+														<div class="progress__value-text">75%</div>
 													</div>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<td style="width:9.6%">123-ЗЛ-ОК</td>
-											<td style="width:9.6%">12.07.2023
-												<br>
-												<span class="color-gray">12:24</span>
-											</td>
-											<td class="td-table-inside" colspan="6">
-												<table>
-													<tr>
-														<td style="width:22%">ж/д вагон Хоппер</td>
-														<td style="width:17.5%">ООО «РЖД»</td>
-														<td style="width:13.67%">01.10.2023</td>
-														<td style="width:18.5%">1 000 000,00</td>
-														<td style="width:11.67%">20 ед.</td>
-														<td style="width:16.67%">20 000 000,00</td>
-													</tr>
-													<tr>
-														<td style="width:22%">ж/д вагон Хоппер</td>
-														<td style="width:17.5%"> 
-															<div class="text-one-line">ООО «Название длинное длинное длинное</div>
-														</td>
-														<td style="width:13.67%">03.11.2023</td>
-														<td style="width:18.5%">50 000 000,00</td>
-														<td style="width:11.67%">1 ед.</td>
-														<td style="width:16.67%">50 000 000,00</td>
-													</tr>
-													<tr>
-														<td style="width:22%">ж/д вагон Хоппер</td>
-														<td style="width:17.5%">ООО «Название»</td>
-														<td style="width:13.67%">03.11.2023</td>
-														<td style="width:18.5%">50 000 000,00</td>
-														<td style="width:11.67%">1 ед.</td>
-														<td style="width:16.67%">50 000 000,00</td>
-													</tr>
-													<tr>
-														<td style="width:22%">ж/д вагон Хоппер</td>
-														<td style="width:17.5%">ООО «Название»</td>
-														<td style="width:13.67%">03.11.2023</td>
-														<td style="width:18.5%">50 000 000,00</td>
-														<td style="width:11.67%">1 ед.</td>
-														<td style="width:16.67%">50 000 000,00</td>
-													</tr>
-													<tr>
-														<td style="width:22%"></td>
-														<td style="width:17.5%"></td>
-														<td style="width:13.67%"></td>
-														<td style="width:18.5%"></td>
-														<td class="td-total-selected" style="width:11.67%">
-															<div class="total-selected">итого														</div>
-														</td>
-														<td class="td-total-selected" style="width:16.67%">
-															<div class="total-selected">70 850 000,00</div>
-														</td>
-													</tr>
-												</table>
-											</td>
-											<td class="text-center" style="width:7%">
-												<div class="progress progress--docs">
-													<div class="progress-bar" data-progress="75%"></div>
-													<div class="progress__value-text">75%</div>
-												</div>
-											</td>
-											<td style="width:13.45%">
-												<div class="d-flex align-items-center application-nav">
-													<div class="status status--draft">Черновик</div>
-													<div class="tooltip">
-														<a class="btn tooltip__btn">
-															<svg class="icon-more-alt">
-																<use xlink:href="img/icons/icons.svg#icon-more-alt"></use>
-															</svg>
-														</a>
-														<ul class="tooltip__menu">
-															<li class="tooltip__menu-item">
-																<a class="tooltip__menu-item-link" href="#">Просмотреть</a>
-															</li>
-															<li class="tooltip__menu-item">
-																<a class="tooltip__menu-item-link" href="#modal-continue-filling" data-modal>Продолжить заполнение</a>
-															</li>
-															<li class="tooltip__menu-item tooltip__menu-item--cancel">
-																<a class="tooltip__menu-item-link" href="#modal-remove-draft" data-modal>Удалить черновик</a>
-															</li>
-														</ul>
+												</td>
+												<td style="width:13.45%">
+													<div class="d-flex align-items-center">
+														<div class="status status--draft">Черновик</div>
+														<div class="tooltip">
+															<a class="btn tooltip__btn">
+																<svg class="icon-more-alt">
+																	<use xlink:href="img/icons/icons.svg#icon-more-alt"></use>
+																</svg>
+															</a>
+															<ul class="tooltip__menu">
+																<li class="tooltip__menu-item">
+																	<a class="tooltip__menu-item-link" href="#">Просмотреть</a>
+																</li>
+																<li class="tooltip__menu-item">
+																	<a class="tooltip__menu-item-link" href="#modal-continue-filling" data-modal>Продолжить заполнение</a>
+																</li>
+																<li class="tooltip__menu-item tooltip__menu-item--cancel">
+																	<a class="tooltip__menu-item-link" href="#modal-remove-draft" data-modal>Удалить черновик</a>
+																</li>
+															</ul>
+														</div>
 													</div>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<td style="width:9.6%">123-ЗЛ-ОК</td>
-											<td style="width:9.6%">12.07.2023
-												<br>
-												<span class="color-gray">12:24</span>
-											</td>
-											<td class="td-table-inside" colspan="6">
-												<table>
-													<tr>
-														<td style="width:22%">ж/д вагон Хоппер</td>
-														<td style="width:17.5%">ООО «РЖД»</td>
-														<td style="width:13.67%">01.10.2023</td>
-														<td style="width:18.5%">1 000 000,00</td>
-														<td style="width:11.67%">20 ед.</td>
-														<td style="width:16.67%">20 000 000,00</td>
-													</tr>
-													<tr>
-														<td style="width:22%">ж/д вагон Хоппер</td>
-														<td style="width:17.5%"> 
-															<div class="text-one-line">ООО «Название длинное длинное длинное</div>
-														</td>
-														<td style="width:13.67%">03.11.2023</td>
-														<td style="width:18.5%">50 000 000,00</td>
-														<td style="width:11.67%">1 ед.</td>
-														<td style="width:16.67%">50 000 000,00</td>
-													</tr>
-													<tr>
-														<td style="width:22%">ж/д вагон Хоппер</td>
-														<td style="width:17.5%">ООО «Название»</td>
-														<td style="width:13.67%">03.11.2023</td>
-														<td style="width:18.5%">50 000 000,00</td>
-														<td style="width:11.67%">1 ед.</td>
-														<td style="width:16.67%">50 000 000,00</td>
-													</tr>
-													<tr>
-														<td style="width:22%">ж/д вагон Хоппер</td>
-														<td style="width:17.5%">ООО «Название»</td>
-														<td style="width:13.67%">03.11.2023</td>
-														<td style="width:18.5%">50 000 000,00</td>
-														<td style="width:11.67%">1 ед.</td>
-														<td style="width:16.67%">50 000 000,00</td>
-													</tr>
-													<tr>
-														<td style="width:22%"></td>
-														<td style="width:17.5%"></td>
-														<td style="width:13.67%"></td>
-														<td style="width:18.5%"></td>
-														<td class="td-total-selected" style="width:11.67%">
-															<div class="total-selected">итого														</div>
-														</td>
-														<td class="td-total-selected" style="width:16.67%">
-															<div class="total-selected">70 850 000,00</div>
-														</td>
-													</tr>
-												</table>
-											</td>
-											<td class="text-center" style="width:7%">
-												<div class="progress progress--docs">
-													<div class="progress-bar" data-progress="75%"></div>
-													<div class="progress__value-text">75%</div>
-												</div>
-											</td>
-											<td style="width:13.45%">
-												<div class="d-flex align-items-center application-nav">
-													<div class="status status--draft">Черновик</div>
-													<div class="tooltip">
-														<a class="btn tooltip__btn">
-															<svg class="icon-more-alt">
-																<use xlink:href="img/icons/icons.svg#icon-more-alt"></use>
-															</svg>
-														</a>
-														<ul class="tooltip__menu">
-															<li class="tooltip__menu-item">
-																<a class="tooltip__menu-item-link" href="#">Просмотреть</a>
-															</li>
-															<li class="tooltip__menu-item">
-																<a class="tooltip__menu-item-link" href="#modal-continue-filling" data-modal>Продолжить заполнение</a>
-															</li>
-															<li class="tooltip__menu-item tooltip__menu-item--cancel">
-																<a class="tooltip__menu-item-link" href="#modal-remove-draft" data-modal>Удалить черновик</a>
-															</li>
-														</ul>
+												</td>
+											</tr>
+											<tr>
+												<td style="width:9.6%">123-ЗЛ-ОК</td>
+												<td style="width:9.6%">12.07.2023
+													<br>
+													<span class="color-gray">12:24</span>
+												</td>
+												<td class="td-table-inside" colspan="6">
+													<table>
+														<tr>
+															<td style="width:22%">ж/д вагон Хоппер</td>
+															<td style="width:17.5%">ООО «РЖД»</td>
+															<td style="width:13.67%">01.10.2023</td>
+															<td style="width:18.5%">1 000 000,00</td>
+															<td style="width:11.67%">20 ед.</td>
+															<td style="width:16.67%">20 000 000,00</td>
+														</tr>
+														<tr>
+															<td style="width:22%">ж/д вагон Хоппер</td>
+															<td style="width:17.5%"> 
+																<div class="text-one-line">ООО «Название длинное длинное длинное</div>
+															</td>
+															<td style="width:13.67%">03.11.2023</td>
+															<td style="width:18.5%">50 000 000,00</td>
+															<td style="width:11.67%">1 ед.</td>
+															<td style="width:16.67%">50 000 000,00</td>
+														</tr>
+														<tr>
+															<td style="width:22%">ж/д вагон Хоппер</td>
+															<td style="width:17.5%">ООО «Название»</td>
+															<td style="width:13.67%">03.11.2023</td>
+															<td style="width:18.5%">50 000 000,00</td>
+															<td style="width:11.67%">1 ед.</td>
+															<td style="width:16.67%">50 000 000,00</td>
+														</tr>
+														<tr>
+															<td style="width:22%">ж/д вагон Хоппер</td>
+															<td style="width:17.5%">ООО «Название»</td>
+															<td style="width:13.67%">03.11.2023</td>
+															<td style="width:18.5%">50 000 000,00</td>
+															<td style="width:11.67%">1 ед.</td>
+															<td style="width:16.67%">50 000 000,00</td>
+														</tr>
+														<tr>
+															<td style="width:22%"></td>
+															<td style="width:17.5%"></td>
+															<td style="width:13.67%"></td>
+															<td style="width:18.5%"></td>
+															<td class="td-total-selected" style="width:11.67%">
+																<div class="total-selected">итого														</div>
+															</td>
+															<td class="td-total-selected" style="width:16.67%">
+																<div class="total-selected">70 850 000,00</div>
+															</td>
+														</tr>
+													</table>
+												</td>
+												<td class="text-center" style="width:7%">
+													<div class="progress progress--docs">
+														<div class="progress-bar" data-progress="75%"></div>
+														<div class="progress__value-text">75%</div>
 													</div>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<td style="width:9.6%">123-ЗЛ-ОК</td>
-											<td style="width:9.6%">12.07.2023
-												<br>
-												<span class="color-gray">12:24</span>
-											</td>
-											<td class="td-table-inside" colspan="6">
-												<table>
-													<tr>
-														<td style="width:22%">ж/д вагон Хоппер</td>
-														<td style="width:17.5%">ООО «РЖД»</td>
-														<td style="width:13.67%">01.10.2023</td>
-														<td style="width:18.5%">1 000 000,00</td>
-														<td style="width:11.67%">20 ед.</td>
-														<td style="width:16.67%">20 000 000,00</td>
-													</tr>
-													<tr>
-														<td style="width:22%">ж/д вагон Хоппер</td>
-														<td style="width:17.5%"> 
-															<div class="text-one-line">ООО «Название длинное длинное длинное</div>
-														</td>
-														<td style="width:13.67%">03.11.2023</td>
-														<td style="width:18.5%">50 000 000,00</td>
-														<td style="width:11.67%">1 ед.</td>
-														<td style="width:16.67%">50 000 000,00</td>
-													</tr>
-													<tr>
-														<td style="width:22%">ж/д вагон Хоппер</td>
-														<td style="width:17.5%">ООО «Название»</td>
-														<td style="width:13.67%">03.11.2023</td>
-														<td style="width:18.5%">50 000 000,00</td>
-														<td style="width:11.67%">1 ед.</td>
-														<td style="width:16.67%">50 000 000,00</td>
-													</tr>
-													<tr>
-														<td style="width:22%">ж/д вагон Хоппер</td>
-														<td style="width:17.5%">ООО «Название»</td>
-														<td style="width:13.67%">03.11.2023</td>
-														<td style="width:18.5%">50 000 000,00</td>
-														<td style="width:11.67%">1 ед.</td>
-														<td style="width:16.67%">50 000 000,00</td>
-													</tr>
-													<tr>
-														<td style="width:22%"></td>
-														<td style="width:17.5%"></td>
-														<td style="width:13.67%"></td>
-														<td style="width:18.5%"></td>
-														<td class="td-total-selected" style="width:11.67%">
-															<div class="total-selected">итого														</div>
-														</td>
-														<td class="td-total-selected" style="width:16.67%">
-															<div class="total-selected">70 850 000,00</div>
-														</td>
-													</tr>
-												</table>
-											</td>
-											<td class="text-center" style="width:7%">
-												<div class="progress progress--docs">
-													<div class="progress-bar" data-progress="75%"></div>
-													<div class="progress__value-text">75%</div>
-												</div>
-											</td>
-											<td style="width:13.45%">
-												<div class="d-flex align-items-center application-nav">
-													<div class="status status--draft">Черновик</div>
-													<div class="tooltip">
-														<a class="btn tooltip__btn">
-															<svg class="icon-more-alt">
-																<use xlink:href="img/icons/icons.svg#icon-more-alt"></use>
-															</svg>
-														</a>
-														<ul class="tooltip__menu">
-															<li class="tooltip__menu-item">
-																<a class="tooltip__menu-item-link" href="#">Просмотреть</a>
-															</li>
-															<li class="tooltip__menu-item">
-																<a class="tooltip__menu-item-link" href="#modal-continue-filling" data-modal>Продолжить заполнение</a>
-															</li>
-															<li class="tooltip__menu-item tooltip__menu-item--cancel">
-																<a class="tooltip__menu-item-link" href="#modal-remove-draft" data-modal>Удалить черновик</a>
-															</li>
-														</ul>
+												</td>
+												<td style="width:13.45%">
+													<div class="d-flex align-items-center">
+														<div class="status status--draft">Черновик</div>
+														<div class="tooltip">
+															<a class="btn tooltip__btn">
+																<svg class="icon-more-alt">
+																	<use xlink:href="img/icons/icons.svg#icon-more-alt"></use>
+																</svg>
+															</a>
+															<ul class="tooltip__menu">
+																<li class="tooltip__menu-item">
+																	<a class="tooltip__menu-item-link" href="#">Просмотреть</a>
+																</li>
+																<li class="tooltip__menu-item">
+																	<a class="tooltip__menu-item-link" href="#modal-continue-filling" data-modal>Продолжить заполнение</a>
+																</li>
+																<li class="tooltip__menu-item tooltip__menu-item--cancel">
+																	<a class="tooltip__menu-item-link" href="#modal-remove-draft" data-modal>Удалить черновик</a>
+																</li>
+															</ul>
+														</div>
 													</div>
-												</div>
-											</td>
-										</tr>
-									</tbody>
-								</table>
+												</td>
+											</tr>
+											<tr>
+												<td style="width:9.6%">123-ЗЛ-ОК</td>
+												<td style="width:9.6%">12.07.2023
+													<br>
+													<span class="color-gray">12:24</span>
+												</td>
+												<td class="td-table-inside" colspan="6">
+													<table>
+														<tr>
+															<td style="width:22%">ж/д вагон Хоппер</td>
+															<td style="width:17.5%">ООО «РЖД»</td>
+															<td style="width:13.67%">01.10.2023</td>
+															<td style="width:18.5%">1 000 000,00</td>
+															<td style="width:11.67%">20 ед.</td>
+															<td style="width:16.67%">20 000 000,00</td>
+														</tr>
+														<tr>
+															<td style="width:22%">ж/д вагон Хоппер</td>
+															<td style="width:17.5%"> 
+																<div class="text-one-line">ООО «Название длинное длинное длинное</div>
+															</td>
+															<td style="width:13.67%">03.11.2023</td>
+															<td style="width:18.5%">50 000 000,00</td>
+															<td style="width:11.67%">1 ед.</td>
+															<td style="width:16.67%">50 000 000,00</td>
+														</tr>
+														<tr>
+															<td style="width:22%">ж/д вагон Хоппер</td>
+															<td style="width:17.5%">ООО «Название»</td>
+															<td style="width:13.67%">03.11.2023</td>
+															<td style="width:18.5%">50 000 000,00</td>
+															<td style="width:11.67%">1 ед.</td>
+															<td style="width:16.67%">50 000 000,00</td>
+														</tr>
+														<tr>
+															<td style="width:22%">ж/д вагон Хоппер</td>
+															<td style="width:17.5%">ООО «Название»</td>
+															<td style="width:13.67%">03.11.2023</td>
+															<td style="width:18.5%">50 000 000,00</td>
+															<td style="width:11.67%">1 ед.</td>
+															<td style="width:16.67%">50 000 000,00</td>
+														</tr>
+														<tr>
+															<td style="width:22%"></td>
+															<td style="width:17.5%"></td>
+															<td style="width:13.67%"></td>
+															<td style="width:18.5%"></td>
+															<td class="td-total-selected" style="width:11.67%">
+																<div class="total-selected">итого														</div>
+															</td>
+															<td class="td-total-selected" style="width:16.67%">
+																<div class="total-selected">70 850 000,00</div>
+															</td>
+														</tr>
+													</table>
+												</td>
+												<td class="text-center" style="width:7%">
+													<div class="progress progress--docs">
+														<div class="progress-bar" data-progress="75%"></div>
+														<div class="progress__value-text">75%</div>
+													</div>
+												</td>
+												<td style="width:13.45%">
+													<div class="d-flex align-items-center">
+														<div class="status status--draft">Черновик</div>
+														<div class="tooltip">
+															<a class="btn tooltip__btn">
+																<svg class="icon-more-alt">
+																	<use xlink:href="img/icons/icons.svg#icon-more-alt"></use>
+																</svg>
+															</a>
+															<ul class="tooltip__menu">
+																<li class="tooltip__menu-item">
+																	<a class="tooltip__menu-item-link" href="#">Просмотреть</a>
+																</li>
+																<li class="tooltip__menu-item">
+																	<a class="tooltip__menu-item-link" href="#modal-continue-filling" data-modal>Продолжить заполнение</a>
+																</li>
+																<li class="tooltip__menu-item tooltip__menu-item--cancel">
+																	<a class="tooltip__menu-item-link" href="#modal-remove-draft" data-modal>Удалить черновик</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="width:9.6%">123-ЗЛ-ОК</td>
+												<td style="width:9.6%">12.07.2023
+													<br>
+													<span class="color-gray">12:24</span>
+												</td>
+												<td class="td-table-inside" colspan="6">
+													<table>
+														<tr>
+															<td style="width:22%">ж/д вагон Хоппер</td>
+															<td style="width:17.5%">ООО «РЖД»</td>
+															<td style="width:13.67%">01.10.2023</td>
+															<td style="width:18.5%">1 000 000,00</td>
+															<td style="width:11.67%">20 ед.</td>
+															<td style="width:16.67%">20 000 000,00</td>
+														</tr>
+														<tr>
+															<td style="width:22%">ж/д вагон Хоппер</td>
+															<td style="width:17.5%"> 
+																<div class="text-one-line">ООО «Название длинное длинное длинное</div>
+															</td>
+															<td style="width:13.67%">03.11.2023</td>
+															<td style="width:18.5%">50 000 000,00</td>
+															<td style="width:11.67%">1 ед.</td>
+															<td style="width:16.67%">50 000 000,00</td>
+														</tr>
+														<tr>
+															<td style="width:22%">ж/д вагон Хоппер</td>
+															<td style="width:17.5%">ООО «Название»</td>
+															<td style="width:13.67%">03.11.2023</td>
+															<td style="width:18.5%">50 000 000,00</td>
+															<td style="width:11.67%">1 ед.</td>
+															<td style="width:16.67%">50 000 000,00</td>
+														</tr>
+														<tr>
+															<td style="width:22%">ж/д вагон Хоппер</td>
+															<td style="width:17.5%">ООО «Название»</td>
+															<td style="width:13.67%">03.11.2023</td>
+															<td style="width:18.5%">50 000 000,00</td>
+															<td style="width:11.67%">1 ед.</td>
+															<td style="width:16.67%">50 000 000,00</td>
+														</tr>
+														<tr>
+															<td style="width:22%"></td>
+															<td style="width:17.5%"></td>
+															<td style="width:13.67%"></td>
+															<td style="width:18.5%"></td>
+															<td class="td-total-selected" style="width:11.67%">
+																<div class="total-selected">итого														</div>
+															</td>
+															<td class="td-total-selected" style="width:16.67%">
+																<div class="total-selected">70 850 000,00</div>
+															</td>
+														</tr>
+													</table>
+												</td>
+												<td class="text-center" style="width:7%">
+													<div class="progress progress--docs">
+														<div class="progress-bar" data-progress="75%"></div>
+														<div class="progress__value-text">75%</div>
+													</div>
+												</td>
+												<td style="width:13.45%">
+													<div class="d-flex align-items-center">
+														<div class="status status--draft">Черновик</div>
+														<div class="tooltip">
+															<a class="btn tooltip__btn">
+																<svg class="icon-more-alt">
+																	<use xlink:href="img/icons/icons.svg#icon-more-alt"></use>
+																</svg>
+															</a>
+															<ul class="tooltip__menu">
+																<li class="tooltip__menu-item">
+																	<a class="tooltip__menu-item-link" href="#">Просмотреть</a>
+																</li>
+																<li class="tooltip__menu-item">
+																	<a class="tooltip__menu-item-link" href="#modal-continue-filling" data-modal>Продолжить заполнение</a>
+																</li>
+																<li class="tooltip__menu-item tooltip__menu-item--cancel">
+																	<a class="tooltip__menu-item-link" href="#modal-remove-draft" data-modal>Удалить черновик</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="width:9.6%">123-ЗЛ-ОК</td>
+												<td style="width:9.6%">12.07.2023
+													<br>
+													<span class="color-gray">12:24</span>
+												</td>
+												<td class="td-table-inside" colspan="6">
+													<table>
+														<tr>
+															<td style="width:22%">ж/д вагон Хоппер</td>
+															<td style="width:17.5%">ООО «РЖД»</td>
+															<td style="width:13.67%">01.10.2023</td>
+															<td style="width:18.5%">1 000 000,00</td>
+															<td style="width:11.67%">20 ед.</td>
+															<td style="width:16.67%">20 000 000,00</td>
+														</tr>
+														<tr>
+															<td style="width:22%">ж/д вагон Хоппер</td>
+															<td style="width:17.5%"> 
+																<div class="text-one-line">ООО «Название длинное длинное длинное</div>
+															</td>
+															<td style="width:13.67%">03.11.2023</td>
+															<td style="width:18.5%">50 000 000,00</td>
+															<td style="width:11.67%">1 ед.</td>
+															<td style="width:16.67%">50 000 000,00</td>
+														</tr>
+														<tr>
+															<td style="width:22%">ж/д вагон Хоппер</td>
+															<td style="width:17.5%">ООО «Название»</td>
+															<td style="width:13.67%">03.11.2023</td>
+															<td style="width:18.5%">50 000 000,00</td>
+															<td style="width:11.67%">1 ед.</td>
+															<td style="width:16.67%">50 000 000,00</td>
+														</tr>
+														<tr>
+															<td style="width:22%">ж/д вагон Хоппер</td>
+															<td style="width:17.5%">ООО «Название»</td>
+															<td style="width:13.67%">03.11.2023</td>
+															<td style="width:18.5%">50 000 000,00</td>
+															<td style="width:11.67%">1 ед.</td>
+															<td style="width:16.67%">50 000 000,00</td>
+														</tr>
+														<tr>
+															<td style="width:22%"></td>
+															<td style="width:17.5%"></td>
+															<td style="width:13.67%"></td>
+															<td style="width:18.5%"></td>
+															<td class="td-total-selected" style="width:11.67%">
+																<div class="total-selected">итого														</div>
+															</td>
+															<td class="td-total-selected" style="width:16.67%">
+																<div class="total-selected">70 850 000,00</div>
+															</td>
+														</tr>
+													</table>
+												</td>
+												<td class="text-center" style="width:7%">
+													<div class="progress progress--docs">
+														<div class="progress-bar" data-progress="75%"></div>
+														<div class="progress__value-text">75%</div>
+													</div>
+												</td>
+												<td style="width:13.45%">
+													<div class="d-flex align-items-center">
+														<div class="status status--draft">Черновик</div>
+														<div class="tooltip">
+															<a class="btn tooltip__btn">
+																<svg class="icon-more-alt">
+																	<use xlink:href="img/icons/icons.svg#icon-more-alt"></use>
+																</svg>
+															</a>
+															<ul class="tooltip__menu">
+																<li class="tooltip__menu-item">
+																	<a class="tooltip__menu-item-link" href="#">Просмотреть</a>
+																</li>
+																<li class="tooltip__menu-item">
+																	<a class="tooltip__menu-item-link" href="#modal-continue-filling" data-modal>Продолжить заполнение</a>
+																</li>
+																<li class="tooltip__menu-item tooltip__menu-item--cancel">
+																	<a class="tooltip__menu-item-link" href="#modal-remove-draft" data-modal>Удалить черновик</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 								<ul class="pagination">
 									<li class="disabled">
 										<a href="#">
@@ -1558,6 +1697,11 @@
 					<a class="btn btn-confirm btn-confirm--positive">Да</a>
 					<a class="btn btn-confirm btn-confirm--negative" data-modal-close>Нет</a>
 				</div>
+				<a class="modal__close-btn is-lg-hidden" data-modal-close>
+					<svg class="icon-close">
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</a>
 			</div>
 		</div>
 		<div class="modal-container" id="modal-block-counterparty">
@@ -1572,6 +1716,11 @@
 					<a class="btn btn-confirm btn-confirm--positive">Да</a>
 					<a class="btn btn-confirm btn-confirm--negative" data-modal-close>Нет</a>
 				</div>
+				<a class="modal__close-btn is-lg-hidden" data-modal-close>
+					<svg class="icon-close">
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</a>
 			</div>
 		</div>
 		<div class="modal-container" id="modal-remove-counterparty">
@@ -1586,6 +1735,11 @@
 					<a class="btn btn-confirm btn-confirm--positive">Да</a>
 					<a class="btn btn-confirm btn-confirm--negative" data-modal-close>Нет</a>
 				</div>
+				<a class="modal__close-btn is-lg-hidden" data-modal-close>
+					<svg class="icon-close">
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</a>
 			</div>
 		</div>
 		<div class="modal-container" id="modal-block-employeer">
@@ -1614,6 +1768,11 @@
 					<a class="btn btn-confirm btn-confirm--positive">Да</a>
 					<a class="btn btn-confirm btn-confirm--negative" data-modal-close>Нет</a>
 				</div>
+				<a class="modal__close-btn is-lg-hidden" data-modal-close>
+					<svg class="icon-close">
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</a>
 			</div>
 		</div>
 		<div class="modal-container" id="modal-annul">
@@ -1641,6 +1800,11 @@
 					<a class="btn btn-nav btn-nav--cancel" data-modal-close>Отменить</a>
 					<a class="btn btn-nav btn-nav--continue" href="#">Продолжить</a>
 				</div>
+				<a class="modal__close-btn is-lg-hidden" data-modal-close>
+					<svg class="icon-close">
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</a>
 			</div>
 		</div>
 		<div class="modal-container" id="modal-app-sent">
@@ -1889,6 +2053,11 @@
 					<a class="btn btn-confirm btn-confirm--positive">Да</a>
 					<a class="btn btn-confirm btn-confirm--negative" data-modal-close>Нет</a>
 				</div>
+				<a class="modal__close-btn is-lg-hidden" data-modal-close>
+					<svg class="icon-close">
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</a>
 			</div>
 		</div>
 		<script src="js/app.min.js"></script>

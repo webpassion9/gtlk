@@ -7,17 +7,27 @@
 	flex-grow: 1;
 	display: flex;
 	flex-direction: column;
-	max-width: calc(100% - var(--sidebar-width));
+	transition: .25s;
+	max-width: 100%;
+	@media (min-width: $lg) {
+		max-width: calc(100% - var(--sidebar-width));
+	}
 }
 
 .content {
-	padding: 35px;
+	padding: 23px 16px;
 	flex-grow: 1;
+	@media (min-width: $lg) {
+		padding: 35px;
+	}
 }
 
 .content-inner {
 	background: var(--color-white);
 	border-radius: 8px;
-	padding: 30px 30px;
 	min-height: 100%;
+	padding: 12px;
+	@media (min-width: $lg) {
+		padding: 30px 30px;
+	}
 }

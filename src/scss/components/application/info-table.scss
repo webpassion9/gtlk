@@ -1,20 +1,44 @@
 .info-table {
-	font-size: 20px;
-	line-height: 24px;
-	color: #242424;
+	width: 100%;
+	font-size: 12px;
+	line-height: 18px;
 	border-collapse: collapse;
-	font-family: $fontThird;
+	@media (min-width: $lg) {
+		font-size: 20px;
+		line-height: 24px;
+		color: #242424;
+		font-family: $fontThird;
+	}
 	tr {
-		border-top: 1px solid rgba(0,0,0,.1);
+		@media (min-width: $lg) {
+			border-top: 1px solid rgba(0,0,0,.1);
+		}
 	}
 	td {
-		padding: 15px 23px;
+		padding: 15px 10px;
+		@media (min-width: $lg) {
+			padding: 15px 23px;
+		}
 		&:first-child {
-			color:rgba(var(--color-black-base));
 			padding-left: 0;
+			padding-right: 0;
+			color: var(--color-gray2);
+			@media (max-width: $lg - 1px) {
+				padding-right: 0;
+			}
+			@media (min-width: $xl) {
+				color:var(--color-black-base);
+			}
 		}
 		&:last-child {
 			padding-right: 0;
 		}
+	}
+}
+
+.td-info-main {
+	@media (max-width: $lg - 1px) {
+		max-width: 350px;
+		width: 172px;
 	}
 }

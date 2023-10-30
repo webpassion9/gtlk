@@ -1,6 +1,6 @@
 header.header
 	.container
-		a(href="#")
+		a(href="#").header-logo
 			img(src="img/logo-GTLK_dark.png", width="166" height="52" alt="")
 		ul.header-menu
 			li
@@ -25,6 +25,9 @@ header.header
 				.header-search__btn
 					input(type="submit" value="Найти").btn.btn-search.btn-search--header
 		ul.header-btns
+			li.header-btns__item.is-lg-hidden
+				a(href="#").btn.header-btns__link
+					+sprite("icon-loop") 
 			li.header-btns__item
 				a(data-target="popup-notifications").btn.header-btns__link
 					+sprite("icon-bell")
@@ -124,8 +127,63 @@ header.header
 
 					.popup-notifications__close(data-popup-close)
 						+sprite("icon-close")
-
-			li.header-btns__item
+			li.header-btns__item.is-lg-hidden
+				a(data-target="popup-menu").btn.header-btns__link
+					+sprite("icon-menu")
+				.user-menu.user-menu--mobile(data-popup="popup-menu")
+					ul.user-menu__list
+						li.user-menu__list-item
+							a(href="#").user-menu__list-item-link
+								span.user-menu__list-item-icon
+									+sprite("icon-file-tray")
+								| Заявки
+						li.user-menu__list-item
+							a(href="#").user-menu__list-item-link
+								span.user-menu__list-item-icon
+									+sprite("icon-newspaper")
+								| Договоры
+						li.user-menu__list-item
+							a(href="#").user-menu__list-item-link
+								span.user-menu__list-item-icon
+									+sprite("icon-doc")
+								| Обращения НМЦ
+					ul.user-menu__list
+						li.user-menu__list-item
+							a(href="#").user-menu__list-item-link
+								span.user-menu__list-item-icon
+									+sprite("icon-user")
+								| Профиль
+						li.user-menu__list-item
+							a(href="#").user-menu__list-item-link
+								span.user-menu__list-item-icon
+									+sprite("icon-calendar")
+								| Журнал событий
+						li.user-menu__list-item
+							a(href="#").user-menu__list-item-link
+								span.user-menu__list-item-icon
+									+sprite("icon-book")
+								| Справка по системе
+					ul.user-menu__list
+						li.user-menu__list-item
+							.manager.manager--view-full
+								.manager__main
+									.manager__ava
+										img(src="img/avatar-manager.png", alt="")
+									.manager__name Менеджер Иванова А.А.
+								.manager__contacts
+									a(href="#").btn.manager__btn Связаться
+					ul.user-menu__list
+						li.user-menu__list-item
+							a(href="#").user-menu__list-item-link
+								span.user-menu__list-item-icon
+									+sprite("icon-chat")
+								| Служба поддержки
+						li.user-menu__list-item
+							a(href="#").user-menu__list-item-link
+								span.user-menu__list-item-icon
+									+sprite("icon-logout")
+								| Выйти
+			li.header-btns__item.is-lg-visible
 				a(data-target="popup-user-menu").btn.header-btns__link
 					+sprite("icon-user")
 				.user-menu(data-popup="popup-user-menu")

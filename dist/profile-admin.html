@@ -11,7 +11,7 @@
 		<div class="wrapper wrapper-main">
 			<header class="header">
 				<div class="container">
-					<a href="#">
+					<a class="header-logo" href="#">
 						<img src="img/logo-GTLK_dark.png" width="166" height="52" alt="">
 					</a>
 					<ul class="header-menu">
@@ -51,6 +51,13 @@
 						</div>
 					</form>
 					<ul class="header-btns">
+						<li class="header-btns__item is-lg-hidden">
+							<a class="btn header-btns__link" href="#">
+								<svg class="icon-loop">
+									<use xlink:href="img/icons/icons.svg#icon-loop"></use>
+								</svg>
+							</a>
+						</li>
 						<li class="header-btns__item">
 							<a class="btn header-btns__link" data-target="popup-notifications">
 								<svg class="icon-bell">
@@ -230,7 +237,109 @@
 								</div>
 							</div>
 						</li>
-						<li class="header-btns__item">
+						<li class="header-btns__item is-lg-hidden">
+							<a class="btn header-btns__link" data-target="popup-menu">
+								<svg class="icon-menu">
+									<use xlink:href="img/icons/icons.svg#icon-menu"></use>
+								</svg>
+							</a>
+							<div class="user-menu user-menu--mobile" data-popup="popup-menu">
+								<ul class="user-menu__list">
+									<li class="user-menu__list-item">
+										<a class="user-menu__list-item-link" href="#">
+											<span class="user-menu__list-item-icon">
+												<svg class="icon-file-tray">
+													<use xlink:href="img/icons/icons.svg#icon-file-tray"></use>
+												</svg>
+											</span>Заявки
+										</a>
+									</li>
+									<li class="user-menu__list-item">
+										<a class="user-menu__list-item-link" href="#">
+											<span class="user-menu__list-item-icon">
+												<svg class="icon-newspaper">
+													<use xlink:href="img/icons/icons.svg#icon-newspaper"></use>
+												</svg>
+											</span>Договоры
+										</a>
+									</li>
+									<li class="user-menu__list-item">
+										<a class="user-menu__list-item-link" href="#">
+											<span class="user-menu__list-item-icon">
+												<svg class="icon-doc">
+													<use xlink:href="img/icons/icons.svg#icon-doc"></use>
+												</svg>
+											</span>Обращения НМЦ
+										</a>
+									</li>
+								</ul>
+								<ul class="user-menu__list">
+									<li class="user-menu__list-item">
+										<a class="user-menu__list-item-link" href="#">
+											<span class="user-menu__list-item-icon">
+												<svg class="icon-user">
+													<use xlink:href="img/icons/icons.svg#icon-user"></use>
+												</svg>
+											</span>Профиль
+										</a>
+									</li>
+									<li class="user-menu__list-item">
+										<a class="user-menu__list-item-link" href="#">
+											<span class="user-menu__list-item-icon">
+												<svg class="icon-calendar">
+													<use xlink:href="img/icons/icons.svg#icon-calendar"></use>
+												</svg>
+											</span>Журнал событий
+										</a>
+									</li>
+									<li class="user-menu__list-item">
+										<a class="user-menu__list-item-link" href="#">
+											<span class="user-menu__list-item-icon">
+												<svg class="icon-book">
+													<use xlink:href="img/icons/icons.svg#icon-book"></use>
+												</svg>
+											</span>Справка по системе
+										</a>
+									</li>
+								</ul>
+								<ul class="user-menu__list">
+									<li class="user-menu__list-item">
+										<div class="manager manager--view-full">
+											<div class="manager__main">
+												<div class="manager__ava">
+													<img src="img/avatar-manager.png" alt="">
+												</div>
+												<div class="manager__name">Менеджер Иванова А.А.</div>
+											</div>
+											<div class="manager__contacts">
+												<a class="btn manager__btn" href="#">Связаться</a>
+											</div>
+										</div>
+									</li>
+								</ul>
+								<ul class="user-menu__list">
+									<li class="user-menu__list-item">
+										<a class="user-menu__list-item-link" href="#">
+											<span class="user-menu__list-item-icon">
+												<svg class="icon-chat">
+													<use xlink:href="img/icons/icons.svg#icon-chat"></use>
+												</svg>
+											</span>Служба поддержки
+										</a>
+									</li>
+									<li class="user-menu__list-item">
+										<a class="user-menu__list-item-link" href="#">
+											<span class="user-menu__list-item-icon">
+												<svg class="icon-logout">
+													<use xlink:href="img/icons/icons.svg#icon-logout"></use>
+												</svg>
+											</span>Выйти
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="header-btns__item is-lg-visible">
 							<a class="btn header-btns__link" data-target="popup-user-menu">
 								<svg class="icon-user">
 									<use xlink:href="img/icons/icons.svg#icon-user"></use>
@@ -351,7 +460,7 @@
 						<div class="content-inner application-content profile">
 							<div class="application-content__main">
 								<div class="profile-admin-top">
-									<div class="heading-base">Панель администратора</div>
+									<div class="heading-base heading-base--normal">Панель администратора</div>
 								</div>
 								<div class="application-main">
 									<ul class="profile-nav-btns">
@@ -360,7 +469,7 @@
 										</li>
 									</ul>
 									<div class="application-main__section">
-										<table class="details-table details-table--profile">
+										<table class="details-table details-table--application details-table--profile">
 											<tr>
 												<td style="width:28%">Ф.И.О</td>
 												<td style="width:72%">Абдулхаков Артур Маратович</td>
@@ -438,6 +547,11 @@
 					<a class="btn btn-confirm btn-confirm--positive">Да</a>
 					<a class="btn btn-confirm btn-confirm--negative" data-modal-close>Нет</a>
 				</div>
+				<a class="modal__close-btn is-lg-hidden" data-modal-close>
+					<svg class="icon-close">
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</a>
 			</div>
 		</div>
 		<div class="modal-container" id="modal-block-counterparty">
@@ -452,6 +566,11 @@
 					<a class="btn btn-confirm btn-confirm--positive">Да</a>
 					<a class="btn btn-confirm btn-confirm--negative" data-modal-close>Нет</a>
 				</div>
+				<a class="modal__close-btn is-lg-hidden" data-modal-close>
+					<svg class="icon-close">
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</a>
 			</div>
 		</div>
 		<div class="modal-container" id="modal-remove-counterparty">
@@ -466,6 +585,11 @@
 					<a class="btn btn-confirm btn-confirm--positive">Да</a>
 					<a class="btn btn-confirm btn-confirm--negative" data-modal-close>Нет</a>
 				</div>
+				<a class="modal__close-btn is-lg-hidden" data-modal-close>
+					<svg class="icon-close">
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</a>
 			</div>
 		</div>
 		<div class="modal-container" id="modal-block-employeer">
@@ -494,6 +618,11 @@
 					<a class="btn btn-confirm btn-confirm--positive">Да</a>
 					<a class="btn btn-confirm btn-confirm--negative" data-modal-close>Нет</a>
 				</div>
+				<a class="modal__close-btn is-lg-hidden" data-modal-close>
+					<svg class="icon-close">
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</a>
 			</div>
 		</div>
 		<div class="modal-container" id="modal-annul">
@@ -521,6 +650,11 @@
 					<a class="btn btn-nav btn-nav--cancel" data-modal-close>Отменить</a>
 					<a class="btn btn-nav btn-nav--continue" href="#">Продолжить</a>
 				</div>
+				<a class="modal__close-btn is-lg-hidden" data-modal-close>
+					<svg class="icon-close">
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</a>
 			</div>
 		</div>
 		<div class="modal-container" id="modal-app-sent">
@@ -769,6 +903,11 @@
 					<a class="btn btn-confirm btn-confirm--positive">Да</a>
 					<a class="btn btn-confirm btn-confirm--negative" data-modal-close>Нет</a>
 				</div>
+				<a class="modal__close-btn is-lg-hidden" data-modal-close>
+					<svg class="icon-close">
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</a>
 			</div>
 		</div>
 		<script src="js/app.min.js"></script>

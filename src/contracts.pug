@@ -66,259 +66,267 @@ html(lang="ru")
 									.application-form__item-icon
 										+sprite("icon-loop")
 								input(type="submit" value="Найти").btn.btn-search
-							
-							table.application-table
-								thead
-									tr
-										th(style="width:9.6%") №
-										th(style="width:9.6%") Дата подписания
-										th(colspan="6").th-table-inside
-											table
-												thead
+							.application-info.application-info--base.application-info--width-large.application-info--page-contracts.is-lg-hidden
+								.application-info__main
+									.application-info__icon
+										img(src="img/icon-swipe.svg" width="28" height="28" alt="")
+									.application-info__text
+										.application-info__text-heading Используйте свайп пальцем для просмотра таблицы
+									.application-info__close
+										+sprite("icon-close")
+							.scroll-wrapper
+								table.application-table
+									thead
+										tr
+											th(style="width:9.6%") №
+											th(style="width:9.6%") Дата подписания
+											th(colspan="6").th-table-inside
+												table
+													thead
+														tr
+															th(colspan="6").th-section-heading Договоры
+														tr
+															th(style="width:20%") Наименование
+															th(style="width:20%") Вид договора
+															th(style="width:20%") Контрагент
+															th(style="width:20%") Валюта
+															th(style="width:20%") Сумма договора
+											th(style="width:13.45%") Статус
+									tbody
+										tr
+											td(style="width:9.6%") 123-ЗЛ-ОК
+											td(style="width:9.6%") 12.07.2023
+												br
+												span.color-gray 12:24
+											td(colspan="6").td-table-inside
+												table
 													tr
-														th(colspan="6").th-section-heading Договоры
+														td(style="width:20%") Наименование
+														td(style="width:20%") Договор лизинга
+														td(style="width:20%") Иванов А.А.
+														td(style="width:20%") Рубли
+														td(style="width:20%") 20 000 000,00
+											td(style="width:13.45%")
+												.d-flex.align-items-center.application-nav
+													.status.status--completed.status--text-medium Выполнен
+													.tooltip
+														a.btn.tooltip__btn
+															+sprite("icon-more-alt")
+														ul.tooltip__menu
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Просмотреть
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Создать новую версию
+															li.tooltip__menu-item.tooltip__menu-item--cancel
+																a(href="#").tooltip__menu-item-link Аннулировать
+										tr
+											td(style="width:9.6%") 123-ЗЛ-ОК
+											td(style="width:9.6%") 12.07.2023
+												br
+												span.color-gray 12:24
+											td(colspan="6").td-table-inside
+												table
 													tr
-														th(style="width:20%") Наименование
-														th(style="width:20%") Вид договора
-														th(style="width:20%") Контрагент
-														th(style="width:20%") Валюта
-														th(style="width:20%") Сумма договора
-										th(style="width:13.45%") Статус
-								tbody
-									tr
-										td(style="width:9.6%") 123-ЗЛ-ОК
-										td(style="width:9.6%") 12.07.2023
-											br
-											span.color-gray 12:24
-										td(colspan="6").td-table-inside
-											table
-												tr
-													td(style="width:20%") Наименование
-													td(style="width:20%") Договор лизинга
-													td(style="width:20%") Иванов А.А.
-													td(style="width:20%") Рубли
-													td(style="width:20%") 20 000 000,00
-										td(style="width:13.45%")
-											.d-flex.align-items-center.application-nav
-												.status.status--completed.status--text-medium Выполнен
-												.tooltip
-													a.btn.tooltip__btn
-														+sprite("icon-more-alt")
-													ul.tooltip__menu
-														li.tooltip__menu-item
-															a(href="#").tooltip__menu-item-link Просмотреть
-														li.tooltip__menu-item
-															a(href="#").tooltip__menu-item-link Создать новую версию
-														li.tooltip__menu-item.tooltip__menu-item--cancel
-															a(href="#").tooltip__menu-item-link Аннулировать
-									tr
-										td(style="width:9.6%") 123-ЗЛ-ОК
-										td(style="width:9.6%") 12.07.2023
-											br
-											span.color-gray 12:24
-										td(colspan="6").td-table-inside
-											table
-												tr
-													td(style="width:20%") Наименование
-													td(style="width:20%") Договор лизинга
-													td(style="width:20%") Иванов А.А.
-													td(style="width:20%") Рубли
-													td(style="width:20%") 20 000 000,00
-										td(style="width:13.45%")
-											.d-flex.align-items-center.application-nav
-												.status.status--active.status--text-medium Активен
-												.tooltip
-													a.btn.tooltip__btn
-														+sprite("icon-more-alt")
-													ul.tooltip__menu
-														li.tooltip__menu-item
-															a(href="#").tooltip__menu-item-link Просмотреть
-														li.tooltip__menu-item
-															a(href="#").tooltip__menu-item-link Создать новую версию
-														li.tooltip__menu-item.tooltip__menu-item--cancel
-															a(href="#").tooltip__menu-item-link Аннулировать
-									tr
-										td(style="width:9.6%") 123-ЗЛ-ОК
-										td(style="width:9.6%") 12.07.2023
-											br
-											span.color-gray 12:24
-										td(colspan="6").td-table-inside
-											table
-												tr
-													td(style="width:20%") Наименование
-													td(style="width:20%") Договор лизинга
-													td(style="width:20%") Иванов А.А.
-													td(style="width:20%") Рубли
-													td(style="width:20%") 20 000 000,00
-										td(style="width:13.45%")
-											.d-flex.align-items-center.application-nav
-												.status.status--active.status--text-medium Активен
-												.tooltip
-													a.btn.tooltip__btn
-														+sprite("icon-more-alt")
-													ul.tooltip__menu
-														li.tooltip__menu-item
-															a(href="#").tooltip__menu-item-link Просмотреть
-														li.tooltip__menu-item
-															a(href="#").tooltip__menu-item-link Создать новую версию
-														li.tooltip__menu-item.tooltip__menu-item--cancel
-															a(href="#").tooltip__menu-item-link Аннулировать
-									tr
-										td(style="width:9.6%") 123-ЗЛ-ОК
-										td(style="width:9.6%") 12.07.2023
-											br
-											span.color-gray 12:24
-										td(colspan="6").td-table-inside
-											table
-												tr
-													td(style="width:20%") Наименование
-													td(style="width:20%") Договор лизинга
-													td(style="width:20%") Иванов А.А.
-													td(style="width:20%") Рубли
-													td(style="width:20%") 20 000 000,00
-										td(style="width:13.45%")
-											.d-flex.align-items-center.application-nav
-												.status.status--completed.status--text-medium Выполнен
-												.tooltip
-													a.btn.tooltip__btn
-														+sprite("icon-more-alt")
-													ul.tooltip__menu
-														li.tooltip__menu-item
-															a(href="#").tooltip__menu-item-link Просмотреть
-														li.tooltip__menu-item
-															a(href="#").tooltip__menu-item-link Создать новую версию
-														li.tooltip__menu-item.tooltip__menu-item--cancel
-															a(href="#").tooltip__menu-item-link Аннулировать
-									tr
-										td(style="width:9.6%") 123-ЗЛ-ОК
-										td(style="width:9.6%") 12.07.2023
-											br
-											span.color-gray 12:24
-										td(colspan="6").td-table-inside
-											table
-												tr
-													td(style="width:20%") Наименование
-													td(style="width:20%") Договор лизинга
-													td(style="width:20%") Иванов А.А.
-													td(style="width:20%") Рубли
-													td(style="width:20%") 20 000 000,00
-										td(style="width:13.45%")
-											.d-flex.align-items-center.application-nav
-												.status.status--completed.status--text-medium Выполнен
-												.tooltip
-													a.btn.tooltip__btn
-														+sprite("icon-more-alt")
-													ul.tooltip__menu
-														li.tooltip__menu-item
-															a(href="#").tooltip__menu-item-link Просмотреть
-														li.tooltip__menu-item
-															a(href="#").tooltip__menu-item-link Создать новую версию
-														li.tooltip__menu-item.tooltip__menu-item--cancel
-															a(href="#").tooltip__menu-item-link Аннулировать
-									tr
-										td(style="width:9.6%") 123-ЗЛ-ОК
-										td(style="width:9.6%") 12.07.2023
-											br
-											span.color-gray 12:24
-										td(colspan="6").td-table-inside
-											table
-												tr
-													td(style="width:20%") Наименование
-													td(style="width:20%") Договор лизинга
-													td(style="width:20%") Иванов А.А.
-													td(style="width:20%") Рубли
-													td(style="width:20%") 20 000 000,00
-										td(style="width:13.45%")
-											.d-flex.align-items-center.application-nav
-												.status.status--active.status--text-medium Активен
-												.tooltip
-													a.btn.tooltip__btn
-														+sprite("icon-more-alt")
-													ul.tooltip__menu
-														li.tooltip__menu-item
-															a(href="#").tooltip__menu-item-link Просмотреть
-														li.tooltip__menu-item
-															a(href="#").tooltip__menu-item-link Создать новую версию
-														li.tooltip__menu-item.tooltip__menu-item--cancel
-															a(href="#").tooltip__menu-item-link Аннулировать
-									tr
-										td(style="width:9.6%") 123-ЗЛ-ОК
-										td(style="width:9.6%") 12.07.2023
-											br
-											span.color-gray 12:24
-										td(colspan="6").td-table-inside
-											table
-												tr
-													td(style="width:20%") Наименование
-													td(style="width:20%") Договор лизинга
-													td(style="width:20%") Иванов А.А.
-													td(style="width:20%") Рубли
-													td(style="width:20%") 20 000 000,00
-										td(style="width:13.45%")
-											.d-flex.align-items-center.application-nav
-												.status.status--active.status--text-medium Активен
-												.tooltip
-													a.btn.tooltip__btn
-														+sprite("icon-more-alt")
-													ul.tooltip__menu
-														li.tooltip__menu-item
-															a(href="#").tooltip__menu-item-link Просмотреть
-														li.tooltip__menu-item
-															a(href="#").tooltip__menu-item-link Создать новую версию
-														li.tooltip__menu-item.tooltip__menu-item--cancel
-															a(href="#").tooltip__menu-item-link Аннулировать
-									tr
-										td(style="width:9.6%") 123-ЗЛ-ОК
-										td(style="width:9.6%") 12.07.2023
-											br
-											span.color-gray 12:24
-										td(colspan="6").td-table-inside
-											table
-												tr
-													td(style="width:20%") Наименование
-													td(style="width:20%") Договор лизинга
-													td(style="width:20%") Иванов А.А.
-													td(style="width:20%") Рубли
-													td(style="width:20%") 20 000 000,00
-										td(style="width:13.45%")
-											.d-flex.align-items-center.application-nav
-												.status.status--completed.status--text-medium Выполнен
-												.tooltip
-													a.btn.tooltip__btn
-														+sprite("icon-more-alt")
-													ul.tooltip__menu
-														li.tooltip__menu-item
-															a(href="#").tooltip__menu-item-link Просмотреть
-														li.tooltip__menu-item
-															a(href="#").tooltip__menu-item-link Создать новую версию
-														li.tooltip__menu-item.tooltip__menu-item--cancel
-															a(href="#").tooltip__menu-item-link Аннулировать
-									tr
-										td(style="width:9.6%") 123-ЗЛ-ОК
-										td(style="width:9.6%") 12.07.2023
-											br
-											span.color-gray 12:24
-										td(colspan="6").td-table-inside
-											table
-												tr
-													td(style="width:20%") Наименование
-													td(style="width:20%") Договор лизинга
-													td(style="width:20%") Иванов А.А.
-													td(style="width:20%") Рубли
-													td(style="width:20%") 20 000 000,00
-										td(style="width:13.45%")
-											.d-flex.align-items-center.application-nav
-												.status.status--completed.status--text-medium Выполнен
-												.tooltip
-													a.btn.tooltip__btn
-														+sprite("icon-more-alt")
-													ul.tooltip__menu
-														li.tooltip__menu-item
-															a(href="#").tooltip__menu-item-link Просмотреть
-														li.tooltip__menu-item
-															a(href="#").tooltip__menu-item-link Создать новую версию
-														li.tooltip__menu-item.tooltip__menu-item--cancel
-															a(href="#").tooltip__menu-item-link Аннулировать
+														td(style="width:20%") Наименование
+														td(style="width:20%") Договор лизинга
+														td(style="width:20%") Иванов А.А.
+														td(style="width:20%") Рубли
+														td(style="width:20%") 20 000 000,00
+											td(style="width:13.45%")
+												.d-flex.align-items-center.application-nav
+													.status.status--active.status--text-medium Активен
+													.tooltip
+														a.btn.tooltip__btn
+															+sprite("icon-more-alt")
+														ul.tooltip__menu
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Просмотреть
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Создать новую версию
+															li.tooltip__menu-item.tooltip__menu-item--cancel
+																a(href="#").tooltip__menu-item-link Аннулировать
+										tr
+											td(style="width:9.6%") 123-ЗЛ-ОК
+											td(style="width:9.6%") 12.07.2023
+												br
+												span.color-gray 12:24
+											td(colspan="6").td-table-inside
+												table
+													tr
+														td(style="width:20%") Наименование
+														td(style="width:20%") Договор лизинга
+														td(style="width:20%") Иванов А.А.
+														td(style="width:20%") Рубли
+														td(style="width:20%") 20 000 000,00
+											td(style="width:13.45%")
+												.d-flex.align-items-center.application-nav
+													.status.status--active.status--text-medium Активен
+													.tooltip
+														a.btn.tooltip__btn
+															+sprite("icon-more-alt")
+														ul.tooltip__menu
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Просмотреть
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Создать новую версию
+															li.tooltip__menu-item.tooltip__menu-item--cancel
+																a(href="#").tooltip__menu-item-link Аннулировать
+										tr
+											td(style="width:9.6%") 123-ЗЛ-ОК
+											td(style="width:9.6%") 12.07.2023
+												br
+												span.color-gray 12:24
+											td(colspan="6").td-table-inside
+												table
+													tr
+														td(style="width:20%") Наименование
+														td(style="width:20%") Договор лизинга
+														td(style="width:20%") Иванов А.А.
+														td(style="width:20%") Рубли
+														td(style="width:20%") 20 000 000,00
+											td(style="width:13.45%")
+												.d-flex.align-items-center.application-nav
+													.status.status--completed.status--text-medium Выполнен
+													.tooltip
+														a.btn.tooltip__btn
+															+sprite("icon-more-alt")
+														ul.tooltip__menu
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Просмотреть
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Создать новую версию
+															li.tooltip__menu-item.tooltip__menu-item--cancel
+																a(href="#").tooltip__menu-item-link Аннулировать
+										tr
+											td(style="width:9.6%") 123-ЗЛ-ОК
+											td(style="width:9.6%") 12.07.2023
+												br
+												span.color-gray 12:24
+											td(colspan="6").td-table-inside
+												table
+													tr
+														td(style="width:20%") Наименование
+														td(style="width:20%") Договор лизинга
+														td(style="width:20%") Иванов А.А.
+														td(style="width:20%") Рубли
+														td(style="width:20%") 20 000 000,00
+											td(style="width:13.45%")
+												.d-flex.align-items-center.application-nav
+													.status.status--completed.status--text-medium Выполнен
+													.tooltip
+														a.btn.tooltip__btn
+															+sprite("icon-more-alt")
+														ul.tooltip__menu
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Просмотреть
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Создать новую версию
+															li.tooltip__menu-item.tooltip__menu-item--cancel
+																a(href="#").tooltip__menu-item-link Аннулировать
+										tr
+											td(style="width:9.6%") 123-ЗЛ-ОК
+											td(style="width:9.6%") 12.07.2023
+												br
+												span.color-gray 12:24
+											td(colspan="6").td-table-inside
+												table
+													tr
+														td(style="width:20%") Наименование
+														td(style="width:20%") Договор лизинга
+														td(style="width:20%") Иванов А.А.
+														td(style="width:20%") Рубли
+														td(style="width:20%") 20 000 000,00
+											td(style="width:13.45%")
+												.d-flex.align-items-center.application-nav
+													.status.status--active.status--text-medium Активен
+													.tooltip
+														a.btn.tooltip__btn
+															+sprite("icon-more-alt")
+														ul.tooltip__menu
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Просмотреть
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Создать новую версию
+															li.tooltip__menu-item.tooltip__menu-item--cancel
+																a(href="#").tooltip__menu-item-link Аннулировать
+										tr
+											td(style="width:9.6%") 123-ЗЛ-ОК
+											td(style="width:9.6%") 12.07.2023
+												br
+												span.color-gray 12:24
+											td(colspan="6").td-table-inside
+												table
+													tr
+														td(style="width:20%") Наименование
+														td(style="width:20%") Договор лизинга
+														td(style="width:20%") Иванов А.А.
+														td(style="width:20%") Рубли
+														td(style="width:20%") 20 000 000,00
+											td(style="width:13.45%")
+												.d-flex.align-items-center.application-nav
+													.status.status--active.status--text-medium Активен
+													.tooltip
+														a.btn.tooltip__btn
+															+sprite("icon-more-alt")
+														ul.tooltip__menu
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Просмотреть
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Создать новую версию
+															li.tooltip__menu-item.tooltip__menu-item--cancel
+																a(href="#").tooltip__menu-item-link Аннулировать
+										tr
+											td(style="width:9.6%") 123-ЗЛ-ОК
+											td(style="width:9.6%") 12.07.2023
+												br
+												span.color-gray 12:24
+											td(colspan="6").td-table-inside
+												table
+													tr
+														td(style="width:20%") Наименование
+														td(style="width:20%") Договор лизинга
+														td(style="width:20%") Иванов А.А.
+														td(style="width:20%") Рубли
+														td(style="width:20%") 20 000 000,00
+											td(style="width:13.45%")
+												.d-flex.align-items-center.application-nav
+													.status.status--completed.status--text-medium Выполнен
+													.tooltip
+														a.btn.tooltip__btn
+															+sprite("icon-more-alt")
+														ul.tooltip__menu
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Просмотреть
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Создать новую версию
+															li.tooltip__menu-item.tooltip__menu-item--cancel
+																a(href="#").tooltip__menu-item-link Аннулировать
+										tr
+											td(style="width:9.6%") 123-ЗЛ-ОК
+											td(style="width:9.6%") 12.07.2023
+												br
+												span.color-gray 12:24
+											td(colspan="6").td-table-inside
+												table
+													tr
+														td(style="width:20%") Наименование
+														td(style="width:20%") Договор лизинга
+														td(style="width:20%") Иванов А.А.
+														td(style="width:20%") Рубли
+														td(style="width:20%") 20 000 000,00
+											td(style="width:13.45%")
+												.d-flex.align-items-center.application-nav
+													.status.status--completed.status--text-medium Выполнен
+													.tooltip
+														a.btn.tooltip__btn
+															+sprite("icon-more-alt")
+														ul.tooltip__menu
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Просмотреть
+															li.tooltip__menu-item
+																a(href="#").tooltip__menu-item-link Создать новую версию
+															li.tooltip__menu-item.tooltip__menu-item--cancel
+																a(href="#").tooltip__menu-item-link Аннулировать
 
 							ul.pagination
 								li.disabled

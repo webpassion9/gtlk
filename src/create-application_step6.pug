@@ -46,10 +46,14 @@ html(lang="ru")
 										.sidebar__nav-item-text Справка
 						.sidebar__section
 							.manager
-								.manager__ava
-									img(src="img/avatar-manager.png", alt="")
-								.manager__name Менеджер Иванова А.А.
-								a(href="#").btn.manager__btn Связаться
+								.manager__main
+									.manager__ava
+										img(src="img/avatar-manager.png", alt="")
+									.manager__name Менеджер Иванова А.А.
+									a(href="#").btn.manager__btn Связаться
+								.manager__contacts
+									a(href="#").btn.btn-contacts
+										img(src="img/icon-viber.svg" width="32" height="32" alt="")
 						.sidebar__section
 							a(href="#").support
 								.support__icon
@@ -62,26 +66,39 @@ html(lang="ru")
 							.form-application__top
 								.go-back.go-back--form-application
 									a(href="#") < Назад в мои заявки
-								.heading-base.heading-base--large Новая заявка
+								.heading-base.heading-base--large.form-application__top-heading.is-lg-visible Новая заявка
 							.form-application__steps
 								ul.form-steps
 									li.form-steps__item.active
-										.form-steps__item-text Заявитель
+										.form-steps__item-text 
+											span.is-lg-hidden Шаг 1: 
+											|  Заявитель
 									li.form-steps__item.active
-										.form-steps__item-text Контактное лицо по сделке
+										.form-steps__item-text 
+											span.is-lg-hidden Шаг 2: 
+											|  Контактное лицо по сделке
 									li.form-steps__item.active
-										.form-steps__item-text Руководитель организации
+										.form-steps__item-text 
+											span.is-lg-hidden Шаг 3: 
+											|  Руководитель организации
 									li.form-steps__item.active
-										.form-steps__item-text Предмет лизинга/аренды
+										.form-steps__item-text 
+											span.is-lg-hidden Шаг 4: 
+											|  Предмет лизинга/аренды
 									li.form-steps__item.active
-										.form-steps__item-text Условия лизинга/аренды
-									li.form-steps__item.active
-										.form-steps__item-text Дополнительные условия
+										.form-steps__item-text 
+											span.is-lg-hidden Шаг 5: 
+											|  Условия лизинга/аренды
+									li.form-steps__item.active.current
+										.form-steps__item-text 
+											span.is-lg-hidden Шаг 6: 
+											|  Дополнительные условия
 									li.form-steps__item
-										.form-steps__item-text Загрузить документы
-							
+										.form-steps__item-text 
+											span.is-lg-hidden Шаг 7: 
+											|  Загрузить документы
 							.form-application__main
-								.form-application__row-items.form-application__row-items--gap-medium
+								.form-application__row-items.form-application__row-items--create-app.form-application__row-items--gap-medium
 									.form-application__row
 										label.checkbox-base
 											input(type="checkbox" hidden)
@@ -94,7 +111,7 @@ html(lang="ru")
 											span.checkbox-base__icon
 												+sprite("icon-check")
 											span.checkbox-base__text Пусконаладочные работы
-									.form-application__row
+									.form-application__row.form-application__row--terms-other
 										.form-application__row-heading.form-application__row-heading--width-auto
 											.field-heading.field-heading Другое
 										.form-application__row-content.form-application__row-content--width-base
@@ -104,7 +121,7 @@ html(lang="ru")
 											span.total-sum__text Итоговая стоимость всего иммущества с НДС: 
 											span.total-sum__value 36 420 000,00 ₽
 									.form-application__row
-										.form-application__nav
+										.form-application__nav.form-application__nav--create-app
 											a(href="#").btn.btn-nav.btn-nav--back Назад
 											a(href="#").btn.btn-nav.btn-nav--continue Продолжить
 											a(href="#").btn.btn-nav.btn-nav--save Сохранить

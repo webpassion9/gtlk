@@ -1,9 +1,14 @@
 .details-table {
-	font-size: 16px;
-	line-height: 18px;
 	width: 100%;
 	max-width: 840px;
-	table-layout: fixed;
+	font-size: 16px;
+	&--specialclass {
+		font-size: 12px;
+		line-height: 18px;
+		@media (min-width: $lg) {
+			font-size: 16px;
+		}
+	}
 	th {
 		padding: 10px 0;
 		color: var(--color-gray2);
@@ -12,17 +17,25 @@
 		text-align: left;
 	}
 	td {
-		padding: 10px 16px;
+		padding: 15px 10px;
+		@media (min-width: $lg) {
+			padding: 10px 16px;
+		}
 		&:first-child {
 			color: var(--color-gray2);
 			padding-left: 0;
+			padding-right: 0;
 		}
 	}
 
 	&--organization {
 		td {
-			padding-top: 16px;
-			padding-bottom: 16px;
+			padding-top: 6px;
+			padding-bottom: 6px;
+			@media (min-width: $lg) {
+				padding-top: 16px;
+				padding-bottom: 16px;
+			}
 		}
 	}
 	&--profile {
@@ -30,5 +43,57 @@
 			padding-top: 16px;
 			padding-bottom: 16px;
 		}
+	}
+
+	&--application {
+		td {
+			@media (max-width: $lg - 1px) {
+				display: block;
+				padding: 2px 0;
+				width: auto;
+			}
+		}
+		@media (max-width: $lg - 1px) {
+			tr {
+				&:not(:last-child) {
+					td {
+						&:last-child {
+							padding-bottom: 12px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+.td-details-main {
+	width: 172px;
+	@media (min-width: $lg) {
+		width: 27%;
+		min-width: 210px;
+	}
+}
+
+.td-details-content {
+	@media (min-width: $lg) {
+		width: 73%;
+	}
+}
+
+
+
+.td-details-org-main {
+	min-width: 140px;
+	@media (min-width: $lg) {
+		width: 27%;
+	}
+}
+
+.td-details-org-content {
+	@media (min-width: $lg) {
+		width: 73%;
 	}
 }

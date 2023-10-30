@@ -9,21 +9,37 @@
 	// 	padding-bottom: 23px;
 	// }
 	&__main {
-		padding-top: 50px;
+		padding-top: 35px;
+		@media (min-width: $lg) {
+			padding-top: 50px;
+		}
 		&--step4 {
 			padding-top: 35px;
+		}
+	}
+	&__top {
+		&-heading {
+			@media (max-width: $lg - 1px) {
+				text-align: center;
+			}
 		}
 	}
 	&__row-items {
 		display: flex;
 		flex-direction: column;
-		gap: 38px;
+		gap: 20px;
+		@media (min-width: $lg) {
+			gap: 38px;
+		}
 		&:not(:first-child) {
 			padding-top: 33px;
 		}
 		&--padding-top-large {
 			&:not(:first-child) {
-				padding-top: 60px;
+				padding-top: 30px;
+				@media (min-width: $lg) {
+					padding-top: 60px;
+				}
 			}
 		}
 		&--gap-small {
@@ -41,17 +57,57 @@
 		&--gap-medium {
 			gap: 33px;
 		}
+
+		&--create-app {
+			gap: 15px;
+			.form-application__row {
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 12px;
+				@media (min-width: $lg) {
+					flex-direction: row;
+					align-items: center;
+				}
+				@media (max-width: $lg - 1px) {
+					&-heading {
+						max-width: 100%;
+						width: 100%;
+					}
+					&-content {
+						width: 100%;
+						max-width: 100%;
+					}
+				}
+				&--switcher {
+					flex-direction: row;
+					align-items: center;
+					.form-application {
+						&__row {
+							&-heading {
+								width: auto;
+								padding-right: 0;
+							}
+							&-content {
+								width: auto;
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 	&__row {
 		display: flex;
 		align-items: center;
-		min-height: 34px;
+		// min-height: 34px;
 		&.hidden {
 			display: none;
 		}
 		&-heading {
 			width: 209px;
-			padding-right: 10px;
+			@media (min-width: $lg) {
+				padding-right: 10px;
+			}
 			&--width-small {
 				width: 170px;
 			}
@@ -80,21 +136,50 @@
 			padding-bottom: 7px;
 		}
 
+		&--terms-other {
+			@media (max-width: $lg - 1px) {
+				padding-top: 10px;
+				padding-bottom: 10px;
+			}
+		}
+
+
 	}
 
 	&__add-item {
 		padding-top: 30px;
-		padding-bottom: 45px;
+		padding-bottom: 30px;
+		@media (min-width: $lg) {
+			padding-bottom: 45px;
+		}
 	}
 	&__nav {
 		// padding-top: 43px;
 		display: flex;
-		gap: 30px;
+		gap: 25px 30px;
 		width: 100%;
 		&--preview {
 			.btn-nav {
 				flex-grow: 1;
 			}
 		}
+		&--create-app {
+			flex-wrap: wrap;
+			padding-top: 20px;
+			@media (max-width: $md - 1px) {
+				.btn {
+					width: 100%;
+				}
+			}
+		}
 	}
+
+	&__section-heading {
+		width: 100%;
+		text-align: center;
+		@media (min-width: $lg) {
+			text-align: left;
+		}
+	}
+
 }

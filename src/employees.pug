@@ -65,53 +65,62 @@ html(lang="ru")
 							
 							.wrapper-employees-list
 								.heading-base.heading-base--employees-list Список сотрудников
-								table.table-employees
-									thead
-										tr
-											th(style="width:309px;") Сотрудник
-											th(style="width:215px;") Номер телефона
-											th(style="width:236px;") Почта
-											th(style="width:188px;") Дата выдачи
-											th(style="width:271px;") Статус
-									tbody
-										tr
-											td Константинов Алексей Юрьевич
-											td +7 (916) 000-00-00
-											td.fs-16 kpatp-2@yandex.ru
-											td 12.07.2023
-												.color-gray 12:24
-											td
-												.td-status-bar
-													.fs-16.text-status.text-status--positive Доступ выдан
-													.tooltip
-														a.btn.tooltip__btn.tooltip__btn--vertical
-															+sprite("icon-more-alt")
-														ul.tooltip__menu
-															li.tooltip__menu-item
-																a(href="#").tooltip__menu-item-link Редактировать
-															li.tooltip__menu-item
-																a(href="#modal-block-employeer" data-modal).tooltip__menu-item-link Заблокировать
-															li.tooltip__menu-item.tooltip__menu-item--cancel
-																a(href="#modal-remove-employeer" data-modal).tooltip__menu-item-link Удалить
-										tr
-											td Константинов Алексей Юрьевич
-											td +7 (916) 000-00-00
-											td.fs-16 kpatp-2@yandex.ru
-											td 12.07.2023
-												.color-gray 12:24
-											td
-												.td-status-bar
-													.fs-16.text-status.text-status--positive Доступ выдан
-													.tooltip
-														a.btn.tooltip__btn.tooltip__btn--vertical
-															+sprite("icon-more-alt")
-														ul.tooltip__menu
-															li.tooltip__menu-item
-																a(href="#").tooltip__menu-item-link Редактировать
-															li.tooltip__menu-item
-																a(href="#modal-block-employeer" data-modal).tooltip__menu-item-link Заблокировать
-															li.tooltip__menu-item.tooltip__menu-item--cancel
-																a(href="#modal-remove-employeer" data-modal).tooltip__menu-item-link Удалить
+								.application-info.application-info--employees.application-info--base.application-info--width-large
+									.application-info__main
+										.application-info__icon
+											img(src="img/icon-swipe.svg" width="28" height="28" alt="")
+										.application-info__text
+											.application-info__text-heading Используйте свайп пальцем для просмотра таблицы
+										.application-info__close
+											+sprite("icon-close")
+								.scroll-wrapper
+									table.table-employees
+										thead
+											tr
+												th(style="width:309px;") Сотрудник
+												th(style="width:215px;") Номер телефона
+												th(style="width:236px;") Почта
+												th(style="width:188px;") Дата выдачи
+												th(style="width:271px;") Статус
+										tbody
+											tr
+												td Константинов Алексей Юрьевич
+												td +7 (916) 000-00-00
+												td.fs-16 kpatp-2@yandex.ru
+												td 12.07.2023
+													.color-gray 12:24
+												td
+													.td-status-bar
+														.fs-16.text-status.text-status--positive Доступ выдан
+														.tooltip
+															a.btn.tooltip__btn.tooltip__btn--vertical
+																+sprite("icon-more-alt")
+															ul.tooltip__menu
+																li.tooltip__menu-item
+																	a(href="#").tooltip__menu-item-link Редактировать
+																li.tooltip__menu-item
+																	a(href="#modal-block-employeer" data-modal).tooltip__menu-item-link Заблокировать
+																li.tooltip__menu-item.tooltip__menu-item--cancel
+																	a(href="#modal-remove-employeer" data-modal).tooltip__menu-item-link Удалить
+											tr
+												td Константинов Алексей Юрьевич
+												td +7 (916) 000-00-00
+												td.fs-16 kpatp-2@yandex.ru
+												td 12.07.2023
+													.color-gray 12:24
+												td
+													.td-status-bar
+														.fs-16.text-status.text-status--positive Доступ выдан
+														.tooltip
+															a.btn.tooltip__btn.tooltip__btn--vertical
+																+sprite("icon-more-alt")
+															ul.tooltip__menu
+																li.tooltip__menu-item
+																	a(href="#").tooltip__menu-item-link Редактировать
+																li.tooltip__menu-item
+																	a(href="#modal-block-employeer" data-modal).tooltip__menu-item-link Заблокировать
+																li.tooltip__menu-item.tooltip__menu-item--cancel
+																	a(href="#modal-remove-employeer" data-modal).tooltip__menu-item-link Удалить
 
 							.wrapper-employeer-info
 								.heading-base.heading-base--add-access Выдать новый доступ

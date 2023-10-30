@@ -46,10 +46,14 @@ html(lang="ru")
 										.sidebar__nav-item-text Справка
 						.sidebar__section
 							.manager
-								.manager__ava
-									img(src="img/avatar-manager.png", alt="")
-								.manager__name Менеджер Иванова А.А.
-								a(href="#").btn.manager__btn Связаться
+								.manager__main
+									.manager__ava
+										img(src="img/avatar-manager.png", alt="")
+									.manager__name Менеджер Иванова А.А.
+									a(href="#").btn.manager__btn Связаться
+								.manager__contacts
+									a(href="#").btn.btn-contacts
+										img(src="img/icon-viber.svg" width="32" height="32" alt="")
 						.sidebar__section
 							a(href="#").support
 								.support__icon
@@ -59,7 +63,7 @@ html(lang="ru")
 				main.main
 					.content
 						.content-inner
-							.heading-base.heading-base--help Часто задаваемые вопросы
+							.heading-base.heading-base--normal.heading-base--help Часто задаваемые вопросы
 							.help
 								.help__heading
 									.help__heading-main Есть вопрос?
@@ -88,11 +92,11 @@ html(lang="ru")
 												+sprite("icon-user")
 							
 							.contact
-								div
-									.heading-base.heading-base--contact Связаться с нами
+								.contact__col-img
+									.heading-base.heading-base--normal.heading-base--contact Связаться с нами
 									div
 										img(src="img/illustration-consultant.png", width="306" height="230" alt="")
-								div
+								.contact__col-main
 									.contact__heading Способы связаться с нами
 									.contact__btns
 										div

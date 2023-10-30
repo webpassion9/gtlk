@@ -2,9 +2,20 @@
 	width: 100%;
 	font-size: 14px;
 	line-height: 17px;
-	color: rgba(var(--color-black-base));
+	color: var(--color-black-base);
 	border-collapse: collapse;
 	table-layout: fixed;
+	tbody {
+		tr {
+			&:last-child, &:nth-last-child(2):not(:first-child) {
+				.tooltip__menu {
+					top: auto;
+					bottom: 0;
+				}
+			}	
+		}
+
+	}
 	tbody {
 		tr {
 			transition: .25s;

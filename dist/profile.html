@@ -11,7 +11,7 @@
 		<div class="wrapper wrapper-main">
 			<header class="header">
 				<div class="container">
-					<a href="#">
+					<a class="header-logo" href="#">
 						<img src="img/logo-GTLK_dark.png" width="166" height="52" alt="">
 					</a>
 					<ul class="header-menu">
@@ -51,6 +51,13 @@
 						</div>
 					</form>
 					<ul class="header-btns">
+						<li class="header-btns__item is-lg-hidden">
+							<a class="btn header-btns__link" href="#">
+								<svg class="icon-loop">
+									<use xlink:href="img/icons/icons.svg#icon-loop"></use>
+								</svg>
+							</a>
+						</li>
 						<li class="header-btns__item">
 							<a class="btn header-btns__link" data-target="popup-notifications">
 								<svg class="icon-bell">
@@ -230,7 +237,109 @@
 								</div>
 							</div>
 						</li>
-						<li class="header-btns__item">
+						<li class="header-btns__item is-lg-hidden">
+							<a class="btn header-btns__link" data-target="popup-menu">
+								<svg class="icon-menu">
+									<use xlink:href="img/icons/icons.svg#icon-menu"></use>
+								</svg>
+							</a>
+							<div class="user-menu user-menu--mobile" data-popup="popup-menu">
+								<ul class="user-menu__list">
+									<li class="user-menu__list-item">
+										<a class="user-menu__list-item-link" href="#">
+											<span class="user-menu__list-item-icon">
+												<svg class="icon-file-tray">
+													<use xlink:href="img/icons/icons.svg#icon-file-tray"></use>
+												</svg>
+											</span>Заявки
+										</a>
+									</li>
+									<li class="user-menu__list-item">
+										<a class="user-menu__list-item-link" href="#">
+											<span class="user-menu__list-item-icon">
+												<svg class="icon-newspaper">
+													<use xlink:href="img/icons/icons.svg#icon-newspaper"></use>
+												</svg>
+											</span>Договоры
+										</a>
+									</li>
+									<li class="user-menu__list-item">
+										<a class="user-menu__list-item-link" href="#">
+											<span class="user-menu__list-item-icon">
+												<svg class="icon-doc">
+													<use xlink:href="img/icons/icons.svg#icon-doc"></use>
+												</svg>
+											</span>Обращения НМЦ
+										</a>
+									</li>
+								</ul>
+								<ul class="user-menu__list">
+									<li class="user-menu__list-item">
+										<a class="user-menu__list-item-link" href="#">
+											<span class="user-menu__list-item-icon">
+												<svg class="icon-user">
+													<use xlink:href="img/icons/icons.svg#icon-user"></use>
+												</svg>
+											</span>Профиль
+										</a>
+									</li>
+									<li class="user-menu__list-item">
+										<a class="user-menu__list-item-link" href="#">
+											<span class="user-menu__list-item-icon">
+												<svg class="icon-calendar">
+													<use xlink:href="img/icons/icons.svg#icon-calendar"></use>
+												</svg>
+											</span>Журнал событий
+										</a>
+									</li>
+									<li class="user-menu__list-item">
+										<a class="user-menu__list-item-link" href="#">
+											<span class="user-menu__list-item-icon">
+												<svg class="icon-book">
+													<use xlink:href="img/icons/icons.svg#icon-book"></use>
+												</svg>
+											</span>Справка по системе
+										</a>
+									</li>
+								</ul>
+								<ul class="user-menu__list">
+									<li class="user-menu__list-item">
+										<div class="manager manager--view-full">
+											<div class="manager__main">
+												<div class="manager__ava">
+													<img src="img/avatar-manager.png" alt="">
+												</div>
+												<div class="manager__name">Менеджер Иванова А.А.</div>
+											</div>
+											<div class="manager__contacts">
+												<a class="btn manager__btn" href="#">Связаться</a>
+											</div>
+										</div>
+									</li>
+								</ul>
+								<ul class="user-menu__list">
+									<li class="user-menu__list-item">
+										<a class="user-menu__list-item-link" href="#">
+											<span class="user-menu__list-item-icon">
+												<svg class="icon-chat">
+													<use xlink:href="img/icons/icons.svg#icon-chat"></use>
+												</svg>
+											</span>Служба поддержки
+										</a>
+									</li>
+									<li class="user-menu__list-item">
+										<a class="user-menu__list-item-link" href="#">
+											<span class="user-menu__list-item-icon">
+												<svg class="icon-logout">
+													<use xlink:href="img/icons/icons.svg#icon-logout"></use>
+												</svg>
+											</span>Выйти
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="header-btns__item is-lg-visible">
 							<a class="btn header-btns__link" data-target="popup-user-menu">
 								<svg class="icon-user">
 									<use xlink:href="img/icons/icons.svg#icon-user"></use>
@@ -326,11 +435,18 @@
 						</div>
 						<div class="sidebar__section">
 							<div class="manager">
-								<div class="manager__ava">
-									<img src="img/avatar-manager.png" alt="">
+								<div class="manager__main">
+									<div class="manager__ava">
+										<img src="img/avatar-manager.png" alt="">
+									</div>
+									<div class="manager__name">Менеджер Иванова А.А.</div>
+									<a class="btn manager__btn" href="#">Связаться</a>
 								</div>
-								<div class="manager__name">Менеджер Иванова А.А.</div>
-								<a class="btn manager__btn" href="#">Связаться</a>
+								<div class="manager__contacts">
+									<a class="btn btn-contacts" href="#">
+										<img src="img/icon-viber.svg" width="32" height="32" alt="">
+									</a>
+								</div>
 							</div>
 						</div>
 						<div class="sidebar__section">
@@ -375,41 +491,41 @@
 										<div class="application-main__row application-main__section">
 											<div class="application-main__row-col-first">
 												<div class="application-main__section">
-													<table class="details-table">
+													<table class="details-table details-table--application">
 														<tr>
-															<td style="width:27%">Ф.И.О. контактного лица со стороны Заявителя</td>
-															<td style="width:73%">Абдулхаков Артур Маратович</td>
+															<td class="td-details-main">Ф.И.О. контактного лица со стороны Заявителя</td>
+															<td class="td-details-content">Абдулхаков Артур Маратович</td>
 														</tr>
 														<tr>
-															<td style="width:27%">E-mail</td>
-															<td style="width:73%">kpatp-2@yandex.ru</td>
+															<td class="td-details-main">E-mail</td>
+															<td class="td-details-content">kpatp-2@yandex.ru</td>
 														</tr>
 														<tr>
-															<td style="width:27%">Телефон</td>
-															<td style="width:73%">+7 (843) 262-06-76</td>
+															<td class="td-details-main">Телефон</td>
+															<td class="td-details-content">+7 (843) 262-06-76</td>
 														</tr>
 													</table>
 												</div>
 											</div>
 											<div class="application-main__row-col-sec">
 												<div class="application-main__section">
-													<div class="heading-base heading-base--application">Контактная информация</div>
+													<div class="heading-base heading-base--normal heading-base--application">Контактная информация</div>
 													<table class="info-table">
 														<tbody>
 															<tr>
-																<td>Менеджер</td>
+																<td class="td-info-main">Менеджер</td>
 																<td>Анна</td>
 															</tr>
 															<tr>
-																<td>E-mail для обращений</td>
+																<td class="td-info-main">E-mail для обращений</td>
 																<td>Ivanova@gtlk.ru</td>
 															</tr>
 															<tr>
-																<td>Внутренний номер сотрудника</td>
+																<td class="td-info-main">Внутренний номер сотрудника</td>
 																<td>8-800-200-12-99 (доб. 101)</td>
 															</tr>
 															<tr>
-																<td>Мобильный телефон</td>
+																<td class="td-info-main">Мобильный телефон</td>
 																<td>8-916-555-88-99</td>
 															</tr>
 														</tbody>
@@ -422,82 +538,82 @@
 										<div class="application-main__row application-main__section">
 											<div class="application-main__row-col-first">
 												<div class="application-main__section">
-													<table class="details-table details-table--organization">
+													<table class="details-table details-table--application details-table--organization">
 														<tr>
-															<td style="width:29%">Полное наименование организации</td>
-															<td style="width:71%">МУНИЦИПАЛЬНОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ Г.КАЗАНИ "ПАССАЖИРСКОЕ ABTOTPAHCПOPTHOE ПРЕДПРИЯТИЕ Хв2"</td>
+															<td class="td-details-org-main">Полное наименование организации</td>
+															<td class="td-details-org-content">МУНИЦИПАЛЬНОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ Г.КАЗАНИ "ПАССАЖИРСКОЕ ABTOTPAHCПOPTHOE ПРЕДПРИЯТИЕ Хв2"</td>
 														</tr>
 														<tr>
-															<td style="width:29%">Краткое наименование</td>
-															<td style="width:71%">МУП "ПАТП №2</td>
+															<td class="td-details-org-main">Краткое наименование</td>
+															<td class="td-details-org-content">МУП "ПАТП №2</td>
 														</tr>
 														<tr>
-															<td style="width:29%">Ф.И.О. руководител</td>
-															<td style="width:71%">Мухаметшин Альберт Ахатович</td>
+															<td class="td-details-org-main">Ф.И.О. руководител</td>
+															<td class="td-details-org-content">Мухаметшин Альберт Ахатович</td>
 														</tr>
 														<tr>
-															<td style="width:29%">E-mail</td>
-															<td style="width:71%">kpatp-2@yandex.ru</td>
+															<td class="td-details-org-main">E-mail</td>
+															<td class="td-details-org-content">kpatp-2@yandex.ru</td>
 														</tr>
 														<tr>
-															<td style="width:29%">Телефон</td>
-															<td style="width:71%">+7 (843) 262-06-76</td>
+															<td class="td-details-org-main">Телефон</td>
+															<td class="td-details-org-content">+7 (843) 262-06-76</td>
 														</tr>
 														<tr>
-															<td style="width:29%">Факс</td>
-															<td style="width:71%">+7 (843) 262-06-76</td>
+															<td class="td-details-org-main">Факс</td>
+															<td class="td-details-org-content">+7 (843) 262-06-76</td>
 														</tr>
 														<tr>
-															<td style="width:29%">ИНН</td>
-															<td style="width:71%">1660005127</td>
+															<td class="td-details-org-main">ИНН</td>
+															<td class="td-details-org-content">1660005127</td>
 														</tr>
 														<tr>
-															<td style="width:29%">КПП</td>
-															<td style="width:71%">166001001</td>
+															<td class="td-details-org-main">КПП</td>
+															<td class="td-details-org-content">166001001</td>
 														</tr>
 														<tr>
-															<td style="width:29%">ОГРН</td>
-															<td style="width:71%">1021603617133</td>
+															<td class="td-details-org-main">ОГРН</td>
+															<td class="td-details-org-content">1021603617133</td>
 														</tr>
 														<tr>
-															<td style="width:29%">ОКПО</td>
-															<td style="width:71%">05151873</td>
+															<td class="td-details-org-main">ОКПО</td>
+															<td class="td-details-org-content">05151873</td>
 														</tr>
 														<tr>
-															<td style="width:29%">Код ОКОПФ</td>
-															<td style="width:71%">1 10 00</td>
+															<td class="td-details-org-main">Код ОКОПФ</td>
+															<td class="td-details-org-content">1 10 00</td>
 														</tr>
 														<tr>
-															<td style="width:29%">ОКВЭД</td>
-															<td style="width:71%">01</td>
+															<td class="td-details-org-main">ОКВЭД</td>
+															<td class="td-details-org-content">01</td>
 														</tr>
 														<tr>
-															<td style="width:29%">ОКТМО</td>
-															<td style="width:71%">36602404</td>
+															<td class="td-details-org-main">ОКТМО</td>
+															<td class="td-details-org-content">36602404</td>
 														</tr>
 														<tr>
-															<td style="width:29%">Фактический адрес</td>
-															<td style="width:71%">420087, Республика Татарстан, город Казань, улица Крылова, дом 3</td>
+															<td class="td-details-org-main">Фактический адрес</td>
+															<td class="td-details-org-content">420087, Республика Татарстан, город Казань, улица Крылова, дом 3</td>
 														</tr>
 														<tr>
-															<td style="width:29%">Юридический адрес</td>
-															<td style="width:71%">420087, Республика Татарстан, город Казань, улица Крылова, дом 3</td>
+															<td class="td-details-org-main">Юридический адрес</td>
+															<td class="td-details-org-content">420087, Республика Татарстан, город Казань, улица Крылова, дом 3</td>
 														</tr>
 														<tr>
-															<td style="width:29%">Расчетный счет</td>
-															<td style="width:71%">4060281020000000058</td>
+															<td class="td-details-org-main">Расчетный счет</td>
+															<td class="td-details-org-content">4060281020000000058</td>
 														</tr>
 														<tr>
-															<td style="width:29%">Банк</td>
-															<td style="width:71%">ООО КБЭР «Банк-Казани»</td>
+															<td class="td-details-org-main">Банк</td>
+															<td class="td-details-org-content">ООО КБЭР «Банк-Казани»</td>
 														</tr>
 														<tr>
-															<td style="width:29%">Корреспондентский счет</td>
-															<td style="width:71%">30101810100000000844</td>
+															<td class="td-details-org-main">Корреспондентский счет</td>
+															<td class="td-details-org-content">30101810100000000844</td>
 														</tr>
 														<tr>
-															<td style="width:29%">БИК</td>
-															<td style="width:71%">049205844</td>
+															<td class="td-details-org-main">БИК</td>
+															<td class="td-details-org-content">049205844</td>
 														</tr>
 													</table>
 												</div>
@@ -567,6 +683,11 @@
 					<a class="btn btn-confirm btn-confirm--positive">Да</a>
 					<a class="btn btn-confirm btn-confirm--negative" data-modal-close>Нет</a>
 				</div>
+				<a class="modal__close-btn is-lg-hidden" data-modal-close>
+					<svg class="icon-close">
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</a>
 			</div>
 		</div>
 		<div class="modal-container" id="modal-block-counterparty">
@@ -581,6 +702,11 @@
 					<a class="btn btn-confirm btn-confirm--positive">Да</a>
 					<a class="btn btn-confirm btn-confirm--negative" data-modal-close>Нет</a>
 				</div>
+				<a class="modal__close-btn is-lg-hidden" data-modal-close>
+					<svg class="icon-close">
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</a>
 			</div>
 		</div>
 		<div class="modal-container" id="modal-remove-counterparty">
@@ -595,6 +721,11 @@
 					<a class="btn btn-confirm btn-confirm--positive">Да</a>
 					<a class="btn btn-confirm btn-confirm--negative" data-modal-close>Нет</a>
 				</div>
+				<a class="modal__close-btn is-lg-hidden" data-modal-close>
+					<svg class="icon-close">
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</a>
 			</div>
 		</div>
 		<div class="modal-container" id="modal-block-employeer">
@@ -623,6 +754,11 @@
 					<a class="btn btn-confirm btn-confirm--positive">Да</a>
 					<a class="btn btn-confirm btn-confirm--negative" data-modal-close>Нет</a>
 				</div>
+				<a class="modal__close-btn is-lg-hidden" data-modal-close>
+					<svg class="icon-close">
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</a>
 			</div>
 		</div>
 		<div class="modal-container" id="modal-annul">
@@ -650,6 +786,11 @@
 					<a class="btn btn-nav btn-nav--cancel" data-modal-close>Отменить</a>
 					<a class="btn btn-nav btn-nav--continue" href="#">Продолжить</a>
 				</div>
+				<a class="modal__close-btn is-lg-hidden" data-modal-close>
+					<svg class="icon-close">
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</a>
 			</div>
 		</div>
 		<div class="modal-container" id="modal-app-sent">
@@ -898,6 +1039,11 @@
 					<a class="btn btn-confirm btn-confirm--positive">Да</a>
 					<a class="btn btn-confirm btn-confirm--negative" data-modal-close>Нет</a>
 				</div>
+				<a class="modal__close-btn is-lg-hidden" data-modal-close>
+					<svg class="icon-close">
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</a>
 			</div>
 		</div>
 		<script src="js/app.min.js"></script>

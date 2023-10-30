@@ -1,16 +1,22 @@
 .tabs-notifications {
 	border-bottom: 1px solid #DDE1E6;
 	display: inline-flex;
-	margin-bottom: 35px;
+	margin-bottom: 25px;
 	padding-right: 23px;
 	position: relative;
+	max-width: 100%;
+	overflow-x: auto;
+	padding-bottom: 1px;
+	@media (min-width: $lg) {
+		margin-bottom: 35px;
+	}
 	&__list {
 		display: flex;
-		flex-wrap: wrap;
 		list-style: none;
 		margin: 0;
 		padding: 0;
 		gap: 23px;
+		white-space: nowrap;
 	}
 	&__item {
 		&-link {
@@ -47,7 +53,7 @@
 	&__line {
 		position: absolute;
 		left: 0;
-		bottom: -1px;
+		bottom: 0px;
 		width: 0px;
 		height: 2px;
 		background: var(--color-blue2);

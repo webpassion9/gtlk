@@ -131,9 +131,13 @@ textarea {
 	background: var(--color-white);
 	border: 1px solid rgba(52, 52, 52, 0.8);
 	border-radius: 8px;
-	font-size: 16px;
-	line-height: 20px;
 	color: #343434;
+	font-size: 12px;
+	line-height: 15px;
+	@media (min-width: $lg) {
+		font-size: 16px;
+		line-height: 20px;
+	}
 	&--textarea {
 		height: 58px;
 		padding-top: 10px;
@@ -143,7 +147,13 @@ textarea {
 	// 	border-color: rgba(52, 52, 52, 0.8);
 	// }
 	&--replace-info {
-		height: 103px;
+		height: 169px;
+		@media (max-width: $lg - 1px) {
+			font-size: 16px;
+		}
+		@media (min-width: $lg) {
+			height: 103px;
+		}
 	}
 
 	&--height-small {
@@ -193,8 +203,12 @@ textarea {
 .input-error-text {
 	position: absolute;
 	left: 0;
-	top: calc(100% + 5px);
+	top: calc(100% + 3px);
 	color: var(--color-red);
-	font-size: 12px;
 	line-height: 1;
+	font-size: 10px;
+	@media (min-width: $lg) {
+		font-size: 12px;
+		top: calc(100% + 5px);
+	}
 }

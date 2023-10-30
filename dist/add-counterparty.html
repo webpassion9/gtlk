@@ -11,7 +11,7 @@
 		<div class="wrapper wrapper-main">
 			<header class="header">
 				<div class="container">
-					<a href="#">
+					<a class="header-logo" href="#">
 						<img src="img/logo-GTLK_dark.png" width="166" height="52" alt="">
 					</a>
 					<ul class="header-menu">
@@ -51,6 +51,13 @@
 						</div>
 					</form>
 					<ul class="header-btns">
+						<li class="header-btns__item is-lg-hidden">
+							<a class="btn header-btns__link" href="#">
+								<svg class="icon-loop">
+									<use xlink:href="img/icons/icons.svg#icon-loop"></use>
+								</svg>
+							</a>
+						</li>
 						<li class="header-btns__item">
 							<a class="btn header-btns__link" data-target="popup-notifications">
 								<svg class="icon-bell">
@@ -230,7 +237,109 @@
 								</div>
 							</div>
 						</li>
-						<li class="header-btns__item">
+						<li class="header-btns__item is-lg-hidden">
+							<a class="btn header-btns__link" data-target="popup-menu">
+								<svg class="icon-menu">
+									<use xlink:href="img/icons/icons.svg#icon-menu"></use>
+								</svg>
+							</a>
+							<div class="user-menu user-menu--mobile" data-popup="popup-menu">
+								<ul class="user-menu__list">
+									<li class="user-menu__list-item">
+										<a class="user-menu__list-item-link" href="#">
+											<span class="user-menu__list-item-icon">
+												<svg class="icon-file-tray">
+													<use xlink:href="img/icons/icons.svg#icon-file-tray"></use>
+												</svg>
+											</span>Заявки
+										</a>
+									</li>
+									<li class="user-menu__list-item">
+										<a class="user-menu__list-item-link" href="#">
+											<span class="user-menu__list-item-icon">
+												<svg class="icon-newspaper">
+													<use xlink:href="img/icons/icons.svg#icon-newspaper"></use>
+												</svg>
+											</span>Договоры
+										</a>
+									</li>
+									<li class="user-menu__list-item">
+										<a class="user-menu__list-item-link" href="#">
+											<span class="user-menu__list-item-icon">
+												<svg class="icon-doc">
+													<use xlink:href="img/icons/icons.svg#icon-doc"></use>
+												</svg>
+											</span>Обращения НМЦ
+										</a>
+									</li>
+								</ul>
+								<ul class="user-menu__list">
+									<li class="user-menu__list-item">
+										<a class="user-menu__list-item-link" href="#">
+											<span class="user-menu__list-item-icon">
+												<svg class="icon-user">
+													<use xlink:href="img/icons/icons.svg#icon-user"></use>
+												</svg>
+											</span>Профиль
+										</a>
+									</li>
+									<li class="user-menu__list-item">
+										<a class="user-menu__list-item-link" href="#">
+											<span class="user-menu__list-item-icon">
+												<svg class="icon-calendar">
+													<use xlink:href="img/icons/icons.svg#icon-calendar"></use>
+												</svg>
+											</span>Журнал событий
+										</a>
+									</li>
+									<li class="user-menu__list-item">
+										<a class="user-menu__list-item-link" href="#">
+											<span class="user-menu__list-item-icon">
+												<svg class="icon-book">
+													<use xlink:href="img/icons/icons.svg#icon-book"></use>
+												</svg>
+											</span>Справка по системе
+										</a>
+									</li>
+								</ul>
+								<ul class="user-menu__list">
+									<li class="user-menu__list-item">
+										<div class="manager manager--view-full">
+											<div class="manager__main">
+												<div class="manager__ava">
+													<img src="img/avatar-manager.png" alt="">
+												</div>
+												<div class="manager__name">Менеджер Иванова А.А.</div>
+											</div>
+											<div class="manager__contacts">
+												<a class="btn manager__btn" href="#">Связаться</a>
+											</div>
+										</div>
+									</li>
+								</ul>
+								<ul class="user-menu__list">
+									<li class="user-menu__list-item">
+										<a class="user-menu__list-item-link" href="#">
+											<span class="user-menu__list-item-icon">
+												<svg class="icon-chat">
+													<use xlink:href="img/icons/icons.svg#icon-chat"></use>
+												</svg>
+											</span>Служба поддержки
+										</a>
+									</li>
+									<li class="user-menu__list-item">
+										<a class="user-menu__list-item-link" href="#">
+											<span class="user-menu__list-item-icon">
+												<svg class="icon-logout">
+													<use xlink:href="img/icons/icons.svg#icon-logout"></use>
+												</svg>
+											</span>Выйти
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="header-btns__item is-lg-visible">
 							<a class="btn header-btns__link" data-target="popup-user-menu">
 								<svg class="icon-user">
 									<use xlink:href="img/icons/icons.svg#icon-user"></use>
@@ -349,22 +458,20 @@
 				<main class="main">
 					<div class="content">
 						<div class="content-inner">
-							<div class="form-application__top">
-								<div class="go-back go-back--form-application">
-									<a href="#">< Назад</a>
-								</div>
-								<div class="heading-base heading-base--large">Добавление контрагента (юридическое лицо)</div>
+							<div class="go-back go-back--form-application">
+								<a href="#">< Назад</a>
 							</div>
+							<div class="heading-base heading-base--large">Добавление контрагента (юридическое лицо)</div>
 							<div class="wrapper-add-counterparty">
-								<div class="form-application__main">
-									<div class="form-application__row-items">
-										<div class="form-application__row">
-											<div class="form-application__row-heading form-application__row-heading--width-normal">
+								<div class="form-counterparty">
+									<div class="form-counterparty__row-items">
+										<div class="form-counterparty__row">
+											<div class="form-counterparty__row-heading form-counterparty__row-heading--width-normal">
 												<div class="field-heading">ИНН
 													<span class="field-heading__require">*</span>
 												</div>
 											</div>
-											<div class="form-application__row-content form-application__row-content--width-medium">
+											<div class="form-counterparty__row-content form-counterparty__row-content--width-medium">
 												<div class="select">
 													<input class="input-base input-base--select select__input" type="text" placeholder="Поиск по названию, ИНН">
 													<div class="select__icon">
@@ -389,161 +496,165 @@
 															<div class="select__list-item-main">МУП "ПАТП №2332"</div>
 															<div class="select__list-item-details">ИНН 771537455874</div>
 														</li>
+														<li class="select__list-item">
+															<div class="select__list-item-main">МУП "ПАТП №2332"</div>
+															<div class="select__list-item-details">ИНН 771537455874</div>
+														</li>
 													</ul>
 												</div>
 											</div>
 										</div>
-										<div class="form-application__row">
-											<div class="form-application__row-heading form-application__row-heading--width-normal">
+										<div class="form-counterparty__row">
+											<div class="form-counterparty__row-heading form-counterparty__row-heading--width-normal">
 												<div class="field-heading">Краткое наименование организации
 													<span class="field-heading__require">*</span>
 												</div>
 											</div>
-											<div class="form-application__row-content form-application__row-content--width-medium">
+											<div class="form-counterparty__row-content form-counterparty__row-content--width-medium">
 												<input class="input-base is-error" type="text" placeholder="Введите краткое наименование организации">
 												<div class="input-error-text">Это обязательное поле для заполнения</div>
 											</div>
 										</div>
-										<div class="form-application__row">
-											<div class="form-application__row-heading form-application__row-heading--width-normal">
+										<div class="form-counterparty__row">
+											<div class="form-counterparty__row-heading form-counterparty__row-heading--width-normal">
 												<div class="field-heading">Полное наименование организации
 													<span class="field-heading__require">*</span>
 												</div>
 											</div>
-											<div class="form-application__row-content form-application__row-content--width-medium">
+											<div class="form-counterparty__row-content form-counterparty__row-content--width-medium">
 												<textarea class="input-base input-base--textarea"></textarea>
 											</div>
 										</div>
-										<div class="form-application__row">
-											<div class="form-application__row-heading form-application__row-heading--width-normal">
+										<div class="form-counterparty__row">
+											<div class="form-counterparty__row-heading form-counterparty__row-heading--width-normal">
 												<div class="field-heading">Регион</div>
 											</div>
-											<div class="form-application__row-content form-application__row-content--width-medium">
+											<div class="form-counterparty__row-content form-counterparty__row-content--width-medium">
 												<input class="input-base" type="text">
 											</div>
 										</div>
-										<div class="form-application__row">
-											<div class="form-application__row-heading form-application__row-heading--width-normal">
+										<div class="form-counterparty__row">
+											<div class="form-counterparty__row-heading form-counterparty__row-heading--width-normal">
 												<div class="field-heading">Адрес</div>
 											</div>
-											<div class="form-application__row-content form-application__row-content--width-medium">
+											<div class="form-counterparty__row-content form-counterparty__row-content--width-medium">
 												<textarea class="input-base input-base--textarea"></textarea>
 											</div>
 										</div>
-										<div class="form-application__row">
-											<div class="form-application__row-heading form-application__row-heading--width-normal">
+										<div class="form-counterparty__row">
+											<div class="form-counterparty__row-heading form-counterparty__row-heading--width-normal">
 												<div class="field-heading">КПП</div>
 											</div>
-											<div class="form-application__row-content form-application__row-content--width-medium">
+											<div class="form-counterparty__row-content form-counterparty__row-content--width-medium">
 												<input class="input-base" type="text" placeholder="test">
 											</div>
 										</div>
-										<div class="form-application__row">
-											<div class="form-application__row-heading form-application__row-heading--width-normal">
+										<div class="form-counterparty__row">
+											<div class="form-counterparty__row-heading form-counterparty__row-heading--width-normal">
 												<div class="field-heading">ОКПО</div>
 											</div>
-											<div class="form-application__row-content form-application__row-content--width-medium">
+											<div class="form-counterparty__row-content form-counterparty__row-content--width-medium">
 												<input class="input-base" type="text" placeholder="test">
 											</div>
 										</div>
-										<div class="form-application__row">
-											<div class="form-application__row-heading form-application__row-heading--width-normal">
+										<div class="form-counterparty__row">
+											<div class="form-counterparty__row-heading form-counterparty__row-heading--width-normal">
 												<div class="field-heading">Код ОКОПФ</div>
 											</div>
-											<div class="form-application__row-content form-application__row-content--width-medium">
+											<div class="form-counterparty__row-content form-counterparty__row-content--width-medium">
 												<input class="input-base" type="text">
 											</div>
 										</div>
-										<div class="form-application__row">
-											<div class="form-application__row-heading form-application__row-heading--width-normal">
+										<div class="form-counterparty__row">
+											<div class="form-counterparty__row-heading form-counterparty__row-heading--width-normal">
 												<div class="field-heading">ОКВЭД</div>
 											</div>
-											<div class="form-application__row-content form-application__row-content--width-medium">
+											<div class="form-counterparty__row-content form-counterparty__row-content--width-medium">
 												<input class="input-base" type="text">
 											</div>
 										</div>
-										<div class="form-application__row">
-											<div class="form-application__row-heading form-application__row-heading--width-normal">
+										<div class="form-counterparty__row">
+											<div class="form-counterparty__row-heading form-counterparty__row-heading--width-normal">
 												<div class="field-heading">ОКТМО</div>
 											</div>
-											<div class="form-application__row-content form-application__row-content--width-medium">
+											<div class="form-counterparty__row-content form-counterparty__row-content--width-medium">
 												<input class="input-base" type="text">
 											</div>
 										</div>
-										<div class="form-application__row">
-											<div class="form-application__row-heading form-application__row-heading--width-normal">
+										<div class="form-counterparty__row">
+											<div class="form-counterparty__row-heading form-counterparty__row-heading--width-normal">
 												<div class="field-heading">Телефон</div>
 											</div>
-											<div class="form-application__row-content form-application__row-content--width-medium">
+											<div class="form-counterparty__row-content form-counterparty__row-content--width-medium">
 												<input class="input-base" type="text">
 											</div>
 										</div>
-										<div class="form-application__row">
-											<div class="form-application__row-heading form-application__row-heading--width-normal">
+										<div class="form-counterparty__row">
+											<div class="form-counterparty__row-heading form-counterparty__row-heading--width-normal">
 												<div class="field-heading">E-mail организации
 													<span class="field-heading__require">*</span>
 												</div>
 											</div>
-											<div class="form-application__row-content form-application__row-content--width-medium">
+											<div class="form-counterparty__row-content form-counterparty__row-content--width-medium">
 												<input class="input-base" type="text">
 											</div>
 										</div>
-										<div class="form-application__row">
-											<div class="form-application__row-heading form-application__row-heading--width-normal">
+										<div class="form-counterparty__row">
+											<div class="form-counterparty__row-heading form-counterparty__row-heading--width-normal">
 												<div class="field-heading">Код синхронизации</div>
 											</div>
-											<div class="form-application__row-content form-application__row-content--width-medium">
+											<div class="form-counterparty__row-content form-counterparty__row-content--width-medium">
 												<input class="input-base" type="text">
 											</div>
 										</div>
-										<div class="form-application__row">
-											<div class="form-application__row-heading form-application__row-heading--width-normal">
+										<div class="form-counterparty__row">
+											<div class="form-counterparty__row-heading form-counterparty__row-heading--width-normal">
 												<div class="field-heading">ФИО КМ
 													<span class="field-heading__require">*</span>
 												</div>
 											</div>
-											<div class="form-application__row-content form-application__row-content--width-medium">
+											<div class="form-counterparty__row-content form-counterparty__row-content--width-medium">
 												<input class="input-base" type="text">
 											</div>
 										</div>
-										<div class="form-application__row">
-											<div class="form-application__row-heading form-application__row-heading--width-normal">
+										<div class="form-counterparty__row">
+											<div class="form-counterparty__row-heading form-counterparty__row-heading--width-normal">
 												<div class="field-heading">E-mail для обращений
 													<span class="field-heading__require">*</span>
 												</div>
 											</div>
-											<div class="form-application__row-content form-application__row-content--width-medium">
+											<div class="form-counterparty__row-content form-counterparty__row-content--width-medium">
 												<input class="input-base" type="text">
 											</div>
 										</div>
-										<div class="form-application__row">
-											<div class="form-application__row-heading form-application__row-heading--width-normal">
+										<div class="form-counterparty__row">
+											<div class="form-counterparty__row-heading form-counterparty__row-heading--width-normal">
 												<div class="field-heading">Внутренний номер КМ
 													<span class="field-heading__require">*</span>
 												</div>
 											</div>
-											<div class="form-application__row-content form-application__row-content--width-medium">
+											<div class="form-counterparty__row-content form-counterparty__row-content--width-medium">
 												<input class="input-base" type="text">
 											</div>
 										</div>
-										<div class="form-application__row">
-											<div class="form-application__row-heading form-application__row-heading--width-normal">
+										<div class="form-counterparty__row">
+											<div class="form-counterparty__row-heading form-counterparty__row-heading--width-normal">
 												<div class="field-heading">Мобильный номер КМ</div>
 											</div>
-											<div class="form-application__row-content form-application__row-content--width-medium">
+											<div class="form-counterparty__row-content form-counterparty__row-content--width-medium">
 												<input class="input-base" type="text">
 											</div>
 										</div>
-										<div class="form-application__row">
-											<div class="form-application__row-heading form-application__row-heading--width-normal">
+										<div class="form-counterparty__row">
+											<div class="form-counterparty__row-heading form-counterparty__row-heading--width-normal">
 												<div class="field-heading">Код синхронизации КМ</div>
 											</div>
-											<div class="form-application__row-content form-application__row-content--width-medium">
+											<div class="form-counterparty__row-content form-counterparty__row-content--width-medium">
 												<input class="input-base" type="text">
 											</div>
 										</div>
-										<div class="form-application__row">
-											<div class="form-application__nav">
+										<div class="form-counterparty__row">
+											<div class="form-counterparty__nav">
 												<a class="btn btn-save btn--fullwidth" href="#">Сохранить</a>
 											</div>
 										</div>
@@ -611,6 +722,11 @@
 					<a class="btn btn-confirm btn-confirm--positive">Да</a>
 					<a class="btn btn-confirm btn-confirm--negative" data-modal-close>Нет</a>
 				</div>
+				<a class="modal__close-btn is-lg-hidden" data-modal-close>
+					<svg class="icon-close">
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</a>
 			</div>
 		</div>
 		<div class="modal-container" id="modal-block-counterparty">
@@ -625,6 +741,11 @@
 					<a class="btn btn-confirm btn-confirm--positive">Да</a>
 					<a class="btn btn-confirm btn-confirm--negative" data-modal-close>Нет</a>
 				</div>
+				<a class="modal__close-btn is-lg-hidden" data-modal-close>
+					<svg class="icon-close">
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</a>
 			</div>
 		</div>
 		<div class="modal-container" id="modal-remove-counterparty">
@@ -639,6 +760,11 @@
 					<a class="btn btn-confirm btn-confirm--positive">Да</a>
 					<a class="btn btn-confirm btn-confirm--negative" data-modal-close>Нет</a>
 				</div>
+				<a class="modal__close-btn is-lg-hidden" data-modal-close>
+					<svg class="icon-close">
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</a>
 			</div>
 		</div>
 		<div class="modal-container" id="modal-block-employeer">
@@ -667,6 +793,11 @@
 					<a class="btn btn-confirm btn-confirm--positive">Да</a>
 					<a class="btn btn-confirm btn-confirm--negative" data-modal-close>Нет</a>
 				</div>
+				<a class="modal__close-btn is-lg-hidden" data-modal-close>
+					<svg class="icon-close">
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</a>
 			</div>
 		</div>
 		<div class="modal-container" id="modal-annul">
@@ -694,6 +825,11 @@
 					<a class="btn btn-nav btn-nav--cancel" data-modal-close>Отменить</a>
 					<a class="btn btn-nav btn-nav--continue" href="#">Продолжить</a>
 				</div>
+				<a class="modal__close-btn is-lg-hidden" data-modal-close>
+					<svg class="icon-close">
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</a>
 			</div>
 		</div>
 		<div class="modal-container" id="modal-app-sent">
@@ -942,6 +1078,11 @@
 					<a class="btn btn-confirm btn-confirm--positive">Да</a>
 					<a class="btn btn-confirm btn-confirm--negative" data-modal-close>Нет</a>
 				</div>
+				<a class="modal__close-btn is-lg-hidden" data-modal-close>
+					<svg class="icon-close">
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</a>
 			</div>
 		</div>
 		<script src="js/app.min.js"></script>

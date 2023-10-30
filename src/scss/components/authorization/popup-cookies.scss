@@ -13,8 +13,17 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: 40px;
 	padding: 9px 15px;
 
 	transition: .25s;
+
+	flex-direction: column;
+	gap: 15px;
+	@media (min-width: $md) {
+		flex-direction: row;
+		gap: 40px;
+	}
+	&__btn {
+		flex-shrink: 0;
+	}
 }

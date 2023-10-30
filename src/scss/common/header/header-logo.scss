@@ -1,0 +1,7 @@
+.header-logo {
+	flex-shrink: 0;
+	@media (max-width: $lg - 1px) {
+		width: 132px;
+		height: 44px;
+	}
+}

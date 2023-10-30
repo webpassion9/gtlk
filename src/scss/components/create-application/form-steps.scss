@@ -1,24 +1,31 @@
 .form-steps {
 	list-style: none;
 	margin: 0;
-	padding: 62px 0 0;
+	padding: 10px 0 0;
 	display: flex;
+	flex-wrap: wrap;
+	row-gap: 20px;
+	@media (min-width: $lg) {
+		padding: 62px 0 0;
+	}
 	&__item {
 		position: relative;
 		padding-left: 30px;
 		padding-right: 16px;
 		&:last-child {
-			
-			&:after {
-				content: "";
-				position: absolute;
-				right: -20px;
-				bottom: -10px;
-				width: 23px;
-				height: 23px;
-				border-radius: 100%;
-				border: 2px solid #B0B0B0;
+			@media (min-width: $lg) {
+				&:after {
+					content: "";
+					position: absolute;
+					right: -20px;
+					bottom: -10px;
+					width: 23px;
+					height: 23px;
+					border-radius: 100%;
+					border: 2px solid #B0B0B0;
+				}
 			}
+			
 		}
 		&:before {
 			content: "";
@@ -38,8 +45,13 @@
 			display: flex;
 			align-items: center;
 			border-bottom: 3px solid #B0B0B0;
-			width: 158px;
 			padding-bottom: 6px;
+			flex-grow: 1;
+			justify-content: center;
+			@media (min-width: $lg) {
+				justify-content: flex-start;
+				width: 158px;
+			}
 		}
 		&.active {
 			.form-steps {
@@ -51,6 +63,12 @@
 			}
 			&:before {
 				border-color: #67CE16;
+			}
+		}
+		@media (max-width: $lg - 1px) {
+			width: 100%;
+			&:not(.current) {
+				display: none;
 			}
 		}
 	}	

@@ -38,9 +38,13 @@
 		color: #093E8C;
 	}
 	&__desc {
-		font-size: 15px;
-		line-height: 18px;
 		color: #BBBBBB;
+		font-size: 11px;
+		line-height: 14px;
+		@media (min-width: $md) {
+			font-size: 15px;
+			line-height: 18px;
+		}
 	}
 	&__uploading-visible {
 		position: absolute;

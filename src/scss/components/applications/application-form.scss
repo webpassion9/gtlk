@@ -1,8 +1,11 @@
 .application-form {
 	display: flex;
-	gap: 25px;
 	padding-top: 25px;
 	padding-bottom: 23px;
+	gap: 10px;
+	@media (min-width: $lg) {
+		gap: 25px;
+	}
 	&__item {
 		width: 357px;
 		position: relative;

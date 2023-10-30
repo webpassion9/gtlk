@@ -11,6 +11,27 @@
 	opacity: 0;
 	visibility: hidden;
 
+	&--mobile {
+		width: 252px;
+		box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.05);
+		.user-menu {
+			&__list {
+				&-item {
+					&-link {
+						height: auto;
+						padding-top: 10px;
+						padding-bottom: 10px;
+					}
+					&-icon {
+						svg {
+							fill: rgba(#000, .8);
+						}
+					}
+				}
+			}
+		}
+	}
+
 	&.opened {
 		opacity: 1;
 		visibility: visible;

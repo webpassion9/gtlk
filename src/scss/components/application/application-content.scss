@@ -2,54 +2,116 @@
 	display: flex;
 	align-items: flex-start;
 	min-height: 100%;
-	&--float {
-		display: block;
+	flex-direction: column;
+	@media (min-width: $xl) {
+		flex-direction: row;
 	}
 	&__main {
+		max-width: 100%;
 		flex-grow: 1;
+		order: 1;
+		width: 100%;
+		@media (min-width: $xl) {
+			order: 0;
+			width: 71%;
+		}
 	}
 	&__side {
-		float: right;
-		order: 2;
-		margin-left: 115px;
-		width: 413px;
 		flex-shrink: 0;
-		padding-right: 35px;
+		order: 0;
+		@media (min-width: $xl) {
+			margin-left: 6%;
+			width: 23%;
+			order: 1;
+		}
+		@media (min-width: $hd) {
+			padding-right: 35px;
+		}
 		&-section {
 			padding-top: 27px;
 			padding-bottom: 30px;
+			display: flex;
+			flex-direction: column;
 			.heading-base {
-				margin-bottom: 35px;
+				transition: .25s;
+				@media (min-width: $xl) {
+					padding-bottom: 35px;
+				}
+				&.opened {
+					padding-bottom: 35px;
+				}
 			}
 			&:not(:last-child) {
 				border-bottom: 1px solid #BEBEBE;
 			}
 
 			&--first {
-				padding-top: 70px;
-				padding-bottom: 65px;
+				@media (min-width: $xl) {
+					padding-top: 70px;
+					padding-bottom: 65px;
+				}
 			}
 			&--actions {
 				// min-height: 460px;
 			}
+
+			&-content {
+				@media (min-width: $xl) {
+					max-height: none;
+				}
+			}
+
+		}
+		.status-note {
+			padding-top: 10px;
 		}
 	}
 }
 
-body {
-	&.tab-docs-active {
-		.application-content__side-section:not(.application-content__side-section--first) {
-			display: none;
+// body {
+// 	&.tab-docs-active {
+// 		.application-content__side-section:not(.application-content__side-section--first) {
+// 			display: none;
+// 		}
+// 		.application-content {
+// 			display: block;
+// 			&__side {
+// 				float: right;
+// 			}
+// 			&::after {
+// 				content: "";
+// 				clear: both;
+// 				display: table;
+// 			}
+// 		}
+// 	}
+// }
+
+[data-toggle-content] {
+	transition: max-height .25s;
+	overflow: hidden;
+	max-height: 0;
+}
+
+.heading-app-side {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	&__icon {
+		line-height: 0;
+		flex-shrink: 0;
+		transition: .25s;
+		transform: rotate(180deg);
+		.icon-chevron-up {
+			width: 18px;
+			height: 12px;
+			fill: rgba(#1C1C1C,.8)
 		}
-		.application-content {
-			display: block;
-			&__side {
-				float: right;
-			}
-			&::after {
-				content: "";
-				clear: both;
-				display: table;
+	}
+	&.opened {
+		.heading-app-side {
+			&__icon {
+				transform: none;
 			}
 		}
 	}

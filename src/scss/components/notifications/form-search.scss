@@ -2,8 +2,12 @@
 	width: 100%;
 	max-width: 598px;
 	display: flex;
-	gap: 15px;
-	margin-bottom: 35px;
+	gap: 8px;
+	margin-bottom: 25px;
+	@media (min-width: $lg) {
+		margin-bottom: 35px;
+		gap: 15px;
+	}
 	&__input-wrapper {
 		flex-grow: 1;
 		position: relative;

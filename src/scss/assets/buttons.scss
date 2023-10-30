@@ -31,9 +31,14 @@
 		}
 
 		&--size-large {
-			height: 60px;
-			font-size: 36px;
-			line-height: 43px;
+			height: 50px;
+			font-size: 26px;
+			line-height: 1;
+			@media (min-width: $lg) {
+				height: 60px;
+				font-size: 36px;
+				line-height: 43px;
+			}
 		}
 
 		&--cookies {
@@ -74,13 +79,19 @@
 
 	&-base {
 		background: #159655;
-		font-size: 16px;
-		line-height: 24px;
 		color: #E8E8E8;
-		height: 52px;
-		padding: 5px 41px;
 		border-radius: 10px;
 		text-transform: uppercase;
+		height: 36px;
+		font-size: 12px;
+		line-height: 16px;
+		padding: 5px 10px;
+		@media (min-width: $lg) {
+			height: 52px;
+			font-size: 16px;
+			line-height: 24px;
+			padding: 5px 41px;
+		}
 		&:hover {
 			background: #0b8045;
 		}
@@ -104,14 +115,19 @@
 	}
 	
 	&-confirm {
-		height: 46px;
 		border-radius: 10px;
-		width: 138px;
 		color: var(--color-white);
 		text-transform: uppercase;
 		font-weight: 700;
-		font-size: 20px;
 		line-height: 1;
+		width: 102px;
+		height: 38px;
+		font-size: 16px;
+		@media (min-width: $lg) {
+			font-size: 20px;
+			height: 46px;
+			width: 138px;
+		}
 		&--positive {
 			background: #53BD00;
 		}
@@ -121,14 +137,18 @@
 	}
 
 	&-nav {
-		height: 57px;
 		min-width: 296px;
 		border-radius: 10px;
-		font-size: 20px;
 		line-height: 1;
 		font-family: $fontBase;
 		text-transform: uppercase;
 		padding: 5px 30px;
+		height: 42px;
+		font-size: 16px;
+		@media (min-width: $lg) {
+			font-size: 20px;
+			height: 57px;
+		}
 		&--cancel {
 			background: var(--color-blue);
 			color: var(--color-white);
@@ -203,10 +223,17 @@
 
 	&-add-item {
 		gap: 8px;
-		font-size: 18px;
+		font-size: 16px;
+		@media (min-width: $lg) {
+			font-size: 18px;
+		}
 		.icon-add-circle {
-			width: 32px;
-			height: 32px;
+			width: 20px;
+			height: 20px;
+			@media (min-width: $lg) {
+				width: 32px;
+				height: 32px;
+			}
 		}
 	}
 
@@ -227,11 +254,15 @@
 		}
 
 		&--size-large {
-			height: 66px;
+			height: 42px;
+			font-size: 16px;
 			font-weight: 700;
-			font-size: 22px;
 			line-height: 150%;
 			color: #F2F2F2;
+			@media (min-width: $md) {
+				height: 66px;
+				font-size: 22px;
+			}
 		}
 	}
 
@@ -265,9 +296,12 @@
 		color: var(--color-white);
 		border-radius: 10px;
 		border: 1px solid #E8E8E8;
-		font-size: 16px;
 		padding: 5px 14px;
 		height: 40px;
+		font-size: 12px;
+		@media (min-width: $lg) {
+			font-size: 16px;
+		}
 		&:hover {
 			background: #0074e9;
 		}
@@ -280,14 +314,14 @@
 		}
 		&--theme-outline-white {
 			background: var(--color-white);
-			color: rgba(var(--color-black-base));
+			color: var(--color-black-base);
 			&:hover {
 				background: #E8E8E8;
 			}
 		}
 		&--theme-gray {
 			background: #EAEDFF;
-			color: rgba(var(--color-black-base));
+			color: var(--color-black-base);
 			&:hover {
 				background: #D0D6F8;
 			}
@@ -302,6 +336,10 @@
 		font-weight: 700;
 		font-size: 16px;
 		color: var(--color-white);
+	}
+
+	&-contacts {
+		line-height: 0;
 	}
 
 
