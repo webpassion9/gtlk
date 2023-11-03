@@ -1,6 +1,5 @@
 .field-heading {
 	color: var(--color-gray2);
-	gap:5px;
 	font-size: 14px;
 	line-height: 16px;
 	@media (min-width: $lg) {
@@ -9,5 +8,6 @@
 	}
 	&__require {
 		color: var(--color-red);
+		margin-left: -4px;
 	}
 }

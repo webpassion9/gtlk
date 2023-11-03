@@ -1,9 +1,13 @@
 .auth {
 	max-width: 448px;
 	margin: 0 auto;
-	padding-top: 30px;
+	padding-top: 20px;
 	padding-bottom: 100px;
-	@media (min-width: $md) {
+	
+	@media (min-width: $md) and (max-height: 768px)  {
+		padding-top: 20px;
+	}
+	@media (min-width: $md) and (min-height: 769px) {
 		padding-top: 43px;
 	}
 	&__heading {
@@ -19,7 +23,10 @@
 	}
 
 	&__form {
-		padding-top: 27px;
+		padding-top: 10px;
+		@media (min-width: $md) and (min-height: 769px) {
+			padding-top: 27px;
+		}
 		
 		&-heading {
 			font-family: $fontThird;
@@ -42,6 +49,9 @@
 		position: relative;
 		&:not(:last-child) {
 			padding-bottom: 31px;
+			@media (min-width: $md) and (max-height: 768px)  {
+				padding-bottom: 18px;
+			}
 		}
 		&-input-wrap {
 			position: relative;
@@ -60,10 +70,10 @@
 
 			color: rgba(0, 0, 0, 0.75);
 			font-family: $fontThird;
-			height: 60px;
+			height: 64px;
 			font-size: 16px;
 			line-height: 1.2;
-			@media (min-width: $lg) {
+			@media (min-width: $lg) and (min-height: 940px) {
 				height: 73px;
 				font-size: 20px;
 				line-height: 24px;
@@ -95,8 +105,8 @@
 
 	&__checkbox-wrapper {
 		padding-top: 25px;
-		padding-bottom: 30px;
-		@media (min-width: $md) {
+		padding-bottom: 25px;
+		@media (min-width: $md) and (min-height: 769px) {
 			padding-bottom: 43px;
 		}
 	}
@@ -107,7 +117,13 @@
 		font-size: 20px;
 		line-height: 24px;
 		color: var(--color-black-base);
-		padding-top: 25px;
+		padding-top: 20px;
+		@media (min-width: $md) and (max-height: 768px)  {
+			padding-top: 10px;
+		}
+		@media (min-width: $lg) and (min-height: 769px) {
+			padding-top: 25px;
+		}
 		&::before {
 			content: "";
 			flex-grow: 1;
@@ -129,7 +145,13 @@
 	}
 
 	&__type {
-		padding-top: 25px;
+		padding-top: 15px;
+		@media (min-width: $md) and (max-height: 768px)  {
+			padding-top: 10px;
+		}
+		@media (min-width: $lg) and (min-height: 769px) {
+			padding-top: 25px;
+		}
 		&-list {
 			list-style: none;
 			margin: 0;
