@@ -7,6 +7,9 @@ import PerfectScrollbar from 'perfect-scrollbar';
 
 flsFunctions.isWebp();
 
+import { viewportSet } from './modules/viewportSet.js';
+viewportSet();
+
 //
 
 import { forcedOriginalScale } from './modules/scale.js';

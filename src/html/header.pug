@@ -17,7 +17,7 @@ header.header
 				a(href="#") Устойчивое развитие
 			li
 				a(href="#") Медиа
-		form.header-search
+		form.header-search.is-lg-visible
 			.header-search__input-wrap
 				input(type="text").header-search__input
 				.header-search__icon
@@ -26,8 +26,16 @@ header.header
 					input(type="submit" value="Найти").btn.btn-search.btn-search--header
 		ul.header-btns
 			li.header-btns__item.is-lg-hidden
-				a(href="#").btn.header-btns__link
-					+sprite("icon-loop") 
+				a(data-target="popup-search").btn.header-btns__link
+					+sprite("icon-loop")
+				.popup-search(data-popup="popup-search")
+					form.header-search
+						.header-search__input-wrap
+							input(type="text").header-search__input
+							.header-search__icon
+								+sprite("icon-loop")
+							.header-search__btn
+								input(type="submit" value="Найти").btn.btn-search.btn-search--header
 			li.header-btns__item
 				a(data-target="popup-notifications").btn.header-btns__link
 					+sprite("icon-bell")

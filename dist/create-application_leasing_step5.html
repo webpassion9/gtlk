@@ -37,7 +37,7 @@
 							<a href="#">Медиа</a>
 						</li>
 					</ul>
-					<form class="header-search">
+					<form class="header-search is-lg-visible">
 						<div class="header-search__input-wrap">
 							<input class="header-search__input" type="text">
 							<div class="header-search__icon">
@@ -52,11 +52,26 @@
 					</form>
 					<ul class="header-btns">
 						<li class="header-btns__item is-lg-hidden">
-							<a class="btn header-btns__link" href="#">
+							<a class="btn header-btns__link" data-target="popup-search">
 								<svg class="icon-loop">
 									<use xlink:href="img/icons/icons.svg#icon-loop"></use>
 								</svg>
 							</a>
+							<div class="popup-search" data-popup="popup-search">
+								<form class="header-search">
+									<div class="header-search__input-wrap">
+										<input class="header-search__input" type="text">
+										<div class="header-search__icon">
+											<svg class="icon-loop">
+												<use xlink:href="img/icons/icons.svg#icon-loop"></use>
+											</svg>
+										</div>
+										<div class="header-search__btn">
+											<input class="btn btn-search btn-search--header" type="submit" value="Найти">
+										</div>
+									</div>
+								</form>
+							</div>
 						</li>
 						<li class="header-btns__item">
 							<a class="btn header-btns__link" data-target="popup-notifications">
