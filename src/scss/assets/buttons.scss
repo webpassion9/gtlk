@@ -108,9 +108,15 @@
 		line-height: 1;
 		&--positive {
 			background: #159655;
+			&:hover {
+				background: #117e47;
+			}
 		}
 		&--negative {
 			background: #243F94;
+			&:hover {
+				background: #13286e;
+			}
 		}
 	}
 	
@@ -130,9 +136,15 @@
 		}
 		&--positive {
 			background: #53BD00;
+			&:hover {
+				background: #439a00;
+			}
 		}
 		&--negative {
 			background: #939598;
+			&:hover {
+				background: #6e7176;
+			}
 		}
 	}
 
@@ -167,6 +179,11 @@
 		&--back {
 			border: 1px solid var(--color-green);
 			color: var(--color-green);
+			&:hover {
+				background: var(--color-green);
+				color: var(--color-white);
+
+			}
 		}
 		&--continue {
 			background: var(--color-green);
@@ -183,14 +200,23 @@
 		&--save {
 			background: #243F94;
 			color: var(--color-white);
+			&:hover {
+				background: #033177;
+			}
 		}
 		&--back-cancel {
 			background: #E6961F;
 			color: var(--color-white);
+			&:hover {
+				background: #dc8d16;				
+			}
 		}
 		&--send {
 			background: #969696;
 			color: var(--color-white);
+			&:hover {
+				background: #7c7c7c;		
+			}
 		}
 		&.disabled {
 			background: #CECECE;
@@ -201,6 +227,9 @@
 			background: #43698C;
 			color: var(--color-white);
 			gap: 17px;
+			&:hover {
+				background: #325373;
+			}
 		}
 	}
 

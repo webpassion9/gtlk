@@ -1240,8 +1240,16 @@ body {
   background: #159655;
 }
 
+.btn-filling--positive:hover {
+  background: #117e47;
+}
+
 .btn-filling--negative {
   background: #243F94;
+}
+
+.btn-filling--negative:hover {
+  background: #13286e;
 }
 
 .btn-confirm {
@@ -1259,8 +1267,16 @@ body {
   background: #53BD00;
 }
 
+.btn-confirm--positive:hover {
+  background: #439a00;
+}
+
 .btn-confirm--negative {
   background: #939598;
+}
+
+.btn-confirm--negative:hover {
+  background: #6e7176;
 }
 
 .btn-nav {
@@ -1297,6 +1313,11 @@ body {
   color: var(--color-green);
 }
 
+.btn-nav--back:hover {
+  background: var(--color-green);
+  color: var(--color-white);
+}
+
 .btn-nav--continue {
   background: var(--color-green);
   color: var(--color-white);
@@ -1317,14 +1338,26 @@ body {
   color: var(--color-white);
 }
 
+.btn-nav--save:hover {
+  background: #033177;
+}
+
 .btn-nav--back-cancel {
   background: #E6961F;
   color: var(--color-white);
 }
 
+.btn-nav--back-cancel:hover {
+  background: #dc8d16;
+}
+
 .btn-nav--send {
   background: #969696;
   color: var(--color-white);
+}
+
+.btn-nav--send:hover {
+  background: #7c7c7c;
 }
 
 .btn-nav.disabled {
@@ -1337,6 +1370,10 @@ body {
   background: #43698C;
   color: var(--color-white);
   gap: 17px;
+}
+
+.btn-nav--waiting:hover {
+  background: #325373;
 }
 
 .btn-action {
