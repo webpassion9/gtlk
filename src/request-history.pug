@@ -1,0 +1,189 @@
+include html/mixins
+
+doctype html
+block head
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no")
+		meta(name="format-detection" content="telephone=no")
+
+		link(rel="stylesheet", href="css/style.min.css")
+
+		title Title
+
+	body
+		.wrapper.wrapper-main
+
+			include html/header
+
+						
+			.main-row
+
+				aside.sidebar
+					.sidebar__inner
+						.sidebar__section
+							ul.sidebar__nav
+								li.sidebar__nav-item.current
+									a(href="#").sidebar__nav-item-btn
+										.sidebar__nav-item-icon
+											+sprite("icon-file-tray")
+										.sidebar__nav-item-text Заявки
+								li.sidebar__nav-item
+									a(href="#").sidebar__nav-item-btn
+										.sidebar__nav-item-icon
+											+sprite("icon-newspaper")
+										.sidebar__nav-item-text Договоры
+								li.sidebar__nav-item
+									a(href="#").sidebar__nav-item-btn
+										.sidebar__nav-item-icon
+											+sprite("icon-management")
+										.sidebar__nav-item-text Управление контрагентами
+								li.sidebar__nav-item
+									a(href="#").sidebar__nav-item-btn
+										.sidebar__nav-item-icon
+											+sprite("icon-settings")
+										.sidebar__nav-item-text Настройки
+						.sidebar__section.sidebar__section--info
+							ul.sidebar__nav
+								li.sidebar__nav-item
+									a(href="#").sidebar__nav-item-btn
+										.sidebar__nav-item-icon
+											+sprite("icon-book")
+										.sidebar__nav-item-text Справка
+						.sidebar__section
+							a(href="#").support
+								.support__icon
+									+sprite("icon-chat")
+								.support__heading Служба поддержки
+
+				main.main
+					.content
+						.content-inner.request-history-wrapper
+							.breadcrumbs Служба поддержки
+							.request-top-bar
+								.heading-base.heading-base--large История обращений
+								a(href="#modal-request" data-modal).btn.btn-details Создать обращение
+							.request-note
+								.request-note__item.request-note__item--from-user Ваши сообщения
+								.request-note__item.request-note__item--from-support Сообщения службы поддержки
+							hr.hr-request
+							.request-items.scrollbar-vertical
+								.request.request--from-support
+									.request__text-wrap
+										.request__text
+											p Добрый день! Вам нужно срочно выполнить государственную регистрацию имущества и сообщить нам как закончите. Длинный текст сообщения. Длинный текст сообщения раскрытый полностью здесь дополнительная информация и текст может содержать большой объём.
+										a(href="#").link-underline.btn-request-answer Ответить
+										|  
+										a.link-underline.btn-text-toggle Подробнее
+									.request__details
+										.request__details-item
+											.request__details-item-title Дата
+											div 23.11.2023, 13:00:00
+										.request__details-item
+											.request__details-item-title Клиентский менеджер ГТЛК
+											div Петров Пётр
+										.request__details-item
+											.request__details-item-title Статус
+											.color-green Сообщение получено из BPM
+								.request.request--from-user
+									.request__text-wrap
+										.request__text
+											p Добрый день! Можем ли мы направить в ГИБЛЛ для регистрации заверенные в ГТЛК копии документов?
+									.request__details
+										.request__details-item
+											.request__details-item-title Дата
+											div 23.11.2023, 13:00:00
+										.request__details-item
+											.request__details-item-title Клиентский менеджер ГТЛК
+											div Петров Пётр
+										.request__details-item
+											.request__details-item-title Статус
+											.color-green Сообщение получено из BPM
+								.request.request--from-support
+									.request__text-wrap
+										.request__text
+											p Добрый день! Вам нужно срочно выполнить государственную регистрацию имущества и сообщить нам как закончите. Длинный текст сообщения. Длинный текст сообщения раскрытый полностью здесь дополнительная информация и текст может содержать большой объём.
+										a(href="#").link-underline.btn-request-answer Ответить
+										|  
+										a.link-underline.btn-text-toggle Подробнее
+									.request__details
+										.request__details-item
+											.request__details-item-title Дата
+											div 23.11.2023, 13:00:00
+										.request__details-item
+											.request__details-item-title Клиентский менеджер ГТЛК
+											div Петров Пётр
+										.request__details-item
+											.request__details-item-title Статус
+											.color-green Сообщение получено из BPM
+								.request.request--from-user
+									.request__text-wrap
+										.request__text
+											p Добрый день! Можем ли мы направить в ГИБЛЛ для регистрации заверенные в ГТЛК копии документов?
+									.request__details
+										.request__details-item
+											.request__details-item-title Дата
+											div 23.11.2023, 13:00:00
+										.request__details-item
+											.request__details-item-title Клиентский менеджер ГТЛК
+											div Петров Пётр
+										.request__details-item
+											.request__details-item-title Статус
+											.color-green Сообщение получено из BPM
+								.request.request--from-support
+									.request__text-wrap
+										.request__text
+											p Добрый день! Вам нужно срочно выполнить государственную регистрацию имущества и сообщить нам как закончите. Длинный текст сообщения. Длинный текст сообщения раскрытый полностью здесь дополнительная информация и текст может содержать большой объём.
+										a(href="#").link-underline.btn-request-answer Ответить
+										|  
+										a.link-underline.btn-text-toggle Подробнее
+									.request__details
+										.request__details-item
+											.request__details-item-title Дата
+											div 23.11.2023, 13:00:00
+										.request__details-item
+											.request__details-item-title Клиентский менеджер ГТЛК
+											div Петров Пётр
+										.request__details-item
+											.request__details-item-title Статус
+											.color-green Сообщение получено из BPM
+								.request.request--from-user
+									.request__text-wrap
+										.request__text
+											p Добрый день! Можем ли мы направить в ГИБЛЛ для регистрации заверенные в ГТЛК копии документов?
+									.request__details
+										.request__details-item
+											.request__details-item-title Дата
+											div 23.11.2023, 13:00:00
+										.request__details-item
+											.request__details-item-title Клиентский менеджер ГТЛК
+											div Петров Пётр
+										.request__details-item
+											.request__details-item-title Статус
+											.color-green Сообщение получено из BPM
+
+					footer.footer
+						.container
+							.footer__section.d-flex.justify-content-end
+								ul.footer__menu
+									li
+										a(href="#") О нас
+									li
+										a(href="#") Реквизиты
+									li
+										a(href="#") Политика в отношении обработки персональных данных в АО “ГТЛК”
+							hr
+							.footer__section.d-flex.justify-content-between.align-items-center
+								.footer__copyright © 2023 АО ГТЛК
+								ul.footer__menu
+									li
+										a(href="tel:88002001299") 8-800-200-12-99
+									li
+										a(href="mailto:gtlk@gtlk.ru") gtlk@gtlk.ru
+									li
+										a(href="#") 125284, г. Москва, Ленинградский проспект д. 31 а, стр. 1
+			
+		include html/modals
+
+		script(src="js/app.min.js")

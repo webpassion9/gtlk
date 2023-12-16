@@ -425,11 +425,21 @@
 								<li class="sidebar__nav-item">
 									<a class="sidebar__nav-item-btn" href="#">
 										<div class="sidebar__nav-item-icon">
-											<svg class="icon-doc">
-												<use xlink:href="img/icons/icons.svg#icon-doc"></use>
+											<svg class="icon-management">
+												<use xlink:href="img/icons/icons.svg#icon-management"></use>
 											</svg>
 										</div>
-										<div class="sidebar__nav-item-text">Обращения НМЦ</div>
+										<div class="sidebar__nav-item-text">Управление контрагентами</div>
+									</a>
+								</li>
+								<li class="sidebar__nav-item">
+									<a class="sidebar__nav-item-btn" href="#">
+										<div class="sidebar__nav-item-icon">
+											<svg class="icon-settings">
+												<use xlink:href="img/icons/icons.svg#icon-settings"></use>
+											</svg>
+										</div>
+										<div class="sidebar__nav-item-text">Настройки</div>
 									</a>
 								</li>
 							</ul>
@@ -449,22 +459,6 @@
 							</ul>
 						</div>
 						<div class="sidebar__section">
-							<div class="manager">
-								<div class="manager__main">
-									<div class="manager__ava">
-										<img src="img/avatar-manager.png" alt="">
-									</div>
-									<div class="manager__name">Менеджер Иванова А.А.</div>
-									<a class="btn manager__btn" href="#">Связаться</a>
-								</div>
-								<div class="manager__contacts">
-									<a class="btn btn-contacts" href="#">
-										<img src="img/icon-viber.svg" width="32" height="32" alt="">
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="sidebar__section">
 							<a class="support" href="#">
 								<div class="support__icon">
 									<svg class="icon-chat">
@@ -478,276 +472,147 @@
 				</aside>
 				<main class="main">
 					<div class="content">
-						<div class="content-inner">
-							<div class="form-application__top">
-								<div class="go-back go-back--form-application">
-									<a href="#">< Назад в мои заявки</a>
-								</div>
-								<div class="heading-base heading-base--large form-application__top-heading is-lg-visible">Новая заявка</div>
+						<div class="content-inner request-history-wrapper">
+							<div class="breadcrumbs">Служба поддержки</div>
+							<div class="request-top-bar">
+								<div class="heading-base heading-base--large">История обращений</div>
+								<a class="btn btn-details" href="#modal-request" data-modal>Создать обращение</a>
 							</div>
-							<div class="form-application__steps">
-								<ul class="form-steps">
-									<li class="form-steps__item active">
-										<div class="form-steps__item-text"> 
-											<span class="is-lg-hidden">Шаг 1: </span> Заявитель
-										</div>
-									</li>
-									<li class="form-steps__item active">
-										<div class="form-steps__item-text"> 
-											<span class="is-lg-hidden">Шаг 2: </span> Контактное лицо по сделке
-										</div>
-									</li>
-									<li class="form-steps__item active">
-										<div class="form-steps__item-text"> 
-											<span class="is-lg-hidden">Шаг 3: </span> Руководитель организации
-										</div>
-									</li>
-									<li class="form-steps__item active current">
-										<div class="form-steps__item-text"> 
-											<span class="is-lg-hidden">Шаг 4: </span> Предмет лизинга/аренды
-										</div>
-									</li>
-									<li class="form-steps__item">
-										<div class="form-steps__item-text"> 
-											<span class="is-lg-hidden">Шаг 5: </span> Условия лизинга/аренды
-										</div>
-									</li>
-									<li class="form-steps__item">
-										<div class="form-steps__item-text"> 
-											<span class="is-lg-hidden">Шаг 6: </span> Дополнительные условия
-										</div>
-									</li>
-									<li class="form-steps__item">
-										<div class="form-steps__item-text"> 
-											<span class="is-lg-hidden">Шаг 7: </span> Загрузить документы
-										</div>
-									</li>
-								</ul>
+							<div class="request-note">
+								<div class="request-note__item request-note__item--from-user">Ваши сообщения</div>
+								<div class="request-note__item request-note__item--from-support">Сообщения службы поддержки</div>
 							</div>
-							<div class="form-application__main form-application__main--step4">
-								<div class="form-application__row-items form-application__row-items--create-app form-application__row-items--gap-small">
-									<div class="form-application__row form-application__row--check">
-										<label class="checkbox-base">
-											<input type="checkbox" checked hidden>
-											<span class="checkbox-base__icon">
-												<svg class="icon-check">
-													<use xlink:href="img/icons/icons.svg#icon-check"></use>
-												</svg>
-											</span>
-											<span class="checkbox-base__text">Заявка на аренду</span>
-										</label>
+							<hr class="hr-request">
+							<div class="request-items scrollbar-vertical">
+								<div class="request request--from-support">
+									<div class="request__text-wrap">
+										<div class="request__text">
+											<p>Добрый день! Вам нужно срочно выполнить государственную регистрацию имущества и сообщить нам как закончите. Длинный текст сообщения. Длинный текст сообщения раскрытый полностью здесь дополнительная информация и текст может содержать большой объём.</p>
+										</div>
+										<a class="link-underline btn-request-answer" href="#">Ответить</a> 
+										<a class="link-underline btn-text-toggle">Подробнее</a>
 									</div>
-									<div class="form-application__row">
-										<div class="form-application__row-heading form-application__row-heading--width-normal">
-											<div class="field-heading">Вид имущества&nbsp;
-												<span class="field-heading__require">*</span>
-											</div>
+									<div class="request__details">
+										<div class="request__details-item">
+											<div class="request__details-item-title">Дата</div>
+											<div>23.11.2023, 13:00:00</div>
 										</div>
-										<div class="form-application__row-content">
-											<div class="select select--width-base">
-												<input class="input-base input-base--select select__input input-base--height-small" type="text" placeholder="Выберите из списка">
-												<div class="select__icon">
-													<svg class="icon-chevron-up">
-														<use xlink:href="img/icons/icons.svg#icon-chevron-up"></use>
-													</svg>
-												</div>
-												<ul class="select__list select__list--type-of-property">
-													<li class="select__list-item">
-														<div class="select__list-item-main">Авиатранспорт</div>
-													</li>
-													<li class="select__list-item">
-														<div class="select__list-item-main">Автотранспорт</div>
-													</li>
-													<li class="select__list-item">
-														<div class="select__list-item-main">Водный транспорт</div>
-													</li>
-													<li class="select__list-item">
-														<div class="select__list-item-main">Дорожно-строительная техника</div>
-													</li>
-													<li class="select__list-item">
-														<div class="select__list-item-main">Железнодорожный транспорт</div>
-													</li>
-													<li class="select__list-item">
-														<div class="select__list-item-main">Недвижимость</div>
-													</li>
-													<li class="select__list-item">
-														<div class="select__list-item-main">Оборудование</div>
-													</li>
-													<li class="select__list-item">
-														<div class="select__list-item-main">С/х техника</div>
-													</li>
-													<li class="select__list-item" data-target="type-other">
-														<div class="select__list-item-main">Прочее</div>
-													</li>
-												</ul>
-											</div>
+										<div class="request__details-item">
+											<div class="request__details-item-title">Клиентский менеджер ГТЛК</div>
+											<div>Петров Пётр</div>
 										</div>
-									</div>
-									<div class="form-application__row hidden" data-item="type-other">
-										<div class="form-application__row-heading form-application__row-heading--width-normal"></div>
-										<div class="form-application__row-content">
-											<input class="input-base input-base--width-base input-base--height-small" type="text" placeholder="Введите вид имущества">
-										</div>
-									</div>
-									<div class="form-application__row">
-										<div class="form-application__row-heading form-application__row-heading--width-normal">
-											<div class="field-heading">Ставка НДС&nbsp;
-												<span class="field-heading__require">*</span>
-											</div>
-										</div>
-										<div class="form-application__row-content">
-											<div class="select select--width-base">
-												<input class="input-base input-base--select select__input input-base--height-small" type="text" placeholder="Выберите из списка">
-												<div class="select__icon">
-													<svg class="icon-chevron-up">
-														<use xlink:href="img/icons/icons.svg#icon-chevron-up"></use>
-													</svg>
-												</div>
-												<ul class="select__list">
-													<li class="select__list-item">
-														<div class="select__list-item-main">Без НДС</div>
-													</li>
-													<li class="select__list-item">
-														<div class="select__list-item-main">0%</div>
-													</li>
-													<li class="select__list-item">
-														<div class="select__list-item-main">20%</div>
-													</li>
-												</ul>
-											</div>
+										<div class="request__details-item">
+											<div class="request__details-item-title">Статус</div>
+											<div class="color-green">Сообщение получено из BPM</div>
 										</div>
 									</div>
 								</div>
-								<div class="form-application__add-item">
-									<a class="btn btn-add-item">
-										<svg class="icon-add-circle">
-											<use xlink:href="img/icons/icons.svg#icon-add-circle"></use>
-										</svg>Добавить предмет лизинга
-									</a>
-								</div>
-								<div class="add-items-wrapper">
-									<div class="add-item">
-										<div class="add-item__top">
-											<div class="add-item__heading">Предмет 1</div>
-											<div class="tooltip add-item__menu">
-												<a class="btn add-item__menu-btn tooltip__btn">
-													<svg class="icon-more-alt_vertical">
-														<use xlink:href="img/icons/icons.svg#icon-more-alt_vertical"></use>
-													</svg>
-												</a>
-												<ul class="tooltip__menu add-item__tooltip">
-													<li class="tooltip__menu-item">
-														<a class="tooltip__menu-item-link">Сбросить форму</a>
-													</li>
-													<li class="tooltip__menu-item tooltip__menu-item--cancel">
-														<a class="tooltip__menu-item-link">Удалить предмет</a>
-													</li>
-												</ul>
-											</div>
+								<div class="request request--from-user">
+									<div class="request__text-wrap">
+										<div class="request__text">
+											<p>Добрый день! Можем ли мы направить в ГИБЛЛ для регистрации заверенные в ГТЛК копии документов?</p>
 										</div>
-										<div class="add-item__row">
-											<div class="add-item__row-section">
-												<div class="form-application__row-items form-application__row-items--create-app form-application__row-items--gap-small">
-													<div class="form-application__row">
-														<div class="form-application__row-heading form-application__row-heading--width-base">
-															<div class="field-heading">Поставщик&nbsp;
-																<span class="field-heading__require">*</span>
-															</div>
-														</div>
-														<div class="form-application__row-content">
-															<div class="select">
-																<input class="input-base input-base--select input-base--height-small select__input" type="text" placeholder="Поиск по названию, ИНН">
-																<div class="select__icon">
-																	<svg class="icon-chevron-up">
-																		<use xlink:href="img/icons/icons.svg#icon-chevron-up"></use>
-																	</svg>
-																</div>
-																<ul class="select__list select__list--supplier">
-																	<li class="select__list-item">
-																		<div class="select__list-item-main">МУП "ПАТП №2"</div>
-																		<div class="select__list-item-details">ИНН 771537455874</div>
-																	</li>
-																	<li class="select__list-item">
-																		<div class="select__list-item-main">МУП "ПАТП №22"</div>
-																		<div class="select__list-item-details">ИНН 771537487477</div>
-																	</li>
-																	<li class="select__list-item">
-																		<div class="select__list-item-main">МУП "ПАТП №2223"</div>
-																		<div class="select__list-item-details">ИНН 771874537455</div>
-																	</li>
-																	<li class="select__list-item">
-																		<div class="select__list-item-main">МУП "ПАТП №2332"</div>
-																		<div class="select__list-item-details">ИНН 771537455874</div>
-																	</li>
-																</ul>
-															</div>
-														</div>
-													</div>
-													<div class="form-application__row">
-														<div class="form-application__row-heading form-application__row-heading--width-base">
-															<div class="field-heading">Название предмета аренды&nbsp;
-																<span class="field-heading__require">*</span>
-															</div>
-														</div>
-														<div class="form-application__row-content">
-															<input class="input-base input-base--height-small" type="text" placeholder="Укажите название">
-														</div>
-													</div>
-													<div class="form-application__row">
-														<div class="form-application__row-heading form-application__row-heading--width-base">
-															<div class="field-heading">Спецификация</div>
-														</div>
-														<div class="form-application__row-content">
-															<input class="input-base input-base--height-small" type="text" placeholder="Укажите значение">
-														</div>
-													</div>
-													<div class="form-application__row">
-														<div class="form-application__row-heading form-application__row-heading--width-base">
-															<div class="field-heading">Стоимость единицы с НДС (руб)</div>
-														</div>
-														<div class="form-application__row-content">
-															<input class="input-base input-base--height-small" type="text" placeholder="Укажите значение">
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="add-item__row-section">
-												<div class="form-application__row-items form-application__row-items--create-app form-application__row-items--gap-small">
-													<div class="form-application__row">
-														<div class="form-application__row-heading form-application__row-heading--width-base">
-															<div class="field-heading">Количество</div>
-														</div>
-														<div class="form-application__row-content">
-															<input class="input-base input-base--height-small" type="text" placeholder="Укажите значение">
-														</div>
-													</div>
-													<div class="form-application__row">
-														<div class="form-application__row-heading form-application__row-heading--width-base">
-															<div class="field-heading">Срок поставки&nbsp;
-																<span class="field-heading__require">*</span>
-															</div>
-														</div>
-														<div class="form-application__row-content">
-															<input class="input-base input-base--height-small" type="text" placeholder="Укажите значение">
-														</div>
-													</div>
-												</div>
-											</div>
+									</div>
+									<div class="request__details">
+										<div class="request__details-item">
+											<div class="request__details-item-title">Дата</div>
+											<div>23.11.2023, 13:00:00</div>
+										</div>
+										<div class="request__details-item">
+											<div class="request__details-item-title">Клиентский менеджер ГТЛК</div>
+											<div>Петров Пётр</div>
+										</div>
+										<div class="request__details-item">
+											<div class="request__details-item-title">Статус</div>
+											<div class="color-green">Сообщение получено из BPM</div>
 										</div>
 									</div>
 								</div>
-								<div class="form-application__row-items form-application__row-items--padding-top-large">
-									<div class="form-application__row">
-										<div class="total-sum total-sum--large">
-											<span class="total-sum__text">Итоговая стоимость всего иммущества с НДС: </span>
-											<span class="total-sum__value">36 420 000,00 ₽</span>
+								<div class="request request--from-support">
+									<div class="request__text-wrap">
+										<div class="request__text">
+											<p>Добрый день! Вам нужно срочно выполнить государственную регистрацию имущества и сообщить нам как закончите. Длинный текст сообщения. Длинный текст сообщения раскрытый полностью здесь дополнительная информация и текст может содержать большой объём.</p>
+										</div>
+										<a class="link-underline btn-request-answer" href="#">Ответить</a> 
+										<a class="link-underline btn-text-toggle">Подробнее</a>
+									</div>
+									<div class="request__details">
+										<div class="request__details-item">
+											<div class="request__details-item-title">Дата</div>
+											<div>23.11.2023, 13:00:00</div>
+										</div>
+										<div class="request__details-item">
+											<div class="request__details-item-title">Клиентский менеджер ГТЛК</div>
+											<div>Петров Пётр</div>
+										</div>
+										<div class="request__details-item">
+											<div class="request__details-item-title">Статус</div>
+											<div class="color-green">Сообщение получено из BPM</div>
 										</div>
 									</div>
-									<div class="form-application__row">
-										<div class="form-application__nav form-application__nav--create-app">
-											<a class="btn btn-nav btn-nav--back" href="#">Назад</a>
-											<a class="btn btn-nav btn-nav--continue" href="#">Продолжить</a>
-											<a class="btn btn-nav btn-nav--save" href="#">Сохранить</a>
+								</div>
+								<div class="request request--from-user">
+									<div class="request__text-wrap">
+										<div class="request__text">
+											<p>Добрый день! Можем ли мы направить в ГИБЛЛ для регистрации заверенные в ГТЛК копии документов?</p>
+										</div>
+									</div>
+									<div class="request__details">
+										<div class="request__details-item">
+											<div class="request__details-item-title">Дата</div>
+											<div>23.11.2023, 13:00:00</div>
+										</div>
+										<div class="request__details-item">
+											<div class="request__details-item-title">Клиентский менеджер ГТЛК</div>
+											<div>Петров Пётр</div>
+										</div>
+										<div class="request__details-item">
+											<div class="request__details-item-title">Статус</div>
+											<div class="color-green">Сообщение получено из BPM</div>
+										</div>
+									</div>
+								</div>
+								<div class="request request--from-support">
+									<div class="request__text-wrap">
+										<div class="request__text">
+											<p>Добрый день! Вам нужно срочно выполнить государственную регистрацию имущества и сообщить нам как закончите. Длинный текст сообщения. Длинный текст сообщения раскрытый полностью здесь дополнительная информация и текст может содержать большой объём.</p>
+										</div>
+										<a class="link-underline btn-request-answer" href="#">Ответить</a> 
+										<a class="link-underline btn-text-toggle">Подробнее</a>
+									</div>
+									<div class="request__details">
+										<div class="request__details-item">
+											<div class="request__details-item-title">Дата</div>
+											<div>23.11.2023, 13:00:00</div>
+										</div>
+										<div class="request__details-item">
+											<div class="request__details-item-title">Клиентский менеджер ГТЛК</div>
+											<div>Петров Пётр</div>
+										</div>
+										<div class="request__details-item">
+											<div class="request__details-item-title">Статус</div>
+											<div class="color-green">Сообщение получено из BPM</div>
+										</div>
+									</div>
+								</div>
+								<div class="request request--from-user">
+									<div class="request__text-wrap">
+										<div class="request__text">
+											<p>Добрый день! Можем ли мы направить в ГИБЛЛ для регистрации заверенные в ГТЛК копии документов?</p>
+										</div>
+									</div>
+									<div class="request__details">
+										<div class="request__details-item">
+											<div class="request__details-item-title">Дата</div>
+											<div>23.11.2023, 13:00:00</div>
+										</div>
+										<div class="request__details-item">
+											<div class="request__details-item-title">Клиентский менеджер ГТЛК</div>
+											<div>Петров Пётр</div>
+										</div>
+										<div class="request__details-item">
+											<div class="request__details-item-title">Статус</div>
+											<div class="color-green">Сообщение получено из BPM</div>
 										</div>
 									</div>
 								</div>

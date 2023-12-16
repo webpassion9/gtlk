@@ -103,3 +103,11 @@ faq();
 lengthRequire();
 checkFilling();
 uploadFile();
+
+
+//
+
+import { textToggle, maxHeightInit } from './modules/request/index.js';
+
+textToggle();
+// maxHeightInit();

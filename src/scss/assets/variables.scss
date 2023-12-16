@@ -25,7 +25,10 @@ $fontFourth: OpenSans, Arial, sans-serif;
 .color {
 	&-gray {
 		color: var(--color-gray);
-	}	
+	}
+	&-green {
+		color: #129656;
+	}
 }
 
 // breakpoints
