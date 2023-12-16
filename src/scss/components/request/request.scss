@@ -6,6 +6,29 @@
 	flex-grow: 1;
 }
 
+.scrollbar-vertical {
+	overflow: hidden;
+	position: relative;
+	.ps__rail-x {
+		display: none;
+	}
+	
+	.ps__rail-y {
+		position: absolute;
+		right: 6px;
+		bottom: 0;
+		width: 9px;
+		height: 100%;
+	}
+	
+	.ps__thumb-y {
+		background: rgba(#969696,.3);
+		width: 9px;
+		border-radius: 8px;
+		position: absolute;
+	}
+}
+
 .request {
 	position: relative;
 	max-width: 780px;
@@ -137,3 +160,9 @@
 
 }
 
+
+.page-request {
+	.content, .content-inner {
+		height: 100%;
+	}
+}

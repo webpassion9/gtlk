@@ -76,6 +76,7 @@ document.querySelectorAll('.select__list').forEach(selectList => {
 });
 
 
+
 //
 
 import { targetPopup, headerSearch } from './modules/header/index.js';
@@ -110,4 +111,13 @@ uploadFile();
 import { textToggle, maxHeightInit } from './modules/request/index.js';
 
 textToggle();
-// maxHeightInit();
+maxHeightInit();
+
+//
+
+if (window.innerWidth > 992) {
+  document.querySelectorAll('.request-items').forEach(requestItems => {
+    const psVertical = new PerfectScrollbar(requestItems, {});
+    psVertical.update();
+  });
+}

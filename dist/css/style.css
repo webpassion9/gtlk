@@ -6970,6 +6970,30 @@ textarea.form-request__input.is-filled {
   flex-grow: 1;
 }
 
+.scrollbar-vertical {
+  overflow: hidden;
+  position: relative;
+}
+
+.scrollbar-vertical .ps__rail-x {
+  display: none;
+}
+
+.scrollbar-vertical .ps__rail-y {
+  position: absolute;
+  right: 6px;
+  bottom: 0;
+  width: 9px;
+  height: 100%;
+}
+
+.scrollbar-vertical .ps__thumb-y {
+  background: rgba(150, 150, 150, 0.3);
+  width: 9px;
+  border-radius: 8px;
+  position: absolute;
+}
+
 .request {
   position: relative;
   max-width: 780px;
@@ -7116,6 +7140,11 @@ textarea.form-request__input.is-filled {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+}
+
+.page-request .content,
+.page-request .content-inner {
+  height: 100%;
 }
 
 @media (min-width: 320px) {
